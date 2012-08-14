@@ -1,0 +1,22 @@
+	<!--header -->
+	<div id="header">			
+				
+		<h1 id="logo-text"><a href="index.html" title="">CLIP</a></h1>		
+		<p id="slogan">CIPPIC Licensing Information Project</p>
+      <?php include('breadcrumbs.inc'); ?>
+		<?php
+		// only show navbar if we're on a page for an individual license
+		if(!empty($_GET['id'])){
+		?>
+		<div  id="nav">
+			<ul>
+				<li class="first"<?php print preg_match('/license\-info\.php\Z/', $_SERVER["PHP_SELF"]) ? ' id="current"' : ''; ?>><a href="license-info.php?rc=<?php print $_GET['rc']; ?>&id=<?php print $_GET['id']; ?>">License Info</a></li>
+				<li <?php print preg_match('/license\-text\.php\Z/', $_SERVER["PHP_SELF"]) ? ' id="current"' : ''; ?>><a href="license-text.php?rc=<?php print $_GET['rc']; ?>&id=<?php print $_GET['id']; ?>">License Text</a></li>
+				<li <?php print preg_match('/license\-benchmarks\.php\Z/', $_SERVER["PHP_SELF"]) ? ' id="current"' : ''; ?>><a href="license-benchmarks.php?rc=<?php print $_GET['rc']; ?>&id=<?php print $_GET['id']; ?>">Benchmarks</a></li>
+				<li <?php print preg_match('/license\-metadata\.php\Z/', $_SERVER["PHP_SELF"]) ? ' id="current"' : ''; ?>><a href="license-metadata.php?rc=<?php print $_GET['rc']; ?>&id=<?php print $_GET['id']; ?>">Metadata</a></li>
+			</ul>		
+		</div>
+		<?php } ?>	
+						
+	<!--header ends-->					
+	</div>

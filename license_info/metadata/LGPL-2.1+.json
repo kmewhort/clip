@@ -1,0 +1,65 @@
+{
+  "id": "LGPL-2.1+",
+  "title": "GNU Lesser General Public License v2.1 or later",
+  "url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
+  "maintainer": "Free Software Foundation",
+  "domain_content": false,
+  "domain_data": false,
+  "domain_software": true,
+  "is_okd_compliant": false,
+  "is_osi_compliant": true,
+  "is_dfcw_compliant": false,
+  "status": "active",
+  "rights": {
+    "right_to_use_and_reproduce": true,
+    "right_to_modify": true,
+    "right_to_distribute": true,
+    "covers_copyright": true,
+    "covers_neighbouring_rights": false,
+    "covers_sgdrs": false,
+    "covers_moral_rights": false,
+    "covers_trademarks": false,
+    "covers_patents": false,
+    "covers_circumventions": false,
+    "prohibits_commercial_use": false,
+    "prohibits_tpms": false,
+    "prohibits_tpms_unless_parallel": false
+  },
+  "obligations": {
+    "obligation_notice": true,
+    "obligation_modifiable_form": true,
+    "obligation_attribution_flexible": false,
+    "obligation_attribution_specific": false,
+    "obligation_attribution_specific_details": "",
+    "obligation_copyleft": true
+  },
+  "copyleft": {
+    "copyleft_on": "derivatives_links_excepted",
+    "copyleft_engages_on": "distribution"
+  },
+  "sublicensing": {
+    "sublicense_any": false,
+    "sublicense_future_versions": true,
+    "sublicense_other": "GPL-2.0,GPL-2.0+",
+    "copyleft_compatible_with_future_versions": false,
+    "copyleft_compatible_with_other": ""
+  },
+  "termination": {
+    "termination_automatic": true,
+    "termination_discretionary": false,
+    "termination_reinstatement": false
+  },
+  "license_changes": {
+    "license_changes_effective_immediately": false
+  },
+  "disclaimers": {
+    "disclaimer_warranty": true,
+    "disclaimer_liability": true,
+    "disclaimer_indemnity": false,
+    "warranty_noninfringement": false
+  },
+  "conflict_of_laws": {
+    "law_of": "unspecified",
+    "forum_of": "unspecified"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "CAN-GoC-ODL-1.1",
+  "title": "Government of Canada Open Data License v1.1",
+  "url": "http://www.data.gc.ca",
+  "maintainer": "Government of Canada",
+  "domain_content": false,
+  "domain_data": true,
+  "domain_software": false,
+  "is_okd_compliant": false,
+  "is_osi_compliant": false,
+  "is_dfcw_compliant": false,
+  "status": "active",
+  "rights": {
+    "right_to_use_and_reproduce": true,
+    "right_to_modify": true,
+    "right_to_distribute": true,
+    "covers_copyright": true,
+    "covers_neighbouring_rights": true,
+    "covers_sgdrs": false,
+    "covers_moral_rights": false,
+    "covers_trademarks": false,
+    "covers_patents": true,
+    "covers_circumventions": false,
+    "prohibits_commercial_use": false,
+    "prohibits_tpms": false,
+    "prohibits_tpms_unless_parallel": false
+  },
+  "obligations": {
+    "obligation_notice": false,
+    "obligation_modifiable_form": false,
+    "obligation_attribution_flexible": false,
+    "obligation_attribution_specific": true,
+    "obligation_attribution_specific_details": "Contains data licensed \"as is\" under the Government of Canada Open Data License Agreement. Such licensing does not constitute an endorsement by the Government of Canada of this product.",
+    "obligation_copyleft": false
+  },
+  "copyleft": {},
+  "sublicensing": {
+    "sublicense_any": false,
+    "sublicense_future_versions": false,
+    "sublicense_other": ""
+  },
+  "termination": {
+    "termination_automatic": true,
+    "termination_discretionary": false,
+    "termination_reinstatement": false
+  },
+  "license_changes": {
+    "license_changes_effective_immediately": false
+  },
+  "disclaimers": {
+    "disclaimer_warranty": true,
+    "disclaimer_liability": true,
+    "disclaimer_indemnity": true,
+    "warranty_noninfringement": false
+  },
+  "conflict_of_laws": {
+    "law_of": "specific",
+    "forum_of": "specific"
+  }
+}

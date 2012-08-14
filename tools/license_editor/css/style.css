@@ -1,0 +1,66 @@
+/* overall page sizing */
+#license_fields {
+  width: 625px;
+  display: inline-block;
+}
+#json_preview {
+  width: 475px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 21px 0 0 10px;
+  border: 1px solid #777;
+}
+
+/* input box spacing */
+#license_fields fieldset {
+  margin: 12px 0px;
+  padding: 6px 10px;
+  width: 605px;
+}
+#license_fields input {
+  margin: 2px 6px;
+}
+#license_fields input[type='checkbox'],
+#license_fields input[type='radio'] {
+  margin: 8px 6px 10px 6px;
+}
+
+/* minor alignment adjustments */
+#license_fields input[name="url"] {
+  margin-left: 12px; 
+}
+#license_fields input[name="maintainer"] {
+  width: 444px;
+} 
+
+/* formatting */
+#license_fields legend {
+  font-weight: bold;
+  color: #444;
+}
+.lbl {
+  font-weight: bold;
+}
+
+/* json preview */
+#json_preview h2 {
+  font-size: 110%;
+  margin: 4px 0;
+}
+#json_preview p {
+  font-family: Courier, monospace
+}
+.KelpJSONView ol li {
+  white-space: normal;
+}
+
+/* button bar */
+#button_bar {
+ margin-left: 2px;
+}
+#button_bar form{
+  margin-bottom: 0;
+}
+#button_bar select{
+  margin-left: 10px;
+}

@@ -1,0 +1,13 @@
+<?php
+require_once('config.php');
+require_once('load.php');
+
+$txt = load_text($LICENSE_TEXT_DIR, $_GET['id'], 'html');
+if(empty($tx)){
+  print 'License text unavailable.';
+  exit(1);
+}
+
+print $txt;
+?>
+  

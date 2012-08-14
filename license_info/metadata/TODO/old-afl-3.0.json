@@ -1,0 +1,57 @@
+{
+  "id": "old-afl-3.0",
+  "title": "Academic Free License 3.0 (AFL 3.0)",
+  "url": "http://www.opensource.org/licenses/afl-3.0.php",
+  "maintainer": "Lawrence Rosen",
+  "domain_content": false,
+  "domain_data": false,
+  "domain_software": true,
+  "is_okd_compliant": false,
+  "is_osi_compliant": true,
+  "status": "active",
+  "rights": {
+    "right_to_use_and_reproduce": true,
+    "right_to_modify": true,
+    "right_to_distribute": true,
+    "covers_copyright": true,
+    "covers_neighbouring_rights": false,
+    "covers_sgdrs": false,
+    "covers_moral_rights": false,
+    "covers_trademarks": false,
+    "covers_patents": true,
+    "covers_circumventions": false,
+    "prohibits_commercial_use": false,
+    "prohibits_tpms": false,
+    "prohibits_tpms_unless_parallel": false
+  },
+  "obligations": {
+    "obligation_notice": true,
+    "obligation_modifiable_form": true,
+    "obligation_attribution_flexible": true,
+    "obligation_attribution_specific": false,
+    "obligation_attribution_specific_details": "",
+    "obligation_copyleft": false
+  },
+  "copyleft": {},
+  "sublicensing": {
+    "sublicense_future_versions": false,
+    "sublicense_other": "",
+    "copyleft_compatible_with_future_versions": false,
+    "copyleft_compatible_with_other": ""
+  },
+  "termination": {
+    "termination_automatic": true,
+    "termination_discretionary": false,
+    "termination_reinstatement": false
+  },
+  "disclaimers": {
+    "disclaimer_warranty_noninfringement": false,
+    "disclaimer_warranty_fitness": true,
+    "disclaimer_liability": true,
+    "disclaimer_indemnity": false
+  },
+  "conflict_of_laws": {
+    "law_of": "forum",
+    "forum_of": "licensor"
+  }
+}

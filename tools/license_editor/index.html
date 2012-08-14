@@ -1,0 +1,132 @@
+<html>
+<head>
+  <title>License definition editor</title>
+  <link rel="stylesheet" href="css/KelpJSONView.css" type="text/css"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/KelpJSONView.js"></script>
+  <script type="text/javascript" src="js/form_to_json.js"></script>
+</head>
+<body>
+  <div id="button_bar">
+    <form>
+      Select a license to view or edit:<select id="license_selection" name="licenses"></select>
+      <input id="save" type="button" value="Save changes" />
+    </form>
+  </div>
+  <span id="license_fields">
+    <form>
+      <fieldset id="basic_info">
+        <legend>License info</legend>
+        <span class="lbl">Short unique id (eg. "gpl-3.0"):</span><input type="text" name="id" size="10" /><br />
+        <span class="lbl">Title:</span><input type="text" name="title" size="60" /><br />
+        <span class="lbl">URL:</span><input type="text" name="url" size="60" /><br />
+        <span class="lbl">Maintainer:</span><input type="text" name="maintainer" size="60" /><br />
+        <span class="lbl">Domains:</span>
+        <input type="checkbox" name="domain_content" value="true" />Content
+        <input type="checkbox" name="domain_data" value="true" />Data
+        <input type="checkbox" name="domain_software" value="true" />Software<br />
+        <span class="lbl">Status and compliance:</span><br />
+        <input type="checkbox" name="is_okd_compliant" value="true" /><span class="lbl"><a href="http://opendefinition.org/okd/">Open Definition</a> compliant?</span><br />
+        <input type="checkbox" name="is_osi_compliant" value="true" /><span class="lbl"><a href="http://opensource.org/docs/osd">Open Source Initiative (OSI)</a> compliant?</span><br />
+        <input type="checkbox" name="is_dfcw_compliant" value="true" /><span class="lbl"><a href="http://freedomdefined.org/Definition">Definition of Free Cultural Works (DFCW)</a> compliant?</span><br />
+        <span class="lbl">Status:</span>
+        <input type="radio" name="status" value="active" />Active
+        <input type="radio" name="status" value="inactive" />Inactive (obsolete)<br />
+     </fieldset>
+     <fieldset id="rights">
+        <legend>Rights & permissions</legend>
+        <span class="lbl">Rights granted:</span><br />
+        <input type="checkbox" name="right_to_use_and_reproduce" value="true" />Use and reproduce
+        <input type="checkbox" name="right_to_modify" value="true" />Modify 
+        <input type="checkbox" name="right_to_distribute" value="true" />Distribute<br />
+        <span class="lbl">Covered categories of rights (whether granted or waived):</span><br />
+        <input type="checkbox" name="covers_copyright" />Copyright
+        <input type="checkbox" name="covers_neighbouring_rights" />Neighbouring rights<br />
+        <input type="checkbox" name="covers_sgdrs" />Sui generis database rights
+        <input type="checkbox" name="covers_moral_rights" />Moral rights<br />
+        <input type="checkbox" name="covers_trademarks" />Trade-marks
+        <input type="checkbox" name="covers_patents" />Patents<br />
+        <input type="checkbox" name="covers_circumventions" />Circumvention of TPMs (you are permitted to circumvent)<br />
+        <span class="lbl">Prohibitions:</span><br />
+        <input type="checkbox" name="prohibits_commercial_use" />Commercial use prohibited
+        <input type="checkbox" name="prohibits_tpms" />TPMs/DRM prohibited<br />
+        <input type="checkbox" name="prohibits_tpms_unless_parallel">TMPs/DRM prohibited unless parallel distribution provided
+    </fieldset>
+    <fieldset id="obligations">
+        <legend>Obligations</legend>
+        <span class="lbl">Obligations:</span><br />
+        <input type="checkbox" name="obligation_notice">Must retain the copyright/disclaimer notices<br />
+        <input type="checkbox" name="obligation_modifiable_form">Must provide source code / modifiable form<br />
+        <input type="checkbox" name="obligation_attribution_flexible" />Flexible attribution
+        <input type="checkbox" name="obligation_attribution_specific" />Specific attribution<br />
+        If specific, please specify:<input type="text" name="obligation_attribution_specific_details" size="60" /><br />
+        <input type="checkbox" name="obligation_copyleft" />Copyleft
+   </fieldset>
+   <fieldset id="copyleft">
+        <legend>Copyleft / share-alike</legend>
+        <span class="lbl">Copyleft obligations (if any) apply to:</span><br />
+        <input type="radio" name="copyleft_on" value="modified_files" />Only modified files
+        <input type="radio" name="copyleft_on" value="derivatives" />Derivative works / Adaptations<br />
+        <input type="radio" name="copyleft_on" value="derivatives_links_excepted">Derivative works / Adaptations, but linking excepted<br />
+        <input type="radio" name="copyleft_on" value="compilations" />Compilations / larger works<br />
+        <span class="lbl">Copyleft engages upon:</span><br />
+        <input type="radio" name="copyleft_engages_on" value="use" />Use
+        <input type="radio" name="copyleft_engages_on" value="affero" />Access over a computer network (Affero)
+        <input type="radio" name="copyleft_engages_on" value="distribution" />Distribution<br />
+   </fieldset>
+   <fieldset id="sublicensing">
+        <legend>Sublicensing/Compatibility</legend>
+        <span class="lbl">Sublicensing permissible under:</span><br />
+        <input type="checkbox" name="sublicense_any" />Any other license (compatible with the obligations)</input><br />
+        <input type="checkbox" name="sublicense_future_versions" value="true" />Future versions of the same license<br />
+        Other compatible licenses (please specify a comma-seperated list of license ids):<input type="text" name="sublicense_other" size="30" /><br />
+        <span class="lbl">Copyleft obligations compatible with:</span><br />
+        <input type="checkbox" name="copyleft_compatible_with_future_versions" value="true" />Future versions of the same license<br />
+        Other compatible licenses (please specify a comma-seperated list of license ids):<input type="text" name="copyleft_compatible_with_other" size="30" />
+   </fieldset>
+  <fieldset id="termination">
+        <legend>Termination clauses</legend>
+        <span class="lbl">Termination of rights is:</span><br />
+        <input type="checkbox" name="termination_automatic" />Automatic upon breach
+        <input type="checkbox" name="termination_discretionary">Available at the discretion of the licensor 
+        <input type="checkbox" name="termination_reinstatement">Temporary, with automatic reinstatement upon ceasing violations
+  </fieldset>
+  <fieldset id="license_changes">
+        <legend>License changes</legend>
+        <span class="lbl">Licensor's unilateral changes to the license are:</span><br />
+        <input type="checkbox" name="license_changes_effective_immediately" />Effective immediately</input>
+ </fieldset>
+ </fieldset>
+  <fieldset id="disclaimers">
+        <legend>Disclaimers & warranties</legend>
+        <span class="lbl">Disclaimers & Indemnities:</span><br />
+        <input type="checkbox" name="disclaimer_warranty" />General disclaimer of warranty (merchantability, fitness, etc.)<br />
+        <input type="checkbox" name="disclaimer_liability" />General disclaimer of liability<br />
+        <input type="checkbox" name="disclaimer_indemnity" />Licensee must indemnify licensor<br />
+        <span class="lbl">Warranties</span><br />
+        <input type="checkbox" name="warranty_noninfringement" />Warranty for noninfringement of copyright (as an exception to any general disclaimer)<br />
+  </fieldset> 
+  <fieldset id="conflict_of_laws">
+       <legend>Choice of law and forum</legend>
+       <span class="lbl">Choice of law:</span><br />
+       <input type="radio" name="law_of" value="unspecified" />Unspecified
+       <input type="radio" name="law_of" value="licensor" />Law of licensor's jurisdiction<br />
+       <input type="radio" name="law_of" value="plaintiff" />Law of plaintiff's jurisdiction
+       <input type="radio" name="law_of" value="defendant" />Law of defendant's jurisdiction<br />
+       <input type="radio" name="law_of" value="forum" />Law of the forum
+       <input type="radio" name="law_of" value="specific" />Specifically-named jurisdiction<br />
+
+       <span class="lbl">Choice of forum:</span><br />
+       <input type="radio" name="forum_of" value="unspecified" />Unspecified
+       <input type="radio" name="forum_of" value="licensor" />Jurisdiction of the licensor<br />
+       <input type="radio" name="forum_of" value="plaintiff" />Jurisdiction of the plaintiff
+       <input type="radio" name="forum_of" value="defendant" />Jurisdiction of the defendant</br>
+       <input type="radio" name="forum_of" value="specific" />Specifically-named jurisdiction
+  </fieldset>
+ </form>
+</span>
+<span id="json_preview">
+  <h2>JSON:</h2>
+  <div id="json"></div>
+</span>

@@ -1,0 +1,60 @@
+{
+  "id": "CC-BY-2.0",
+  "title": "Creative Commons Attribution 2.0",
+  "url": "http://creativecommons.org/licenses/by/2.0/legalcode",
+  "maintainer": "Creative Commons",
+  "domain_content": true,
+  "domain_data": false,
+  "domain_software": false,
+  "is_okd_compliant": true,
+  "is_osi_compliant": false,
+  "is_dfcw_compliant": true,
+  "status": "inactive",
+  "rights": {
+    "right_to_use_and_reproduce": true,
+    "right_to_modify": true,
+    "right_to_distribute": true,
+    "covers_copyright": true,
+    "covers_neighbouring_rights": true,
+    "covers_sgdrs": false,
+    "covers_moral_rights": false,
+    "covers_trademarks": false,
+    "covers_patents": false,
+    "covers_circumventions": false,
+    "prohibits_commercial_use": false,
+    "prohibits_tpms": true,
+    "prohibits_tpms_unless_parallel": false
+  },
+  "obligations": {
+    "obligation_notice": true,
+    "obligation_modifiable_form": false,
+    "obligation_attribution_flexible": true,
+    "obligation_attribution_specific": false,
+    "obligation_attribution_specific_details": "",
+    "obligation_copyleft": false
+  },
+  "copyleft": {},
+  "sublicensing": {
+    "sublicense_any": false,
+    "sublicense_future_versions": false,
+    "sublicense_other": ""
+  },
+  "termination": {
+    "termination_automatic": true,
+    "termination_discretionary": false,
+    "termination_reinstatement": false
+  },
+  "license_changes": {
+    "license_changes_effective_immediately": false
+  },
+  "disclaimers": {
+    "disclaimer_warranty": true,
+    "disclaimer_liability": true,
+    "disclaimer_indemnity": false,
+    "warranty_noninfringement": false
+  },
+  "conflict_of_laws": {
+    "law_of": "unspecified",
+    "forum_of": "unspecified"
+  }
+}

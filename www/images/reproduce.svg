@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="207.07019" height="146.41963" id="svg5513" sodipodi:version="0.32" inkscape:version="0.44.1" sodipodi:docbase="/Users/rick/Desktop/svg" sodipodi:docname="fax.svg" version="1.0">
+  <defs id="defs5515">
+    <linearGradient id="linearGradient10004">
+      <stop style="stop-color:black;stop-opacity:0.68041235;" offset="0" id="stop10006"/>
+      <stop style="stop-color:black;stop-opacity:0.4742268;" offset="1" id="stop10008"/>
+    </linearGradient>
+    <linearGradient id="linearGradient9998">
+      <stop id="stop10000" offset="0" style="stop-color:black;stop-opacity:1;"/>
+      <stop id="stop10002" offset="1" style="stop-color:black;stop-opacity:0;"/>
+    </linearGradient>
+    <linearGradient id="linearGradient9986">
+      <stop style="stop-color:black;stop-opacity:1;" offset="0" id="stop9988"/>
+      <stop style="stop-color:black;stop-opacity:0;" offset="1" id="stop9990"/>
+    </linearGradient>
+    <radialGradient inkscape:collect="always" xlink:href="#linearGradient10004" id="radialGradient10014" cx="274.28571" cy="300.93362" fx="274.28571" fy="300.93362" r="89.071426" gradientTransform="matrix(0.501207,0,0,0.308281,64.90515,400.043)" gradientUnits="userSpaceOnUse"/>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" gridtolerance="10000" guidetolerance="10" objecttolerance="10" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.35" inkscape:cx="375" inkscape:cy="405.71429" inkscape:document-units="px" inkscape:current-layer="layer1" inkscape:window-width="823" inkscape:window-height="577" inkscape:window-x="320" inkscape:window-y="70"/>
+  <metadata id="metadata5518">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-104.2857,-453.0765)">
+    <rect style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#414141;stroke-width:5.01207256;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" id="rect5523" width="117.4257" height="115.99368" x="143.66629" y="455.58252" inkscape:export-xdpi="90" inkscape:export-ydpi="90"/>
+    <rect style="opacity:1;fill:black;fill-opacity:1;fill-rule:evenodd;stroke:#666;stroke-width:5.99345112;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" id="rect5525" width="10.045181" height="20.069324" x="298.314" y="568.7016" inkscape:export-filename="/Users/rick/Desktop/rect5523.png" inkscape:export-xdpi="90" inkscape:export-ydpi="90"/>
+    <path style="fill:url(#radialGradient10014);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 157.98649,465.60665 L 246.77178,465.60665 L 246.77178,484.22292 L 220.9954,484.22292 L 220.9954,504.27121 L 189.49095,504.27121 L 189.49095,520.02344 L 159.41851,520.02344 L 157.98649,465.60665 z " id="path9071" sodipodi:nodetypes="ccccccccc" inkscape:export-filename="/Users/rick/Desktop/rect5523.png" inkscape:export-xdpi="90" inkscape:export-ydpi="90"/>
+    <path style="opacity:1;fill:black;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="M 104.28571,560.84051 L 104.28571,599.49611 L 294.74446,599.49611 L 294.74446,560.84051 L 260.38043,560.84051 L 260.38043,572.28996 L 142.94132,572.28996 L 142.94132,560.84051 L 104.28571,560.84051 z " id="path11814" inkscape:export-filename="/Users/rick/Desktop/rect5523.png" inkscape:export-xdpi="90" inkscape:export-ydpi="90"/>
+  </g>
+</svg>

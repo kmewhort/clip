@@ -1,0 +1,60 @@
+{
+  "id": "ODC-PDDL-1.0",
+  "title": "ODC Public Domain Dedication License v1.0",
+  "url": "http://opendatacommons.org/licenses/pddl/1.0/",
+  "maintainer": "Open Data Commons",
+  "domain_content": false,
+  "domain_data": true,
+  "domain_software": false,
+  "is_okd_compliant": true,
+  "is_osi_compliant": false,
+  "is_dfcw_compliant": false,
+  "status": "active",
+  "rights": {
+    "right_to_use_and_reproduce": true,
+    "right_to_modify": true,
+    "right_to_distribute": true,
+    "covers_copyright": true,
+    "covers_neighbouring_rights": true,
+    "covers_sgdrs": true,
+    "covers_moral_rights": true,
+    "covers_trademarks": false,
+    "covers_patents": false,
+    "covers_circumventions": false,
+    "prohibits_commercial_use": false,
+    "prohibits_tpms": false,
+    "prohibits_tpms_unless_parallel": false
+  },
+  "obligations": {
+    "obligation_notice": false,
+    "obligation_modifiable_form": false,
+    "obligation_attribution_flexible": false,
+    "obligation_attribution_specific": false,
+    "obligation_attribution_specific_details": "",
+    "obligation_copyleft": false
+  },
+  "copyleft": {},
+  "sublicensing": {
+    "sublicense_any": true,
+    "sublicense_future_versions": false,
+    "sublicense_other": ""
+  },
+  "termination": {
+    "termination_automatic": false,
+    "termination_discretionary": false,
+    "termination_reinstatement": false
+  },
+  "license_changes": {
+    "license_changes_effective_immediately": false
+  },
+  "disclaimers": {
+    "disclaimer_warranty": true,
+    "disclaimer_liability": true,
+    "disclaimer_indemnity": false,
+    "warranty_noninfringement": false
+  },
+  "conflict_of_laws": {
+    "law_of": "forum",
+    "forum_of": "unspecified"
+  }
+}

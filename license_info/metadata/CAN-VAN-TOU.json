@@ -1,0 +1,65 @@
+{
+  "id": "CAN-VAN-TOU",
+  "title": "Vancouver Open Data Catalogue Terms of Use",
+  "url": "http://vancouver.ca/your-government/terms-of-use.aspx",
+  "maintainer": "City of Vancouver",
+  "domain_content": false,
+  "domain_data": true,
+  "domain_software": false,
+  "is_okd_compliant": false,
+  "is_osi_compliant": false,
+  "is_dfcw_compliant": false,
+  "status": "active",
+  "rights": {
+    "right_to_use_and_reproduce": true,
+    "right_to_modify": true,
+    "right_to_distribute": true,
+    "covers_copyright": true,
+    "covers_neighbouring_rights": false,
+    "covers_sgdrs": false,
+    "covers_moral_rights": false,
+    "covers_trademarks": false,
+    "covers_patents": false,
+    "covers_circumventions": false,
+    "prohibits_commercial_use": false,
+    "prohibits_tpms": false,
+    "prohibits_tpms_unless_parallel": false
+  },
+  "obligations": {
+    "obligation_notice": true,
+    "obligation_modifiable_form": false,
+    "obligation_attribution_flexible": false,
+    "obligation_attribution_specific": false,
+    "obligation_attribution_specific_details": "",
+    "obligation_copyleft": true
+  },
+  "copyleft": {
+    "copyleft_on": "derivatives",
+    "copyleft_engages_on": "affero"
+  },
+  "sublicensing": {
+    "sublicense_any": false,
+    "sublicense_future_versions": false,
+    "sublicense_other": "",
+    "copyleft_compatible_with_future_versions": false,
+    "copyleft_compatible_with_other": ""
+  },
+  "termination": {
+    "termination_automatic": false,
+    "termination_discretionary": true,
+    "termination_reinstatement": false
+  },
+  "license_changes": {
+    "license_changes_effective_immediately": true
+  },
+  "disclaimers": {
+    "disclaimer_warranty": true,
+    "disclaimer_liability": true,
+    "disclaimer_indemnity": true,
+    "warranty_noninfringement": false
+  },
+  "conflict_of_laws": {
+    "law_of": "specific",
+    "forum_of": "specific"
+  }
+}

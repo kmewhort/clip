@@ -1,0 +1,21 @@
+{
+    "categories": {
+        "freedom": 1.0,
+        "legal_risk": 1.0,
+        "business_risk": 1.0
+    },
+    "license_components": {
+        "core_rights": 3.0,
+        "commercial_use": 1.0,
+        "attribution": 1.0,
+        
+        "choice_of_forum": 0.75,
+        "choice_of_law": 0.75,
+        "warranty": 0.75,
+        "disclaimer": 0.75,
+        "indemnity": 2.0,
+        
+        "unilateral_changes": 2.0,
+        "termination": 3.0
+    }
+}

@@ -1,0 +1,352 @@
+<?php
+/* This PHP script is a template for the license info page */
+require_once('data.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>CLIP</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="author" content="cippic42" />
+<meta name="description" content="CIPPIC Licence Information Project" />
+<meta name="keywords" content="open licensing,open data,open source software,free software,software licenses,data licenses" />
+<meta name="robots" content="index, follow" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+</head>
+
+<body>
+
+<!-- wrap starts here -->
+<div id="wrap">
+
+	<!--header -->
+	<div id="header">			
+				
+		<h1 id="logo-text"><a href="index.html" title="">CLIP</a></h1>		
+		<p id="slogan">CIPPIC Licensing Information Project</p>	
+		
+		<div  id="nav">
+			<ul>
+				<li class="first" id="current"><a href="index.html">License Info</a></li>
+				<li><a href="text.html">License Text</a></li>
+				<li><a href="text.html">Benchmarks</a></li>
+				<li><a href="metadata.html">Metadata</a></li>
+			</ul>		
+		</div>	
+		
+		
+						
+	<!--header ends-->					
+	</div>
+	
+	<!-- featured starts -->	
+	<div id="featured" class="clear">				
+				
+			<a name="TemplateInfo"></a>
+			
+			<div class="image-block">
+              <img src="<?php print $logo; ?>" alt="featured"/>
+              <div class="approvals">
+                 <span class="approval <?php print $metadata->is_okd_compliant ? 'approved' : 'not-approved'; ?>"><img src="images/<?php print $metadata->is_okd_compliant ? 'okfn_approved' : 'okfn_not_approved'; ?>.png"></img></span>
+                 <span class="approval <?php print $metadata->is_osi_compliant ? 'approved' : 'not-approved'; ?>"><img src="images/<?php print $metadata->is_osi_compliant ? 'osi_approved' : 'osi_not_approved'; ?>.png"></img></span>
+                 <span class="approval <?php print $metadata->is_dfcw_compliant ? 'approved' : 'not-approved'; ?>"><img src="images/<?php print $metadata->is_dfcw_compliant ?  'dfcw_approved' : 'dfcw_not_approved'; ?>.png"></img></span>
+              </div>
+         </div>			
+			
+			<div class="text-block">
+			
+				<h2><a href="index.html"><?php print $metadata->title; ?></a></h2>
+            <p class="post-info">CLIP/SPDX License ID: <span class="highlight"><?php print $metadata->id; ?></span></p>
+			
+            <p>This license is </strong> maintained by <strong><?php print $metadata->maintainer; ?></strong> for use with <strong><?php print $metadata->domain_list; ?></strong>.
+            </p>
+            <table>
+              <tr>
+                <th colspan="4"><strong>Benchmark Summary (<a href="">details</a>)</strong></th>
+              </tr>
+              <tr>
+                <td><strong>Overall score:</strong></td>
+                <td><strong><?php print $scoredata->overall_score; ?> / 15</strong></td>
+                <td>Legal risk minimization:</td>
+                <td><?php print $scoredata->legal_risk_score; ?> / 5</td>
+              </tr>
+              <tr>
+                <td>Rights granted:</td>
+                <td><?php print $scoredata->freedom_score; ?> / 5</td>
+                <td>Business risk minimization:</td>
+                <td><?php print $scoredata->business_risk_score; ?> / 15</td>
+              </tr>
+            </table>
+								
+			</div>
+	
+	<!-- featured ends -->
+	</div>	
+	
+	<!-- content -->
+	<div id="content-outer" class="clear"><div id="content-wrap">
+	
+		<div id="content">
+		
+			<div id="left">			
+			
+				<div class="entry">
+				
+					<h3><a href="#" name="rights">Rights and Permissions</a></h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+					odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
+					condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
+					In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. 				
+					</p>
+								
+					<p><a class="more-link" href="index.html">continue reading</a></p>
+				
+				</div>
+				
+				<div class="entry">
+						
+					<h3><a href="#" name="obligations">Obligations</a></h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+					odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
+					condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
+					In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. 				
+					</p>
+				
+					<p><a class="more-link" href="index.html">continue reading</a></p>
+				
+				</div>
+				
+				<div class="entry">
+			
+					<h3><a href="#" name="copyleft">Share-alike / Copyleft</a></h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+					odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
+					condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
+					In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. 				
+					</p>
+				
+					<p><a class="more-link" href="index.html">continue reading</a></p>
+			
+				</div>
+				
+				<div class="entry">
+			
+					<h3><a href="#" name="compatibility">Compatibility</a></h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+					odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
+					condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
+					In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. 				
+					</p>
+				
+					<p><a class="more-link" href="index.html">continue reading</a></p>
+			
+				</div>
+				
+				<div class="entry">
+			
+					<h3><a href="#" name="versioning">License versioning</a></h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+					odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
+					condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
+					In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. 				
+					</p>
+				
+					<p><a class="more-link" href="index.html">continue reading</a></p>
+			
+				</div>
+				
+				<div class="entry">
+			
+					<h3><a href="#" name="disclaimers">Disclaimers</a></h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+					odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
+					condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
+					In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. 				
+					</p>
+				
+					<p><a class="more-link" href="index.html">continue reading</a></p>
+			
+				</div>
+				
+				<div class="entry">
+			
+					<h3><a href="#" name="choice_of_law">Choice of Law and Forum</a></h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+					odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
+					condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
+					In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+					Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+					posuere nunc justo tempus leo. 				
+					</p>
+				
+					<p><a class="more-link" href="index.html">continue reading</a></p>
+			
+				</div>
+				
+			</div>
+		
+			<div id="right">
+							
+				<div class="sidemenu">	
+					<h3>Go to</h3>
+					<ul>				
+						<li><a href="#rights">Rights and Permissions</a></li>
+						<li><a href="#obligations">Obligations</a></li>
+						<li><a href="#copyleft">Share-alike / Copyleft</a></li>
+						<li><a href="#compatibilityl">Compatibility</a></li>
+						<li><a href="#versioning">License Versioning</a></li>
+						<li><a href="#disclaimers">Disclaimers</a></li>
+						<li><a href="#choice_of_law">Choice of Law and Forum</a></li>
+					</ul>	
+				</div>
+				
+				<h3>Search</h3>
+			
+				<form id="quick-search" action="index.html" method="get" >
+					<p>
+					<label for="qsearch">Search:</label>
+					<input class="tbox" id="qsearch" type="text" name="qsearch" value="type and hit enter..." title="Start typing and hit ENTER" />
+					<input class="btn" alt="Search" type="image" name="searchsubmit" title="Search" src="images/search.gif" />
+					</p>
+				</form>	
+					
+			</div>		
+		
+		</div>	
+			
+	<!-- content end -->	
+	</div></div>
+		
+	<!-- footer starts here -->	
+	<div id="footer-outer" class="clear"><div id="footer-wrap">
+	
+		<div class="col-a">
+		
+			<h3>Image Gallery </h3>					
+				
+			<p class="thumbs">
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>	
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>				
+			</p>	
+			
+			<h3>Lorem ipsum dolor</h3>
+			
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+			Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+			posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+			odio, ac blandit ante orci ut diam. Cras fringilla magna.  
+		   </p>			
+				
+		</div>
+		
+		<div class="col-a">
+		
+			<h3>Lorem Ipsum</h3>
+			
+			<p>
+			<strong>Lorem ipsum dolor</strong> <br />
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+			Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+			posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+			odio, ac blandit ante orci ut diam.</p>
+				
+			<div class="footer-list">
+				<ul>				
+					<li><a href="index.html">consequat molestie</a></li>
+					<li><a href="index.html">sem justo</a></li>
+					<li><a href="index.html">semper</a></li>
+					<li><a href="index.html">magna sed purus</a></li>
+					<li><a href="index.html">tincidunt</a></li>		
+					<li><a href="index.html">consequat molestie</a></li>		
+					<li><a href="index.html">magna sed purus</a></li>					
+				</ul>
+			</div>
+				
+		</div>		
+	
+		<div class="col-b">
+		
+			<h3>About</h3>			
+			
+			<p>
+			<a href="index.html"><img src="images/gravatar.jpg" width="40" height="40" alt="firefox" class="float-left" /></a>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+			Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+			posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+			odio, ac blandit ante orci ut diam.</p>
+			
+			<p>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+			Cras id urna. <a href="index.html">Learn more...</a></p>			
+			
+		</div>		
+	
+	<!-- footer ends -->		
+	</div></div>
+	
+	<!-- footer-bottom starts -->		
+	<div id="footer-bottom">
+		<div class="bottom-left">
+			<p>
+			&copy; 2011 <strong>Your Copyright Info Here</strong>&nbsp; &nbsp; &nbsp;
+			Design by <a href="http://www.styleshout.com/">styleshout</a>
+			</p>
+		</div>
+	
+		<div class="bottom-right">
+			<p>		
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | 
+		   	<a href="http://validator.w3.org/check/referer">XHTML</a>	|			
+				<a href="index.html">Home</a> |
+				<a href="index.html">Sitemap</a> |
+				<a href="index.html">RSS Feed</a>								
+			</p>
+		</div>
+	<!-- footer-bottom ends -->		
+	</div>
+	
+<!-- wrap ends here -->
+</div>
+
+</body>
+</html>
