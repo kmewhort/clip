@@ -14,7 +14,7 @@ function load_json($dir, $base_filename, $ext){
 // load a text file
 function load_text($dir, $base_filename, $ext){
   // security validation on the filename
-  if(preg_match('/[^A-Za-z0-9\-\_\.]/', $base_filename))
+  if(preg_match('/[^A-Za-z0-9\-\_\.\+]/', $base_filename))
     return false;
     
   // check that the file exists
@@ -33,7 +33,7 @@ function load_text($dir, $base_filename, $ext){
 // load a logo
 function load_logo($dir, $base_filename, $cache_dir, $overwrite_cache = false){
   // security validation on the filename
-  if(preg_match('/[^A-Za-z0-9\-\_\.]/', $base_filename))
+  if(preg_match('/[^A-Za-z0-9\-\_\.\+]/', $base_filename))
     return false;
 
   // check if a processed logo is already cached
@@ -65,7 +65,7 @@ function load_logo($dir, $base_filename, $cache_dir, $overwrite_cache = false){
 // load a score file in Google Charts format
 function load_scores($dir, $base_filename, $cache_dir, $overwrite_cache = true){
   // security validation on the filename
-  if(preg_match('/[^A-Za-z0-9\-\_\.]/', $base_filename))
+  if(preg_match('/[^A-Za-z0-9\-\_\.\+]/', $base_filename))
     return false;
 
   // check if a processed score file is already cached
@@ -103,7 +103,7 @@ function load_benchmarks($licenses, $base_filename, $cache_dir, $overwrite_cache
   global $LICENSE_SCORE_DIR, $LICENSE_DATA_DIR;
 	
   // security validation on the filename
-  if(preg_match('/[^A-Za-z0-9\-\_\.]/', $base_filename))
+  if(preg_match('/[^A-Za-z0-9\-\_\.\+]/', $base_filename))
     return false;
 
   // check if a processed benchmark file is already cached
@@ -122,14 +122,14 @@ function load_benchmarks($licenses, $base_filename, $cache_dir, $overwrite_cache
   	 $precursor = ($groupId == -1) ? 'all-' : "$groupId-";
   	 
     // setup the data columns in google format
-    $data->cols[] = (object) array('id' => $precursor . 'overall_score', 'label' => 'Overall', 'type' => 'number');
-    $data->cols[] = (object) array('id' => $precursor . 'overall_rank', 'label' => 'Overall Rank', 'type' => 'number');
-    $data->cols[] = (object) array('id' => $precursor . 'freedom_score', 'label' => 'Rights Granted', 'type' => 'number');
-    $data->cols[] = (object) array('id' => $precursor . 'freedom_rank', 'label' => 'Rights Granted Rank', 'type' => 'number');
-    $data->cols[] = (object) array('id' => $precursor . 'legal_risk_score', 'label' => 'Legal Risk', 'type' => 'number');
-    $data->cols[] = (object) array('id' => $precursor . 'legal_risk_rank', 'label' => 'Legal Risk Rank', 'type' => 'number');
-    $data->cols[] = (object) array('id' => $precursor . 'business_risk_score', 'label' => 'Business Risk', 'type' => 'number');
-    $data->cols[] = (object) array('id' => $precursor . 'business_risk_rank', 'label' => 'Business Risk Rank', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'openness_score', 'label' => 'Overall Openness', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'openness_rank', 'label' => 'Openness Rank', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'user_freedom_score', 'label' => 'Rights Granted', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'user_freedom_rank', 'label' => 'Rights Granted Rank', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'user_legal_risk_score', 'label' => 'Legal Risk', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'user_legal_risk_rank', 'label' => 'Legal Risk Rank', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'user_business_risk_score', 'label' => 'Business Risk', 'type' => 'number');
+    $data->cols[] = (object) array('id' => $precursor . 'user_business_risk_rank', 'label' => 'Business Risk Rank', 'type' => 'number');
   }
 
   // setup the rows for each group of licenses  

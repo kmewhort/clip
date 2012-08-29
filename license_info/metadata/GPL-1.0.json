@@ -9,7 +9,7 @@
   "is_okd_compliant": false,
   "is_osi_compliant": false,
   "is_dfcw_compliant": false,
-  "status": "active",
+  "status": "inactive",
   "rights": {
     "right_to_use_and_reproduce": true,
     "right_to_modify": true,

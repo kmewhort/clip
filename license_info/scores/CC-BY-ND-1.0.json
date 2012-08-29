@@ -1,10 +1,12 @@
 {
-    "business_risk_rank": 11,
-    "business_risk_score": "3.0",
-    "freedom_rank": 33,
-    "freedom_score": "3.3",
-    "legal_risk_rank": 25,
-    "legal_risk_score": "2.8",
-    "overall_rank": 29,
-    "overall_score": "9.1"
+    "licensor_legal_risk_rank": 18,
+    "licensor_legal_risk_score": "0.1",
+    "openness_rank": 51,
+    "openness_score": "9.1",
+    "user_business_risk_rank": 23,
+    "user_business_risk_score": "3.0",
+    "user_freedom_rank": 55,
+    "user_freedom_score": "3.3",
+    "user_legal_risk_rank": 47,
+    "user_legal_risk_score": "2.8"
 }

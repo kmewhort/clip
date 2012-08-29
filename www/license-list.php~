@@ -80,7 +80,8 @@
 		// for each license in the list
 		foreach($list as $metadata){
          // write out the title and a link to the license
-         print "<li><span class='ltitle'><a href='license-info.php?id=" . $metadata->id . "'>" .
+         print "<li><span class='ltitle'><a href='license-info.php?rc=" . $_GET['cat']
+           . "&id=" . urlencode($metadata->id) . "'>" .
          $metadata->title . "</a></span> " .
            "[<span class='lid'>" . $metadata->id . "</span>]<br />" .
            "<span class='lmaint'>" . $metadata->maintainer . "</span></li>";

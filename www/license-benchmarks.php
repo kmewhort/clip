@@ -25,35 +25,36 @@
    <?php include('license-header.inc'); ?>
    
 	<!-- featured starts -->	
-	<div id="featured" class="clear">
+	<div id="featured" class="clear benchmark-featured">
 		<?php
 		  // load the scores in Google Charts format
 		  $score_filename = load_scores($LICENSE_SCORE_DIR, $_GET['id'], $LICENSE_SCORE_CACHE_DIR);
      	  if(empty($score_filename)){
-           print "Error: unknown license id.\n";
+           print "222Error: unknown license id.\n";
            exit(1);
         }	
       ?>
+      <h2>Openness</h2>
       <div id="benchmark-feature-text">
-	     <p>This license achieves an overall openness benchmark of <strong><?php print $scoredata->overall_score; ?></strong>.  This ranks it <strong><?php print get_ordinal($scoredata->overall_rank); ?></strong> out of all licenses in our database.</p>
+	     <p>This license achieves an overall openness benchmark of <strong><?php print $scoredata->openness_score; ?></strong>.  This ranks it <strong><?php print get_ordinal($scoredata->openness_rank); ?></strong> out of all licenses in our database.</p>
 	     <p>This score reflects the license's ability to provide the user/licensee with a flexible and friendly license, based on (1) the <strong>rights and freedoms</strong> granted, (2) the <strong>legal risks</strong> posed, and (3) the <strong>business risks</strong> posed.</p>
 	   </div>	
 		<div id="benchmark-gauges" class="benchmark-gauges" data-file="<?php print $score_filename; ?>">
 		  <span class="gauge-wrapper">
 		    <span class="gauge-label-short">Overall</span>
-		    <span class="benchmark-gauge" data-col="overall_score" data-yellow="8.5" data-green="12" data-max="15"></span>
+		    <span class="benchmark-gauge" data-col="openness_score" data-yellow="8.5" data-green="12" data-max="15"></span>
 		  </span>
 		  <span class="gauge-wrapper">
 		    <span class="gauge-label-short">Rights Granted</span>
-		    <span class="benchmark-gauge" data-col="freedom_score" data-yellow="3" data-green="4" data-max="5"></span>
+		    <span class="benchmark-gauge" data-col="user_freedom_score" data-yellow="3" data-green="4" data-max="5"></span>
 		  </span>
 		  <span class="gauge-wrapper">
 		    <span class="gauge-label">Legal Risk<br />Mitigation</span>
-		    <span class="benchmark-gauge" data-col="legal_risk_score" data-yellow="3" data-green="4" data-max="5"></span>
+		    <span class="benchmark-gauge" data-col="user_legal_risk_score" data-yellow="3" data-green="4" data-max="5"></span>
 		  </span>
 		  <span class="gauge-wrapper">
 		    <span class="gauge-label">Business Risk<br />Mitigation</span>
-		    <span class="benchmark-gauge" data-col="business_risk_score" data-yellow="3" data-green="4" data-max="5"></span>
+		    <span class="benchmark-gauge" data-col="user_business_risk_score" data-yellow="3" data-green="4" data-max="5"></span>
 		  </span>
 		</div>
 		

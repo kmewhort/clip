@@ -11,8 +11,7 @@
 	<!--header (custom header/navbar for license list)-->
 	<div id="header">			
 				
-		<h1 id="logo-text"><a href="index.html" title="">CLIP</a></h1>		
-		<p id="slogan">CIPPIC Licensing Information Project</p>	
+		<?php include('logo.inc'); ?>
 		<?php include('breadcrumbs.inc'); ?>
 		<div  id="nav">
 			<ul>
@@ -81,7 +80,7 @@
 		foreach($list as $metadata){
          // write out the title and a link to the license
          print "<li><span class='ltitle'><a href='license-info.php?rc=" . $_GET['cat']
-           . "&id=" . $metadata->id . "'>" .
+           . "&id=" . urlencode($metadata->id) . "'>" .
          $metadata->title . "</a></span> " .
            "[<span class='lid'>" . $metadata->id . "</span>]<br />" .
            "<span class='lmaint'>" . $metadata->maintainer . "</span></li>";

@@ -65,15 +65,15 @@
               </tr>
               <tr>
                 <td><strong>Openness score:</strong></td>
-                <td><strong><?php print $scoredata->overall_score; ?> / 15</strong></td>
+                <td><strong><?php print $scoredata->openness_score; ?> / 15</strong></td>
                 <td>User legal risk mitigation:</td>
-                <td><?php print $scoredata->legal_risk_score; ?> / 5.0</td>
+                <td><?php print $scoredata->user_legal_risk_score; ?> / 5.0</td>
               </tr>
               <tr>
                 <td>Rights granted:</td>
-                <td><?php print $scoredata->freedom_score; ?> / 5.0</td>
+                <td><?php print $scoredata->user_freedom_score; ?> / 5.0</td>
                 <td>Business risk mitigation:</td>
-                <td><?php print $scoredata->business_risk_score; ?> / 5.0</td>
+                <td><?php print $scoredata->user_business_risk_score; ?> / 5.0</td>
               </tr>
             </table>
 								
@@ -270,7 +270,7 @@
                </p>
                <?php } ?>
                <?php if($metadata->disclaimers->warranty_noninfringement) { ?>
-               <p>Note that the licensor does include a "<strong>noninfringement warranty</strong>", providing a guaranteeing that he or she owns all of the rights which the license claims to grant.</p>
+               <p>Note that the licensor does include a "<strong>noninfringement warranty</strong>", providing a guarantee that he or she owns all of the rights which the license claims to grant.</p>
                <?php } ?>
 					</p>
 					<p>The license also contains a general <strong>disclaimer of liability</strong>. In most cases, you cannot sue the licensor, even if you suffer injuries or financial harm due to errors, inaccuracies, or faults on the part of the licensor.</p>

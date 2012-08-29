@@ -159,8 +159,8 @@ input, select, textarea {
 	font: 11px 'Lucida Grande', Verdana, Helvetica, sans-serif;
 }
 input:focus, select:focus, textarea:focus {
-	color: #7BA857;
-	background: #EFFAE6;
+/*	color: #7BA857;
+	background: #EFFAE6;*/
 }
 #name, #email, #message, #website {
 	width: 380px;
@@ -839,7 +839,11 @@ a:link, a:visited,
   display: inline-block;
   width: 374px;
 }
-
+#featured.benchmark-featured h2 {
+	font-size: 27px;
+	letter-spacing: -1px;
+	
+}
 /* benchmark chart */
 .benchmark-chart{
   border: 1px solid #DFDFDF;
@@ -864,4 +868,103 @@ a:link, a:visited,
 	padding-top: 0;
 }
 
+/* tweaks to license text listing */
+.license-text #license-text-wrap {
+	padding: 0px 22px;
+}
+.license-text p,
+.license-text h1,
+.license-text h2,
+.license-text h3,
+.license-text h4{
+	margin: 10px 0;
+}
+.license-text var{
+	font-style: italic;
+}
 
+
+/* front page search */
+#search{
+	margin-bottom: 90px;
+}
+#search-title {
+    background: url("../images/search.gif") no-repeat scroll 4px 8px #FFFFFF;
+    padding-left: 20px;
+    text-align: left;
+    width: 250px;
+    display: inline-block;
+}
+#search-title h3{
+  margin-top: 0;
+  padding-top: 0;
+}
+#search,
+.ui-widget{
+	text-align: center;
+	
+}
+.ui-combobox {
+		position: relative;
+		display: inline-block;
+}
+.ui-combobox-toggle {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin-left: -1px;
+		padding: 0;
+		/* adjust styles for IE 6/7 */
+		*height: 1.7em;
+		*top: 0.1em;
+}
+.ui-combobox-input {
+		margin: 0;
+		padding: 0.3em;
+		width: 500px;
+		text-align: left;
+}
+.ui-menu .ui-menu-item a {
+	text-align: left;
+}
+
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text{
+    padding: 0.86em 0.4em;
+    vertical-align: top;
+}
+
+.ui-autocomplete {
+		max-height: 250px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 20px;
+}
+/* IE 6 doesn't support max-height
+ */
+* html .ui-autocomplete {
+		height: 250px;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("ui-lightness/images/ui-icons_228ef1_256x240.png");
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #aaa;
+	background: #FFF url('ui-lightness/images/images/ui-bg_glass_100_f6f6f6_1x400.png') 50% 50% repeat-x;
+	font-weight: bold;
+	color: #1075F9;
+}
+.ui-combobox-toggle{
+	margin-left: -29px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	color: #333;
+}
+
+/* Temporarily disabled until implemented */
+.more-link{
+	display: none;
+}

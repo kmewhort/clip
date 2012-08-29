@@ -57,7 +57,7 @@
 		  // always add a home link
 		  $breadcrumbs[] = array(
           	  'title' => 'Home',
-          	  'url' => '/',
+          	  'url' => 'index.php',
           	);
           	
         $breadcrumbs[0]['class'] = 'last';

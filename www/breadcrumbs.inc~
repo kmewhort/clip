@@ -38,21 +38,21 @@
 		      'title' => $_GET['id'],
 		      'url' => 'license-info.php?id=' . $_GET['id'],
 		    );
-		    
-		    // if there's a category (referring list page or actual), add this to the breadcrumbs
-		    $cat = null;
-		    if(isset($_GET['cat']))
-		      $cat = $_GET['cat'];
-		    else if(isset($_GET['rc']))
-		      $cat = $_GET['rc'];
-		      
-		    if($cat){
-		      $breadcrumbs[] = array(
-		       'title' => ucfirst($cat) . ' licenses',
-		       'url' => 'license-list.php?cat=' . $cat,
-		      );
-          }
 		  }
+		  
+		  // if there's a category (referring list page or actual), add this to the breadcrumbs
+		  $cat = null;
+		  if(isset($_GET['cat']))
+		    $cat = $_GET['cat'];
+		  else if(isset($_GET['rc']))
+		    $cat = $_GET['rc'];
+		      
+		  if($cat){
+		    $breadcrumbs[] = array(
+		     'title' => ucfirst($cat) . ' licenses',
+		     'url' => 'license-list.php?cat=' . $cat,
+		    );
+        }
 		  
 		  // always add a home link
 		  $breadcrumbs[] = array(

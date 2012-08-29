@@ -65,15 +65,15 @@
               </tr>
               <tr>
                 <td><strong>Openness score:</strong></td>
-                <td><strong><?php print $scoredata->overall_score; ?> / 15</strong></td>
+                <td><strong><?php print $scoredata->openness_score; ?> / 15</strong></td>
                 <td>User legal risk mitigation:</td>
-                <td><?php print $scoredata->legal_risk_score; ?> / 5.0</td>
+                <td><?php print $scoredata->user_legal_risk_score; ?> / 5.0</td>
               </tr>
               <tr>
                 <td>Rights granted:</td>
-                <td><?php print $scoredata->freedom_score; ?> / 5.0</td>
+                <td><?php print $scoredata->user_freedom_score; ?> / 5.0</td>
                 <td>Business risk mitigation:</td>
-                <td><?php print $scoredata->business_risk_score; ?> / 5.0</td>
+                <td><?php print $scoredata->user_business_risk_score; ?> / 5.0</td>
               </tr>
             </table>
 								
@@ -346,16 +346,6 @@
 						<li><a href="#choice_of_law">Choice of Law and Forum</a></li>
 					</ul>	
 				</div>
-				
-				<h3>Search</h3>
-			
-				<form id="quick-search" action="index.html" method="get" >
-					<p>
-					<label for="qsearch">Search:</label>
-					<input class="tbox" id="qsearch" type="text" name="qsearch" value="type and hit enter..." title="Start typing and hit ENTER" />
-					<input class="btn" alt="Search" type="image" name="searchsubmit" title="Search" src="images/search.gif" />
-					</p>
-				</form>	
 					
 			</div>		
 		

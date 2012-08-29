@@ -16,21 +16,24 @@ foreach(list_licenses() as $id){
 	$metadata = get_license_metadata($id);
 	
 	// calculate the rating for each category
-	$ratings[$id]['freedom_score'] = rate_freedom($metadata, $weights->license_components);
-	$ratings[$id]['legal_risk_score'] = rate_legal_risk($metadata, $weights->license_components);
-	$ratings[$id]['business_risk_score'] = rate_business_risk($metadata, $weights->license_components);
+	$ratings[$id]['user_freedom_score'] = rate_freedom($metadata, $weights->license_components);
+	$ratings[$id]['user_legal_risk_score'] = rate_user_legal_risk($metadata, $weights->license_components);
+	$ratings[$id]['licensor_legal_risk_score'] = rate_licensor_legal_risk($metadata, $weights->license_components);
+	$ratings[$id]['user_business_risk_score'] = rate_business_risk($metadata, $weights->license_components);
 	
-	// calculate the overall rating
-	$ratings[$id]['overall_score'] =
-	  $ratings[$id]['freedom_score'] * $weights->categories->freedom +
-	  $ratings[$id]['legal_risk_score'] * $weights->categories->legal_risk +
-	  $ratings[$id]['business_risk_score'] * $weights->categories->business_risk;
+	// low legal risk for the user means the risk is shifted 
+	
+	// calculate the overall openness rating
+	$ratings[$id]['openness_score'] =
+	  $ratings[$id]['user_freedom_score'] * $weights->categories->freedom +
+	  $ratings[$id]['user_legal_risk_score'] * $weights->categories->legal_risk +
+	  $ratings[$id]['user_business_risk_score'] * $weights->categories->business_risk;
 	  
-	print 'Overall score = ' . $ratings[$id]['overall_score'] . "\n";
+	print 'Overall score = ' . $ratings[$id]['openness_score'] . "\n";
 }
 
 // calculate ranking for each type of score
-foreach(array('freedom', 'legal_risk', 'business_risk', 'overall') as $score_type){
+foreach(array('user_freedom', 'user_legal_risk', 'licensor_legal_risk', 'user_business_risk', 'openness') as $score_type){
 	
 	// get a list of the scores for this score type
 	$scores = array();
@@ -66,8 +69,8 @@ foreach($ratings as $id => $val){
     fclose($fh);
 }
 
-// assigns a score of the legal risk associated with a license (high score = low risk to the user)
-function rate_legal_risk($license_data, $weights){
+// assigns a score of the legal risk to the user associated with a license (high score = low risk to the user)
+function rate_user_legal_risk($license_data, $weights){
 
   // Choice of forum affects legal risks because of the increased legal costs of defending against a lawsuit in a foreign jurisdiction
   // -A forum selection clause (FSC) for the jurisdiction of the defendant generally introduces the lowest cost for the defendant, deterring lawsuits and legal risk
@@ -138,6 +141,21 @@ function rate_legal_risk($license_data, $weights){
     $disclaimer_score * $weights->disclaimer +
     $indemnity_score * $weights->indemnity;
 }
+
+// assigns a score of the legal risk to the licensor associated with a license 
+function rate_licensor_legal_risk($license_data, $weights){
+  // total weight for the legal risk factors
+  $weight = $weights->choice_of_forum +
+    $weights->choice_of_law +
+    $weights->warranty +
+    $weights->disclaimer +
+    $weights->indemnity;
+    
+  // the legal risk to the licensor is the inverse of the risk to the user
+  return (1 - (rate_user_legal_risk($license_data, $weights) / $weight)) / $weight;
+  
+}
+
 
 // assigns a score of the business risk associated with a license (high score = low risk to the user)
 function rate_business_risk($license_data, $weights){

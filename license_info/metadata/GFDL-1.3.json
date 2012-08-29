@@ -6,9 +6,9 @@
   "domain_content": true,
   "domain_data": false,
   "domain_software": false,
-  "is_okd_compliant": false,
+  "is_okd_compliant": true,
   "is_osi_compliant": false,
-  "is_dfcw_compliant": false,
+  "is_dfcw_compliant": true,
   "status": "active",
   "rights": {
     "right_to_use_and_reproduce": true,

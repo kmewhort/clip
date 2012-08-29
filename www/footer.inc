@@ -47,7 +47,7 @@
 			
 			<p><a href="http://www.cippic.ca"><img src="images/cippic-small.png" class="float-left" /></a>
 			The CIPPIC Open Licensing Project (CLIP) is an initiative of the <a href="http://www.cippic.ca">Samuelson-Glushko Canadian Internet Policy and Public
-			Interest Clinic</a>, a public interest technology law clinic at the Faculty of Law, Common Law Section, at the University of Ottawa</p><br />
+			Interest Clinic</a>, a public interest technology law clinic at the Faculty of Law, Common Law Section, University of Ottawa.<br />This is a <em>beta</em> version of the project. The information may contain errors.  We will also be adding additional licenses and new features in the future!</p>
 			
 			<p><a href="http://geoconnections.nrcan.gc.ca/"><img src="images/geoconnections-small.png" class="float-left" /></a>
 			Financial support for the project provided by <a href="http://geoconnections.nrcan.gc.ca/">GeoConnections</a>, a national collaborative initiative
@@ -65,17 +65,9 @@
 		<div class="bottom-left">
 			<p>
 			&copy; 2012 <strong><a href="http://www.cippic.ca">CIPPIC</a></strong>&nbsp; &nbsp; &nbsp;
-			Design by <a href="http://www.cippic.ca">CIPPIC</a> and <a href="http://www.styleshout.com/">styleshout</a>
+			Design by <a href="http://www.cippic.ca">CIPPIC</a> and <a href="http://www.styleshout.com/">styleshout</a>.
 			</p>
 		</div>
-	
-		<div class="bottom-right">
-			<p>		
-				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | 
-		   	<a href="http://validator.w3.org/check/referer">XHTML</a>	|			
-				<a href="index.html">Home</a> |
-				<a href="index.html">Sitemap</a> |						
-			</p>
-		</div>
+
 	<!-- footer-bottom ends -->		
 	</div>
