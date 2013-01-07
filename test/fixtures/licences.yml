@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: MyString
+  title: MyString
+  url: MyString
+  maintainer: MyString
+  domain_content: false
+  domain_data: false
+  domain_software: false
+
+two:
+  id: MyString
+  title: MyString
+  url: MyString
+  maintainer: MyString
+  domain_content: false
+  domain_data: false
+  domain_software: false

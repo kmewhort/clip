@@ -1,0 +1,21 @@
+<div class="obligations checkbox-group field">
+  <div class="label-wrapper">Obligations</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :obligation_notice %>
+      <%= f.label :obligation_notice, "Must retain the copyright/disclaimer notices" %>
+    </span>
+    <span>
+      <%= f.check_box :obligation_modifiable_form %>
+      <%= f.label :obligation_modifiable_form, "Must provide source code / modifiable form" %>
+    </span>
+    <span>
+      <%= f.check_box :obligation_attribution %>
+      <%= f.label :obligation_attribution, "Must provide attribution" %>
+    </span>
+    <span>
+      <%= f.check_box :obligation_copyleft %>
+      <%= f.label :obligation_copyleft, "Copyleft / share-alike" %>
+    </span>
+  </div>
+</div>

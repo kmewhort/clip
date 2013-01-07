@@ -1,0 +1,54 @@
+<div class="law-of radio-group field">
+  <div class="label-wrapper">Choice of law:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.radio_button :law_of, "unspecified" %>
+      <%= f.label :law_of, "Unspecified", value: "unspecified" %>
+    </span>
+    <span>
+      <%= f.radio_button :law_of, "licensor" %>
+      <%= f.label :law_of, "Law of licensor's jurisdiction", value: "licensor" %>
+    </span>
+    <span>
+      <%= f.radio_button :law_of, "plaintiff" %>
+      <%= f.label :law_of, "Law of plaintiff's jurisdiction", value: "plaintiff" %>
+    </span>
+    <span>
+      <%= f.radio_button :law_of, "defendant" %>
+      <%= f.label :law_of, "Law of defendant's jurisdiction", value: "defendant" %>
+    </span>
+    <span>
+      <%= f.radio_button :law_of, "forum" %>
+      <%= f.label :law_of, "Law of the forum", value: "forum" %>
+    </span>
+    <span>
+      <%= f.radio_button :law_of, "specific" %>
+      <%= f.label :law_of, "Specifically-named jurisdiction", value: "specific" %>
+    </span>
+  </div>
+</div>
+<div class="forum-of radio-group field">
+  <div class="label-wrapper">Forum selection clause:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.radio_button :forum_of, "unspecified" %>
+      <%= f.label :forum_of, "Unspecified", value: "unspecified" %>
+    </span>
+    <span>
+      <%= f.radio_button :forum_of, "licensor" %>
+      <%= f.label :forum_of, "Jurisdiction of the licensor", value: "licensor" %>
+    </span>
+    <span>
+      <%= f.radio_button :forum_of, "plaintiff" %>
+      <%= f.label :forum_of, "Jurisdiction of the plaintiff", value: "plaintiff" %>
+    </span>
+    <span>
+      <%= f.radio_button :forum_of, "defendant" %>
+      <%= f.label :forum_of, "Jurisdiction of the defendant", value: "defendant" %>
+    </span>
+    <span>
+      <%= f.radio_button :forum_of, "specific" %>
+      <%= f.label :forum_of, "Specifically-named jurisdiction", value: "specific" %>
+    </span>
+  </div>
+</div>

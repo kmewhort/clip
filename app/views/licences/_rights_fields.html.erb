@@ -1,0 +1,73 @@
+<div class="rights-granted checkbox-group field">
+  <div class="label-wrapper">Rights Granted</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :right_to_use_and_reproduce %>
+      <%= f.label :right_to_use_and_reproduce, "Use and Reproduce" %>
+    </span>
+    <span>
+      <%= f.check_box :right_to_modify %>
+      <%= f.label :right_to_modify, "Modify" %>
+    </span>
+    <span>
+      <%= f.check_box :right_to_distribute %>
+      <%= f.label :right_to_distribute, "Distribute" %>
+    </span>
+  </div>
+</div>
+
+<div class="rights-covered checkbox-group field">
+  <div class="label-wrapper">Covered Categories of Rights (whether granted or waived)</div>
+  <div class="input-wrapper">
+    <span>
+        <%= f.check_box :covers_copyright %>
+        <%= f.label :covers_copyright, "Copyright" %>
+    </span>
+    <span>
+      <%= f.check_box :covers_neighbouring_rights %>
+      <%= f.label :covers_neighbouring_rights, "Neighbouring rights" %>
+    </span>
+    <span>
+      <%= f.check_box :covers_sgdrs %>
+      <%= f.label :covers_sgdrs, "Sui generis database rights" %>
+    </span>
+    <span>
+      <%= f.check_box :covers_moral_rights %>
+      <%= f.label :covers_moral_rights, "Moral rights" %>
+    </span>
+    <span>
+      <%= f.check_box :covers_trademarks %>
+      <%= f.label :covers_trademarks, "Trade-marks" %>
+    </span>
+    <span>
+      <%= f.check_box :covers_patents_explicitly %>
+      <%= f.label :covers_patents_explicitly, "Patents (explicitly covered)" %>
+    </span>
+    <span>
+      <%= f.check_box :covers_circumventions %>
+      <%= f.label :covers_circumventions, "Circumvention of TPMs (you are permitted to circumvent)" %>
+    </span>
+  </div>
+</div>
+
+<div class="prohibitions checkbox-group field">
+  <div class="label-wrapper">Prohibitions</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :prohibits_commercial_use %>
+      <%= f.label :prohibits_commercial_use, "Commercial use prohibited" %>
+    </span>
+    <span>
+      <%= f.check_box :prohibits_tpms %>
+      <%= f.label :prohibits_tpms, "TPMs/DRM prohibited" %>
+    </span>
+    <span>
+      <%= f.check_box :prohibits_tpms_unless_parallel %>
+      <%= f.label :prohibits_tpms_unless_parallel, "TPMs/DRM prohibited unless parallel distribution provided" %>
+    </span>
+    <span>
+      <%= f.check_box :prohibits_patent_actions %>
+      <%= f.label :prohibits_patent_actions, "Patent actions prohibited (licence includes patent retaliation clause)" %>
+    </span>
+  </div>
+</div>

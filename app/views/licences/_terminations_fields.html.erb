@@ -1,0 +1,17 @@
+<div class="termination checkbox-group field">
+  <div class="label-wrapper">Terminations of the licence is:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :termination_automatic %>
+      <%= f.label :termination_automatic, "Automatic upon breach of the terms" %>
+    </span>
+    <span>
+      <%= f.check_box :termination_discretionary %>
+      <%= f.label :termination_discretionary, "Available at the licensor's discretion" %>
+    </span>
+    <span>
+      <%= f.check_box :termination_reinstatement %>
+      <%= f.label :termination_reinstatement, "Temporary, with automatic reinstatement when violations cease" %>
+    </span>
+  </div>
+</div>

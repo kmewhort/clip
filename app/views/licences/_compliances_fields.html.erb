@@ -1,0 +1,17 @@
+<div class="compliance checkbox-group field">
+  <div class="label-wrapper">Compliance</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :is_okd_compliant %>
+      <%= f.label :is_okd_compliant, "Open Definition compliant?" %>
+    </span>
+    <span>
+      <%= f.check_box :is_osi_compliant %>
+      <%= f.label :is_osi_compliant, "Open Source Initiative (OSI) compliant?" %>
+    </span>
+    <span>
+      <%= f.check_box :is_dfcw_compliant %>
+      <%= f.label :is_dfcw_compliant, "Definition of Free Cultural Works (DFCW) compliant?" %>
+    </span>
+  </div>
+</div>

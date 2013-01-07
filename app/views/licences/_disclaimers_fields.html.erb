@@ -1,0 +1,27 @@
+<div class="disclaimers checkbox-group field">
+  <div class="label-wrapper">Disclaimers and indemnification</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :disclaimer_warranty %>
+      <%= f.label :disclaimer_warranty, "General disclaimer of warranty (merchantability, fitness, etc.)" %>
+    </span>
+    <span>
+      <%= f.check_box :disclaimer_liability %>
+      <%= f.label :disclaimer_liability, "General disclaimer of liability" %>
+    </span>
+    <span>
+      <%= f.check_box :disclaimer_indemnity %>
+      <%= f.label :disclaimer_indemnity, "Licensee must indemnify licensor (against third party lawsuits)" %>
+    </span>
+  </div>
+</div>
+
+<div class="warranties checkbox-group field">
+  <div class="label-wrapper">Warranties</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :warranty_noninfringement %>
+      <%= f.label :warranty_noninfringement, "Licensor provides a warranty of noninfringement of copyright" %>
+    </span>
+  </div>
+</div>

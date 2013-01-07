@@ -1,0 +1,282 @@
+/*
+ * Original styles ported from the beta-version site
+ */
+
+/* api note */
+/* breadcrumbs (per Veerle Pieters) */
+#crumbs {
+  bottom: 68px;
+  left: 0;
+  margin: 0;
+  padding: 0 0 0 20px;
+  position: absolute;
+  width: 900px;
+}
+#crumbs ul,
+#crumbs li {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+#crumbs ul {
+  height:1.4em;
+  border: 1px solid #dedede;
+}
+#crumbs li {
+  /*border-top:1px solid #dedede;
+     border-bottom:1px solid #dedede;*/
+  float:left;
+  line-height:1.4em;
+  padding-left:.75em;
+  color:#777;
+}
+#crumbs li a {
+  background: image-url('crumbs.gif') no-repeat right center;
+  display:block;
+  padding:0 15px 0 0;
+}
+#crumbs li a:link,
+#crumbs li a:visited {
+  color:#777;
+  text-decoration:none;
+}
+a:link, a:visited,
+#crumbs li a:hover,
+#crumbs li a:focus {
+  color:#dd2c0d;
+}
+#crumbs li.last a{
+  background: none;
+}
+
+/* alignment classes & additional classes*/
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  { text-align: left; }
+.align-right { text-align: right; }
+.no-border { border: none; }
+.no-bg {	background: none; }
+
+/* clearing */
+.clearer { clear: both; }
+.clear {	display:inline-block; }
+.clear:after {
+  display:block;
+  visibility:hidden;
+  clear:both;
+  height:0;
+  content: ".";
+}
+
+/* api note */
+#api-note {
+  background-color: #FFFFE0;
+  border: 1px solid #DCF1FB;
+  color: #666666;
+  margin: 0 10px 8px;
+  padding: 4px 14px;
+}
+
+#api-note ul{
+  margin: 2px 0;
+}
+
+/* normalize/clear for license-text elements */
+#license-text-wrap h1,
+#license-text-wrap h2,
+#license-text-wrap h3,
+#license-text-wrap h4 {
+  border: medium none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  padding-bottom: 3px;
+}
+#license-text-wrap h1{
+  font-size: 1.5em;
+}
+#license-text-wrap h2{
+  font-size: 1.3em;
+}
+#license-text-wrap hr{
+  background: none repeat scroll 0 0 #999999;
+  border: medium none;
+  color: #999999;
+  margin: 0 16px;
+  padding: 0;
+}
+
+/* info page */
+.help-link {
+  text-align: center;
+}
+
+/* gauges */
+.gauge-wrapper {
+  color: #383883;
+  display: inline-block;
+  font-size: 11pt;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px 8px;
+}
+
+.benchmark-gauge{
+  width: 150px;
+}
+.gauge-label,
+.gauge-label-short {
+  display: block;
+  height: 42px;
+  margin: 4px 0px;
+}
+.gauge-label-short {
+  height: 32px;
+  padding-top: 10px;
+}
+#benchmark-gauges {
+  background: none repeat scroll 0 0 #FDFDFD;
+  border: 1px solid #DFDFDF;
+  width: 508px;
+  display: inline-block;
+  margin-top: 10px;
+  vertical-align: top;
+}
+#benchmark-feature-text {
+  display: inline-block;
+  width: 374px;
+}
+#featured.benchmark-featured h2 {
+  font-size: 27px;
+  letter-spacing: -1px;
+
+}
+/* benchmark chart */
+.benchmark-chart{
+  border: 1px solid #DFDFDF;
+  margin: 2px 18px;
+}
+
+/* license list */
+.license-list .lid{
+  font-style: italic;
+}
+.license-list .lmaint {
+  color: #009933;
+  font-size: 95%;
+  font-style: italic;
+}
+.license-list li{
+  line-height: 14px;
+  margin-bottom: 12px;
+  list-style: none outside none;
+}
+.license-list-header{
+  padding-top: 0;
+}
+
+/* tweaks to license text listing */
+.license-text #license-text-wrap {
+  padding: 0px 22px;
+}
+.license-text p,
+.license-text h1,
+.license-text h2,
+.license-text h3,
+.license-text h4{
+  margin: 10px 0;
+}
+.license-text var{
+  font-style: italic;
+}
+
+
+/* front page search */
+#search{
+  margin-bottom: 90px;
+}
+#search-title {
+  background: image-url('search.gif') no-repeat scroll 4px 8px #FFFFFF;
+  padding-left: 20px;
+  text-align: center;
+  width: 260px;
+  display: inline-block;
+}
+#search-title h3{
+  margin-top: 0;
+  padding-top: 0;
+}
+#search,
+.ui-widget{
+  text-align: center;
+
+}
+.ui-combobox {
+  position: relative;
+  display: inline-block;
+}
+.ui-combobox-toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: -1px;
+  padding: 0;
+  /* adjust styles for IE 6/7 */
+  *height: 1.7em;
+  *top: 0.1em;
+}
+.ui-combobox-input {
+  margin: 0;
+  padding: 0.3em;
+  width: 500px;
+  text-align: left;
+}
+.ui-menu .ui-menu-item a {
+  text-align: left;
+}
+
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text{
+  padding: 0.86em 0.4em;
+  vertical-align: top;
+}
+
+.ui-autocomplete {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 20px;
+}
+/* IE 6 doesn't support max-height
+ */
+* html .ui-autocomplete {
+  height: 250px;
+}
+
+.ui-state-default .ui-icon {
+  background-image: url("ui-lightness/images/ui-icons_228ef1_256x240.png");
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border: 1px solid #aaa;
+  background: #FFF url('ui-lightness/images/images/ui-bg_glass_100_f6f6f6_1x400.png') 50% 50% repeat-x;
+  font-weight: bold;
+  color: #1075F9;
+}
+.ui-combobox-toggle{
+  margin-left: -29px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+  color: #333;
+}
+
+/* Temporarily disabled until implemented */
+.more-link{
+  display: none;
+}
+#header h1#logo-text a {
+  background: image-url('beta_small.png') bottom right no-repeat;
+  padding-right: 33px;
+}

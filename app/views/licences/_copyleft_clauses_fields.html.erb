@@ -1,0 +1,38 @@
+<div class="copyleft-applies-to radio-group field">
+  <div class="label-wrapper">Copyleft obligations apply to:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.radio_button :copyleft_applies_to, "modified_files" %>
+      <%= f.label :copyleft_applies_to, "Only modified files", value: "modified_files" %>
+    </span>
+    <span>
+      <%= f.radio_button :copyleft_applies_to, "derivatives" %>
+      <%= f.label :copyleft_applies_to, "Derivative works / Adaptations", value: "derivatives" %>
+    </span>
+    <span>
+      <%= f.radio_button :copyleft_applies_to, "derivatives_linking_excepted" %>
+      <%= f.label :copyleft_applies_to, "Derivative works / Adaptations, but linking excepted", value: "derivatives_linking_excepted" %>
+    </span>
+    <span>
+      <%= f.radio_button :copyleft_applies_to, "compilations" %>
+      <%= f.label :copyleft_applies_to, "Compilations / larger works", value: "compilations" %>
+    </span>
+  </div>
+</div>
+<div class="copyleft-engages-on radio-group field">
+  <div class="label-wrapper">Copyleft obligations engage upon:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.radio_button :copyleft_engages_on, "distribution" %>
+      <%= f.label :copyleft_engages_on, "Distribution", value: "distribution" %>
+    </span>
+    <span>
+      <%= f.radio_button :copyleft_engages_on, "affero" %>
+      <%= f.label :copyleft_engages_on, "Access over a computer network (Affero)", value: "affero" %>
+    </span>
+    <span>
+      <%= f.radio_button :copyleft_engages_on, "use" %>
+      <%= f.label :copyleft_engages_on, "Mere use", value: "use" %>
+    </span>
+  </div>
+</div>

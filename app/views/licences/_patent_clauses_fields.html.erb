@@ -1,0 +1,40 @@
+<div class="patent-licence-extends-to radio-group field">
+  <div class="label-wrapper">Patent licence extends to:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.radio_button :patent_licence_extends_to, "licensors_contributions" %>
+      <%= f.label :patent_licence_extends_to, "Licensor's contributions only", value: "licensors_contributions" %>
+    </span>
+    <span>
+      <%= f.radio_button :patent_licence_extends_to, "entire_work" %>
+      <%= f.label :patent_licence_extends_to, "Entire work", value: "entire_work" %>
+    </span>
+  </div>
+</div>
+<div class="patent-retaliation radio-group field">
+  <div class="label-wrapper">Patent retaliation clause revokes the licence for:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.radio_button :patent_retaliation_applies_to, "specific_work" %>
+      <%= f.label :patent_retaliation_applies_to, "The specific work at issue", value: "specific_work" %>
+    </span>
+    <span>
+      <%= f.radio_button :patent_retaliation_applies_to, "all_works_under_same_licence" %>
+      <%= f.label :patent_retaliation_applies_to, "All works under the same licence", value: "all_works_under_same_licence" %>
+    </span>
+  </div>
+</div>
+
+<div class="patent-retaliation-engages-upon checkbox-group field">
+  <div class="label-wrapper">Patent retaliation clause engages upon:</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.check_box :patent_retaliation_upon_originating_claim %>
+      <%= f.label :patent_retaliation_upon_originating_claim, "An originating patent infringement claim" %>
+    </span>
+    <span>
+      <%= f.check_box :patent_retaliation_upon_counterclaim %>
+      <%= f.label :patent_retaliation_upon_counterclaim, "A counterclaim and/or crossclaim" %>
+    </span>
+  </div>
+</div>

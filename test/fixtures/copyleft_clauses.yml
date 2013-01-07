@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  copyleft_applies_to: MyString
+  copyleft_engages_on: MyString
+
+two:
+  copyleft_applies_to: MyString
+  copyleft_engages_on: MyString

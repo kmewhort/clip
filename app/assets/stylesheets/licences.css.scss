@@ -1,0 +1,60 @@
+//= require KelpJSONView
+
+@import 'foundation';
+
+#main-content.licences {
+  #form-wrapper{
+    @include column(7);
+
+    .field{
+      @include innerRow();
+
+      .label-wrapper{
+        @include column(3);
+      }
+      .input-wrapper{
+        @include column(9);
+      }
+    }
+
+    .checkbox-group, .radio-group {
+      margin-bottom: 9px;
+
+      span {
+        display: inline-block;
+        margin: 2px 8px 5px 0;
+      }
+      input, label {
+        display: inline;
+      }
+    }
+    input[type='file'] {
+      margin-bottom: 10px;
+    }
+  }
+  #json-preview-wrapper{
+    @include column(5);
+    #json-preview{
+      border: 1px solid #DDDDDD;
+      border-radius: 3px 3px 3px 3px;
+      margin: 78px 0 0 0;
+      padding: 12px 20px 12px 2px;
+
+      p {
+        font-family: Courier, monospace;
+      }
+      ol li {
+        white-space: normal;
+      }
+    }
+  }
+  .license-list {
+    .ladmin-links {
+      margin-left: 10px;
+      a, a:link, a:visited {
+        color: #0788C3;
+        font-size: 90%;
+      }
+    }
+  }
+}

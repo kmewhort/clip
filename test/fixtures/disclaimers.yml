@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  disclaimer_warranty: false
+  disclaimer_liability: false
+  disclaimer_indemnity: false
+  warranty_noninfringement: false
+
+two:
+  disclaimer_warranty: false
+  disclaimer_liability: false
+  disclaimer_indemnity: false
+  warranty_noninfringement: false

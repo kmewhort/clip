@@ -1,0 +1,17 @@
+<div class="attribution-type radio-group field">
+  <div class="label-wrapper">Type of attribution clause</div>
+  <div class="input-wrapper">
+    <span>
+      <%= f.radio_button :attribution_type, "flexible" %>
+      <%= f.label :attribution_type, "Flexible", value: "flexible" %>
+    </span>
+     <span>
+      <%= f.radio_button :attribution_type, "specific" %>
+      <%= f.label :attribution_type, "Specific", value: "specific" %>
+    </span>
+  </div>
+</div>
+<div class="attribution-details field">
+  <div class="label-wrapper"><%= f.label :attribution_details, "If specific, please specify or describe the format and details for the attribution." %></div>
+  <div class="input-wrapper"><%= f.text_area :attribution_details, rows: 5 %></div>
+</div>

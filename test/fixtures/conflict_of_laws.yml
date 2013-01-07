@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  law_of: MyString
+  forum_of: MyString
+
+two:
+  law_of: MyString
+  forum_of: MyString

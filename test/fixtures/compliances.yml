@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  is_okd_compliant: false
+  is_osi_compliant: false
+  is_dfcw_compliant: false
+
+two:
+  is_okd_compliant: false
+  is_osi_compliant: false
+  is_dfcw_compliant: false

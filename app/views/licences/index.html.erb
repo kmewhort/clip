@@ -1,0 +1,29 @@
+<div id="nav">
+  <ul>
+    <li id="current" class="first"><a href="licences">All licenses</a></li>
+    <li><a href="licences?domain_data=true">Data</a></li>
+    <li><a href="licences?domain_software=true">Software</a></li>
+    <li><a href="licences?domain_content=true">Content</a></li>
+    <li><a href="licences?maintainer_type=ngo,private">International</a></li>
+    <li><a href="licences?maintainer_type=gov_canada">Canadian</a></li>
+  </ul>
+</div>
+
+<div class="clear" id="featured">
+  <h3 class="license-list-header">All licenses in the CLIP database:</h3>
+  <ul class="license-list">
+  <% @licences.each do |licence| %>
+    <li>
+        <span class="ltitle"><%= link_to licence.title, licence %></span>
+        [<span class="lid"><%= licence.identifier %></span>]
+        <br />
+        <span class="lmaint"><%= licence.maintainer %></span>
+        <span class="ladmin-links">
+          <%= link_to 'Edit', edit_licence_path(licence) %>
+          <%= link_to 'Destroy', licence, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </span>
+    </li>
+  <% end %>
+  <span class="ladmin-links"><%= link_to '+ Add new licence', new_licence_path %></span>
+</div>
+

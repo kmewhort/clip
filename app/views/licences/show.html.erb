@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Identifier:</b>
+  <%= @licence.identifier %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @licence.title %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @licence.url %>
+</p>
+
+<p>
+  <b>Maintainer:</b>
+  <%= @licence.maintainer %>
+</p>
+
+<p>
+  <b>Domain content:</b>
+  <%= @licence.domain_content %>
+</p>
+
+<p>
+  <b>Domain data:</b>
+  <%= @licence.domain_data %>
+</p>
+
+<p>
+  <b>Domain software:</b>
+  <%= @licence.domain_software %>
+</p>
+
+<p>
+  <b>Logo:</b>
+  <%= image_tag @user.logo.url(:medium) %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= link_to @user.text.url(:html) %>
+</p>
+
+
+<%= link_to 'Edit', edit_licence_path(@licence) %> |
+<%= link_to 'Back', licences_path %>
