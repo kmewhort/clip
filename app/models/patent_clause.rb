@@ -5,9 +5,10 @@ class PatentClause < ActiveRecord::Base
   PATENT_LICENCE_EXTENDS_TO_TYPES = %w(licensors_contributions entire_work)
   PATENT_RETALIATION_APPLIES_TO = %w(specific_work all_works_under_same_licence)
 
-  validates :patent_licence_extends_to, :patent_retaliation_applies_to, presence: true
-  validates :patent_licence_extends_to, inclusion: PATENT_LICENCE_EXTENDS_TO_TYPES
-  validates :patent_retaliation_applies_to, inclusion: PATENT_RETALIATION_APPLIES_TO
+  validates :patent_licence_extends_to, inclusion: PATENT_LICENCE_EXTENDS_TO_TYPES,
+            if: Proc.new { |a| !a.patent_licence_extends_to.blank? }
+  validates :patent_retaliation_applies_to, inclusion: PATENT_RETALIATION_APPLIES_TO,
+            if: Proc.new { |a| !a.patent_retaliation_applies_to.blank? }
 
   def as_json(options = {})
     super( except: [ :id, :licence_id, :created_at, :updated_at ] )

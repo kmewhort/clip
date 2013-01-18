@@ -14,7 +14,7 @@
   <ul class="license-list">
   <% @licences.each do |licence| %>
     <li>
-        <span class="ltitle"><%= link_to licence.title, licence %></span>
+        <span class="ltitle"><%= link_to licence.title + " " + licence.version, licence %></span>
         [<span class="lid"><%= licence.identifier %></span>]
         <br />
         <span class="lmaint"><%= licence.maintainer %></span>

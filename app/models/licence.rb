@@ -1,5 +1,5 @@
 class Licence < ActiveRecord::Base
-  attr_accessible :domain_content, :domain_data, :domain_software, :identifier,
+  attr_accessible :domain_content, :domain_data, :domain_software, :identifier, :version, :family,
     :maintainer, :maintainer_type, :title, :url,
     :compliance_attributes, :right_attributes, :obligation_attributes, :patent_clause_attributes,
     :attribution_clause_attributes, :copyleft_clause_attributes, :compatibility_attributes,
@@ -18,9 +18,10 @@ class Licence < ActiveRecord::Base
   has_one :changes_to_term, dependent: :destroy
   has_one :disclaimer, dependent: :destroy
   has_one :conflict_of_law, dependent: :destroy
+  has_one :score, dependent: :destroy
 
-  has_attached_file :logo, styles: { medium: "220x220^" }
-  has_attached_file :text, styles: { html: "" }, processors: []
+  has_attached_file :logo, styles: { medium: "220x220" }
+  has_attached_file :text
 
   accepts_nested_attributes_for :compliance, :allow_destroy => true
   accepts_nested_attributes_for :right, :allow_destroy => true

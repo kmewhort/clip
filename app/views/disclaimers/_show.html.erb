@@ -1,0 +1,22 @@
+<h3><a href="#" name="disclaimers">Disclaimers</a></h3>
+<?php if($metadata->disclaimers->disclaimer_warranty){ ?>
+<p>The licensor makes <strong>no guarantee</strong> to you as to:
+<ul>
+  <li><strong>The quality of the work</strong>. Keep in mind that the work may contain inaccuracies and errors. It may be entirely unsuitable for your purpose.</li>
+  <?php if(!$metadata->disclaimers->warranty_noninfringement){ ?>
+  <li><strong>The clearance of rights</strong>. It is possible that the licensor might not actually own all of the rights that the license claims to grant. If this is the case, you could inadvertently infringe the copyright of a third party -- and you will bear the full responsibility of this infringement.</li>
+  <?php } ?>
+</ul>
+</p>
+<?php } ?>
+<?php if($metadata->disclaimers->warranty_noninfringement) { ?>
+<p>Note that the licensor does include a "<strong>noninfringement warranty</strong>", providing a guarantee that he or she owns all of the rights which the license claims to grant.</p>
+<?php } ?>
+</p>
+<p>The license also contains a general <strong>disclaimer of liability</strong>. In most cases, you cannot sue the licensor, even if you suffer injuries or financial harm due to errors, inaccuracies, or faults on the part of the licensor.</p>
+
+<?php if($metadata->disclaimers->disclaimer_indemnity) { ?>
+<p>You must additionally <strong>indemnify</strong> the licensor for lawsuits that relate to your use of the work. That is, in certain cases, if someone else sues the licensor, it's you who must pay for all of the licensor's legal costs and any damages (even if the licensor is at fault).</p>
+<?php } ?>
+
+<div class="help-link"><a class="more-link" href="index.html">What does this all mean?</a></div>

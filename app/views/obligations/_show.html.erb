@@ -1,0 +1,38 @@
+<h3><a href="#" name="obligations">Obligations</a></h3>
+<?php if($metadata->obligations->obligation_notice ||
+$metadata->obligations->obligation_attribution_flexible ||
+$metadata->obligations->obligation_attribution_specific ||
+$metadata->obligations->obligation_modifiable_form ||
+$metadata->obligations->obligation_copyleft) {
+?>
+<p>You must:</p>
+<ul>
+  <?php if($metadata->obligations->obligation_notice) { ?>
+  <li id="notice_obligation"><strong>Retain the original copyright notices</strong> and disclaimers to inform downstream users of the license conditions that apply to the original work</li>
+  <?php } ?>
+  <?php if($metadata->obligations->obligation_attribution_flexible) { ?>
+  <li id="flex_attribution_obligation"><strong>Provide attribution</strong> to the original authors (you may do so in any reasonable manner appropriate to your medium)</li>
+  <?php } ?>
+  <?php if($metadata->obligations->obligation_attribution_specific && empty($metadata->obligation_attribution_specific_details)) { ?>
+  <li id="specific_attribution_obligation"><strong>Provide attribution</strong> in the exact manner specified in the license</li>
+  <?php } ?>
+  <?php if($metadata->obligations->obligation_attribution_specific && !empty($metadata->obligation_attribution_specific_details)) { ?>
+  <li id="specific_attribution_obligation">Provide attribution as follows:<br/>
+    <blockquote><?php print obligation_attribution_specific_details; ?></blockquote>
+  </li>
+  <?php } ?>
+  <?php if($metadata->obligations->obligation_modifiable_form) { ?>
+  <li id="modifiable_form_obligation">Provide the work in a <strong>modifiable form</strong> that others can easily edit and add to (eg. provide the source code of any software program)</li>
+  <?php } ?>
+  <?php if($metadata->obligations->obligation_copyleft) { ?>
+  <li id="modifiable_form_obligation"><strong>Share your modifications</strong> with others under the exact same license as the original work (for further details, see <a href="#copyleft">Share-alike / Copyleft</a> below)</li>
+  <?php } ?>
+</ul>
+</p>
+<?php }
+					else { ?>
+<p>This license imposes <strong>no major obligations</strong>.  Distribute and give others access to the work at will!
+  <?php } ?>
+<div class="help-link"><a class="more-link" href="index.html">What does this all mean?</a></div>
+
+</div>

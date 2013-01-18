@@ -1,0 +1,51 @@
+
+<div class="identifier field">
+  <div class="label-wrapper"><%= f.label :identifier, "Short unique id" %></div>
+  <div class="input-wrapper"><%= f.text_field :identifier, placeholder: 'eg "gpl-3.0"' %></div>
+</div>
+<div class="title field">
+  <div class="label-wrapper"><%= f.label :title %></div>
+  <div class="input-wrapper"><%= f.text_field :title, placeholder: 'eg "GNU General Public License v3.0"' %></div>
+</div>
+<div class="version field">
+  <div class="label-wrapper"><%= f.label :version %></div>
+  <div class="input-wrapper"><%= f.text_field :version, placeholder: 'eg "1.0"' %></div>
+</div>
+<div class="version field">
+  <div class="label-wrapper"><%= f.label :family %></div>
+  <div class="input-wrapper"><%= f.text_field :family, placeholder: 'eg "BSD", "Creative Commons", etc.' %></div>
+</div>
+<div class="url field">
+  <div class="label-wrapper"><%= f.label :url %></div>
+  <div class="input-wrapper"><%= f.url_field :url, placeholder: 'eg "http://www.gnu.org/licenses/gpl-3.0-standalone.html"' %></div>
+</div>
+<div class="maintainer field">
+  <div class="label-wrapper"><%= f.label :maintainer %></div>
+  <div class="input-wrapper"><%= f.text_field :maintainer, placeholder: 'eg "Free Software Foundation"' %></div>
+</div>
+<div class="maintainer-type field">
+  <div class="label-wrapper"><%= f.label :maintainer_type %></div>
+  <div class="input-wrapper">
+    <%= f.collection_select :maintainer_type, [['gov_canada', "Government body - Canadian"],
+                                          ['ngo', "Non-governmental organization (NGO)"],
+                                          ['private', "Private individual or company"]], :first, :last %>
+  </div>
+</div>
+
+<div class="domain checkbox-group field">
+  <div class="label-wrapper">Domains</div>
+  <div class="input-wrapper">
+    <span>
+        <%= f.check_box :domain_data %>
+        <%= f.label :domain_data, "Data" %>
+    </span>
+    <span>
+      <%= f.check_box :domain_software %>
+      <%= f.label :domain_software, "Software" %>
+    </span>
+    <span>
+        <%= f.check_box :domain_content  %>
+        <%= f.label :domain_content, "Content" %>
+    </span>
+  </div>
+</div>

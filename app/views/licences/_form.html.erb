@@ -12,72 +12,72 @@
     <% end %>
 
     <%= field_set_tag 'Licence Info', class: 'licence-info' do %>
-      <%= render partial: "basic_fields", locals: { f: f } %>
+      <%= render partial: "fields", locals: { f: f } %>
     <% end %>
 
     <%= field_set_tag 'Compliance', class: 'rights' do %>
         <%= f.fields_for(:compliance) do |f| %>
-            <%= render partial: "compliances_fields", locals: { f: f } %>
+            <%= render partial: "compliances/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Rights & Permissions', class: 'rights' do %>
         <%= f.fields_for(:right) do |f| %>
-            <%= render partial: "rights_fields", locals: { f: f } %>
+            <%= render partial: "rights/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Obligations', class: 'obligations' do %>
         <%= f.fields_for(:obligation) do |f| %>
-            <%= render partial: "obligations_fields", locals: { f: f } %>
+            <%= render partial: "obligations/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Attribution', class: 'attribution' do %>
         <%= f.fields_for(:attribution_clause) do |f| %>
-            <%= render partial: "attribution_clauses_fields", locals: { f: f } %>
+            <%= render partial: "attribution_clauses/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Copyleft / Share-alike', class: 'copyleft' do %>
         <%= f.fields_for(:copyleft_clause) do |f| %>
-            <%= render partial: "copyleft_clauses_fields", locals: { f: f } %>
+            <%= render partial: "copyleft_clauses/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Patent Clauses', class: 'patents' do %>
         <%= f.fields_for(:patent_clause) do |f| %>
-            <%= render partial: "patent_clauses_fields", locals: { f: f } %>
+            <%= render partial: "patent_clauses/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Sublicensing & Compatibility', class: 'compatibility' do %>
         <%= f.fields_for(:compatibility) do |f| %>
-            <%= render partial: "compatibilities_fields", locals: { f: f } %>
+            <%= render partial: "compatibilities/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Termination of Licence',  class: 'termination' do %>
         <%= f.fields_for(:termination) do |f| %>
-            <%= render partial: "terminations_fields", locals: { f: f } %>
+            <%= render partial: "terminations/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Changes of Licence Terms',  class: 'changes' do %>
         <%= f.fields_for(:changes_to_term) do |f| %>
-            <%= render partial: "changes_to_terms_fields", locals: { f: f } %>
+            <%= render partial: "changes_to_terms/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Disclaimers',  class: 'disclaimers' do %>
         <%= f.fields_for(:disclaimer) do |f| %>
-            <%= render partial: "disclaimers_fields", locals: { f: f } %>
+            <%= render partial: "disclaimers/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 
     <%= field_set_tag 'Conflict of Laws', class: 'conflict_of_laws' do %>
         <%= f.fields_for(:conflict_of_law) do |f| %>
-            <%= render partial: "conflict_of_laws_fields", locals: { f: f } %>
+            <%= render partial: "conflict_of_laws/fields", locals: { f: f } %>
         <% end %>
     <% end %>
 

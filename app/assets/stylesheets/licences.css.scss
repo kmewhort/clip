@@ -57,4 +57,204 @@
       }
     }
   }
+
+  #featured{
+    padding-bottom: 41px;
+    margin-bottom: 20px;
+
+    .image-block {
+      background: none repeat scroll 0 0 #E6F1FB;
+      border: 1px solid #CCDADA;
+      display: inline-block;
+      margin: 26px 0 26px 14px;
+      padding: 12px;
+      width: 276px;
+
+      .image-backing{
+        width: 250px;
+        height: 250px;
+        background-color: #FFF;
+        text-align: center;
+        display: table;
+        border: 1px solid #CCDADA;
+
+        .image-wrapper{
+          display: table-cell;
+          vertical-align: middle;
+
+          img {
+            border: none;
+            background: none repeat scroll 0 0 #FFF;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+      .approvals{
+        position: absolute;
+        margin-left: 6px;
+        margin-top: 10px;
+
+        .approved, .not_approved {
+          position: relative;
+          top: -25px;
+
+          img{
+            padding: 4px 4px;
+            border: 1px solid #aaa;
+            background-color: #B4DB6F;
+            border-radius: 2px;
+          }
+        }
+        .not_approved{
+          img{
+            background: transparent;
+          }
+        }
+
+        img {
+          padding: 4px;
+        }
+      }
+    }
+
+    .text-block {
+      border-left: 1px solid #DCF1FB;
+      margin: 0 0 0 32px;
+      padding: 14px 32px;
+      width: 642px;
+
+      h2{
+        margin-right: 0;
+        font: 3.4em Georgia,"Times New Roman",Times,Serif;
+        padding-bottom: 2px;
+        border: medium none;
+      }
+
+      p {
+        margin-left: 6px;
+        line-height: 15px;
+      }
+      .post-info{
+        padding-top: 10px;
+        margin-bottom: 9px;
+      }
+
+      .highlight {
+        border: medium none;
+        color: #8BB92E;
+        background: none;
+      }
+
+      table {
+        margin: 6px;
+        width: 100%;
+
+        th{
+          font-size: 10pt;
+
+          a{
+            font-weight: normal;
+          }
+        }
+        td{
+         font-size: 9.5pt;
+        }
+      }
+
+      .licence-versions{
+        padding: 2px;
+        border-bottom: 1px solid #EBEBEB;
+
+        dl.sub-nav {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+        dt{
+          font-weight: bold;
+          color: #1980AF;
+        }
+        .active{
+          a, a:visited, a:link {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  #content-outer {
+    width: 700px;
+    display: inline-block;
+    background: none repeat scroll 0 0 transparent;
+    padding: 20px 20px 20px 0;
+    vertical-align: top;
+  }
+  #right{
+    width: 252px;
+    display: inline-block;
+    vertical-align: top;
+
+    .sidemenu {
+      background: url("/assets/dotted-lines.gif") repeat-x scroll left top transparent;
+      margin-top: 15px;
+    }
+  }
+
+  #left, #content-wrap, #content {
+    width: 100%;
+    padding-top: 0;
+
+    .entry {
+      padding: 9px;
+    }
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  #content-wrap {
+    #content{
+      margin-left: 0;
+    }
+  }
+
+  #tabs {
+    clear: both;
+    top: -60px;
+    position: relative;
+
+    dd.hide-for-small {
+      background-color: #FFFFFF;
+      border-right: 1px solid #E6E6E6;
+      border-top: 1px solid #E6E6E6;
+      opacity: 0.8;
+      position: relative;
+      top: -2px;
+    }
+    dd.hide-for-small:first-child {
+      border-left: 1px solid #E6E6E6;
+    }
+    dd.hide-for-small a:hover {
+      background-color: #F0FBFF;
+    }
+    ul.tabs-content{
+      margin: 0;
+      padding: 0;
+
+      #tab-content{
+        clear: both;
+      }
+    }
+  }
+
+  #json-data {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+
+    .jsonhighlight{
+      background: none repeat scroll 0 0 #F8FAFD;
+    }
+  }
 }
+

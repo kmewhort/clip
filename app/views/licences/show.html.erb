@@ -1,50 +1,80 @@
-<p id="notice"><%= notice %></p>
+<div id="featured" class="clear">
+  <div class="image-block">
+    <div class="image-backing">
+      <div class="image-wrapper">
+        <%= image_tag @licence.logo.url(:medium) if defined? @licence.logo %>
+      </div>
+    </div>
+    <div class="approvals">
+      <%= content_tag :span, class: (@licence.compliance.is_okd_compliant ? 'approved' : 'not_approved') do
+        image_tag @licence.compliance.is_okd_compliant ? 'okfn_approved.png' : 'okfn_not_approved.png'
+      end %>
+      <%= content_tag :span, class: (@licence.compliance.is_osi_compliant ? 'approved' : 'not_approved') do
+        image_tag @licence.compliance.is_osi_compliant ? 'osi_approved.png' : 'osi_not_approved.png'
+      end %>
+      <%= content_tag :span, class: (@licence.compliance.is_dfcw_compliant ? 'approved' : 'not_approved') do
+        image_tag @licence.compliance.is_dfcw_compliant ? 'dfcw_approved.png' : 'dfcw_not_approved.png'
+      end %>
+    </div>
+  </div>
 
-<p>
-  <b>Identifier:</b>
-  <%= @licence.identifier %>
-</p>
+  <div class="text-block">
+    <h2><%= @licence.title %> <%= @licence.version %></h2>
 
-<p>
-  <b>Title:</b>
-  <%= @licence.title %>
-</p>
+    <div class="licence-versions">
+      <%= licence_versions_nav(@licence) %>
+    </div>
 
-<p>
-  <b>Url:</b>
-  <%= @licence.url %>
-</p>
+    <p class="post-info">
+      CLIP/SPDX License ID: <%= content_tag :span, @licence.identifier, class: "highlight" %>
+    </p>
 
-<p>
-  <b>Maintainer:</b>
-  <%= @licence.maintainer %>
-</p>
+    <p>This license is maintained by <strong><%= @licence.maintainer %></strong>
+      for use with <%= domains_comma_seperated(@licence) %>.
+    </p>
 
-<p>
-  <b>Domain content:</b>
-  <%= @licence.domain_content %>
-</p>
+    <table>
+      <tr>
+        <th colspan="4" class="benchmark-header">
+          <strong>Benchmark Summary</strong> (<%= link_to "details", licence_path(@licence,
+                                           tab: "licence_benchmarks") %>)
+        </th>
+      </tr>
+      <tr>
+        <td><strong>Openness score:</strong></td>
+        <td><strong>/ 25</strong></td>
+        <td>User legal risk mitigation:</td>
+        <td> / 5.0</td>
+      </tr>
+      <tr>
+        <td>Rights granted:</td>
+        <td> / 15.0</td>
+        <td>Business risk mitigation:</td>
+        <td> / 5.0</td>
+      </tr>
+    </table>
+  </div>
+</div>
 
-<p>
-  <b>Domain data:</b>
-  <%= @licence.domain_data %>
-</p>
+<!-- tabs -->
+<div id="tabs">
+    <dl class="tabs contained">
+      <% {'licence_info' => "Licence Info",
+          'licence_text' => "Licence Text",
+          'licence_benchmarks' => "Benchmarks",
+          'licence_metadata' => "Metadata"}.each do |tab_id, txt|
+      %>
+          <dd class="<%= tab_id == @tab ? "active" : "hide-for-small" %>">
+            <%= link_to txt, licence_path(@licence, tab: tab_id) %>
+          </dd>
+      <% end %>
+    </dl>
+    <ul class="tabs-content contained">
+      <li class="active">
+        <div id="tab-content">
+           <%= render partial: 'tab_' + @tab, locals: { licence: @licence } %>
+        </div>
+      </li>
+    </ul>
+</div>
 
-<p>
-  <b>Domain software:</b>
-  <%= @licence.domain_software %>
-</p>
-
-<p>
-  <b>Logo:</b>
-  <%= image_tag @user.logo.url(:medium) %>
-</p>
-
-<p>
-  <b>Text:</b>
-  <%= link_to @user.text.url(:html) %>
-</p>
-
-
-<%= link_to 'Edit', edit_licence_path(@licence) %> |
-<%= link_to 'Back', licences_path %>

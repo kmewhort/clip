@@ -53,15 +53,6 @@ ul, ol {
 }
 ul { list-style: disc; }
 
-dt {
-  font-weight: bold;
-  color: #1980AF;
-}
-dd {
-  padding-left: 20px;
-}
-
-p, dl { margin: 10px 20px; }
 
 /* Images */
 img {
@@ -245,19 +236,7 @@ td {
   color: #295177;
   border: none;
 }
-#featured .image-block {
-  float: left;
-  width: 310px;
-  margin: 20px 0 0 25px;
-  padding: 10px 0 0 0;
-  display: inline;
-  border-right: 1px solid #DCF1FB;
-}
-#featured .image-block img {
-  background: none repeat scroll 0 0 #E6F1FB;
-  border: 1px solid #CCDADA;
-  padding: 12px;
-}
+
 #featured .text-block {
   float: right;
   width: 540px;
@@ -278,24 +257,6 @@ td {
   display: block;
   float: left;
 }
-.approvals{
-  position: absolute;
-  margin-left: 20px;
-}
-#featured .image-block .approval{
-  position: relative;
-  top: -25px;
-}
-
-#featured .image-block .approval img{
-  padding: 4px 4px;
-  border: 1px solid #aaa;
-  background-color: #B4DB6F;
-  border-radius: 2px;
-}
-#featured .image-block .not-approved img{
-  background: transparent;
-}
 
 
 #featured a.more-link:hover {
@@ -306,18 +267,13 @@ td {
 /* Content */
 #content-outer {
   clear: both;
-  float: left;
-  width: 920px;
   margin: 0; padding: 0;
   background: transparent image-url('hor-line.gif') repeat-y center 0;
 }
 #content-wrap {
-  float: left;
-  width: 920px;
   background: transparent image-url('dotted-lines.gif') repeat-x;
 }
 #content {
-  float: left;
   width: 900px;
   margin-left: 10px;
   display: inline;
@@ -327,12 +283,10 @@ td {
 /* columns */
 #left {
   width: 580px;
-  float: left;
   padding-top: 15px;
 }
 #right {
   width: 285px;
-  float: right;
   padding-top: 5px;
 }
 

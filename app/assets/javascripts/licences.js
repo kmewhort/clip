@@ -1,6 +1,8 @@
 //= require KelpJSONView
+var LicenceEdit = new Array();
 
-function get_json_preview(){
+// preview json for the edit form
+LicenceEdit.get_json_preview = function(){
     $.ajax({
       type: 'POST',
       url: 'preview',
@@ -13,7 +15,7 @@ function get_json_preview(){
 }
 
 // toggle attribution fields
-function attribution_toggle(){
+LicenceEdit.attribution_toggle = function(){
     if($(this).prop('checked')){
         $('.attribution, .attribution textarea, .attribution input').prop('disabled', false);
     }
@@ -23,7 +25,7 @@ function attribution_toggle(){
 }
 
 // toggle copyleft fields
-function copyleft_toggle(){
+LicenceEdit.copyleft_toggle = function(){
     if($(this).prop('checked')){
         $('.copyleft, .copyleft input').prop('disabled', false);
     }
@@ -33,7 +35,7 @@ function copyleft_toggle(){
 }
 
 // toggle patent licence fields
-function patent_licence_toggle(){
+LicenceEdit.patent_licence_toggle = function(){
     if($(this).prop('checked')){
         $('.patents .patent-licence-extends-to input').prop('disabled', false);
     }
@@ -43,7 +45,7 @@ function patent_licence_toggle(){
 }
 
 // toggle patent retaliation fields
-function patent_retaliation_toggle(){
+LicenceEdit.patent_retaliation_toggle = function(){
     if($(this).prop('checked')){
         $('.patents .patent-retaliation input, .patents .patent-retaliation-engages-upon input').prop('disabled', false);
     }
@@ -54,14 +56,23 @@ function patent_retaliation_toggle(){
 
 // register on-change events
 $(document).ready(function(){
-    // conditional fields
-    $('#licence_obligation_obligation_attribution').change(attribution_toggle).change();
-    $('#licence_obligation_obligation_copyleft').change(copyleft_toggle).change();
-    $('#licence_right_covers_patents_explicitly').change(patent_licence_toggle).change();
-    $('#licence_right_prohibits_patent_actions').change(patent_retaliation_toggle).change();
+    // conditional fields in licence editing
+    $('#licence_obligation_obligation_attribution').change(LicenceEdit.attribution_toggle).change();
+    $('#licence_obligation_obligation_copyleft').change(LicenceEdit.copyleft_toggle).change();
+    $('#licence_right_covers_patents_explicitly').change(LicenceEdit.patent_licence_toggle).change();
+    $('#licence_right_prohibits_patent_actions').change(LicenceEdit.patent_retaliation_toggle).change();
 
-    // json preview update
-    $('.licences input, .licences textarea').change(get_json_preview);
-    get_json_preview();
+    // update licence editor json preview
+    $('.licences input, .licences textarea').change(LicenceEdit.get_json_preview);
+    LicenceEdit.get_json_preview();
+
+    // load the json on the licence metadata tab
+    $('#json-data').each(function(){
+        var url = $(this).attr('data-url');
+        var content_wrapper = $(this);
+        $.getJSON(url, function(data){
+            $.JSONView(data, content_wrapper);
+        });
+    });
 });
 
