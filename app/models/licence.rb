@@ -18,7 +18,12 @@ class Licence < ActiveRecord::Base
   has_one :changes_to_term, dependent: :destroy
   has_one :disclaimer, dependent: :destroy
   has_one :conflict_of_law, dependent: :destroy
+
   has_one :score, dependent: :destroy
+  before_save do
+    self.build_score if self.score.nil?
+    self.score.score_licence
+  end
 
   has_attached_file :logo, styles: { medium: "220x220" }
   has_attached_file :text
@@ -44,6 +49,8 @@ class Licence < ActiveRecord::Base
     {
       id: self.identifier,
       title: self.title,
+      version: self.version,
+      family: self.family,
       url: self.url,
       maintainer: self.maintainer,
       maintainer_type: self.maintainer_type,

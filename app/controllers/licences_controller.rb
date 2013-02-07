@@ -53,10 +53,13 @@ class LicencesController < ApplicationController
   def create
     @licence = Licence.new(params[:licence])
 
+    result = true
+    result = @licence.save unless params[:preview]
+
     respond_to do |format|
-      if @licence.save
+      if result
         format.html { redirect_to @licence, notice: 'Licence was successfully created.' }
-        format.json { render json: @licence, status: :created, location: @licence }
+        format.json { render json: @licence  }
       else
         format.html { render action: "new" }
         format.json { render json: @licence.errors, status: :unprocessable_entity }
@@ -67,10 +70,17 @@ class LicencesController < ApplicationController
   def update
     @licence = Licence.find(params[:id])
 
+    result = true
+    if params[:preview]
+      @licence.assign_attributes(params[:licence])
+    else
+      result = @licence.update_attributes(params[:licence]) unless params[:preview]
+    end
+
     respond_to do |format|
-      if @licence.update_attributes(params[:licence])
+      if result
         format.html { redirect_to @licence, notice: 'Licence was successfully updated.' }
-        format.json { head :no_content }
+        format.json { render json: @licence  }
       else
         format.html { render action: "edit" }
         format.json { render json: @licence.errors, status: :unprocessable_entity }
@@ -85,23 +95,6 @@ class LicencesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to licences_url }
       format.json { head :no_content }
-    end
-  end
-
-  def new_preview
-    @licence = Licence.new(params[:licence])
-
-    respond_to do |format|
-      format.json { render json: @licence }
-    end
-  end
-
-  def edit_preview
-    @licence = Licence.find(params[:id])
-    @licence.attributes = params[:licence]
-
-    respond_to do |format|
-      format.json { render json: @licence }
     end
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130111090507) do
+ActiveRecord::Schema.define(:version => 20130111130208) do
 
   create_table "attribution_clauses", :force => true do |t|
     t.string   "licence_id"
@@ -134,6 +134,17 @@ ActiveRecord::Schema.define(:version => 20130111090507) do
     t.boolean  "prohibits_patent_actions"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "scores", :force => true do |t|
+    t.string   "licence_id"
+    t.float    "openness"
+    t.float    "licensee_legal_risk"
+    t.float    "licensee_business_risk"
+    t.float    "licensee_freedom"
+    t.float    "licensor_legal_risk"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
   end
 
   create_table "terminations", :force => true do |t|

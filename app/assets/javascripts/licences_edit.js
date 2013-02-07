@@ -1,12 +1,13 @@
 //= require KelpJSONView
+//= require highcharts
 var LicenceEdit = new Array();
 
 // preview json for the edit form
 LicenceEdit.get_json_preview = function(){
     $.ajax({
-      type: 'POST',
-      url: 'preview',
-      data: $('.licences form').serialize(),
+      url: $('#form-wrapper form').attr('action') + '?preview=true',
+      type: $('#form-wrapper form').attr('method'),
+        data: $('.licences form').serialize(),
       success: function(data, textStatus, jqXHR){
           $.JSONView(data, $('#json-preview').empty());
       },

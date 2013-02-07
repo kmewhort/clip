@@ -42,15 +42,15 @@
       </tr>
       <tr>
         <td><strong>Openness score:</strong></td>
-        <td><strong>/ 25</strong></td>
+        <td><strong><%= "%.1f"% @licence.score.openness %> / 25</strong></td>
         <td>User legal risk mitigation:</td>
-        <td> / 5.0</td>
+        <td><%= "%.1f"% @licence.score.licensee_legal_risk %>  / 5.0</td>
       </tr>
       <tr>
         <td>Rights granted:</td>
-        <td> / 15.0</td>
+        <td><%= "%.1f"% @licence.score.licensee_freedom %>  / 15.0</td>
         <td>Business risk mitigation:</td>
-        <td> / 5.0</td>
+        <td><%= "%.1f"% @licence.score.licensee_business_risk %>  / 5.0</td>
       </tr>
     </table>
   </div>

@@ -30,10 +30,10 @@
     <p id="slogan">CIPPIC Licensing Information Project</p>
   </div>
 
-  <% if !notice.nil? %>
-    <p id="notice"><%= notice %></p>
-  <% end %>
   <div id="main-content" class='<%= controller.controller_name %>'>
+    <% if !notice.nil? %>
+        <p id="notice"><%= notice %></p>
+    <% end %>
     <%= yield %>
   </div>
 </body>
