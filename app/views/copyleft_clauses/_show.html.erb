@@ -1,37 +1,41 @@
-<h3><a href="#" name="copyleft">Share-alike / Copyleft</a></h3>
-<?php if($metadata->copyleft->copyleft_engages_on == 'use'){ ?>
-<p>If you <strong>use or reproduce</strong> the work in any way, you <strong>must license any changes you make to others</strong> under the same terms as the original work.</p>
-<?php } else { ?>
-<p>You may use the work and modify it without sharing your changes, as long as this is sole for your personal use. However, to promote a community of open sharing, you <strong>must license your changes to others</strong> under the same terms as the original if you:</p>
-<ul>
-  <?php if($metadata->copyleft->copyleft_engages_on == "distribution" || $metadata->copyleft->copyleft_engages_on == "affero") { ?>
-  <li id="no_right_to_use"><strong>Distribute</strong> or publicly communicate your modified version to anyone else, whether for free or for profit</li>
-  <?php } ?>
-  <?php if(!$metadata->copyleft->copyleft_engages_on == "affero") { ?>
-  <li id="no_right_to_use">Allow users to <strong>interact with or access</strong> your modified version of the work, whether over the internet or through another public network</li>
-  <?php } ?>
-</ul>
-<?php } ?>
+<% if licence.copyleft_clause.copyleft_engages_on == :use %>
+  <p>If you <strong>use or reproduce</strong> the work in any way, you <strong>must share your changes with others</strong>
+    under the same licence terms as the original work.
+  </p>
+<% else %>
+  <p>You may use the work and modify it without sharing your changes, but only if these activities are for your own
+    personal use. However, to promote a community of open sharing, you <strong>must share your changes with others</strong>
+    under the original licence terms if you:
+  </p>
+  <ul>
+    <% if licence.copyleft_clause.copyleft_engages_on == :distribution ||
+          licence.copyleft_clause.copyleft_engages_on == :affero %>
+      <li><strong>Distribute</strong> or publicly communicate your modified version to anyone else, whether for free or for profit</li>
+    <% end %>
+    <% if licence.copyleft_clause.copyleft_engages_on == :affero %>
+      <li>Allow users to <strong>interact with or access</strong> your modified version of the work, whether over the internet or through another public network</li>
+    <% end %>
+  </ul>
+<% end %>
+
 <p>This copyleft obligation applies to:</p>
 <ul>
-  <?php if($metadata->copyleft->copyleft_on == "derivatives" || $metadata->copyleft->copyleft_on == "derivatives_links_excepted"){ ?>
-  <li id="copyleft_derivative">Any <strong>adaptation or derivative work</strong> you create based on the original</li>
-  <?php } ?>
-  <?php if($metadata->copyleft->copyleft_on == "modified_files"){ ?>
-  <li id="copyleft_files">Any <strong>individual files</strong> from the original that you modify (and any of your files that include portions of the original work)</li>
-  <?php } ?>
+    <% if licence.copyleft_clause.copyleft_applies_to == :derivatives ||
+          licence.copyleft_clause.copyleft_applies_to == :derivatives_links_excepted  %>
+      <li>Any <strong>adaptation or derivative work</strong> you create which is based on the original</li>
+    <% elsif licence.copyleft_clause.copyleft_applies_to == :modified_files %>
+      <li>Any <strong>individual files</strong> from the original that you modify (and any of your files that include portions of the original work)</li>
+    <% end %>
 </ul>
+
 <p>but does <strong>NOT</strong> apply to:</p>
 <ul>
-  <?php if($metadata->copyleft->copyleft_on == "derivatives_links_excepted"){ ?>
-  <li id="no_copyleft_links">A work you create that only programmatically <strong>links</strong> to an original software work</li>
-  <?php } ?>
-  <?php if($metadata->copyleft->copyleft_on == "modified_files"){ ?>
-  <li id="no_copyleft_files">Any individual <strong>files that you author</strong> entirely yourself</li>
-  <?php } ?>
-  <?php if(!($metadata->copyleft->copyleft_on == "compilation")){ ?>
-  <li id="no_copyleft_compilations">Any <strong>compilation</strong> or larger project, as long as it merely includes the whole of the unchanged original work</li>
-  <?php } ?>
+    <% if licence.copyleft_clause.copyleft_applies_to == :derivatives_links_excepted %>
+      <li>A work you create that only programmatically <strong>links</strong> to an original software work</li>
+    <% elsif licence.copyleft_clause.copyleft_applies_to == :modified_files %>
+      <li>Any individual <strong>files that you author</strong> entirely yourself</li>
+    <% end %>
+    <% if licence.copyleft_clause.copyleft_applies_to != :compilation %>
+      <li>Any <strong>compilation</strong> or larger project, as long as it merely includes the whole of the unchanged original work</li>
+    <% end %>
 </ul>
-<div class="help-link"><a class="more-link" href="index.html">What does this all mean?</a></div>
-</div>

@@ -3,11 +3,10 @@
   <div id="content-wrap">
     <div id="content">
       <div id="left">
-        <% licence_info_categories.each do |key,str| %>
+        <% licence_info_categories(@licence).each do |key,str| %>
             <div class="entry">
-              <h3><%=  content_tag :a, str, name: key %></h3>
-              <%= #TODO render key.to_s + "/show"
-              %>
+              <h3 class="licence-info-category"><%=  content_tag :a, str, name: key %></h3>
+              <%= render partial: key.to_s + "/show", locals: { licence: @licence } %>
             </div>
         <% end %>
       </div>
@@ -20,7 +19,7 @@
   <div class="sidemenu">
     <h3>Go to</h3>
     <ul>
-      <% licence_info_categories.each do |key, str| %>
+      <% licence_info_categories(@licence).each do |key, str| %>
           <li>
             <%= link_to str, "#" + key.to_s %>
           </li>

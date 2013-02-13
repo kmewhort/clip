@@ -174,9 +174,15 @@
           font-weight: bold;
           color: #1980AF;
         }
+        a {
+          cursor: pointer;
+        }
         .active{
           a, a:visited, a:link {
             color: white;
+          }
+          a:hover {
+            background: none repeat scroll 0 0 #0BA6F3;
           }
         }
       }
@@ -208,8 +214,18 @@
       padding: 9px;
     }
     h3 {
-      margin: 0;
+      margin: 0 0 8px;
       padding: 0;
+
+      a{
+        color: #333;
+      }
+    }
+    p {
+      margin: 8px 0 5px;
+    }
+    ul, ol {
+      margin-top: 0;
     }
   }
 

@@ -1,26 +1,48 @@
-<h3><a href="#" name="choice_of_law">Choice of Law and Forum</a></h3>
-<?php if($metadata->conflict_of_laws->forum_of == 'unspecified'){ ?>
-<p>The license <strong>does not specify a forum</strong> for any lawsuits. If a legal dispute arises between you and the licensor, courts will decide upon the location for the hearing based on how strongly the legal issue connects to the jurisdictions involved.</p>
-<?php } else if($metadata->conflict_of_laws->forum_of == 'licensor'){ ?>
-<p>If a legal dispute arises between you and the licensor, it must be heard by a <strong>court at the location of the licensor</strong>.  If this differs from your own location, any lawsuit may be more costly for you to launch or defend.</p>
-<?php } else if($metadata->conflict_of_laws->forum_of == 'plaintiff'){ ?>
-<p>If a legal dispute arises between you and the licensor, it must be heard by a <strong>court at the location of the plaintiff</strong> (the person filing the lawsuit).</p>
-<?php } else if($metadata->conflict_of_laws->forum_of == 'defendant'){ ?>
-<p>If a legal dispute arises between you and the licensor, it must be heard by a <strong>court at the location of the defendant</strong>. This can have the effect of deterring lawsuits, as it can increase the cost of a foreign would-be plaintiff filing a lawsuit.</p>
-<?php } else if($metadata->conflict_of_laws->forum_of == 'specific'){ ?>
-<p>If a legal dispute arises between you and the licensor, it must be heard by a <strong>court at the specific location named in the license</strong> (usually within the jurisdiction of the original licensor). If this differs from your own location, any lawsuit may be more costly for you to launch or defend.</p>
-<?php } ?>
+<% if licence.conflict_of_law.forum_of == "unspecified" %>
+  <p>The licence <strong>does not specify a forum</strong> for any lawsuits. If a legal dispute arises between you and
+    the licensor, courts will make their own determinations on the proper location for a hearing.
+  </p>
+<% elsif licence.conflict_of_law.forum_of == "licensor" %>
+  <p>If a legal dispute arises between you and the licensor, a <strong>court at the location of the licensor</strong>
+   must hear the dispute.  If this differs from your own location, a lawsuit could be more costly for you to pursue or defend.
+  </p>
+<% elsif licence.conflict_of_law.forum_of == "plaintiff" %>
+  <p>If a legal dispute arises between you and the licensor, a <strong>court at the location of the plaintiff</strong>
+    (the person filing the lawsuit) must hear the dispute.
+  </p>
+<% elsif licence.conflict_of_law.forum_of == "defendant" %>
+  <p>If a legal dispute arises between you and the licensor, a <strong>court at the location of the defendant</strong>
+    must hear the dispute. This may deter some lawsuits, as it can increase costs for would-be plaintiffs.
+  </p>
+<% elsif licence.conflict_of_law.forum_of == "specific" %>
+  <p>If a legal dispute arises between you and the licensor, a <strong>court at the specific location named in the
+    license</strong> (usually within the jurisdiction of the original licensor) must hear the dispute. If this differs
+    from your own location, a lawsuit could be more costly for you to pursue or defend.
+  </p>
+<% else raise "Unknown choice of forum type:'" + licence.conflict_of_law.forum_of + "'"; end %>
 
-<?php if($metadata->conflict_of_laws->law_of == 'unspecified'){ ?>
-<p>The license <strong>does not specify the particular law</strong> that a court is to apply when resolving a dispute. To interpret the license, courts will determine the appropriate law based on how strongly the legal issue relates to each jurisdiction involved.</p>
-<?php } else if($metadata->conflict_of_laws->law_of == 'licensor'){ ?>
-<p>To resolve any such legal disputes, courts will interpret the license based on the <strong>laws in force at the location of the licensor</strong>.</p>
-<?php } else if($metadata->conflict_of_laws->law_of == 'plaintiff'){ ?>
-<p>To resolve any such legal disputes, courts will interpret the license based on the <strong>laws in force at the location of the plaintiff</strong> (the person filing the lawsuit).</p>
-<?php } else if($metadata->conflict_of_laws->law_of == 'defendant'){ ?>
-<p>To resolve any such legal disputes, courts will interpret the license based on the <strong>laws in force at the location of the defendant</strong>.</p>
-<?php } else if($metadata->conflict_of_laws->law_of == 'forum'){ ?>
-<p>To resolve any such legal disputes, courts will interpret the license based on the <strong>laws in force where the lawsuit is heard</strong>.</p>
-<?php } else if($metadata->conflict_of_laws->law_of == 'specific'){ ?>
-<p>To resolve any such legal disputes, courts will interpret the license based on the <strong>laws in force at the specific location named in the license</strong>.</p>
-<?php } ?>
+<% if licence.conflict_of_law.law_of == "unspecified" %>
+  <p>The license <strong>does not specify the particular laws</strong> that a court is to apply when resolving a dispute.
+    Thus, to interpret the licence, courts will make their own determinations of the appropriate law to apply.
+  </p>
+<% elsif licence.conflict_of_law.law_of == "licensor" %>
+  <p>To resolve any legal disputes, courts will interpret the licence based on the <strong>laws in force at the location
+    of the licensor</strong>.
+  </p>
+<% elsif licence.conflict_of_law.law_of == "plaintiff" %>
+  <p>To resolve any legal disputes, courts will interpret the licence based on the <strong>laws in force at the location
+    of the plaintiff</strong> (the person filing the lawsuit).
+  </p>
+<% elsif licence.conflict_of_law.law_of == "defendant" %>
+  <p>To resolve any legal disputes, courts will interpret the licence based on the <strong>laws in force at the location
+    of the defendant</strong>.
+  </p>
+<% elsif licence.conflict_of_law.law_of == "forum" %>
+  <p>To resolve any legal disputes, courts will interpret the licence based on the <strong>laws in force at the same
+    location where the lawsuit is heard</strong>.
+  </p>
+<% elsif licence.conflict_of_law.law_of == "specific" %>
+  <p>To resolve any legal disputes, courts will interpret the licence based on the <strong>laws in force at the specific
+    location named in the licence</strong>.
+  </p>
+<% else raise "Unknown choice of law type.'" + licence.conflict_of_law.law_of + "'"; end %>

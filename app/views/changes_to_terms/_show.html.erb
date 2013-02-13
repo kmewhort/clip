@@ -1,12 +1,9 @@
-<div class="entry">
-
-  <h3><a href="#" name="versioning">License versioning</a></h3>
-  <?php if($metadata->license_changes->license_changes_effective_immediately){ ?>
-  <p>If the licensor updates or makes any changes to the license, you are <strong>immediately bound</strong> by the new terms. You cannot keep using work under the previous license.</p>
-  <?php }else { ?>
-  <p>Even if the licensor releases a new version of the license with different terms, you can <strong>continue your use of the work under the original license</strong>.</p>
-  <p>However, if you retrieve an updated copy of the work, it may then come under the terms of the new license.</p>
-  <?php } ?>
-
-  <div class="help-link"><a class="more-link" href="index.html">What does this all mean?</a></div>
-</div>
+<% if licence.changes_to_term.licence_changes_effective_immediately %>
+  <p>If the licensor updates or makes any changes to the licence, you are <strong>immediately bound</strong> by the
+    new terms. You cannot keep using the work under the terms of the previous licence.
+  </p>
+<% else %>
+  <p>Even if the licensor releases a new version of the licence with different terms, you may <strong>continue with any
+    present use of the work under the original terms</strong>.</p>
+  <p>However, if you retrieve an updated copy of the work, it will then come under the terms of the new license.</p>
+<% end %>

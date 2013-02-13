@@ -1,70 +1,64 @@
-<h3><a href="#" name="rights">Rights and Permissions</a></h3>
-
-<?php
-     					// compile the list of covered rights into a user-friendly list
-    					$rights_covered = array();
-     					$rights_uncovered = array();
-     					$metadata->rights->covers_copyright ? $rights_covered[] = 'Copyright' : $rights_uncovered[] = 'Copyright';
-$metadata->rights->covers_trademarks ? $rights_covered[] = 'Trade-marks' : $rights_uncovered[] = 'Trade-marks';
-$metadata->rights->covers_patents ? $rights_covered[] = 'Patents' : $rights_uncovered[] = 'Patents';
-$metadata->rights->covers_neighbouring_rights ? $rights_covered[] = 'Neighbouring rights (rights in a sound recording or performance)' : $rights_uncovered[] = 'Neighbouring rights (ie. rights in a sound recording or performance)';
-$metadata->rights->covers_sgdrs ? $rights_covered[] = 'Database rights (where applicable under European law)' : $rights_uncovered[] = 'Database rights (where applicable under European law)';
-$metadata->rights->covers_moral_rights ? $rights_covered[] = 'Moral rights' : $rights_uncovered[] = 'Moral rights';
-?>
-
 <p>You are free to:</p>
-<ul>
-  <?php if($metadata->rights->right_to_use_and_reproduce) { ?>
-  <li id="right_to_use"><strong>Use and reproduce</strong> the work for your own purposes</li>
-  <?php } ?>
-  <?php if($metadata->rights->right_to_modify) { ?>
-  <li id="right_to_modify"><strong>Modify</strong> the work and adapt it into your own projects</li>
-  <?php } ?>
-  <?php if($metadata->rights->right_to_distribute) { ?>
-  <li id="right_to_distribute"><strong>Distribute</strong> the work and share it with others</li>
-  <?php } ?>
-</ul>
+    <ul>
+      <% if licence.right.right_to_use_and_reproduce %>
+        <li><strong>Use and reproduce</strong> the work for your own purposes</li>
+      <% end %>
+
+      <% if licence.right.right_to_modify %>
+        <li><strong>Modify</strong> the work and adapt it into your own projects</li>
+      <% end %>
+
+      <% if licence.right.right_to_distribute  %>
+        <li><strong>Distribute</strong> the work and share it with others</li>
+      <% end %>
+    </ul>
 </p>
-<?php if(!$metadata->rights->right_to_use_and_reproduce ||
-!$metadata->rights->right_to_modify ||
-!$metadata->rights->right_to_distribute ||
-$metadata->rights->prohibits_commercial_use ||
-$metadata->rights->prohibits_tpms ||
-$metadata->rights->prohibits_tpms_unless_parallel) {
-?>
+
 <p>However, you must <strong>NOT</strong> do any of the following:</p>
-<ul>
-  <?php if(!$metadata->rights->right_to_use_and_reproduce) { ?>
-  <li id="no_right_to_use"><strong>Use or reproduce</strong> the work, even for your own purposes</li>
-  <?php } ?>
-  <?php if(!$metadata->rights->right_to_modify) { ?>
-  <li id="no_right_to_modify"><strong>Modify</strong> or adapt the work in any way</li>
-  <?php } ?>
-  <?php if(!$metadata->rights->right_to_distribute) { ?>
-  <li id="no_right_to_distribute"><strong>Distribute</strong> the work or share it with anyone else</li>
-  <?php } ?>
-  <?php if($metadata->rights->prohibits_commercial_use) { ?>
-  <li id="no_commercial_use">Use the work for any <strong>commercial purposes</strong></li>
-  <?php } ?>
-  <?php if($metadata->rights->prohibits_tpms) { ?>
-  <li id="no_tpms"><strong>Lock</strong> the work with any technical protection measures (TPMs) or digital rights management (DRM)</li>
-  <?php } ?>
-  <?php if($metadata->rights->prohibits_tpms_unless_parallel) { ?>
-  <li id="no_tpms_unless_parallel"><strong>Lock</strong> the work with any technical protection measures (TPMs) / digital rights management (DRM), unless you also provide an unlocked version</li>
-  <?php } ?>
-</ul>
-</p>
-<?php } ?>
-<p>Your freedoms under this license apply to all <?php print strtolower(comma_separate($rights_covered)); ?> that vest<?php if(count($rights_covered) == 1) print 's'; ?> in the work. However, you still must ensure that you do not infringe any:
-<ul>
-  <?php if(!empty($rights_uncovered)){
-					    	 foreach($rights_uncovered as $right){
-					    	   print '<li><strong>' . $right . '</strong></li>';
-  }
-  } ?>
-</ul>
+    <ul>
+      <% if !licence.right.right_to_use_and_reproduce %>
+        <li><strong>Use or reproduce</strong> the work, even for your own purposes</li>
+      <% end %>
+
+      <% if !licence.right.right_to_modify %>
+        <li><strong>Modify</strong> or adapt the work in any way</li>
+      <% end %>
+
+      <% if !licence.right.right_to_distribute %>
+        <li><strong>Distribute</strong> the work or share it with anyone else</li>
+      <% end %>
+
+      <% if licence.right.prohibits_commercial_use %>
+        <li>Use the work for any <strong>commercial purposes</strong></li>
+      <% end %>
+
+      <% if licence.right.prohibits_tpms %>
+        <li><strong>Lock</strong> the work with any technical protection measures (TPMs) or digital rights management (DRM)</li>
+      <% end %>
+
+      <% if licence.right.prohibits_tpms_unless_parallel %>
+        <li><strong>Lock</strong> the work with any technical protection measures (TPMs) / digital rights management (DRM), unless you also provide an unlocked version</li>
+      <% end %>
+
+      <% if licence.right.prohibits_patent_actions %>
+          <li>Pursue <strong>patent actions</strong> against the contributors of the work</li>
+      <% end %>
+    </ul>
 </p>
 
-<div class="help-link"><a class="more-link" href="index.html">What does this all mean?</a></div>
-
-</div>
+<% @rights_covered = rights_covered(licence.right, true)
+   @rights_not_covered = rights_covered(licence.right, false) %>
+<% if @rights_covered.length > 0 %>
+  <p>Your freedoms under this license apply
+     to all <%= @rights_covered.map { |str| "<strong>" + str.downcase + "</strong>" }.to_sentence.html_safe %>
+     that vest<%= "s" if @rights_covered.length == 1 %> in the work.
+  <% if @rights_not_covered.length > 0 %>
+     You must still ensure that you do not infringe any:
+    <ul>
+      <% @rights_not_covered.each do |right| %>
+        <li><%= right %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  </p>
+<% end %>
