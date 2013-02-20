@@ -2,41 +2,255 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62db5781-ca98-4cdf-82a9-276b0402f38c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125558_create_licences.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125618_create_compliances.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125709_create_rights.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125749_create_obligations.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125811_create_patent_clauses.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125906_create_attribution_clauses.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125925_create_copyleft_clauses.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123125944_create_compatibilities.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123130016_create_terminations.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123130102_create_disclaimers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123130119_create_conflict_of_laws.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121123131101_create_changes_to_terms.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20130107090549_add_maintainer_type_to_licences.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20130107151136_add_attachment_logo_to_licences.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20130107153314_add_attachment_text_to_licences.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20130111084249_add_version_to_licence.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20130111130208_create_scores.rb" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/001/medium/AGPL-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/001/original/AGPL-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/002/medium/AGPL-3.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/002/original/AGPL-3.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/003/medium/BSD-2-Clause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/003/original/BSD-2-Clause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/004/medium/BSD-3-Clause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/004/original/BSD-3-Clause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/005/medium/BSD-4-Clause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/005/original/BSD-4-Clause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/006/medium/CAN-BC-OGL-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/006/original/CAN-BC-OGL-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/007/medium/CAN-CGY-TOU.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/007/original/CAN-CGY-TOU.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/008/medium/CAN-DNV-TOU.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/008/original/CAN-DNV-TOU.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/011/medium/CAN-GoC-ODL-1.1.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/011/original/CAN-GoC-ODL-1.1.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/027/medium/CC0-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/027/original/CC0-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/028/medium/CC-BY-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/028/original/CC-BY-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/029/medium/CC-BY-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/029/original/CC-BY-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/030/medium/CC-BY-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/030/original/CC-BY-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/031/medium/CC-BY-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/031/original/CC-BY-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/032/medium/CC-BY-NC-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/032/original/CC-BY-NC-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/033/medium/CC-BY-NC-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/033/original/CC-BY-NC-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/034/medium/CC-BY-NC-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/034/original/CC-BY-NC-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/035/medium/CC-BY-NC-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/035/original/CC-BY-NC-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/036/medium/CC-BY-NC-ND-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/036/original/CC-BY-NC-ND-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/037/medium/CC-BY-NC-ND-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/037/original/CC-BY-NC-ND-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/038/medium/CC-BY-NC-ND-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/038/original/CC-BY-NC-ND-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/039/medium/CC-BY-NC-ND-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/039/original/CC-BY-NC-ND-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/040/medium/CC-BY-NC-SA-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/040/original/CC-BY-NC-SA-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/041/medium/CC-BY-NC-SA-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/041/original/CC-BY-NC-SA-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/042/medium/CC-BY-NC-SA-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/042/original/CC-BY-NC-SA-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/043/medium/CC-BY-NC-SA-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/043/original/CC-BY-NC-SA-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/044/medium/CC-BY-ND-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/044/original/CC-BY-ND-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/045/medium/CC-BY-ND-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/045/original/CC-BY-ND-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/046/medium/CC-BY-ND-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/046/original/CC-BY-ND-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/047/medium/CC-BY-ND-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/047/original/CC-BY-ND-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/048/medium/CC-BY-SA-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/048/original/CC-BY-SA-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/049/medium/CC-BY-SA-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/049/original/CC-BY-SA-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/050/medium/CC-BY-SA-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/050/original/CC-BY-SA-2.5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/051/medium/CC-BY-SA-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/051/original/CC-BY-SA-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/052/medium/GFDL-1.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/052/original/GFDL-1.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/053/medium/GFDL-1.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/053/original/GFDL-1.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/054/medium/GFDL-1.3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/054/original/GFDL-1.3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/055/medium/GPL-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/055/original/GPL-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/056/medium/GPL-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/056/original/GPL-1.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/057/medium/GPL-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/057/original/GPL-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/058/medium/GPL-2.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/058/original/GPL-2.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/059/medium/GPL-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/059/original/GPL-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/060/medium/GPL-3.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/060/original/GPL-3.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/061/medium/GPL-3.0-with-autoconf-exception.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/061/original/GPL-3.0-with-autoconf-exception.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/062/medium/GPL-3.0-with-GCC-exception.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/062/original/GPL-3.0-with-GCC-exception.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/063/medium/LGPL-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/063/original/LGPL-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/064/medium/LGPL-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/064/original/LGPL-2.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/065/medium/LGPL-2.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/065/original/LGPL-2.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/066/medium/LGPL-2.1_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/066/original/LGPL-2.1_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/067/medium/LGPL-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/067/original/LGPL-3.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/068/medium/LGPL-3.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/068/original/LGPL-3.0_.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/069/medium/ODC-By-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/069/original/ODC-By-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/070/medium/ODC-ODbL-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/070/original/ODC-ODbL-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/071/medium/ODC-PDDL-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/logos/000/000/071/original/ODC-PDDL-1.0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/licence_family.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/data.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/001/original/AGPL-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/002/original/AGPL-3.0_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/003/original/BSD-2-Clause-FreeBSD.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/004/original/BSD-3-Clause.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/005/original/BSD-4-Clause.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/006/original/CAN-BC-OGL-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/007/original/CAN-CGY-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/008/original/CAN-DNV-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/009/original/CAN-EDM-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/010/original/CAN-GeoGratis.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/011/original/CAN-GoC-ODL-1.1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/012/original/CAN-LDN-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/013/original/CAN-MSS-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/014/original/CAN-NGF-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/015/original/CAN-NMO-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/016/original/CAN-OTT-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/017/original/CAN-PG-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/018/original/CAN-QC-LSU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/019/original/CAN-RGA-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/020/original/CAN-ROP-ODL-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/021/original/CAN-TOR-ODL-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/022/original/CAN-VAN-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/023/original/CAN-VDM-LDU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/024/original/CAN-VDQ-LDO.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/025/original/CAN-WSR-TOU.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/026/original/CAN-WTL-ODL-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/027/original/CC0-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/028/original/CC-BY-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/029/original/CC-BY-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/030/original/CC-BY-2.5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/031/original/CC-BY-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/032/original/CC-BY-NC-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/033/original/CC-BY-NC-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/034/original/CC-BY-NC-2.5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/035/original/CC-BY-NC-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/036/original/CC-BY-NC-ND-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/037/original/CC-BY-NC-ND-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/038/original/CC-BY-NC-ND-2.5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/039/original/CC-BY-NC-ND-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/040/original/CC-BY-NC-SA-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/041/original/CC-BY-NC-SA-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/042/original/CC-BY-NC-SA-2.5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/043/original/CC-BY-NC-SA-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/044/original/CC-BY-ND-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/045/original/CC-BY-ND-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/046/original/CC-BY-ND-2.5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/047/original/CC-BY-ND-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/048/original/CC-BY-SA-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/049/original/CC-BY-SA-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/050/original/CC-BY-SA-2.5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/051/original/CC-BY-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/052/original/GFDL-1.1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/053/original/GFDL-1.2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/054/original/GFDL-1.3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/055/original/GPL-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/056/original/GPL-1.0_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/057/original/GPL-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/058/original/GPL-2.0_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/059/original/GPL-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/060/original/GPL-3.0_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/061/original/GPL-3.0-with-autoconf-exception.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/062/original/GPL-3.0-with-GCC-exception.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/063/original/LGPL-2.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/064/original/LGPL-2.0_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/065/original/LGPL-2.1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/066/original/LGPL-2.1_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/067/original/LGPL-3.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/068/original/LGPL-3.0_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/069/original/ODC-By-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/070/original/ODC-ODbL-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/071/original/ODC-PDDL-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/licences/texts/000/000/072/original/UK-OGL-1.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/highcharts.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/attribution_clauses.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/changes_to_terms.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/compatibilities.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/compliances.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/conflict_of_laws.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/copyleft_clauses.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/disclaimers.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/licence_changes.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/licences.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/obligations.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/patent_clauses.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/rights.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/scores.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/terminations.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/attribution_clauses_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/changes_to_terms_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/compatibilities_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/compliances_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/conflict_of_laws_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/copyleft_clauses_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/disclaimers_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/licence_changes_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/licences_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/obligations_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/patent_clauses_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/rights_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/scores_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/terminations_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/integration/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/performance/browsing_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/attribution_clause_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/changes_to_term_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/compatibility_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/compliance_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/conflict_of_law_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/copyleft_clause_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/disclaimer_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/attribution_clauses_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/changes_to_terms_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/compatibilities_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/compliances_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/conflict_of_laws_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/copyleft_clauses_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/disclaimers_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/licence_changes_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/licences_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/obligations_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/patent_clauses_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/rights_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/scores_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/terminations_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/licence_change_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/licence_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/obligation_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/patent_clause_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/right_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/score_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/termination_test.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/licences.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/licences.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/licences_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/licences_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/licence_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/licence_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/attribution_clause.rb" afterPath="$PROJECT_DIR$/app/models/attribution_clause.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/copyleft_clause.rb" afterPath="$PROJECT_DIR$/app/models/copyleft_clause.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/licence.rb" afterPath="$PROJECT_DIR$/app/models/licence.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/copyleft_clauses/_show.html.erb" afterPath="$PROJECT_DIR$/app/views/copyleft_clauses/_show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/licences/_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/licences/_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/licences/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/licences/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/licences/index.html.erb" afterPath="$PROJECT_DIR$/app/views/licences/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/licences/show.html.erb" afterPath="$PROJECT_DIR$/app/views/licences/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/obligations/_show.html.erb" afterPath="$PROJECT_DIR$/app/views/obligations/_show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patent_clauses/_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/patent_clauses/_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="clip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,53 +282,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/licences/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="34" selection-start="138" selection-end="138" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/licences/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="74" selection-start="3295" selection-end="3295" vertical-scroll-proportion="-9.416667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="licences.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/licences.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="24" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_fields.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/licences/_fields.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="72" selection-start="1240" selection-end="1240" vertical-scroll-proportion="-9.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/licences/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="44" selection-start="139" selection-end="139" vertical-scroll-proportion="-4.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <file leaf-file-name="obligation.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/obligation.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -122,28 +291,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licence_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/licence_helper.rb">
+      <file leaf-file-name="patent_clause.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/patent_clause.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="52" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licences_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/licences_controller.rb">
+      <file leaf-file-name="right.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/right.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="21" selection-start="1851" selection-end="1851" vertical-scroll-proportion="1.0447761">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <file leaf-file-name="score.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/score.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="57" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_fields.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/attribution_clauses/_fields.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_fields.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/rights/_fields.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="32.458332">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="9" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/data.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4909" column="7" selection-start="95036" selection-end="95036" vertical-scroll-proportion="0.6533333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="licence_family.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/licence_family.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,9 +379,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/copyleft_clause.rb" />
-        <option value="$PROJECT_DIR$/app/models/attribution_clause.rb" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/licences_edit.js" />
@@ -181,6 +392,9 @@
         <option value="$PROJECT_DIR$/app/helpers/licence_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/licence.rb" />
         <option value="$PROJECT_DIR$/app/views/licences/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/licences_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/db/data.yml" />
       </list>
     </option>
   </component>
@@ -253,204 +467,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="licences" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="attribution_clauses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -904,28 +920,32 @@
       <created>1360760536351</created>
       <updated>1360760536351</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Licence information pages.">
+      <created>1361373321751</created>
+      <updated>1361373321751</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="19" width="1364" height="747" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266564" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6724512" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29590288" sideWeight="0.21691974" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26176023" sideWeight="0.7118644" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26176023" sideWeight="0.6702619" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22804314" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21109399" sideWeight="0.49772382" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2881356" sideWeight="0.47268587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2881356" sideWeight="0.47268587" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18843284" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266564" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -986,69 +1006,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/licences_edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="45" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="68" selection-start="2557" selection-end="2557" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patent_clauses/_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="96" selection-start="547" selection-end="547" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/copyleft_clauses/_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="51" selection-start="900" selection-end="900" vertical-scroll-proportion="-8.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/obligations/_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="168" selection-start="1092" selection-end="1092" vertical-scroll-proportion="-10.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licences/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="175" selection-end="244" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="57" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licences/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="138" selection-end="138" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licences/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="74" selection-start="3295" selection-end="3295" vertical-scroll-proportion="-9.416667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/licences.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="24" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
@@ -1070,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/licence.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/licences/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="44" selection-start="139" selection-end="139" vertical-scroll-proportion="-4.375">
@@ -1093,7 +1043,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/licences_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="21" selection-start="1851" selection-end="1851" vertical-scroll-proportion="1.0447761">
+        <state line="81" column="54" selection-start="2121" selection-end="2121" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/licence_family.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/licence.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="27" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/obligation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/patent_clause.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/right.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/score.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/attribution_clauses/_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rights/_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="32.458332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="9" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/data.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4909" column="7" selection-start="95036" selection-end="95036" vertical-scroll-proportion="0.6533333">
           <folding />
         </state>
       </provider>
