@@ -36,5 +36,5 @@ Clip::Application.configure do
   config.assets.debug = true
 
   # Paperclip
-  Paperclip.options[:command_path] = "/usr/bin/"
+  Paperclip::Attachment.default_options[:command_path] = "/usr/bin/"
 end

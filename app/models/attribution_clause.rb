@@ -3,7 +3,7 @@ class AttributionClause < ActiveRecord::Base
   attr_accessible :licence_id, :attribution_details, :attribution_type
   ATTRIBUTION_TYPES = %w(flexible specific)
 
-  validates :attribution_type, presence: true, inclusion: ATTRIBUTION_TYPES
+  validates :attribution_type, presence: true, inclusion: ATTRIBUTION_TYPES, if: licence.obligation.obligation_attribution
 
   def as_json(options = {})
     super( except: [ :id, :licence_id, :created_at, :updated_at ] )

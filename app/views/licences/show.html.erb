@@ -2,7 +2,11 @@
   <div class="image-block">
     <div class="image-backing">
       <div class="image-wrapper">
-        <%= image_tag @licence.logo.url(:medium) if defined? @licence.logo %>
+        <% if @licence.logo.file? %>
+          <%= image_tag @licence.logo.url(:medium) if defined? @licence.logo %>
+        <% else %>
+            <%= image_tag 'blank_logo.jpg' %>
+        <% end %>
       </div>
     </div>
     <div class="approvals">
@@ -19,7 +23,7 @@
   </div>
 
   <div class="text-block">
-    <h2><%= @licence.title %> <%= @licence.version %></h2>
+    <h2><%= full_title(@licence) %></h2>
 
     <div class="licence-versions">
       <%= licence_versions_nav(@licence) %>

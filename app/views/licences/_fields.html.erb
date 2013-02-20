@@ -11,10 +11,6 @@
   <div class="label-wrapper"><%= f.label :version %></div>
   <div class="input-wrapper"><%= f.text_field :version, placeholder: 'eg "1.0"' %></div>
 </div>
-<div class="version field">
-  <div class="label-wrapper"><%= f.label :family %></div>
-  <div class="input-wrapper"><%= f.text_field :family, placeholder: 'eg "BSD", "Creative Commons", etc.' %></div>
-</div>
 <div class="url field">
   <div class="label-wrapper"><%= f.label :url %></div>
   <div class="input-wrapper"><%= f.url_field :url, placeholder: 'eg "http://www.gnu.org/licenses/gpl-3.0-standalone.html"' %></div>
@@ -26,7 +22,7 @@
 <div class="maintainer-type field">
   <div class="label-wrapper"><%= f.label :maintainer_type %></div>
   <div class="input-wrapper">
-    <%= f.collection_select :maintainer_type, [['gov_canada', "Government body - Canadian"],
+    <%= f.collection_select :maintainer_type, [['gov_', "Government body"],
                                           ['ngo', "Non-governmental organization (NGO)"],
                                           ['private', "Private individual or company"]], :first, :last %>
   </div>

@@ -31,6 +31,13 @@
     input[type='file'] {
       margin-bottom: 10px;
     }
+
+    .attachments {
+      img, a{
+        display: block;
+        margin-bottom: 6px;
+      }
+    }
   }
   #json-preview-wrapper{
     @include column(5);
@@ -166,6 +173,9 @@
         padding: 2px;
         border-bottom: 1px solid #EBEBEB;
 
+        dt {
+          margin-right: 7px;
+        }
         dl.sub-nav {
           margin-bottom: 0;
           padding-bottom: 0;
@@ -178,11 +188,28 @@
           cursor: pointer;
         }
         .active{
+          margin-left: 0;
           a, a:visited, a:link {
             color: white;
           }
           a:hover {
             background: none repeat scroll 0 0 #0BA6F3;
+          }
+        }
+        .inactive {
+            margin-left: 0;
+            border-radius: 1000px;
+            a {
+              color: #2BA6CB;
+              cursor: pointer;
+              padding: 3px 9px;
+              font-weight: normal;
+            }
+        }
+        .inactive:hover {
+           background-color: #2BA6CB;
+          a {
+            color: #FFF;
           }
         }
       }

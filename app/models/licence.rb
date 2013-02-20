@@ -5,7 +5,7 @@ class Licence < ActiveRecord::Base
     :attribution_clause_attributes, :copyleft_clause_attributes, :compatibility_attributes,
     :termination_attributes, :changes_to_term_attributes, :disclaimer_attributes, :conflict_of_law_attributes,
     :logo, :text
-  MAINTAINER_TYPES = %w(gov_canada ngo private)
+  MAINTAINER_TYPES = %w(gov ngo private)
 
   has_one :compliance, dependent: :destroy
   has_one :right, dependent: :destroy
@@ -20,9 +20,10 @@ class Licence < ActiveRecord::Base
   has_one :conflict_of_law, dependent: :destroy
 
   has_one :score, dependent: :destroy
-  before_save do
+  after_save do
     self.build_score if self.score.nil?
     self.score.score_licence
+    self.score.save
   end
 
   belongs_to :licence_family
@@ -53,7 +54,6 @@ class Licence < ActiveRecord::Base
       id: self.identifier,
       title: self.title,
       version: self.version,
-      family: self.family,
       url: self.url,
       maintainer: self.maintainer,
       maintainer_type: self.maintainer_type,

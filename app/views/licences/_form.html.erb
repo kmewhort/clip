@@ -83,9 +83,12 @@
 
     <%= field_set_tag 'Attachments', class: 'attachments' do %>
         <%= f.label :logo, "Licence or maintainer logo (PNG/JPG/GIF)" %>
+        <%= image_tag @licence.logo.url(:medium) if @licence.logo.file? %>
         <%= f.file_field :logo %>
 
+
         <%= f.label :logo, "Licence text (HTML)" %>
+        <%= link_to @licence.text, @licence.text.url if @licence.text.file? %>
         <%= f.file_field :text %>
     <% end %>
 

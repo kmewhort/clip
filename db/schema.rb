@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130111130208) do
+ActiveRecord::Schema.define(:version => 20130213111511) do
 
   create_table "attribution_clauses", :force => true do |t|
     t.string   "licence_id"
@@ -73,6 +73,12 @@ ActiveRecord::Schema.define(:version => 20130111130208) do
     t.datetime "updated_at",               :null => false
   end
 
+  create_table "licence_families", :force => true do |t|
+    t.text     "family_tree"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "licences", :force => true do |t|
     t.string   "identifier"
     t.string   "title"
@@ -93,7 +99,7 @@ ActiveRecord::Schema.define(:version => 20130111130208) do
     t.integer  "text_file_size"
     t.datetime "text_updated_at"
     t.string   "version"
-    t.string   "family"
+    t.string   "licence_family_id"
   end
 
   create_table "obligations", :force => true do |t|

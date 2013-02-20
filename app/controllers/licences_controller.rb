@@ -89,7 +89,7 @@ class LicencesController < ApplicationController
       @licence.termination.termination_reinstatement = json["termination"]["termination_reinstatement"]
 
       @licence.changes_to_term.licence_changes_effective_immediately =
-          json["changes_to_terms"]["licence_changes_effective_immediately"]
+          json["license_changes"]["license_changes_effective_immediately"]
 
       @licence.disclaimer.disclaimer_indemnity = json["disclaimers"]["disclaimer_indemnity"]
       @licence.disclaimer.disclaimer_liability = json["disclaimers"]["disclaimer_liability"]

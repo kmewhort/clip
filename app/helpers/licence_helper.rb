@@ -5,7 +5,7 @@ module LicenceHelper
       "/licences?domain_software=true" => "Software",
       "/licences?domain_content=true" => "Content",
       "/licences?maintainer_type=ngo,private" => "International",
-      "/licences?maintainer_type=gov_canada" => "Canadian"
+      "/licences?maintainer_type=gov" => "Government"
     }.map do |url, link_name|
         content_tag :li, id: (url == request.fullpath ? "current" : nil) do
           content_tag :a, link_name, href: url
@@ -34,15 +34,32 @@ module LicenceHelper
 
   # links to other versions of this licence
   def licence_versions_nav(cur_licence)
-    dd_tags = Licence.where(title: cur_licence.title).sort { |a,b| a.version <=> b.version }.map do |licence|
+    licence_versions =  Licence.where(title: cur_licence.title)
+    return if licence_versions.length == 1 && licence_versions.first.version.empty?
+
+    # special case handling for LGPL, which changed names from 2.0 to 2.1
+    if cur_licence.title == 'GNU Library General Public License'
+      licence_versions += Licence.where(title: 'GNU Lesser General Public License')
+    elsif cur_licence.title == 'GNU Lesser General Public License'
+      licence_versions += Licence.where(title: 'GNU Library General Public License')
+    end
+
+    dd_tags = licence_versions.sort { |a,b| a.version <=> b.version }.map do |licence|
       content_tag 'dd', class: (licence == cur_licence ? "active" : "inactive") do
         link_to(licence.version, licence)
       end
     end
+
     dd_tags.join('')
     content_tag 'dl', class: "sub-nav" do
       content_tag('dt', "Versions:") + dd_tags.join('').html_safe
     end
+  end
+
+  # full title w/ licence version identifier
+  def full_title(licence)
+    full_title = @licence.title + ' ' + @licence.version
+    full_title.sub /\+\Z/, ' or later'
   end
 
   # populate array of rights covered / not covered under the licence
