@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130213111511) do
 
   create_table "attribution_clauses", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.string   "attribution_type"
     t.text     "attribution_details"
     t.datetime "created_at",          :null => false
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "changes_to_terms", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.boolean  "licence_changes_effective_immediately"
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
   end
 
   create_table "compatibilities", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.boolean  "sublicense_future_versions"
     t.string   "sublicense_other"
     t.boolean  "copyleft_compatible_with_future_versions"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "compliances", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.boolean  "is_okd_compliant"
     t.boolean  "is_osi_compliant"
     t.boolean  "is_dfcw_compliant"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "conflict_of_laws", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.string   "law_of"
     t.string   "forum_of"
     t.datetime "created_at", :null => false
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "copyleft_clauses", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.string   "copyleft_applies_to"
     t.string   "copyleft_engages_on"
     t.datetime "created_at",          :null => false
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "disclaimers", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.boolean  "disclaimer_warranty"
     t.boolean  "disclaimer_liability"
     t.boolean  "disclaimer_indemnity"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "obligations", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.boolean  "obligation_notice"
     t.boolean  "obligation_modifiable_form"
     t.boolean  "obligation_attribution"
@@ -113,7 +113,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "patent_clauses", :force => true do |t|
-    t.string   "licence_id"
+    t.integer  "licence_id"
     t.string   "patent_licence_extends_to"
     t.boolean  "patent_retaliation_upon_originating_claim"
     t.boolean  "patent_retaliation_upon_counterclaim"
@@ -123,7 +123,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "rights", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.boolean  "right_to_use_and_reproduce"
     t.boolean  "right_to_modify"
     t.boolean  "right_to_distribute"
@@ -143,7 +143,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "scores", :force => true do |t|
-    t.string   "licence_id"
+    t.integer  "licence_id"
     t.float    "openness"
     t.float    "licensee_legal_risk"
     t.float    "licensee_business_risk"
@@ -154,7 +154,7 @@ ActiveRecord::Schema.define(:version => 20130213111511) do
   end
 
   create_table "terminations", :force => true do |t|
-    t.string   "licence_id"
+    t.integer   "licence_id"
     t.boolean  "termination_automatic"
     t.boolean  "termination_discretionary"
     t.boolean  "termination_reinstatement"
