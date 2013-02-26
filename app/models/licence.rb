@@ -60,17 +60,17 @@ class Licence < ActiveRecord::Base
       domain_data: self.domain_data,
       domain_software: self.domain_software,
       domain_content: self.domain_content,
-      compliance: self.compliance,
-      rights: self.right,
-      obligations: self.obligation,
-      attribution: self.attribution_clause,
-      copyleft: self.copyleft_clause,
-      patents: self.patent_clause,
-      compatibility: self.compatibility,
-      termination: self.termination,
-      changes_to_terms: self.changes_to_term,
-      disclaimers: self.disclaimer,
-      conflict_of_laws: self.conflict_of_law
+      compliance: self.compliance.as_json(options),
+      rights: self.right.as_json(options),
+      obligations: self.obligation.as_json(options),
+      attribution: self.attribution_clause.as_json(options),
+      copyleft: self.copyleft_clause.as_json(options),
+      patents: self.patent_clause.as_json(options),
+      compatibility: self.compatibility.as_json(options),
+      termination: self.termination.as_json(options),
+      changes_to_terms: self.changes_to_term.as_json(options),
+      disclaimers: self.disclaimer.as_json(options),
+      conflict_of_laws: self.conflict_of_law.as_json(options),
     }
   end
 

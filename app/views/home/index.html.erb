@@ -1,0 +1,11 @@
+<div id="search">
+  <div id="search-title"><h3>Search for a licence</h3></div>
+  <div class="ui-widget">
+    <select id="licence-search-combobox" class="tbox">
+      <option value="">Select...</option>
+      <% @licences.each do |licence| %>
+        <option value="<%= licence.id %>"><%=  full_title(licence) %></option>
+      <% end %>
+    </select>
+  </div>
+</div>

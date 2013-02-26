@@ -1,0 +1,91 @@
+<% scores = comparison_group(score).sort_by! {|s| -s.openness}
+   reference_licences = benchmark_references(score) %>
+$(function () {
+    var chart;
+    $(document).ready(function() {
+        var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'comparison_chart_container',
+                type: 'column',
+                margin: [ 50, 50, 110, 80]
+            },
+            title: {
+                text: 'Openness Score Comparison'
+            },
+            xAxis: {
+                categories: [
+                  <% scores.each do |score| %>
+                    '<%= score_column_title(score) %>',
+                  <% end %>
+                ],
+                labels: {
+                    rotation: -30,
+                    align: 'right',
+                    style: {
+                        fontSize: '11px',
+                        fontFamily: 'Arial, sans-serif'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Openness score'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                formatter: function() {
+                    console.log(this);
+                    return '<b>'+ this.point.licence_info.title + '</b> (' +
+                            this.point.licence_info.identifier + ')<br/>' +
+                            'Openness score: '+ Highcharts.numberFormat(this.y, 1);
+                }
+            },
+            series: [{
+                name: 'Openness score',
+                data: [
+                    <% scores.each do |score| %>
+                    {
+                      y: <%= score.openness.round(1) %>,
+                      <% if reference_licences.include? score.licence %>
+                        color: '#F0FBFF',
+                        dataLabels: {
+                            color: '#111'
+                        },
+                      <% end %>
+                      events: {
+                        click: function(){
+                            location.href = '<%= licence_url(score.licence) %>';
+                        }
+                      },
+                      licence_info: {
+                          title: '<%= score.licence.title %>',
+                          identifier: '<%= score.licence.identifier %>'
+                      }
+                    },
+                    <% end %>
+                ],
+                dataLabels: {
+                    enabled: true,
+                    rotation: -90,
+                    color: '#FFFFFF',
+                    align: 'right',
+                    x: 2,
+                    y: 10,
+                    formatter: function() {
+                        return this.y;
+                    },
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            }]
+        });
+    });
+
+});

@@ -1,0 +1,66 @@
+<h2>Benchmarks & Risk Assessment Overview</h2>
+<p>This license achieves an overall openness benchmark of <strong><%= score.openness.round(1) %></strong> out of 25 points.
+The score reflects the license's ability to provide the user (licensee) with a flexible and friendly license, based on:
+<ol>
+  <li>the rights and freedoms granted;</li>
+  <li>the legal risks posed to the licensee; and</li>
+  <li>the business risks which the licensee faces.</li>
+</ol>
+</p>
+
+<h2>Score Comparison</h2>
+<p>In comparison to other licences, this licence ranks <strong><%= score.openness_rank.ordinalize %></strong> out of all
+<strong><%= Licence.count %></strong> licences in the CLIP database.</p>
+
+<div id="comparison_chart_container"></div>
+<% content_for :head do %>
+    <script type="text/javascript">
+        <%= render partial: "scores/comparison.js.erb", locals: {score: score} %>
+    </script>
+<% end %>
+<br />
+
+<h2>Licensee Freedoms</h2>
+<p>This licence scores <strong><%= score.licensee_freedom.round(1) %></strong> out of 15.0 on the right and freedoms it grants, ranking it
+<strong><%= score.licensee_freedom_rank.ordinalize %></strong> out of all <%= Licence.count %> licences in the CLIP
+database.</p>
+<% if score.licensee_freedom < 15.0 %>
+  <p>When using a work under this licence, you should keep in mind the following limitations:
+    <ul>
+      <li>TO DO</li>
+    </ul>
+  </p>
+<% end %>
+
+<h2>Licensee Legal Risk</h2>
+<p>This licence scores <strong><%= score.licensee_legal_risk.round(1) %></strong> out of 5.0 on the extent to which it prevents and protects licence
+users from legal risk, ranking it <strong><%= score.licensee_legal_risk_rank.ordinalize %></strong> out of all
+<%= Licence.count %> licences in the CLIP database.</p>
+<% if score.licensee_legal_risk < 5.0 %>
+  <p>When using a work under this licence, you should keep in mind the following legal risks:
+    <ul>
+      <li>TO DO</li>
+    </ul>
+  </p>
+<% end %>
+
+
+<h2>Licensee Business Risk</h2>
+<p>This licence scores <strong><%= score.licensee_business_risk.round(1) %></strong> out of 5.0 on the extent to which it prevents and protects licence
+users from legal risk, ranking it <strong><%= score.licensee_legal_risk_rank.ordinalize %></strong> out of all
+<%= Licence.count %> licences in the CLIP database.</p>
+<% if score.licensee_business_risk < 5.0 %>
+  <p>When using a work under this licence, you should keep in mind the following business risks:
+    <ul>
+      <li>TO DO</li>
+    </ul>
+  </p>
+<% end %>
+
+<h2>Licensor Risk</h2>
+<p>Open licences which protect the licence users from legal and business risks necessarily involve shifting some risk onto
+the licensor.  When releasing works under this licence, you should keep in mind the following risks:
+    <ul>
+      <li>TO DO</li>
+    </ul>
+</p>

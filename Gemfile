@@ -2,12 +2,13 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.9'
 
 # database=storage
-gem 'sqlite3'
+gem 'pg'
 gem "paperclip", "~> 3.0"
 gem 'yaml_db'
 
 # styling
 gem 'simple_form'
+gem 'jquery-ui-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

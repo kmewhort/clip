@@ -1,0 +1,38 @@
+/*
+ *= require jquery.ui.combobox
+ */
+#clip {
+
+  #search-title{
+    padding-left: 10px;
+
+    h3{
+      margin: 2px 0 0 0;
+      padding-top: 0px;
+      padding-bottom: 9px;
+    }
+  }
+
+  ul.ui-menu {
+    padding: 2px 4px;
+    background: #F7F7FD;
+    width: 500px !important;
+
+    .ui-menu-item {
+      clear: left;
+      float: left;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      list-style-type: none;
+    }
+  }
+  .ui-combobox {
+    .ui-combobox-input, .ui-button {
+      background: none repeat scroll 0 0 #F7F7FD;
+    }
+    .ui-button-icon-primary {
+      background: url("/assets/jquery-ui/ui-icons_888888_256x240.png") no-repeat scroll -64px -16px #F7F7FD;
+    }
+  }
+}

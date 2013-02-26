@@ -24,12 +24,33 @@ class Score < ActiveRecord::Base
       }
   }
 
+  # calculate the scores
   def score_licence
     calculate_licensee_legal_risk
     calculate_licensee_business_risk
     calculate_licensee_freedom
     calculate_licensor_legal_risk
     calculate_overall_openness
+  end
+
+  def openness_rank
+    Score.count(conditions: "openness > #{self.openness}" )
+  end
+
+  def licensee_freedom_rank
+    Score.count(conditions: "licensee_freedom > #{self.licensee_freedom}" )
+  end
+
+  def licensee_legal_risk_rank
+    Score.count(conditions: "licensee_legal_risk > #{self.licensee_legal_risk}" )
+  end
+
+  def licensee_business_risk_rank
+    Score.count(conditions: "licensee_business_risk > #{self.licensee_business_risk}" )
+  end
+
+  def licensor_business_risk_rank
+    Score.count(conditions: "licensor_business_risk > #{self.licensor_business_risk}" )
   end
 
   private
@@ -165,12 +186,12 @@ class Score < ActiveRecord::Base
   def calculate_licensee_freedom
     # With respect to data licenses, copyright is the only right that is likely to matter in most cases
     # (except in jurisdictions where SGDRs apply). This rights needs to be granted, or the license
-    # effectively grants nothing at all.
+    # effectively grants little
     if !licence.right.covers_copyright
       return 0
     end
 
-    # the core rights that licenses typicall grant and the right to use, modify & distribute
+    # the core rights that licenses typically grant and the right to use, modify & distribute
     core_rights_score = 0
     core_rights_score += (1.0/3.0) if licence.right.right_to_use_and_reproduce
     core_rights_score += (1.0/3.0) if licence.right.right_to_modify

@@ -46,15 +46,15 @@
       </tr>
       <tr>
         <td><strong>Openness score:</strong></td>
-        <td><strong><%= "%.1f"% @licence.score.openness %> / 25</strong></td>
+        <td><strong><%= @licence.score.openness.round(1) %> / 25</strong></td>
         <td>User legal risk mitigation:</td>
-        <td><%= "%.1f"% @licence.score.licensee_legal_risk %>  / 5.0</td>
+        <td><%= @licence.score.licensee_legal_risk.round(1) %>  / 5.0</td>
       </tr>
       <tr>
         <td>Rights granted:</td>
-        <td><%= "%.1f"% @licence.score.licensee_freedom %>  / 15.0</td>
+        <td><%= @licence.score.licensee_freedom.round(1) %>  / 15.0</td>
         <td>Business risk mitigation:</td>
-        <td><%= "%.1f"% @licence.score.licensee_business_risk %>  / 5.0</td>
+        <td><%= @licence.score.licensee_business_risk.round(1) %>  / 5.0</td>
       </tr>
     </table>
   </div>
@@ -65,7 +65,7 @@
     <dl class="tabs contained">
       <% {'licence_info' => "Licence Info",
           'licence_text' => "Licence Text",
-          'licence_benchmarks' => "Benchmarks",
+          'licence_benchmarks' => "Assessment",
           'licence_metadata' => "Metadata"}.each do |tab_id, txt|
       %>
           <dd class="<%= tab_id == @tab ? "active" : "hide-for-small" %>">

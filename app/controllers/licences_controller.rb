@@ -22,7 +22,7 @@ class LicencesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @licence }
+      format.json { render json: @licence.to_json(except: [:created_at, :updated_at, :id, :licence_id]) }
     end
   end
 

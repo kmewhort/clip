@@ -58,7 +58,7 @@ module LicenceHelper
 
   # full title w/ licence version identifier
   def full_title(licence)
-    full_title = @licence.title + ' ' + @licence.version
+    full_title = licence.title + ' ' + licence.version
     full_title.sub /\+\Z/, ' or later'
   end
 
