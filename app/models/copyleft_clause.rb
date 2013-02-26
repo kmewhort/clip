@@ -4,7 +4,7 @@ class CopyleftClause < ActiveRecord::Base
   COPYLEFT_APPLIES_TO_TYPES = %w(modified_files derivatives derivatives_linking_excepted compilations)
   COPYLEFT_ENGAGES_ON_TYPES = %w(use affero distribution)
 
-  validates :copyleft_applies_to, :copyleft_engages_on, presence: true, if: licence.obligation.obligation_copyleft
+  validates :copyleft_applies_to, :copyleft_engages_on, presence: true, if: Proc.new {|c| c.licence.obligation.obligation_copyleft }
   validates :copyleft_applies_to, inclusion: COPYLEFT_APPLIES_TO_TYPES
   validates :copyleft_engages_on, inclusion: COPYLEFT_ENGAGES_ON_TYPES
 
