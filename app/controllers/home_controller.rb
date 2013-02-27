@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @licences = Licence.all
+    @licences = Licence.all(order: :title)
 
     respond_to do |format|
       format.html
