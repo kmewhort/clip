@@ -18,6 +18,7 @@ class LicencesController < ApplicationController
 
   def show
     @licence = Licence.find(params[:id])
+    @licence.build_children
     @tab = params[:tab].nil? ? "licence_info" : params[:tab]
 
     respond_to do |format|
@@ -28,6 +29,7 @@ class LicencesController < ApplicationController
 
   def new
     @licence = Licence.new
+    @licence.build_children
 
     respond_to do |format|
       format.html { render notice: notice }
@@ -37,10 +39,12 @@ class LicencesController < ApplicationController
 
   def edit
     @licence = Licence.find(params[:id])
+    @licence.build_children
   end
 
   def create
     @licence = Licence.new(params[:licence])
+    @licence.build_children
 
     result = true
     result = @licence.save unless params[:preview]
@@ -58,6 +62,7 @@ class LicencesController < ApplicationController
 
   def update
     @licence = Licence.find(params[:id])
+    @licence.build_children
 
     result = true
     if params[:preview]

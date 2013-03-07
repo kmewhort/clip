@@ -34,23 +34,23 @@ class Score < ActiveRecord::Base
   end
 
   def openness_rank
-    Score.count(conditions: "openness > #{self.openness}" )
+    Score.count(conditions: "openness > #{self.openness}" ) + 1
   end
 
   def licensee_freedom_rank
-    Score.count(conditions: "licensee_freedom > #{self.licensee_freedom}" )
+    Score.count(conditions: "licensee_freedom > #{self.licensee_freedom}" ) + 1
   end
 
   def licensee_legal_risk_rank
-    Score.count(conditions: "licensee_legal_risk > #{self.licensee_legal_risk}" )
+    Score.count(conditions: "licensee_legal_risk > #{self.licensee_legal_risk}" ) + 1
   end
 
   def licensee_business_risk_rank
-    Score.count(conditions: "licensee_business_risk > #{self.licensee_business_risk}" )
+    Score.count(conditions: "licensee_business_risk > #{self.licensee_business_risk}" ) + 1
   end
 
   def licensor_business_risk_rank
-    Score.count(conditions: "licensor_business_risk > #{self.licensor_business_risk}" )
+    Score.count(conditions: "licensor_business_risk > #{self.licensor_business_risk}" ) + 1
   end
 
   private

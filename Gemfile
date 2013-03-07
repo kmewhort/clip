@@ -6,6 +6,13 @@ gem 'pg'
 gem "paperclip", "~> 3.0"
 gem 'yaml_db'
 
+# diff
+gem 'htmldiff' # https://github.com/myobie/htmldiff
+#gem 'diffy' https://github.com/samg/diffy
+gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
+gem 'clip-similarity', path: '../clip-similarity'
+gem 'ruby-progressbar'
+
 # styling
 gem 'simple_form'
 gem 'jquery-ui-rails'

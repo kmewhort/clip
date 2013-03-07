@@ -26,7 +26,7 @@ class Licence < ActiveRecord::Base
     self.score.save
   end
 
-  belongs_to :licence_family
+  has_many :family_tree_nodes
 
   has_attached_file :logo, styles: { medium: "220x220" }
   has_attached_file :text
@@ -42,39 +42,11 @@ class Licence < ActiveRecord::Base
   accepts_nested_attributes_for :changes_to_term, :allow_destroy => true
   accepts_nested_attributes_for :disclaimer, :allow_destroy => true
   accepts_nested_attributes_for :conflict_of_law, :allow_destroy => true
-  after_initialize :build_children
 
   validates :identifier, uniqueness: true
   validates :identifier, :title, presence: true
   validates :maintainer_type, inclusion: MAINTAINER_TYPES
 
-  def as_json(options={})
-    # manually define json structure to provide a user-friendly ordering
-    {
-      id: self.identifier,
-      title: self.title,
-      version: self.version,
-      url: self.url,
-      maintainer: self.maintainer,
-      maintainer_type: self.maintainer_type,
-      domain_data: self.domain_data,
-      domain_software: self.domain_software,
-      domain_content: self.domain_content,
-      compliance: self.compliance.as_json(options),
-      rights: self.right.as_json(options),
-      obligations: self.obligation.as_json(options),
-      attribution: self.attribution_clause.as_json(options),
-      copyleft: self.copyleft_clause.as_json(options),
-      patents: self.patent_clause.as_json(options),
-      compatibility: self.compatibility.as_json(options),
-      termination: self.termination.as_json(options),
-      changes_to_terms: self.changes_to_term.as_json(options),
-      disclaimers: self.disclaimer.as_json(options),
-      conflict_of_laws: self.conflict_of_law.as_json(options),
-    }
-  end
-
-  private
   def build_children
     self.build_compliance if self.compliance.nil?
     self.build_right if self.right.nil?
@@ -87,6 +59,32 @@ class Licence < ActiveRecord::Base
     self.build_changes_to_term if self.changes_to_term.nil?
     self.build_disclaimer if self.disclaimer.nil?
     self.build_conflict_of_law if self.conflict_of_law.nil?
+  end
+
+  def as_json(options={})
+    # manually define json structure to provide a user-friendly ordering
+    {
+        id: self.identifier,
+        title: self.title,
+        version: self.version,
+        url: self.url,
+        maintainer: self.maintainer,
+        maintainer_type: self.maintainer_type,
+        domain_data: self.domain_data,
+        domain_software: self.domain_software,
+        domain_content: self.domain_content,
+        compliance: self.compliance.as_json(options),
+        rights: self.right.as_json(options),
+        obligations: self.obligation.as_json(options),
+        attribution: self.attribution_clause.as_json(options),
+        copyleft: self.copyleft_clause.as_json(options),
+        patents: self.patent_clause.as_json(options),
+        compatibility: self.compatibility.as_json(options),
+        termination: self.termination.as_json(options),
+        changes_to_terms: self.changes_to_term.as_json(options),
+        disclaimers: self.disclaimer.as_json(options),
+        conflict_of_laws: self.conflict_of_law.as_json(options),
+    }
   end
 
 end

@@ -45,17 +45,22 @@ $(function () {
                             'Openness score: '+ Highcharts.numberFormat(this.y, 1);
                 }
             },
+            credits:{
+                enabled:false
+            },
             series: [{
                 name: 'Openness score',
                 data: [
                     <% scores.each do |score| %>
                     {
                       y: <%= score.openness.round(1) %>,
-                      <% if reference_licences.include? score.licence %>
+                      <% if score.licence == @licence %>
                         color: '#F0FBFF',
                         dataLabels: {
                             color: '#111'
                         },
+                      <% elsif reference_licences.include? score.licence %>
+                        color: '#495177',
                       <% end %>
                       events: {
                         click: function(){
