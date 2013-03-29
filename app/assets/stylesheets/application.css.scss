@@ -44,3 +44,12 @@
     padding: 4px 13px 6px;
   }
 }
+
+.wait {
+  height: 16px;
+  width: 16px;
+  background-image: image-url('wait.gif');
+  vertical-align: middle;
+  margin: 8px;
+  display: inline-block;
+}

@@ -1,0 +1,7 @@
+// load comparison text
+$('#licence-diff').empty().append('<%= j @comparison.html_safe %>')
+
+// update licence select boxes
+$('.licence-compare-selection #licence-select-a').val('<%= @licence_a.id %>');
+$('.licence-compare-selection #licence-select-b').val('<%= @licence_b.id %>');
+$('.licence-compare-selection select').combobox('destroy').combobox();

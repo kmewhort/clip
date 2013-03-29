@@ -22,7 +22,7 @@
 <div class="maintainer-type field">
   <div class="label-wrapper"><%= f.label :maintainer_type %></div>
   <div class="input-wrapper">
-    <%= f.collection_select :maintainer_type, [['gov_', "Government body"],
+    <%= f.collection_select :maintainer_type, [['gov', "Government body"],
                                           ['ngo', "Non-governmental organization (NGO)"],
                                           ['private', "Private individual or company"]], :first, :last %>
   </div>

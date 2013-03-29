@@ -25,8 +25,10 @@ module LicenceHelper
     result = {}
     result[:rights] = 'Rights and Permissions'
     result[:obligations] = 'Obligations'
+    result[:attribution_clauses] = 'Attribution' if licence.obligation.obligation_attribution
     result[:copyleft_clauses] = 'Copyleft / Share-alike' if licence.obligation.obligation_copyleft
     result[:disclaimers] = 'Disclaimers'
+    result[:terminations] = 'Termination'
     result[:changes_to_terms] = 'Licence Versioning'
     result[:conflict_of_laws] = 'Choice of Law / Choice of Forum'
     result
@@ -67,7 +69,7 @@ module LicenceHelper
     result = []
     result << "Copyright" if rights.covers_copyright == covered
     result << "Trade-marks" if rights.covers_trademarks == covered
-    result <<  (covered ? "Patents" : "Patents (unless rights implied by the licence)") \
+    result <<  (covered ? "Patents" : "Patents (unless rights are implied by the licence)") \
       if rights.covers_patents_explicitly == covered
     result << "Neighbouring rights (rights in a sound recording or performance)" \
       if rights.covers_neighbouring_rights == covered

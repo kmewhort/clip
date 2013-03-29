@@ -1,16 +1,12 @@
 require 'clip_similarity'
 class FamilyTree < ActiveRecord::Base
-  has_many :family_tree_nodes
+  has_many :family_tree_nodes, dependent: :destroy
   has_many :licences, through: :family_tree_node
 
   attr_accessible :title, :diff_threshold
 
   def root_node
     family_tree_nodes.select{|n|n.parent.nil?}.first
-  end
-
-  def is_root?
-    parent_id == null
   end
 
   # build the tree by performing a diff with all licences (starting from the root node) and
@@ -33,40 +29,63 @@ class FamilyTree < ActiveRecord::Base
   end
 
   private
-  def find_and_build_children(node, similarity_matrix)
-    # compare to every other non-ancestral licence
-    Licence.all.each do |licence|
-      next if licence == node.licence #||
-              #(node.ancestors.select{|n| n.licence == licence }.length > 0)
+  def find_and_build_children(root_node, similarity_matrix)
+    tree = root_node
+    flat = [root_node]
 
+    # for each non-root licence
+    Licence.all.delete_if{|l| l == root_node.licence}.map do |l|
+      # create the node
+      new_node = FamilyTreeNode.new(licence: l)
+      new_node.family_tree = self
 
-      diff_score = similarity_matrix[node.licence.id][licence.id]
-      next if diff_score < self.diff_threshold
-
-      # if the licence is already in the family tree, move it to be a child of this node instead if
-      # the match is stronger
-      existing_node = self.family_tree_nodes.select{|n|n.licence == licence}.first
-      if existing_node
-        if diff_score > existing_node.diff_score
-          existing_node.parent.children.reject! {|n|n == existing_node}
-          existing_node.parent = node
-          existing_node.diff_score = diff_score
-          node.children.push(existing_node)
+      # find the best match to the nodes already in the tree
+      closest_diff_score = 0
+      closest = nil
+      flat.each do |node|
+        diff_score = similarity_matrix[l.id][node.licence.id]
+        if closest.nil? || diff_score > closest_diff_score
+          closest_diff_score = diff_score
+          closest = node
         end
-        next
       end
 
-      new_child_node = self.family_tree_nodes.build
-      new_child_node.licence = licence
-      new_child_node.diff_score =  diff_score
-      new_child_node.parent = node
-      node.children.push(new_child_node)
+      # if the match is to the root, or if the match to the parent is weaker than for the current node,
+      # simply add as a child
+      if closest == root_node || (closest.diff_score >= similarity_matrix[l.id][closest.parent.licence.id])
+        new_node.parent = closest
+        closest.children << new_node
+        new_node.diff_score = similarity_matrix[new_node.licence.id][closest.licence.id]
+      # else, if the new node is more similar to the parent, rotate such the existing node is the child
+      else
+        # place children with the closest matching of the two
+        closest.children.dup.each do |child|
+          if similarity_matrix[child.licence.id][new_node.licence.id] > child.diff_score
+            child.parent = new_node
+            closest.children.delete_if{|n| n == child}
+            new_node.children << child
+            child.diff_score = similarity_matrix[child.licence.id][new_node.licence.id]
+          end
+        end
+
+        # connect the new node to the parent
+        new_node.parent = closest.parent
+        new_node.parent.children << new_node
+        new_node.diff_score = similarity_matrix[new_node.licence.id][new_node.parent.licence.id]
+
+        # add the existing node as a child
+        closest.parent = new_node
+        new_node.parent.children.delete_if{|n| n == closest}
+        new_node.children << closest
+        closest.diff_score = similarity_matrix[closest.licence.id][new_node.licence.id]
+      end
+
+      flat << new_node
     end
 
-    # recurse on the children, other than already-calculated children that were moved
-    node.children.each do |child_node|
-      puts 'Recursing from ' + node.licence.identifier + ' into ' + child_node.licence.identifier
-      find_and_build_children(child_node, similarity_matrix) if node.children.include? child_node
+    # prune away links not meeting the threshold
+    flat.each do |node|
+      node.parent.children.reject!{|n| n == node} if node.diff_score < self.diff_threshold
     end
   end
 end

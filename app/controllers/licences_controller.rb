@@ -18,12 +18,24 @@ class LicencesController < ApplicationController
 
   def show
     @licence = Licence.find(params[:id])
-    @licence.build_children
     @tab = params[:tab].nil? ? "licence_info" : params[:tab]
 
     respond_to do |format|
       format.html
       format.json { render json: @licence.to_json(except: [:created_at, :updated_at, :id, :licence_id]) }
+    end
+  end
+
+  def compare
+    @licence_a = Licence.find(params[:id])
+    @licence_b = Licence.find(params[:compare_to_id])
+
+    # render/cache an HTML diff of the two licences
+    cache_filename =
+    @comparison = @licence_a.html_diff_with(@licence_b)
+
+    respond_to do |format|
+      format.js
     end
   end
 
@@ -68,7 +80,7 @@ class LicencesController < ApplicationController
     if params[:preview]
       @licence.assign_attributes(params[:licence])
     else
-      result = @licence.update_attributes(params[:licence]) unless params[:preview]
+      result = @licence.update_attributes(params[:licence])
     end
 
     respond_to do |format|

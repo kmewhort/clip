@@ -1,0 +1,27 @@
+.licence-similarity-tree {
+  svg {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .node circle {
+    cursor: pointer;
+    fill: lightsteelblue;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+  .node circle.selected {
+    fill: #edffdf;
+    stroke: #50db46;
+  }
+
+  .node text {
+    font-size: 11px;
+  }
+
+  path.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }
+}

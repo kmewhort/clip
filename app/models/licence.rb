@@ -1,3 +1,4 @@
+require 'licence_text_processor'
 class Licence < ActiveRecord::Base
   attr_accessible :domain_content, :domain_data, :domain_software, :identifier, :version,
     :maintainer, :maintainer_type, :title, :url,
@@ -29,7 +30,10 @@ class Licence < ActiveRecord::Base
   has_many :family_tree_nodes
 
   has_attached_file :logo, styles: { medium: "220x220" }
-  has_attached_file :text
+  has_attached_file :text, styles: { unparsed: { format: nil },
+                                     html: { format: 'html' },
+                                     text: { format: 'txt' } },
+                           processors: [:licence_text_processor]
 
   accepts_nested_attributes_for :compliance, :allow_destroy => true
   accepts_nested_attributes_for :right, :allow_destroy => true
@@ -47,6 +51,18 @@ class Licence < ActiveRecord::Base
   validates :identifier, :title, presence: true
   validates :maintainer_type, inclusion: MAINTAINER_TYPES
 
+  def html_diff_with(other_licence)
+    # try to load the html diff from cache
+    cache_filename = Rails.root.join('public','system','licences','diffs',"#{self.id}-#{other_licence.id}.html")
+    return File.read cache_filename if File.exist? cache_filename
+
+    # run diff and cache result /system/licences/diffs
+    diff_result = HTMLDiff::DiffBuilder.new(File.read(self.text.path(:html)),
+                                            File.read(other_licence.text.path(:html))).build
+    File.write cache_filename, diff_result
+    diff_result
+  end
+
   def build_children
     self.build_compliance if self.compliance.nil?
     self.build_right if self.right.nil?
@@ -61,8 +77,8 @@ class Licence < ActiveRecord::Base
     self.build_conflict_of_law if self.conflict_of_law.nil?
   end
 
+  # manually define json structure to provide a user-friendly ordering
   def as_json(options={})
-    # manually define json structure to provide a user-friendly ordering
     {
         id: self.identifier,
         title: self.title,

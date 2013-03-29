@@ -5,8 +5,8 @@ class CopyleftClause < ActiveRecord::Base
   COPYLEFT_ENGAGES_ON_TYPES = %w(use affero distribution)
 
   validates :copyleft_applies_to, :copyleft_engages_on, presence: true, if: Proc.new {|c| c.licence.obligation.obligation_copyleft }
-  validates :copyleft_applies_to, inclusion: COPYLEFT_APPLIES_TO_TYPES
-  validates :copyleft_engages_on, inclusion: COPYLEFT_ENGAGES_ON_TYPES
+  validates :copyleft_applies_to, inclusion: {in: COPYLEFT_APPLIES_TO_TYPES, allow_nil: true}
+  validates :copyleft_engages_on, inclusion: {in: COPYLEFT_ENGAGES_ON_TYPES, allow_nil: true}
 
   def as_json(options = {})
     super( except: [ :id, :licence_id, :created_at, :updated_at ] )

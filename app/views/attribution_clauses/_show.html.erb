@@ -1,0 +1,15 @@
+<% if !licence.attribution_clause.attribution_details.empty? %>
+<p>You <%= licence.attribution_clause.attribution_type == 'specific' ? 'must' : 'should' %> attribute
+  the original author of the work in the following manner:</p>
+<blockquote><%= licence.attribution_clause.attribution_details %></blockquote>
+</p>
+<% end %>
+
+<% if licence.attribution_clause.attribution_type == 'flexible' %>
+<p><%= !licence.attribution_clause.attribution_details.empty? ? 'However, t' : 'T' %>he attribution requirement is
+  <strong>flexible</strong>. This means you can adapt the way in which you attribute the original author to fit your use of
+ the work.</p>
+<% elsif licence.attribution_clause.attribution_type == 'specific' %>                                                                                                                                                                           o
+<p>You need to carefully attribute the work in the exact way specified, even if it this poses difficulties with the way
+  in which you wish to use the work.</p>
+<% end %>

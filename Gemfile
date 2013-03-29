@@ -12,6 +12,8 @@ gem 'htmldiff' # https://github.com/myobie/htmldiff
 gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
 gem 'clip-similarity', path: '../clip-similarity'
 gem 'ruby-progressbar'
+gem 'nokogiri'
+gem "d3-rails"
 
 # styling
 gem 'simple_form'

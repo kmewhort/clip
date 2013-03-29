@@ -1,8 +1,8 @@
 //= require KelpJSONView
 //= require highcharts
-var LicenceEdit = new Array();
 
 // preview json for the edit form
+var LicenceEdit = {};
 LicenceEdit.get_json_preview = function(){
     $.ajax({
       url: $('#form-wrapper form').attr('action') + '?preview=true',
@@ -62,21 +62,25 @@ LicenceEdit.patent_retaliation_toggle = function(){
 // register on-change events
 $(document).ready(function(){
     // conditional fields in licence editing
-    $('#licence_obligation_attributes_obligation_attribution').change(LicenceEdit.attribution_toggle).change();
-    $('#licence_obligation_attributes_obligation_copyleft').change(LicenceEdit.copyleft_toggle).change();
-    $('#licence_right_attributes_covers_patents_explicitly').change(LicenceEdit.patent_licence_toggle).change();
-    $('#licence_right_attributes_prohibits_patent_actions').change(LicenceEdit.patent_retaliation_toggle).change();
+    $('.licences #form-wrapper').each(function(){
+        $('#licence_obligation_attributes_obligation_attribution').change(LicenceEdit.attribution_toggle).change();
+        $('#licence_obligation_attributes_obligation_copyleft').change(LicenceEdit.copyleft_toggle).change();
+        $('#licence_right_attributes_covers_patents_explicitly').change(LicenceEdit.patent_licence_toggle).change();
+        $('#licence_right_attributes_prohibits_patent_actions').change(LicenceEdit.patent_retaliation_toggle).change();
+    });
 
     // update licence editor json preview
-    $('.licences input, .licences textarea').change(LicenceEdit.get_json_preview);
-    LicenceEdit.get_json_preview();
+    $('.licences #json-preview').each(function(){
+        $('.licences input, .licences textarea').change(LicenceEdit.get_json_preview);
+        LicenceEdit.get_json_preview();
 
-    // load the json on the licence metadata tab
-    $('#json-data').each(function(){
-        var url = $(this).attr('data-url');
-        var content_wrapper = $(this);
-        $.getJSON(url, function(data){
-            $.JSONView(data, content_wrapper);
+        // load the json on the licence metadata tab
+        $('#json-data').each(function(){
+            var url = $(this).attr('data-url');
+            var content_wrapper = $(this);
+            $.getJSON(url, function(data){
+                $.JSONView(data, content_wrapper);
+            });
         });
     });
 });

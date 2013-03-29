@@ -1,0 +1,18 @@
+<% if licence.termination.termination_automatic %>
+<p>Your right to use the work <strong>terminates automatically</strong> if you breach any of the terms of the licence.</p>
+<% else %>
+<p>Your right to use the work terminates if you breach the terms of the licence is a serious way that amounts to a
+  "fundametal breach". For smaller mistakes on your part, the licensor can seek monetary damages and other remedies for
+  any harm done.</p>
+<% end %>
+
+<% if licence.termination.termination_discretionary %>
+<p>The licensor also reserves the discretion to <strong>unilaterally revoke your right</strong> to use the work, even if
+ you do not breach any of the licence terms.</p>
+<% end %>
+
+<% if licence.termination.termination_reinstatement %>
+<p>However, if you promptly remedy a breach of the licence terms after the mistake comes to your attention, your right
+  to use the work is automatically re-instated.</p>
+<% end %>
+

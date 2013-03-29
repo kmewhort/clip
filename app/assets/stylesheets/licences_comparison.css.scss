@@ -1,0 +1,25 @@
+.licence-compare-selection{
+  margin-bottom: 16px;
+  .ui-combobox{
+    display: inline-block;
+    margin: 6px 10px 6px 0;
+
+    .ui-combobox-input{
+      width: 420px;
+    }
+  }
+}
+
+#clip #licence-select-wrapper-a .ui-combobox-input,
+#clip #licence-select-wrapper-a .ui-button {
+  background: none repeat scroll 0 0 #f2f2f2;
+}
+#clip #licence-select-wrapper-b .ui-combobox-input,
+#clip #licence-select-wrapper-b .ui-button {
+  background: none repeat scroll 0 0 #fdf2bd;
+}
+
+#licence-diff .diffmod,
+#licence-diff .diffins {
+  color: #c69c04;
+}
