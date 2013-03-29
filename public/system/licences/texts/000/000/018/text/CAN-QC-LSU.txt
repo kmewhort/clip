@@ -1,0 +1,34 @@
+Licence
+
+Vous pouvez utiliser les données ouvertes rendues disponibles par le gouvernement du Québec dans les conditions prévues par la présente licence.
+Licence sur l’utilisation des données ouvertes de l’Administration gouvernementale
+En utilisant les données ouvertes disponibles ou référées sur le site www.données.gouv.qc.ca, vous reconnaissez avoir lu et compris la licence énoncée ci-dessous.
+Champ d’application
+Aux fins de la présente licence, l’Administration gouvernementale signifie tout ministère et organisme visés par l’article 3 de Loi sur l'administration publique (L.R.Q., chapitre A-6.01) qui rendent disponibles et accessibles des données ouvertes via le site www.données.gouv.qc.ca .
+
+Octroi de la licence
+L’Administration gouvernementale vous accorde gratuitement une licence non exclusive et non transférable vous permettant d’utiliser, reproduire, traduire, compiler et communiquer au public par quelque moyen que ce soit, en tout ou en partie, les données ouvertes disponibles et accessibles via le site www.données.gouv.qc.ca , à toutes fins licites, incluant notamment la création d’applications comprenant ces données et l’octroi de sous-licences sur celles-ci.
+La présente licence vous est accordée sans limite territoriale ni de temps.
+Droits de propriété
+
+L’Administration gouvernementale conserve tous les droits de propriété intellectuelle à l’égard des données ouvertes et vous reconnaissez n’avoir aucun droit de propriété intellectuelle, incluant les droits d’auteur, sur ces données.
+Mention de la source
+Dans le cadre de l’application de la présente licence, vous devez afficher la mention suivante :
+
+« Comprends des données ouvertes octroyées sous la licence d'utilisation des données ouvertes de l’Administration gouvernementale disponible à l’adresse Web : www.données.gouv.qc.ca .
+L'octroi de la licence n’implique aucune approbation par l’Administration gouvernementale de l’utilisation des données ouvertes qui en est faite. »
+
+Partenariat ou association
+La présente licence ne crée aucun partenariat ou association, juridique ou officielle, entre vous et l’Administration gouvernementale, et vous n'êtes pas autorisé à laisser entendre le contraire. Vous ne pouvez ni déclarer ni insinuer publiquement que l’Administration gouvernementale approuve la façon dont vous utilisez, reproduisez, traduisez, compilez ou communiquez au public par quelque moyen que ce soit les données ouvertes.
+
+De plus, il est interdit d'employer les marques de commerce de l’Administration gouvernementale sans son autorisation préalable et écrite.
+Absence de garantie
+Les données ouvertes sont disponibles et accessibles telles quelles, sans aucune garantie de quelque nature que ce soit, expresse ou tacite, notamment quant à leur adaptabilité, exactitude, actualité ou utilité à des fins particulières.
+Responsabilité
+
+Vous vous engagez à prendre fait et cause et à indemniser l’Administration gouvernementale de tous recours, réclamations, demandes, poursuites et autres procédures pris par toute personne relativement à l’objet de la présente licence.
+Résiliation
+La présente licence est automatiquement résiliée dans le cas d'un manquement de votre part aux obligations qui vous incombent en vertu de celle-ci.
+Droit applicable et tribunaux compétents
+
+La présente licence est régie par le droit applicable au Québec et en cas de contestation les tribunaux du Québec seront seuls compétents.
