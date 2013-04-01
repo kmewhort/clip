@@ -1,28 +1,21 @@
 class LicencesController < ApplicationController
+  before_filter :find_licences, only: [:index]
+  before_filter :find_licence, except: [:new, :create, :index]
+  before_filter :build_licence, only: [:new, :create]
+
   def index
-    table_cols = Licence.columns.map(&:name)
-    filters = params.dup.keep_if{|key,val| table_cols.include? key }
-    filters.each do |key,val|
-      filters[key] = true if val == "true"
-      filters[key] = false if val == "false"
-      filters[key] = val.split(',') if val.include? ','
-    end
-
-    @licences = Licence.all(conditions: filters )
-
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @licences }
+      format.json { render json: JSON.pretty_generate(@licences.as_json(brief: true)) }
     end
   end
 
   def show
-    @licence = Licence.find(params[:id])
     @tab = params[:tab].nil? ? "licence_info" : params[:tab]
 
     respond_to do |format|
       format.html
-      format.json { render json: @licence.to_json(except: [:created_at, :updated_at, :id, :licence_id]) }
+      format.json { render json: JSON.pretty_generate(@licence.as_json(except: [:created_at, :updated_at, :id, :licence_id])) }
     end
   end
 
@@ -40,9 +33,6 @@ class LicencesController < ApplicationController
   end
 
   def new
-    @licence = Licence.new
-    @licence.build_children
-
     respond_to do |format|
       format.html { render notice: notice }
       format.json { render json: @licence }
@@ -50,14 +40,9 @@ class LicencesController < ApplicationController
   end
 
   def edit
-    @licence = Licence.find(params[:id])
-    @licence.build_children
   end
 
   def create
-    @licence = Licence.new(params[:licence])
-    @licence.build_children
-
     result = true
     result = @licence.save unless params[:preview]
 
@@ -73,9 +58,6 @@ class LicencesController < ApplicationController
   end
 
   def update
-    @licence = Licence.find(params[:id])
-    @licence.build_children
-
     result = true
     if params[:preview]
       @licence.assign_attributes(params[:licence])
@@ -95,12 +77,36 @@ class LicencesController < ApplicationController
   end
 
   def destroy
-    @licence = Licence.find(params[:id])
     @licence.destroy
 
     respond_to do |format|
       format.html { redirect_to licences_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def find_licences
+    table_cols = Licence.columns.map(&:name)
+    filters = params.dup.keep_if{|key,val| table_cols.include? key }
+    filters.each do |key,val|
+      filters[key] = true if val == "true"
+      filters[key] = false if val == "false"
+      filters[key] = val.split(',') if val.include? ','
+    end
+    @licences = Licence.all(conditions: filters, order: :identifier )
+  end
+
+  def find_licence
+    if params[:id].match /\A\d+\Z/
+      @licence = Licence.find(params[:id])
+    else
+      @licence = Licence.find_by_identifier(params[:id])
+    end
+  end
+
+  def build_licence
+    @licence = Licence.new
+    @licence.build_children
   end
 end

@@ -79,28 +79,30 @@ class Licence < ActiveRecord::Base
 
   # manually define json structure to provide a user-friendly ordering
   def as_json(options={})
-    {
+    result = {
         id: self.identifier,
         title: self.title,
-        version: self.version,
-        url: self.url,
-        maintainer: self.maintainer,
-        maintainer_type: self.maintainer_type,
-        domain_data: self.domain_data,
-        domain_software: self.domain_software,
-        domain_content: self.domain_content,
-        compliance: self.compliance.as_json(options),
-        rights: self.right.as_json(options),
-        obligations: self.obligation.as_json(options),
-        attribution: self.attribution_clause.as_json(options),
-        copyleft: self.copyleft_clause.as_json(options),
-        patents: self.patent_clause.as_json(options),
-        compatibility: self.compatibility.as_json(options),
-        termination: self.termination.as_json(options),
-        changes_to_terms: self.changes_to_term.as_json(options),
-        disclaimers: self.disclaimer.as_json(options),
-        conflict_of_laws: self.conflict_of_law.as_json(options),
+        version: self.version
     }
+    unless options[:brief]
+      result[:url] = self.url
+      result[:maintainer] = self.maintainer
+      result[:maintainer_type] = self.maintainer_type
+      result[:domain_data] = self.domain_data
+      result[:domain_software] = self.domain_software
+      result[:domain_content] = self.domain_content
+      result[:compliance] = self.compliance.as_json(options)
+      result[:rights] = self.right.as_json(options)
+      result[:obligations] = self.obligation.as_json(options)
+      result[:attribution] = self.attribution_clause.as_json(options)
+      result[:copyleft] = self.copyleft_clause.as_json(options)
+      result[:patents] = self.patent_clause.as_json(options)
+      result[:compatibility] = self.compatibility.as_json(options)
+      result[:termination] = self.termination.as_json(options)
+      result[:changes_to_terms] = self.changes_to_term.as_json(options)
+      result[:disclaimers] = self.disclaimer.as_json(options)
+      result[:conflict_of_laws] = self.conflict_of_law.as_json(options)
+    end
+    result
   end
-
 end

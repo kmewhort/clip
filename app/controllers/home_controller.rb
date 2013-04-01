@@ -6,4 +6,7 @@ class HomeController < ApplicationController
       format.html
     end
   end
+
+  def api
+  end
 end

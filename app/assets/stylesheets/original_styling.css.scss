@@ -150,7 +150,7 @@
   margin-bottom: 90px;
 }
 #search-title {
-  background: image-url('search.gif') no-repeat scroll 4px 8px #FFFFFF;
+  background: image-url('search.png') no-repeat scroll 4px 8px transparent;
   padding-left: 20px;
   text-align: center;
   width: 260px;
@@ -316,7 +316,7 @@
     margin: 10px 20px;
     padding: 10px 10px 10px 32px;
     border: 1px solid #F0F0F0;
-    background: #f8f8f8 image-url('quote.gif') no-repeat 12px 12px;
+    background: no-repeat 12px 12px #f8f8f8;
     font-weight: normal;
     font-size: 17px;
     line-height: 1.5em;
@@ -623,27 +623,23 @@
     margin-left: 10px;
     display: inline;
   }
-  #footer-wrap h3 {
-    font-size: 2.4em;
-  }
-  #footer-wrap .col-a {
-    width: 300px;
+  #footer-wrap .col-a,
+  #footer-wrap .col-b{
+    padding: 0 10px;
+    width: 50%;
     float: left;
-  }
-  #footer-wrap .col-b {
-    width: 295px;
-    float: right;
   }
 
   /* footer-list */
   #footer-outer .footer-list ul {
-    border-top: 1px solid #E6E6E6;
-    list-style: none;
+    border-top: 1px dotted #E6E6E6;
+    list-style: none outside none;
+    margin: 0;
     padding: 0;
-    margin-left: 20px;
   }
   #footer-outer .footer-list ul li {
     background: image-url('dotted-lines.gif') repeat-x left bottom;
+    font-size: 0.9em;
   }
   #footer-outer .footer-list ul li a {
     display: block;
@@ -719,8 +715,7 @@
   #featured .post-info { font-size: .95em; margin-top: 0; color: #B0B0B0; }
 
   .post .post-info a, .post .post-info a:visited,
-  #featured .post-info a, #featured .post-info a:visited,
-  .highlight
+  #featured .post-info a, #featured .post-info a:visited
     { color: #8BB92E; border: none; }
 
   .post .tags {

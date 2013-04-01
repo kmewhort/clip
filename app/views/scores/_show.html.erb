@@ -25,11 +25,11 @@ The score reflects the license's ability to provide the user (licensee) with a f
 <strong><%= score.licensee_freedom_rank.ordinalize %></strong> out of all <%= Licence.count %> licences in the CLIP
 database.</p>
 <% if score.licensee_freedom < 15.0 %>
-  <p>When using a work under this licence, you should keep in mind the following limitations:
+<!--  <p>When using a work under this licence, you should keep in mind the following limitations:
     <ul>
       <li>TO DO</li>
     </ul>
-  </p>
+  </p> -->
 <% end %>
 
 <h2>Licensee Legal Risk</h2>
@@ -37,11 +37,11 @@ database.</p>
 users from legal risk, ranking it <strong><%= score.licensee_legal_risk_rank.ordinalize %></strong> out of all
 <%= Licence.count %> licences in the CLIP database.</p>
 <% if score.licensee_legal_risk < 5.0 %>
-  <p>When using a work under this licence, you should keep in mind the following legal risks:
+  <!-- <p>When using a work under this licence, you should keep in mind the following legal risks:
     <ul>
       <li>TO DO</li>
     </ul>
-  </p>
+  </p>  -->
 <% end %>
 
 
@@ -50,17 +50,18 @@ users from legal risk, ranking it <strong><%= score.licensee_legal_risk_rank.ord
 users from legal risk, ranking it <strong><%= score.licensee_legal_risk_rank.ordinalize %></strong> out of all
 <%= Licence.count %> licences in the CLIP database.</p>
 <% if score.licensee_business_risk < 5.0 %>
-  <p>When using a work under this licence, you should keep in mind the following business risks:
+  <!-- <p>When using a work under this licence, you should keep in mind the following business risks:
     <ul>
       <li>TO DO</li>
     </ul>
-  </p>
+  </p> -->
 <% end %>
 
+<!--
 <h2>Licensor Risk</h2>
 <p>Open licences which protect the licence users from legal and business risks necessarily involve shifting some risk onto
 the licensor.  When releasing works under this licence, you should keep in mind the following risks:
     <ul>
       <li>TO DO</li>
     </ul>
-</p>
+</p>-->

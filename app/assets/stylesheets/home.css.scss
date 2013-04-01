@@ -32,7 +32,26 @@
       background: none repeat scroll 0 0 #F7F7FD;
     }
     .ui-button-icon-primary {
-      background: url("/assets/jquery-ui/ui-icons_888888_256x240.png") no-repeat scroll -64px -16px #F7F7FD;
+      background: url("/assets/jquery-ui/ui-icons_888888_256x240.png") no-repeat scroll -64px -16px transparent;
     }
   }
+  .browse-link{
+    padding-left: 360px;
+    font-size: 88%;
+  }
+
+
+  #footer-wrap {
+    h3{
+      font-size: 1.5em;
+      line-height: 1.6em;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    p{
+      margin-bottom: 6px;
+      font-size: 87%;
+    }
+  }
+
 }

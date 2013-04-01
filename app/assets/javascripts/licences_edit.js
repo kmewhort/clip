@@ -1,5 +1,4 @@
 //= require KelpJSONView
-//= require highcharts
 
 // preview json for the edit form
 var LicenceEdit = {};

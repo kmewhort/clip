@@ -1,0 +1,159 @@
+<div id="api-info">
+  <h2>CLIP API</h2>
+  <h3>List all licences:</h3>
+  <div class="panel">
+    GET <%= link_to licences_url(format: :json), licences_url(format: :json) %>:<br />
+    <%=content_tag('pre', <<-eos
+        [
+          {
+            "id": "AGPL-3.0",
+            "title": "GNU Affero General Public License",
+            "version": "3.0"
+          },
+          {
+             "id": "AGPL-3.0+",
+             "title": "GNU Affero General Public License",
+             "version": "3.0+"
+          }
+        ...
+        ]
+        eos
+    )
+    %>
+  </div>
+  <h3>List one type of licence:</h3>
+  <p>Data licences:</p>
+  <div class="panel">
+    GET <%= link_to licences_url(format: :json, domain_data: 'true'), licences_url(format: :json, domain_data: 'true') %>:<br />
+    <%=content_tag('pre', <<-eos
+        [
+          {
+            "id": "CAN-BC-OGL-1.0",
+            "title": "Open Government License for Government of BC Information",
+            "version": "1.0"
+          },
+          {
+            "id": "CAN-CGY-TOU",
+            "title": "Calgary Public Data Catalogue Terms of Use",
+            "version": ""
+          },
+          ...
+        ]
+        eos
+    )
+    %>
+  </div>
+  <p>Similarly, you may filter to only
+    <%= link_to "content licences", licences_url(format: :json, domain_content: 'true') %>
+    (GET <%= licences_url(format: :json, domain_content: 'true') %>) or
+    <%= link_to "software licences", licences_url(format: :json, domain_software: 'true') %>
+    (GET <%= licences_url(format: :json, domain_software: 'true') %>).</p>
+  <h3>List licences from a particular maintainer:</h3>
+  <p>For example, all Creative Commons licences:</p>
+  <div class="panel">
+    GET <%= link_to licences_url(format: :json, maintainer: 'Creative Commons'),
+                    licences_url(format: :json, maintainer: 'Creative Commons') %>:<br />
+    <%=content_tag('pre', <<-eos
+        [
+          {
+            "id": "CC0-1.0",
+            "title": "Creative Commons Zero",
+            "version": "1.0 Universal"
+          },
+          {
+            "id": "CC-BY-1.0",
+            "title": "Creative Commons Attribution",
+            "version": "1.0"
+          },
+          ...
+        ]
+    eos
+       )
+    %>
+    </div>
+    <h3>Get licence data:</h3>
+    <p>For example, data on the GNU Public Licence v3 (GPL-3.0):</p>
+    <div class="panel">
+      GET <%= link_to licence_url(id: 'GPL-3.0', format: :json), licence_url(id: 'GPL-3.0', format: :json) %>:<br />
+      <%=content_tag('pre', <<-eos
+        {
+          "id": "GPL-3.0",
+          "title": "GNU General Public License",
+          "version": "3.0",
+          "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html",
+          "maintainer": "Free Software Foundation",
+          "maintainer_type": "ngo",
+          "domain_data": false,
+          "domain_software": true,
+          "domain_content": false,
+          "compliance": {
+            "is_dfcw_compliant": true,
+            "is_okd_compliant": false,
+            "is_osi_compliant": true
+          },
+          "rights": {
+            "covers_circumventions": true,
+            "covers_copyright": true,
+            "covers_moral_rights": false,
+            "covers_neighbouring_rights": false,
+            "covers_patents_explicitly": true,
+            "covers_sgdrs": false,
+            "covers_trademarks": false,
+            "prohibits_commercial_use": false,
+            "prohibits_patent_actions": false,
+            "prohibits_tpms": false,
+            "prohibits_tpms_unless_parallel": false,
+            "right_to_distribute": true,
+            "right_to_modify": true,
+            "right_to_use_and_reproduce": true
+          },
+          "obligations": {
+            "obligation_attribution": false,
+            "obligation_copyleft": true,
+            "obligation_modifiable_form": true,
+            "obligation_notice": true
+          },
+          "attribution": {
+            "attribution_details": null,
+            "attribution_type": null
+          },
+          "copyleft": {
+            "copyleft_applies_to": "derivatives",
+            "copyleft_engages_on": "distribution"
+          },
+          "patents": {
+            "patent_licence_extends_to": "entire_work",
+            "patent_retaliation_applies_to": null,
+            "patent_retaliation_upon_counterclaim": false,
+            "patent_retaliation_upon_originating_claim": false
+          },
+          "compatibility": {
+            "copyleft_compatible_with_future_versions": false,
+            "copyleft_compatible_with_other": null,
+            "sublicense_future_versions": false,
+            "sublicense_other": ""
+          },
+          "termination": {
+            "termination_automatic": true,
+            "termination_discretionary": false,
+            "termination_reinstatement": true
+          },
+          "changes_to_terms": {
+            "licence_changes_effective_immediately": false
+          },
+          "disclaimers": {
+            "disclaimer_indemnity": false,
+            "disclaimer_liability": true,
+            "disclaimer_warranty": true,
+            "warranty_noninfringement": false
+          },
+          "conflict_of_laws": {
+            "forum_of": "unspecified",
+            "law_of": "unspecified"
+          }
+        }
+         eos
+         )
+      %>
+  </div>
+</div>
