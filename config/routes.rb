@@ -1,4 +1,6 @@
 Clip::Application.routes.draw do
+  devise_for :admins
+
   # licences
   resources :licences, :id => /[A-Za-z0-9\.\-]+?/, :format => /html|json|js/ do #allow periods in id
     member do

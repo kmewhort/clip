@@ -2,6 +2,7 @@ class LicencesController < ApplicationController
   before_filter :find_licences, only: [:index]
   before_filter :find_licence, except: [:new, :create, :index]
   before_filter :build_licence, only: [:new, :create]
+  authorize_resource
 
   def index
     respond_to do |format|

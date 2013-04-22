@@ -63,11 +63,23 @@
 <!-- tabs -->
 <div id="tabs">
     <dl class="tabs contained">
+      <!-- licence info tabs -->
       <% licence_tabs.each do |tab_id, txt| %>
           <dd class="<%= tab_id == @tab ? "active" : "hide-for-small" %>">
             <%= link_to txt, licence_path(@licence, tab: tab_id) %>
           </dd>
       <% end %>
+
+      <!-- admin tabs -->
+      <dd class="<%= 'licence_edit' == @tab ? "right active" : "right hide-for-small" %>">
+        <%= link_to('Edit', licence_path(@licence, tab: 'licence_edit')) %>
+      </dd>
+      <% if can? :destroy, @licence %>
+        <dd class="hide-for-small right">
+          <%= link_to('Destroy', licence,
+                  method: :delete, data: { confirm: 'Are you sure?' }) %>
+          <% end %>
+        </dd>
     </dl>
     <ul class="tabs-content contained">
       <li class="active">

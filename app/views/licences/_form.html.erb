@@ -92,5 +92,6 @@
         <%= f.file_field :text %>
     <% end %>
 
-    <%= f.submit "Save" %>
+    <%= f.hidden_field :submit_for_review, value: !(can? :update, @licence), name: "submit_for_review" %>
+    <%= f.submit "Submit" %>
 <% end %>

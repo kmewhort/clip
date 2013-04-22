@@ -17,6 +17,10 @@
       }
     }
 
+    fieldset.licence-info{
+      margin-top: 0;
+    }
+
     .checkbox-group, .radio-group {
       margin-bottom: 9px;
 
@@ -39,12 +43,13 @@
       }
     }
   }
+
   #json-preview-wrapper{
     @include column(5);
     #json-preview{
       border: 1px solid #DDDDDD;
       border-radius: 3px 3px 3px 3px;
-      margin: 78px 0 0 0;
+      margin: 84px 0 0 0;
       padding: 12px 20px 12px 2px;
 
       p {
@@ -281,6 +286,13 @@
     dd.hide-for-small a:hover {
       background-color: #F0FBFF;
     }
+    dd.right {
+      float: right;
+      border-left: 1px solid #E6E6E6;
+      a {
+        color: #348FB8;
+      }
+    }
     ul.tabs-content{
       margin: 0;
       padding: 0;
@@ -306,3 +318,10 @@
   }
 }
 
+#licence-edit-container {
+  display: table;
+}
+
+#main-content.licences #tabs #json-preview-wrapper #json-preview{
+  margin: 10px 0 0 0;
+}
