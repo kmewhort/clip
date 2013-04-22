@@ -1,4 +1,4 @@
-.licence-compare-selection{
+#licence-compare {
   margin-bottom: 16px;
   .ui-combobox{
     display: inline-block;
@@ -7,6 +7,11 @@
     .ui-combobox-input{
       width: 420px;
     }
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 6px;
+    line-height: 1.0;
   }
 }
 

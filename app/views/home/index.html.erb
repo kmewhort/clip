@@ -11,6 +11,15 @@
   <div class="browse-link">Or <%= link_to "browse", licences_path() %> by category...</div>
 </div>
 
+<div id="tools">
+  <div id="tools-title"><h3>Licensing Apps:</h3></div>
+  <%= link_to "tools/compare" do %>
+      <div id="tools-links">
+        <span class="compare-tool">Licence Compare</span>
+      </div>
+  <% end %>
+</div>
+
 <div id="footer-outer" class="clear">
   <%= render partial: "footer" %>
 </div>

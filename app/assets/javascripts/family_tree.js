@@ -1,30 +1,24 @@
 /*
  *= require d3
  *= require jquery.ui.combobox
+ *= require licence_compare
  */
 $(document).ready(function(){
-  // render the similarity trees
-  $('.licence-similarity-tree').each(function(){
-      var tree = new SimilarityTree(this,
-          $(this).data('family-tree-root'), 958, 400);
-  });
-
-  // licence selection comboboxes
-  $( ".licences .licence-select-combo" ).combobox().on("comboboxselected", function(event,ui){
-    licence_a = $('#licence-select-a').val();
-    licence_b = $('#licence-select-b').val();
-    compareLicences(licence_a, licence_b);
-  });
-
+    new FamilyTree();
 });
 
-function compareLicences(licence_a_id, licence_b_id){
-    if(licence_a && licence_b){
-        // wait spinner
-        $('#licence-diff').empty().append("Loading...").append($("<div>").addClass('wait'));
+function FamilyTree(){
+    // render the similarity trees
+    $('.licence-similarity-tree').each(function(){
+        var tree = new SimilarityTree(this,
+            $(this).data('family-tree-root'), 958, 400);
+    });
 
-        $.getScript('/licences/' + licence_a + '/compare/' + licence_b);
-    }
+    // render the licence family selection combobox (loading the similarity tree when a selection is made)
+    $('.licence-family-select-combo').combobox().on("comboboxselected", function(event, ui){
+        var family_tree_url = '/family_trees/' + $(this).val() + '.js';
+        $.getScript(family_tree_url);
+    });
 }
 
 // tree of similary licences, where distance apart approximates the difference between any two licences
@@ -72,9 +66,8 @@ SimilarityTree.prototype.update = function(source) {
         .attr("class", "node")
         .attr("transform", function(d) {
             return "translate(" + (d.y  + similarity_tree.y_offset) + "," +
-            (d.x + similarity_tree.x_offset) + ")"; })
+                (d.x + similarity_tree.x_offset) + ")"; })
         .on("click", function(d) {
-            console.log('here3');
             if(similarity_tree.selection_a == null || similarity_tree.selection_b != null){
                 similarity_tree.selection_a = d;
                 similarity_tree.selection_b = null;
@@ -83,7 +76,6 @@ SimilarityTree.prototype.update = function(source) {
                 similarity_tree.selection_b = d;
                 similarity_tree.compare_selections();
             }
-            console.log('here4');
             similarity_tree.update(similarity_tree.root);
         });
     nodeEnter.append("svg:circle")
@@ -107,7 +99,7 @@ SimilarityTree.prototype.update = function(source) {
         .data(this.tree.links(nodes), function(d) { return d.target.id; });
 
     var diagonal = d3.svg.diagonal()
-      .projection(function(d) {return [d.y + similarity_tree.y_offset, d.x + similarity_tree.x_offset];});
+        .projection(function(d) {return [d.y + similarity_tree.y_offset, d.x + similarity_tree.x_offset];});
     link.enter().insert("svg:path", "g")
         .attr("class", "link")
         .attr("d", diagonal);
@@ -128,7 +120,6 @@ SimilarityTree.prototype.calculate_offsets = function(nodes){
             x_range[0] = nodes[i].x;
         if(nodes[i].y < y_range[0])
             y_range[0] = nodes[i].y;
-        console.log(nodes[i].x);
     }
 
     this.x_offset = -x_range[0] + 10;
@@ -150,10 +141,9 @@ SimilarityTree.prototype.calculate_length_between = function(nodes){
     });
 }
 
-
 // compare the text of two selected licences
 SimilarityTree.prototype.compare_selections = function(){
     licence_a = this.selection_a.licence.id;
     licence_b = this.selection_b.licence.id;
-    compareLicences(licence_a, licence_b);
+    (new LicenceCompare()).compareLicences(licence_a, licence_b);
 }

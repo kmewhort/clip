@@ -13,6 +13,28 @@
     }
   }
 
+  #tools{
+    padding-bottom: 32px;
+    h3 {
+      line-height: 1em;
+    }
+
+    #tools-links{
+      span {
+        width: 120px;
+        height: 140px;
+        border: 1px solid #999;
+        border-radius: 4px;
+        display: inline-block;
+        text-align: center;
+        padding-top: 90px;
+      }
+      span.compare-tool {
+        background: image-url('compare_icon_small.png') no-repeat scroll 0 0 transparent;
+      }
+    }
+  }
+
   ul.ui-menu {
     padding: 2px 4px;
     background: #F7F7FD;

@@ -13,6 +13,16 @@ module LicenceHelper
     end.join.html_safe
   end
 
+  def licence_tabs
+    tabs = {}
+    tabs['licence_info'] = "Licence Info"
+    tabs['licence_text'] = "Licence Text"
+    tabs['licence_benchmarks'] = "Benchmarks"
+    tabs['licence_comparison'] = "Family History" if !@family_trees.nil? && !@family_trees.empty?
+    tabs['licence_metadata'] = "Metadata"
+    tabs
+  end
+
   def domains_comma_seperated(licence)
     domains = licence.attributes.map { |domain_name, is_in_domain| \
       (domain_name.match(/^domain/) && is_in_domain) ? domain_name.sub("domain_","") : "" }

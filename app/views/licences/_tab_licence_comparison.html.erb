@@ -1,26 +1,3 @@
-<% @licence.family_tree_nodes.each do |ft_node| %>
-  <p>Click any two licences in the <strong><%= ft_node.family_tree.title %></strong> family to compare the legal text:</p>
-  <%= content_tag :div, '', class: 'licence-similarity-tree',
-                  data: { family_tree_root: ft_node.family_tree.root_node } %>
-<% end %>
-
-<div class="licence-compare-selection">
-    <div><%= !@licence.family_tree_nodes.empty? ? 'Or, c' : 'C' %>ompare to any other licence:</div>
-    <span id="licence-select-wrapper-a">
-        <select id="licence-select-a" class="licence-select-combo tbox">
-          <option value="">First licence</option>
-          <% Licence.all.each do |licence| %>
-              <option value="<%= licence.id %>"><%=  full_title(licence) %></option>
-          <% end %>
-        </select>
-    </span>
-    <span id="licence-select-wrapper-b">
-        <select id="licence-select-b" class="licence-select-combo tbox">
-          <option value="">Second licence</option>
-          <% Licence.all.each do |licence| %>
-              <option value="<%= licence.id %>"><%=  full_title(licence) %></option>
-          <% end %>
-        </select>
-    </span>
-</div>
-<div id="licence-diff" class="panel"><em>No licences selected for comparison.</em></div>
+<%= render partial: 'family_trees/show', locals: { family_tree: @family_trees.first, family_select_box: false } %>
+<%= render partial: 'compare', locals: { licence_a: @licence, licence_b: nil, comparison_html: nil,
+                                         licence_select_box: false } %>

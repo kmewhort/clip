@@ -1,9 +1,16 @@
 Clip::Application.routes.draw do
   # licences
-  resources :licences, :id => /[A-Za-z0-9\.\-]+?/, :format => /html|json/ #allow periods in id
-  match 'licences/:id/compare/:compare_to_id' => 'licences#compare'
+  resources :licences, :id => /[A-Za-z0-9\.\-]+?/, :format => /html|json|js/ do #allow periods in id
+    member do
+      get 'compare_to'
+    end
+  end
+
+  resources :family_trees
 
   # non-resourceful routes
   root to: "home#index"
   match 'api' => "home#api"
+  match 'tools/compare' => "tools#compare"
+  match 'tools/benchmark' => "tools#benchmark"
 end

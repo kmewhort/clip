@@ -19,19 +19,6 @@ class LicencesController < ApplicationController
     end
   end
 
-  def compare
-    @licence_a = Licence.find(params[:id])
-    @licence_b = Licence.find(params[:compare_to_id])
-
-    # render/cache an HTML diff of the two licences
-    cache_filename =
-    @comparison = @licence_a.html_diff_with(@licence_b)
-
-    respond_to do |format|
-      format.js
-    end
-  end
-
   def new
     respond_to do |format|
       format.html { render notice: notice }
@@ -85,6 +72,19 @@ class LicencesController < ApplicationController
     end
   end
 
+  def compare_to
+    @licence_a = Licence.find(params[:id])
+    @licence_b = Licence.find(params[:licence_id])
+    @selectable = params[:selectable]
+
+    # render/cache an HTML diff of the two licences
+    @comparison_html = @licence_a.html_diff_with(@licence_b)
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
   def find_licences
     table_cols = Licence.columns.map(&:name)
@@ -103,6 +103,7 @@ class LicencesController < ApplicationController
     else
       @licence = Licence.find_by_identifier(params[:id])
     end
+    @family_trees = @licence.family_tree_nodes.map {|ftn| ftn.family_tree }
   end
 
   def build_licence

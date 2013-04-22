@@ -1,0 +1,19 @@
+<div id="family-tree">
+  <% if family_select_box %>
+      <p>Select a licence family to compare the licence texts:</p>
+      <select class="licence-family-select-combo tbox">
+        <option value=""></option>
+        <% FamilyTree.all.each do |family| %>
+            <option value="<%= family.id %>" <%= 'selected="selected"' if family == family_tree %>><%=  family.title %></option>
+        <% end %>
+      </select>
+  <% end %>
+
+  <% if !family_tree.nil? %>
+      <% if !family_select_box %>
+        <p>Click any two licences in the <strong><%= family_tree.title %></strong> family to compare the legal text:</p>
+      <% end %>
+      <%= content_tag :div, '', class: 'licence-similarity-tree',
+                      data: { family_tree_root: family_tree.root_node } %>
+  <% end %>
+</div>

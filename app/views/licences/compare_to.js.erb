@@ -1,0 +1,4 @@
+$('#licence-compare').replaceWith('<%=
+j render partial: 'compare', locals: { comparison_html: @comparison_html,  licence_select_box: @selectable,
+                                       licence_a: @licence_a, licence_b: @licence_b } %>');
+new LicenceCompare();

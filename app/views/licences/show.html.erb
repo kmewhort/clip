@@ -63,12 +63,7 @@
 <!-- tabs -->
 <div id="tabs">
     <dl class="tabs contained">
-      <% {'licence_info' => "Licence Info",
-          'licence_text' => "Licence Text",
-          'licence_benchmarks' => "Benchmarks",
-          'licence_comparison' => "Comparison",
-          'licence_metadata' => "Metadata"}.each do |tab_id, txt|
-      %>
+      <% licence_tabs.each do |tab_id, txt| %>
           <dd class="<%= tab_id == @tab ? "active" : "hide-for-small" %>">
             <%= link_to txt, licence_path(@licence, tab: tab_id) %>
           </dd>
