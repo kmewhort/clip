@@ -8,6 +8,7 @@ gem 'yaml_db'
 
 # diff
 gem 'htmldiff' # https://github.com/myobie/htmldiff
+gem 'nokogiri'
 
 # styling
 gem 'simple_form'
@@ -39,7 +40,6 @@ group :development, :test do
   gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
   gem 'clip-similarity', git: 'git@github.com:kmewhort/clip-similarity.git'
   gem 'ruby-progressbar'
-  gem 'nokogiri'
   gem "d3-rails"
 end
 
