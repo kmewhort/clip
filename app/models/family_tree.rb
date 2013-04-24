@@ -1,4 +1,3 @@
-require 'clip_similarity'
 class FamilyTree < ActiveRecord::Base
   has_many :family_tree_nodes, dependent: :destroy
   has_many :licences, through: :family_tree_node
@@ -11,13 +10,7 @@ class FamilyTree < ActiveRecord::Base
 
   # build the tree by performing a diff with all licences (starting from the root node) and
   # adding ones similar above the diff_threshold
-  def build_tree(root_licence, similarity_matrix = nil)
-    # calculate the licence similarity matrix
-    if !similarity_matrix
-      similarity_matrix = ClipSimilarity.calculate_with_diff(
-          Licence.all.map{|l| {id: l.id, filename: l.text.path } })
-    end
-
+  def build_tree(root_licence, similarity_matrix)
     # clear the current tree and add the root licence to the tree
     self.family_tree_nodes.destroy
     root_node = self.family_tree_nodes.build
