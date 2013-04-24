@@ -32,11 +32,20 @@ class LicencesController < ApplicationController
 
   def create
     result = true
-    result = @licence.save unless params[:preview]
+    success_notice = ''
+    unless params[:preview]
+      if params[:submit_for_review]
+        result = @licence.save_for_review
+        success_notice = 'Thank you for your submission of a new licence! We will review it and post it on the website shortly.'
+      else
+        result = @licence.save unless params[:preview]
+        success_notice = 'Licence was successfully created.'
+      end
+    end
 
     respond_to do |format|
       if result
-        format.html { redirect_to @licence, notice: 'Licence was successfully created.' }
+        format.html { redirect_to @licence, notice: success_notice }
         format.json { render json: @licence  }
       else
         format.html { render action: "new" }
@@ -46,16 +55,23 @@ class LicencesController < ApplicationController
   end
 
   def update
+    @licence.assign_attributes(params[:licence])
+
     result = true
-    if params[:preview]
-      @licence.assign_attributes(params[:licence])
-    else
-      result = @licence.update_attributes(params[:licence])
+    success_notice = ''
+    unless params[:preview]
+      if params[:submit_for_review]
+        result = @licence.save_for_review
+        success_notice = 'Thank you for your submission! We will review your suggested changes shortly.'
+      else
+        result = @licence.save unless params[:preview]
+        success_notice = 'Licence was successfully updated.'
+      end
     end
 
     respond_to do |format|
       if result
-        format.html { redirect_to @licence, notice: 'Licence was successfully updated.' }
+        format.html { redirect_to @licence, notice: success_notice }
         format.json { render json: @licence  }
       else
         format.html { render action: "edit" }
@@ -108,7 +124,7 @@ class LicencesController < ApplicationController
   end
 
   def build_licence
-    @licence = Licence.new
+    @licence = Licence.new(params[:licence])
     @licence.build_children
   end
 end

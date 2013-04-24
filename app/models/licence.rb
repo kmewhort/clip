@@ -63,18 +63,36 @@ class Licence < ActiveRecord::Base
     diff_result
   end
 
+  # save the licence state to YAML but not the db (so changes can be reviewed before an actual save)
+  def save_for_review
+    is_valid = self.valid?
+    if is_valid
+      # include nested relations in output
+      data = { attributes: @attributes }
+      self.class.reflections.keys.each {|key| data[key] = self.send(key) }
+
+      # save to file
+      filename = Time.now.to_i.to_s + (!identifier.nil? ? ("_" + identifier) : "") + ".yml"
+      File.open(Rails.root.join('public', 'review_pending', filename), 'w') do |f|
+        YAML.dump(data, f)
+      end
+    end
+    is_valid
+  end
+
   def build_children
-    self.build_compliance if self.compliance.nil?
-    self.build_right if self.right.nil?
-    self.build_obligation if self.obligation.nil?
-    self.build_patent_clause if self.patent_clause.nil?
-    self.build_attribution_clause if self.attribution_clause.nil?
-    self.build_copyleft_clause if self.copyleft_clause.nil?
-    self.build_compatibility if self.compatibility.nil?
-    self.build_termination if self.termination.nil?
-    self.build_changes_to_term if self.changes_to_term.nil?
-    self.build_disclaimer if self.disclaimer.nil?
-    self.build_conflict_of_law if self.conflict_of_law.nil?
+    # need to directly set parent of nested attributes for validation w/o save
+    self.build_compliance.licence = self if self.compliance.nil?
+    self.build_right.licence = self if self.right.nil?
+    self.build_obligation.licence = self if self.obligation.nil?
+    self.build_patent_clause.licence = self if self.patent_clause.nil?
+    self.build_attribution_clause.licence = self if self.attribution_clause.nil?
+    self.build_copyleft_clause.licence = self if self.copyleft_clause.nil?
+    self.build_compatibility.licence = self if self.compatibility.nil?
+    self.build_termination.licence = self if self.termination.nil?
+    self.build_changes_to_term.licence = self if self.changes_to_term.nil?
+    self.build_disclaimer.licence = self if self.disclaimer.nil?
+    self.build_conflict_of_law.licence = self if self.conflict_of_law.nil?
   end
 
   # manually define json structure to provide a user-friendly ordering
