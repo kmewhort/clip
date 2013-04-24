@@ -8,12 +8,6 @@ gem 'yaml_db'
 
 # diff
 gem 'htmldiff' # https://github.com/myobie/htmldiff
-#gem 'diffy' https://github.com/samg/diffy
-gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
-gem 'clip-similarity', git: 'git@github.com:kmewhort/clip-similarity.git'
-gem 'ruby-progressbar'
-gem 'nokogiri'
-gem "d3-rails"
 
 # styling
 gem 'simple_form'
@@ -38,5 +32,16 @@ group :assets do
   gem 'compass-rails'
   gem 'zurb-foundation'
 end
+
+# Gems only needed for development / initial data generation
+group :development, :test do
+  #gem 'diffy' https://github.com/samg/diffy
+  gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
+  gem 'clip-similarity', git: 'git@github.com:kmewhort/clip-similarity.git'
+  gem 'ruby-progressbar'
+  gem 'nokogiri'
+  gem "d3-rails"
+end
+
 gem 'jquery-rails'
 
