@@ -3,7 +3,7 @@
       <p>Select a licence family to compare the licence texts:</p>
       <select class="licence-family-select-combo tbox">
         <option value=""></option>
-        <% FamilyTree.all.each do |family| %>
+        <% FamilyTree.order("title ASC").each do |family| %>
             <option value="<%= family.id %>" <%= 'selected="selected"' if family == family_tree %>><%=  family.title %></option>
         <% end %>
       </select>
@@ -15,5 +15,6 @@
       <% end %>
       <%= content_tag :div, '', class: 'licence-similarity-tree',
                       data: { family_tree_root: family_tree.root_node } %>
+      <p class="tree-info">A closer distance between nodes indicates greater similarity.</p>
   <% end %>
 </div>

@@ -125,6 +125,9 @@ SimilarityTree.prototype.calculate_offsets = function(nodes){
     this.x_offset = -x_range[0] + 10;
     //this.y_offset = (this.width - (y_range[1] - y_range[0])) / 2 - 10 - 100;
     this.y_offset = 0;
+
+    // also re-adjust window height to match the full expanse
+    $('.licence-similarity-tree svg').attr('height', x_range[1] - x_range[0] + 50);
 }
 
 // horizontal distance between nodes (normalized diff scores), in-place
