@@ -230,9 +230,12 @@
 .more-link{
   display: none;
 }
-#header h1#logo-text a {
-  background: image-url("logo.png") no-repeat scroll 97px 24px transparent;
-  padding-right: 38px;
+#header h1#logo-text a{
+  background: image-url("logo.png") no-repeat scroll 150px 24px transparent;
+  padding-right: 44px;
+}
+#header .logo-text-second {
+  color: #999;
 }
 
 /* --------------------------------------------------------------------------------------
@@ -384,7 +387,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;;
     font-weight: bold;
     font-size: 14px;
-    line-height: 1.8em;
+    line-height: 1.3em;
     letter-spacing: -.2px;
     color: #999;
 

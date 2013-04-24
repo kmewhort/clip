@@ -15,11 +15,6 @@
 
 #header{
   @include outerRow();
-
-  h1#logo-text a {
-    background: url('../images/beta_small.png') bottom right no-repeat;
-    padding-right: 33px;
-  }
 }
 
 #main-content{

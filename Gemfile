@@ -10,7 +10,7 @@ gem 'yaml_db'
 gem 'htmldiff' # https://github.com/myobie/htmldiff
 #gem 'diffy' https://github.com/samg/diffy
 gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
-gem 'clip-similarity', path: '../clip-similarity'
+gem 'clip-similarity', git: 'git@github.com>kmewhort/clip-similarity.git'
 gem 'ruby-progressbar'
 gem 'nokogiri'
 gem "d3-rails"
