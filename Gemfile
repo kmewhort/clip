@@ -13,6 +13,7 @@ gem 'nokogiri'
 # styling
 gem 'simple_form'
 gem 'jquery-ui-rails'
+gem 'compass-rails'
 gem 'zurb-foundation'
 
 # authorization and authentication
@@ -30,8 +31,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-
-  gem 'compass-rails'
   gem "d3-rails"
 end
 
