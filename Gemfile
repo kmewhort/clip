@@ -9,6 +9,7 @@ gem 'yaml_db'
 # diff
 gem 'htmldiff' # https://github.com/myobie/htmldiff
 gem 'nokogiri'
+gem "d3-rails"
 
 # styling
 gem 'simple_form'
@@ -32,7 +33,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem "d3-rails"
 end
 
 # Gems only needed for development / initial data generation
