@@ -32,6 +32,7 @@ group :assets do
 
   gem 'compass-rails'
   gem 'zurb-foundation'
+  gem "d3-rails"
 end
 
 # Gems only needed for development / initial data generation
@@ -40,7 +41,6 @@ group :development, :test do
   gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
   gem 'clip-similarity', git: 'git@github.com:kmewhort/clip-similarity.git'
   gem 'ruby-progressbar'
-  gem "d3-rails"
 end
 
 gem 'jquery-rails'
