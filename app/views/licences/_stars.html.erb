@@ -1,0 +1,64 @@
+<table class="star-rating">
+  <% if licence.score.star_rating == 3 %>
+    <tr class="gold-star">
+      <td class="stars-image">
+        <%= image_tag "gold_star.png" %>
+        <h3>Gold star</h3>
+      </td>
+      <td class="stars-description">
+        <p>This licence achieves a <strong>CLIPol Gold Star</strong> rating, the highest standard of openness. An author who releases a works under a Gold Star licence
+          attempts to fully place the work in the world-wide public domain, thereby allowing anyone to freely adapt, remix and redistribute it
+          for any purpose. There are few, if any, obligations. Compatibility issues rarely arise.</p>
+      </td>
+    </tr>
+  <% elsif licence.score.star_rating == 2 %>
+      <tr class="silver-star">
+        <td class="stars-image">
+          <%= image_tag "silver_star.png" %>
+          <h3>Silver star</h3>
+        </td>
+        <td class="stars-description">
+          <p>This licence achieves a <strong>CLIPol Silver Star</strong> rating, indicating a high standard of openness. The licence imposes only minor obligations or risks that are unlikely to hinder ordinary use cases
+            of adapting, remixing or redistributing the work.</p>
+        </td>
+      </tr>
+  <% elsif licence.score.star_rating == 1 %>
+      <tr class="bronze-star">
+        <td class="stars-image">
+          <%= image_tag "bronze_star.png" %>
+          <h3>Bronze star</h3>
+        </td>
+        <td class="stars-description">
+          <p>This licence achieves a <strong>CLIPol Bronze Star</strong> rating, indicating that it meets the minimum standard necessary to be considered an "open" licence;
+            however, it may impose obligations or risks that prevent common desirable uses of the work. When adapting, remixing, or redistributing
+            the work, care should be taken to review the licence terms to ensure that the risks are acceptable and to ensure compliance with all obligations.</p>
+        </td>
+      </tr>
+  <% else %>
+      <tr class="no-star">
+        <td class="stars-image">
+          <%= image_tag "bronze_star.png" %>
+          <h3>Not open</h3>
+        </td>
+        <td class="stars-description">
+          <p>This licence is not compliant with the CLIPol minimum standard for an "open" licence.  The licence terms impose burdensome limitations, obligations or risks.
+            Before using the work, you should carefully review the licences terms to determine whether these burdens are acceptable for your particular use.</p>
+        </td>
+      </tr>
+  <% end %>
+</table>
+<!--
+    (<%= link_to "details", licence_path(@licence,
+                                         tab: "licence_benchmarks") %>)
+-Silver Star
+This licence achieves a high standard of openness, imposing at most minor obligations or risks that are unlikely to hinder ordinary cases
+of adapting, remixing or redistributing the work. Care should still be taken when combining these works with other licences, as licences in
+this category may not be compatible with one another.
+
+-Bronze Star
+This licence meets the minimum standard necessary to be considered an "open" licence; however, it may impose obligations or risks that prevent common desirable uses of the work. When adapting, remixing, or redistributing
+the work, care should be taken to review the licence terms to ensure that the risks are acceptable and to ensure compliance with all obligations.
+
+-No standard
+This licence does not meet the minimum standard necessary to be considered an "open" licence. It imposes burdensome limitations, obligations or risks:  before using the work, users should carefuly review the licences terms and determine whether these burdens are acceptable for a particular use.
+-->

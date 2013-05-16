@@ -1,0 +1,29 @@
+<div id="compatibility-matrix-for-<%= @compatibility.id %>"
+     class="compatibility-matrix"
+     data-compatibility-id="<%= @compatibility.id %>">
+<table class="compatibility-matrix">
+  <tr>
+    <th colspan="2"></th>
+    <th>You can release your adaptation under the following check-marked licences (and you may remix your work with any other work also licenced under these terms):</th>
+  </tr>
+
+  <% licences.each_with_index do |licence_i, i| %>
+    <tr class="<%= (licence_i == current_licence) ? "active" : "inactive" %>">
+      <% if i == 0 %>
+      <th rowspan="<%= licences.length %>" class="row-label">Original Work</th>
+      <% end %>
+      <td>
+        <%= licence_i.identifier %>:
+      </td>
+      <td class="compatibility-data">
+        <%= wrapped_cells(licences.map do |licence_j|
+              content_tag :td, licence_j.identifier,
+                          class: (licence_i.compatibility.compatible_with?(licence_j) ? "compatible" : "incompatible"),
+                          title: licence_j.full_title
+            end)
+        %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+</div>

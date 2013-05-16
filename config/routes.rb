@@ -10,6 +10,12 @@ Clip::Application.routes.draw do
 
   resources :family_trees
 
+  resources :compatibilities do
+    member do
+      get 'matrix'
+    end
+  end
+
   # non-resourceful routes
   root to: "home#index"
   match 'api' => "home#api"

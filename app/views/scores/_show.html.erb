@@ -1,4 +1,23 @@
 <h2>Benchmarks & Risk Assessment Overview</h2>
+<table>
+  <tr>
+    <th colspan="4" class="benchmark-header">
+      <strong>Summary:</strong>
+    </th>
+  </tr>
+  <tr>
+    <td><strong>Openness score:</strong></td>
+    <td><strong><%= @licence.score.openness.round(1) %> / 25</strong></td>
+    <td>User legal risk mitigation:</td>
+    <td><%= @licence.score.licensee_legal_risk.round(1) %>  / 5.0</td>
+  </tr>
+  <tr>
+    <td>Rights granted:</td>
+    <td><%= @licence.score.licensee_freedom.round(1) %>  / 15.0</td>
+    <td>Business risk mitigation:</td>
+    <td><%= @licence.score.licensee_business_risk.round(1) %>  / 5.0</td>
+  </tr>
+</table>
 <p>This license achieves an overall openness benchmark of <strong><%= score.openness.round(1) %></strong> out of 25 points.
 The score reflects the license's ability to provide the user (licensee) with a flexible and friendly license, based on:
 <ol>

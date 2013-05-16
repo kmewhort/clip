@@ -4,7 +4,7 @@
     <select id="licence-search-combobox" class="tbox">
       <option value="">Select...</option>
       <% @licences.each do |licence| %>
-        <option value="<%= licence.id %>"><%=  full_title(licence) %></option>
+        <option value="<%= licence.id %>"><%=  licence.full_title %></option>
       <% end %>
     </select>
   </div>

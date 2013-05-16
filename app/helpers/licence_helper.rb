@@ -17,6 +17,7 @@ module LicenceHelper
     tabs = {}
     tabs['licence_info'] = "Licence Info"
     tabs['licence_text'] = "Licence Text"
+    tabs['licence_compatibility'] = "Compatibility"
     tabs['licence_benchmarks'] = "Benchmarks"
     tabs['licence_comparison'] = "Family History" if !@family_trees.nil? && !@family_trees.empty?
     tabs['licence_metadata'] = "Metadata"
@@ -66,12 +67,6 @@ module LicenceHelper
     content_tag 'dl', class: "sub-nav" do
       content_tag('dt', "Versions:") + dd_tags.join('').html_safe
     end
-  end
-
-  # full title w/ licence version identifier
-  def full_title(licence)
-    full_title = licence.title + ' ' + licence.version
-    full_title.sub /\+\Z/, ' or later'
   end
 
   # populate array of rights covered / not covered under the licence

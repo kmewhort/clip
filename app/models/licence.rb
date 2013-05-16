@@ -95,6 +95,12 @@ class Licence < ActiveRecord::Base
     self.build_conflict_of_law.licence = self if self.conflict_of_law.nil?
   end
 
+  # full title w/ licence version identifier
+  def full_title
+    full_title = title + ' ' + version
+    full_title.sub /\+\Z/, ' or later'
+  end
+
   # manually define json structure to provide a user-friendly ordering
   def as_json(options={})
     result = {

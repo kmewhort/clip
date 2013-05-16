@@ -1,0 +1,3 @@
+$('#compatibility-matrix-for-<%= @compatibility.id %>').replaceWith('<%=
+  j render partial: 'matrix', locals: { current_licence: @compatibility.licence,
+                                        licences: @licences } %>');

@@ -1,6 +1,6 @@
 class FamilyTree < ActiveRecord::Base
   has_many :family_tree_nodes, dependent: :destroy
-  has_many :licences, through: :family_tree_node
+  has_many :licences, through: :family_tree_nodes
 
   attr_accessible :title, :diff_threshold
 

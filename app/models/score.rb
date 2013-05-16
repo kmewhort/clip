@@ -33,6 +33,20 @@ class Score < ActiveRecord::Base
     calculate_overall_openness
   end
 
+  # >=22.5 = 3 stars (Gold), >=20 = 2 stars (Silver), >= 17.5 = 1 star (Bronze)
+  def star_rating
+    case
+      when openness >= 22.5
+        3
+      when openness >= 20
+        2
+      when openness >= 17.5
+        1
+      else
+        0
+    end
+  end
+
   def openness_rank
     Score.count(conditions: "openness > #{self.openness}" ) + 1
   end

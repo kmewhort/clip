@@ -1,6 +1,6 @@
 <select id="<%= select_id %>" class="licence-select-combo tbox">
   <option value=""></option>
   <% Licence.all.each do |licence| %>
-      <option value="<%= licence.id %>" <%= 'selected="selected"' if licence == selection %>><%=  full_title(licence) %></option>
+      <option value="<%= licence.id %>" <%= 'selected="selected"' if licence == selection %>><%= licence.full_title %></option>
   <% end %>
 </select>

@@ -1,0 +1,33 @@
+#clip .compatibility-matrix {
+  tr {
+    border: medium none;
+  }
+  tr.active {
+    background-color: #2BA6CB;
+  }
+  th.row-label {
+    vertical-align: top;
+  }
+
+  td.compatibility-data {
+    margin: 0;
+    padding: 4px 4px;
+
+    table {
+      border: medium none;
+      background: none repeat scroll 0 0 transparent;
+      margin: 0;
+      padding: 0;
+
+      td {
+        margin: 1px;
+      }
+      td.compatible{
+        background-color: #B4DB6F;
+      }
+      td.incompatible{
+        background-color: #C10026;
+      }
+    }
+  }
+}

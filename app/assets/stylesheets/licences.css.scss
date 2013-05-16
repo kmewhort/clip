@@ -138,9 +138,11 @@
 
       h2{
         margin-right: 0;
-        font: 3.0em Georgia,"Times New Roman",Times,Serif;
-        padding-bottom: 8px;
+        font: 2.6em Georgia,"Times New Roman",Times,Serif;
+        padding-bottom: 7px;
         border: medium none;
+        line-height: 0.95;
+        margin-top: 7px;
       }
 
       p {
@@ -217,6 +219,22 @@
             color: #FFF;
           }
         }
+      }
+    }
+
+    .star-rating {
+      h3 {
+        text-align: center;
+        margin: 0;
+        font-size: 1.4em;
+        line-height: 1.0;
+        padding: 2px 0 0;
+      }
+      .stars-description p{
+        font-size: 105%;
+      }
+      .silver-star img{
+        background: none repeat scroll 0 0 #FBFCFE;
       }
     }
   }

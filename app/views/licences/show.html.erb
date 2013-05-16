@@ -23,7 +23,7 @@
   </div>
 
   <div class="text-block">
-    <h2><%= full_title(@licence) %></h2>
+    <h2><%= @licence.full_title %></h2>
 
     <div class="licence-versions">
       <%= licence_versions_nav(@licence) %>
@@ -37,26 +37,8 @@
       for use with <%= domains_comma_seperated(@licence) %>.
     </p>
 
-    <table>
-      <tr>
-        <th colspan="4" class="benchmark-header">
-          <strong>Benchmark Summary</strong> (<%= link_to "details", licence_path(@licence,
-                                           tab: "licence_benchmarks") %>)
-        </th>
-      </tr>
-      <tr>
-        <td><strong>Openness score:</strong></td>
-        <td><strong><%= @licence.score.openness.round(1) %> / 25</strong></td>
-        <td>User legal risk mitigation:</td>
-        <td><%= @licence.score.licensee_legal_risk.round(1) %>  / 5.0</td>
-      </tr>
-      <tr>
-        <td>Rights granted:</td>
-        <td><%= @licence.score.licensee_freedom.round(1) %>  / 15.0</td>
-        <td>Business risk mitigation:</td>
-        <td><%= @licence.score.licensee_business_risk.round(1) %>  / 5.0</td>
-      </tr>
-    </table>
+    <%= render partial: "stars", locals: { licence: @licence } %>
+
   </div>
 </div>
 
