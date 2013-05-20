@@ -39,7 +39,6 @@ $(function () {
             },
             tooltip: {
                 formatter: function() {
-                    console.log(this);
                     return '<b>'+ this.point.licence_info.title + '</b> (' +
                             this.point.licence_info.identifier + ')<br/>' +
                             'Openness score: '+ Highcharts.numberFormat(this.y, 1);

@@ -3,27 +3,28 @@
      data-compatibility-id="<%= @compatibility.id %>">
 <table class="compatibility-matrix">
   <tr>
-    <th colspan="2"></th>
-    <th>You can release your adaptation under the following check-marked licences (and you may remix your work with any other work also licenced under these terms):</th>
+    <th colspan="2">
+      <%= image_tag("beta_small.png", style: "float: left; margin-right: 6px; background-color: #FFF") %>
+      <p style="vertical-align: top; font-size: 95%; font-weight: normal; line-height: 1.2; margin-top: 8px; color: #C10026">
+        Work in progress.  Use with caution!</p>
+    </th>
+    <th class="col-label">You can release your adaptation under the following highlighted-green licences (and you may remix your work with any other work also licenced under these terms):</th>
   </tr>
 
-  <% licences.each_with_index do |licence_i, i| %>
-    <tr class="<%= (licence_i == current_licence) ? "active" : "inactive" %>">
-      <% if i == 0 %>
-      <th rowspan="<%= licences.length %>" class="row-label">Original Work</th>
-      <% end %>
-      <td>
-        <%= licence_i.identifier %>:
-      </td>
-      <td class="compatibility-data">
-        <%= wrapped_cells(licences.map do |licence_j|
-              content_tag :td, licence_j.identifier,
-                          class: (licence_i.compatibility.compatible_with?(licence_j) ? "compatible" : "incompatible"),
-                          title: licence_j.full_title
-            end)
-        %>
-      </td>
-    </tr>
+  <%= render partial: 'matrix_row',
+            locals: {licence: current_licence, all_licences: licences, first_row: true } %>
+  <% licences.to_a.reject{|l| l == current_licence}.each do |licence_i| %>
+     <%= render partial: 'matrix_row',
+                locals: {licence: licence_i, all_licences: licences, first_row: false } %>
   <% end %>
+
+  <tr>
+    <td colspan="2">
+      <span>Check compatibility with another licence:</span>
+      <span><%= render partial: 'licences/licence_select', locals: { select_id: "add-licence",
+                                                                     selection: nil } %></span>
+      <span id="add-licence-button" class="small button">Add</span>
+    </td>
+  </tr>
 </table>
 </div>

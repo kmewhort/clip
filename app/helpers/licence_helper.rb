@@ -47,17 +47,7 @@ module LicenceHelper
 
   # links to other versions of this licence
   def licence_versions_nav(cur_licence)
-    licence_versions =  Licence.where(title: cur_licence.title)
-    return if licence_versions.length == 1 && licence_versions.first.version.empty?
-
-    # special case handling for LGPL, which changed names from 2.0 to 2.1
-    if cur_licence.title == 'GNU Library General Public License'
-      licence_versions += Licence.where(title: 'GNU Lesser General Public License')
-    elsif cur_licence.title == 'GNU Lesser General Public License'
-      licence_versions += Licence.where(title: 'GNU Library General Public License')
-    end
-
-    dd_tags = licence_versions.sort { |a,b| a.version <=> b.version }.map do |licence|
+    dd_tags = cur_licence.all_versions.map do |licence|
       content_tag 'dd', class: (licence == cur_licence ? "active" : "inactive") do
         link_to(licence.version, licence)
       end

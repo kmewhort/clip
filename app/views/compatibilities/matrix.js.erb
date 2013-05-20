@@ -1,3 +1,19 @@
+// load matrix
 $('#compatibility-matrix-for-<%= @compatibility.id %>').replaceWith('<%=
   j render partial: 'matrix', locals: { current_licence: @compatibility.licence,
                                         licences: @licences } %>');
+
+// reload licence selection comboboxes
+$( ".licence-select-combo" ).combobox();
+
+// set add-licence action
+$(".compatibility-matrix #add-licence-button").click(function(){
+    var licence_ids = $.makeArray($('.compatibility-matrix .compatibility-row').map(function(){
+        return $(this).children("td:first").text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '');
+    }));
+    licence_ids.push($('.compatibility-matrix #add-licence').val());
+
+    $.getScript('/compatibilities/' + licence_ids[0] + '/matrix.js?licence_ids[]=' +
+                licence_ids.join("&licence_ids[]="));
+
+});

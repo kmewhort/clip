@@ -10,7 +10,7 @@ Clip::Application.routes.draw do
 
   resources :family_trees
 
-  resources :compatibilities do
+  resources :compatibilities, :id => /[A-Za-z0-9\.\-]+?/, :format => /html|json|js/ do
     member do
       get 'matrix'
     end

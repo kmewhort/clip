@@ -51,6 +51,16 @@ class Licence < ActiveRecord::Base
   validates :identifier, :title, presence: true
   validates :maintainer_type, inclusion: MAINTAINER_TYPES
 
+  # find by either the licence identifier or db id (whichever is specified)
+  def self.find_by_identifier(id)
+    if id.match /\A\d+\Z/
+      Licence.find(id)
+    else
+      Licence.first(conditions: {identifier: id})
+    end
+  end
+
+
   def html_diff_with(other_licence)
     # try to load the html diff from cache
     cache_filename = Rails.root.join('public','system','licences','diffs',"#{self.id}-#{other_licence.id}.html")
@@ -80,6 +90,33 @@ class Licence < ActiveRecord::Base
     is_valid
   end
 
+  # full title w/ licence version identifier
+  def full_title
+    full_title = title + ' ' + version
+    full_title.sub /\+\Z/, ' or later'
+  end
+
+  # get all versions of the this licence
+  def all_versions
+    result = Licence.where(title: self.title)
+    result = [] if result.nil?
+
+    # special case handling for LGPL, which changed names from 2.0 to 2.1
+    if title == 'GNU Library General Public License'
+      result += Licence.where(title: 'GNU Lesser General Public License')
+    elsif title == 'GNU Lesser General Public License'
+      result += Licence.where(title: 'GNU Library General Public License')
+    end
+
+    # sort by version
+    result.sort! { |a,b| a.version <=> b.version }
+    # special case for BSD, which has decreasing number of clauses labels with future versions
+    if title == 'BSD'
+      result.reverse!
+    end
+    result
+  end
+
   def build_children
     # need to directly set parent of nested attributes for validation w/o save
     self.build_compliance.licence = self if self.compliance.nil?
@@ -93,12 +130,6 @@ class Licence < ActiveRecord::Base
     self.build_changes_to_term.licence = self if self.changes_to_term.nil?
     self.build_disclaimer.licence = self if self.disclaimer.nil?
     self.build_conflict_of_law.licence = self if self.conflict_of_law.nil?
-  end
-
-  # full title w/ licence version identifier
-  def full_title
-    full_title = title + ' ' + version
-    full_title.sub /\+\Z/, ' or later'
   end
 
   # manually define json structure to provide a user-friendly ordering

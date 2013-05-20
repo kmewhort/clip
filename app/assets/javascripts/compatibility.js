@@ -1,10 +1,10 @@
 $(document).ready(function(){
     // load compatibility matrices into any placeholders
     $('.compatibility-matrix').each(function(){
-        var model_id = $(this).data('compatibility-id');
+        var compatibility_id = $(this).data('compatibility-id');
 
-        if(model_id){
-            $.getScript('/compatibilities/' + model_id + '/matrix.js');
+        if(compatibility_id){
+            $.getScript('/compatibilities/' + compatibility_id + '/matrix.js');
         }
     });
 });

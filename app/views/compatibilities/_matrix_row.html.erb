@@ -1,0 +1,16 @@
+<tr class="compatibility-row <%= first_row ? "active" : "inactive" %>">
+  <% if first_row %>
+      <th rowspan="<%= all_licences.length+1 %>" class="row-label">Original Work</th>
+  <% end %>
+  <td>
+    <%= licence.identifier %>:
+  </td>
+  <td class="compatibility-data">
+    <%= wrapped_cells(all_licences.map do |licence_j|
+      content_tag :td, licence_j.identifier,
+                  class: (licence.compatibility.compatible_with?(licence_j) ? "compatible" : "incompatible"),
+                  title: licence_j.full_title
+    end)
+    %>
+  </td>
+</tr>

@@ -16,7 +16,8 @@ class Compatibility < ActiveRecord::Base
 
     # future versions of the same licence
     return true if (copyleft_compatible_with_future_versions || sublicense_future_versions) &&
-                   (other_licence.title == self.licence.title && other_licence.version >= self.licence.version)
+                   (licence.all_versions.to_a.include?(other_licence) &&
+                    licence.all_versions.index(other_licence) > licence.all_versions.index(licence))
 
     # specifically-defined compatibility
     return true if !copyleft_compatible_with_other.nil? && copyleft_compatible_with_other.split(/\s*,\s*/).include?(other_licence.id)
@@ -31,7 +32,7 @@ class Compatibility < ActiveRecord::Base
     # of this one (the combined work is still technically under the terms of BOTH licences,
     # but a user's compliance with the more onerous licence implies compliance with the other)
     self.licence.obligation.attributes.each_pair do |key, value|
-      next unless key.match(/\Aobligation/) && value
+      next unless !key.match(/\Aobligation/).nil? && value
       return false unless other_licence.obligation.attributes[key] || soft_compatibility_acceptable
       # TODO: add a warning for soft compatibility
       # TODO: more specific checks for type of attribution, type of copyleft
@@ -39,14 +40,26 @@ class Compatibility < ActiveRecord::Base
 
     # the other licence cannot grant any additional rights or permissions
     other_licence.right.attributes.each_pair do |key, value|
-      next unless key.match(/\A(right|covers)/) && value
-      return false unless licence.right.attributes[key]
+      next unless !key.match(/\A(right|covers)/).nil? && value
+
+      # explicit permission for circumventions or SGDRs is jurisdiction specific and a
+      # licence not including these does not necessarily mean the licence does not allow it;
+      # thus, generate a warning only
+      if key == "covers_circumventions" || key == "covers_sgdrs"
+        # TODO: warning
+      # a patent licence may be implicit even if not set out explicitly in the licence;
+      # thus, generate a warning only
+      elsif key == "covers_patents_explicitly"
+        # TODO: warning
+      else
+        return false unless licence.right.attributes[key]
+      end
     end
 
     # the other licence cannot remove any prohibitions (unless soft compatibility is acceptable,
     # such that the prohibitions can be included in a combined licence)
     other_licence.right.attributes.each_pair do |key, value|
-      next unless key.match(/\A(prohibits)/) && !value
+      next unless !key.match(/\A(prohibits)/).nil? && !value
       return false if licence.right.attributes[key] && !soft_compatibility_acceptable
     end
   end

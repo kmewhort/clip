@@ -90,8 +90,8 @@ class LicencesController < ApplicationController
   end
 
   def compare_to
-    @licence_a = Licence.find(params[:id])
-    @licence_b = Licence.find(params[:licence_id])
+    @licence_a = Licence.find_by_identifier(params[:id])
+    @licence_b = Licence.find_by_identifier(params[:licence_id])
     @selectable = params[:selectable]
 
     # render/cache an HTML diff of the two licences
@@ -115,11 +115,7 @@ class LicencesController < ApplicationController
   end
 
   def find_licence
-    if params[:id].match /\A\d+\Z/
-      @licence = Licence.find(params[:id])
-    else
-      @licence = Licence.find_by_identifier(params[:id])
-    end
+    @licence = Licence.find_by_identifier(params[:id])
     @family_trees = @licence.family_tree_nodes.map {|ftn| ftn.family_tree }
   end
 

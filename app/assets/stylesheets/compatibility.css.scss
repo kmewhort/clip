@@ -8,6 +8,9 @@
   th.row-label {
     vertical-align: top;
   }
+  th.col-label {
+    font-size: 95%;
+  }
 
   td.compatibility-data {
     margin: 0;
@@ -21,6 +24,7 @@
 
       td {
         margin: 1px;
+        word-break: break-all;
       }
       td.compatible{
         background-color: #B4DB6F;
@@ -29,5 +33,19 @@
         background-color: #C10026;
       }
     }
+  }
+
+  td > span {
+    display: inline-block;
+    margin: 0 4px;
+  }
+
+  .ui-front, .ui-combobox-input, ul.ui-menu {
+      width: 320px !important;
+  }
+
+  #add-licence-button {
+    margin-top: 1px;
+    vertical-align: top;
   }
 }

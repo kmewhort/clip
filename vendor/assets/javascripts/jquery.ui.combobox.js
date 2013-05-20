@@ -18,6 +18,8 @@
                 wrapper = this.wrapper = $( "<span>" )
                     .addClass( "ui-combobox" )
                     .insertAfter( select );
+            if(typeof this.options.wrapper_class != 'undefined')
+              wrapper.addClass(this.options.wrapper_class);
             function removeIfInvalid( element ) {
                 var value = $( element ).val(),
                     matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( value ) + "$", "i" ),
