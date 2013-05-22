@@ -7,9 +7,24 @@ class Compatibility < ActiveRecord::Base
   # (but not necessarily licenced under this licence, if it's only one-way compatible);
   # If accept_soft_compatibility is true, the licence is also considered compatible if a combined work can
   # satisfy the licence terms through releasing the work under a licence containing the terms of BOTH licences
-  def compatible_with?(other_licence, soft_compatibility_acceptable = false)
-    # if no modification is allowed, cannot create a compatible derivative work at all
-    return false if !licence.right.right_to_modify
+  def compatible_with?(other_licence, soft_compatibility_acceptable = false, reasons = {})
+    # reasons for any soft or hard incompatibility
+    reasons.replace({
+        soft: [],
+        hard: [],
+        warnings: []
+    })
+
+    #
+    # Basic compatibility checks/barriers
+    #
+
+    # if no modification is allowed, cannot create a compatible derivative work at all (and, with
+    # this full-stop, no further incompatibility checks necessary)
+    if !licence.right.right_to_modify
+      reasons[:hard] << "#{licence.identifier} prohibits any type of adaptation"
+      return false
+    end
 
     # compatible with the exact same licence,
     return true if self.licence == other_licence
@@ -26,45 +41,66 @@ class Compatibility < ActiveRecord::Base
     # unless explicitly compatible per above checks, the licence is NOT compatible where
     # this licence has a copyleft clause
     # TODO: check type of combination / type of copyleft
-    return false if self.licence.obligation.obligation_copyleft?
+    if licence.obligation.obligation_copyleft?
+      reasons[:hard] << "#{licence.identifier} contains a copyleft clause and adapations can only be released under the same #{licence.identifier} licence"
+      return false
+    end
+
+    #
+    # Term-by-term comparisons
+    #
 
     # consider permissive licences compatible where the other licence includes all of the core obligations
     # of this one (the combined work is still technically under the terms of BOTH licences,
     # but a user's compliance with the more onerous licence implies compliance with the other)
     self.licence.obligation.attributes.each_pair do |key, value|
-      next unless !key.match(/\Aobligation/).nil? && value
-      return false unless other_licence.obligation.attributes[key] || soft_compatibility_acceptable
+      next unless !key.match(/\Aobligation/).nil? && value && !other_licence.obligation.attributes[key]
+      reasons[:soft] << "#{licence.identifier} contains #{nicify(key)} obligations, but #{other_licence.identifier} does not"
       # TODO: add a warning for soft compatibility
       # TODO: more specific checks for type of attribution, type of copyleft
     end
 
     # the other licence cannot grant any additional rights or permissions
     other_licence.right.attributes.each_pair do |key, value|
-      next unless !key.match(/\A(right|covers)/).nil? && value
+      next unless !key.match(/\A(right|covers)/).nil? && value && !licence.right.attributes[key]
 
       # explicit permission for circumventions or SGDRs is jurisdiction specific and a
       # licence not including these does not necessarily mean the licence does not allow it;
       # thus, generate a warning only
-      if key == "covers_circumventions" || key == "covers_sgdrs"
-        # TODO: warning
+      if key == "covers_circumventions"
+        reasons[:warnings] << "#{licence.identifier} does not explicitly permit circumvention of technical protection measures (TPMs), but #{other_licence.identifier} \
+          grants permission to do so. This may render the licences incompatible in jurisdictions with anti-circumvention laws"
+      elsif key == "covers_sgdrs"
+        reasons[:warnings] << "#{licence.identifier} does not explicitly grant Sui Generis Database Rights (SGDRs), but #{other_licence.identifier} \
+          does. This may render the licences incompatible in jurisdictions with legislated SGDRs (such as in Europe)"
       # a patent licence may be implicit even if not set out explicitly in the licence;
       # thus, generate a warning only
       elsif key == "covers_patents_explicitly"
-        # TODO: warning
+        reasons[:warnings] << "#{licence.identifier} does not explicitly cover patent rights, but #{other_licence.identifier} \
+          does. However, depending on the context, this may not pose a problem if patent rights are implicitly granted in the #{licence.identifier} licence"
       else
-        return false unless licence.right.attributes[key]
+        reasons[:soft] << "#{licence.identifier} does not cover #{nicify(key)}, but #{other_licence.identifier} #{!key.match(/\Aright/).nil? ? 'grants this right' : 'does'}"
       end
     end
 
     # the other licence cannot remove any prohibitions (unless soft compatibility is acceptable,
     # such that the prohibitions can be included in a combined licence)
     other_licence.right.attributes.each_pair do |key, value|
-      next unless !key.match(/\A(prohibits)/).nil? && !value
-      return false if licence.right.attributes[key] && !soft_compatibility_acceptable
+      next unless !key.match(/\A(prohibits)/).nil? && !value && licence.right.attributes[key]
+      reasons[:soft] << "#{licence.identifier} prohibits #{nicify(key)}, but #{other_licence.identifier} does not contain any such this stipulation"
     end
+
+    reasons[:hard].empty? && (reasons[:soft].empty? || soft_compatibility_acceptable)
   end
 
   def as_json(options = {})
     super( except: [ :id, :licence_id, :created_at, :updated_at ] )
   end
+
+  private
+  # nicify json attributes for incompatibility reason messages
+  def nicify(attribute)
+    attribute.sub(/\A(covers)|(prohibits)|(right)|(obligation)_/,'').gsub(/_/,' ')
+  end
+
 end

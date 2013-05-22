@@ -98,8 +98,8 @@ class Licence < ActiveRecord::Base
 
   # get all versions of the this licence
   def all_versions
-    result = Licence.where(title: self.title)
-    result = [] if result.nil?
+    result = Licence.where(title: self.title).delete_if{|l| l.version.empty? }
+    return [] if result.empty?
 
     # special case handling for LGPL, which changed names from 2.0 to 2.1
     if title == 'GNU Library General Public License'

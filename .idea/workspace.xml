@@ -2,36 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62db5781-ca98-4cdf-82a9-276b0402f38c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/bronze_star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/bronze_star_large.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/gold_star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/gold_star_large.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/no_star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/no_star_large.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/no_star_large.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/silver_star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/silver_star_large.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/licence_select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/licences/_stars.html.erb" afterPath="$PROJECT_DIR$/app/views/scores/_stars.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tools/compatibility.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/tools/benchmark.html.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/home.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/licences_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/licences_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tools_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tools_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/compatibility_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/compatibility_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/licence_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/licence_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/licence.rb" afterPath="$PROJECT_DIR$/app/models/licence.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb" afterPath="$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb" afterPath="$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" afterPath="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb" afterPath="$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/licences/_licence_select.html.erb" afterPath="$PROJECT_DIR$/app/views/licences/_licence_select.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/licences/show.html.erb" afterPath="$PROJECT_DIR$/app/views/licences/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/scores/_comparison.js.erb" afterPath="$PROJECT_DIR$/app/views/scores/_comparison.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/licences/_tab_licence_compatibility.html.erb" afterPath="$PROJECT_DIR$/app/views/licences/_tab_licence_compatibility.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tools/compare.html.erb" afterPath="$PROJECT_DIR$/app/views/tools/compare.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.ui.combobox.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.ui.combobox.js" />
     </list>
     <ignored path="clip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,10 +44,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="matrix.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb">
+      <file leaf-file-name="_tab_licence_compatibility.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/licences/_tab_licence_compatibility.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="52" selection-start="812" selection-end="812" vertical-scroll-proportion="-10.0">
+            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compatibility.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tools/compatibility.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compatibility.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="19" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,7 +74,16 @@
       <file leaf-file-name="compatibilities_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/compatibilities_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="10" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
+            <state line="41" column="0" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matrix.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -75,71 +92,48 @@
       <file leaf-file-name="_matrix.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="91" selection-start="705" selection-end="705" vertical-scroll-proportion="-6.875">
+            <state line="28" column="55" selection-start="1407" selection-end="1407" vertical-scroll-proportion="-8.125">
               <folding>
-                <element signature="n#style#0;n#p#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#330#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compatibility.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss">
+      <file leaf-file-name="compare.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tools/compare.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="30" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+            <state line="3" column="16" selection-start="256" selection-end="256" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bronze_star.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/images/bronze_star.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_stars.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/scores/_stars.html.erb">
+      <file leaf-file-name="tools.css.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="80" selection-start="1306" selection-end="1306" vertical-scroll-proportion="-4.4166665">
+            <state line="1" column="17" selection-start="30" selection-end="30" vertical-scroll-proportion="0.049668875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_comparison.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/scores/_comparison.js.erb">
+      <file leaf-file-name="_matrix_row.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="20" selection-start="590" selection-end="590" vertical-scroll-proportion="-4.375">
+            <state line="9" column="47" selection-start="359" selection-end="359" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licences_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/licences_controller.rb">
+      <file leaf-file-name="compatibility.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/compatibility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="0" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="licence.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/licence.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="48" selection-start="2700" selection-end="2700" vertical-scroll-proportion="0.33116883">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compatibility_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/compatibility_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="51" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="34" column="35" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,30 +159,25 @@
   <component name="GitLogSettings">
     <option name="myStructureFilterPaths" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Rails console: clip" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Rails console: clip" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Rails console: clip" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/licence_compare.js" />
-        <option value="$PROJECT_DIR$/vendor/assets/javascripts/jquery.ui.combobox.js" />
-        <option value="$PROJECT_DIR$/app/views/licences/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/licences/_licence_select.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb" />
-        <option value="$PROJECT_DIR$/app/helpers/compatibility_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/scores/_stars.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/scores/_comparison.js.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/licences_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
         <option value="$PROJECT_DIR$/app/models/licence.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/licence_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/licences/_licence_select.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/tools_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/licences/_tab_licence_compatibility.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" />
+        <option value="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tools/compatibility.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tools/compare.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss" />
       </list>
     </option>
   </component>
@@ -255,39 +244,13 @@
               <option name="myItemId" value="clip" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
@@ -304,19 +267,259 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="foundation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="foundation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="foundation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="foundation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="foundation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zurb-foundation (v3.2.3, RVM: ruby-1.9.3-p385) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="clip" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,6 +554,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -367,10 +574,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scores" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,24 +634,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -468,6 +653,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
@@ -477,15 +702,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="76" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="136" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="85" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="85" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../clip-similarity" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="88" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="988" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="88" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1009" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="988" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="100" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="94" />
     <property name="Database.TableEditor.Splitter" value="0.9" />
@@ -500,8 +725,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1100,20 +1325,24 @@
       <created>1368702051630</created>
       <updated>1368702051630</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Compatibility tool fixes &amp; enhancements.">
+      <created>1369057742112</created>
+      <updated>1369057742112</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="20" width="1364" height="747" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39599383" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39599383" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49922958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6724512" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29590288" sideWeight="0.21691974" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42412746" sideWeight="0.6040062" order="0" side_tool="true" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39753467" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.292868" sideWeight="0.60246533" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39753467" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3167028" sideWeight="0.5189681" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28505394" sideWeight="0.4757208" order="2" side_tool="false" content_ui="tabs" />
@@ -1162,7 +1391,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rating &quot;stars&quot; (gold/silver/bronze); compatibility matrices." />
+    <option name="LAST_COMMIT_MESSAGE" value="Compatibility tool fixes &amp; enhancements." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1199,117 +1428,124 @@
     <MESSAGE value="Fix zurb foundation versioning." />
     <MESSAGE value="Gemfile updates." />
     <MESSAGE value="Rating &quot;stars&quot; (gold/silver/bronze); compatibility matrices." />
+    <MESSAGE value="Compatibility tool fixes &amp; enhancements." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/licences/_tab_licence_compatibility.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/licence_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licences/_licence_select.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="340" selection-end="340" vertical-scroll-proportion="-4.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/compatibility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="70" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="549" selection-end="549" vertical-scroll-proportion="-8.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="52" selection-start="812" selection-end="812" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/compatibility_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="51" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/beta_small.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="91" selection-start="705" selection-end="705" vertical-scroll-proportion="-6.875">
-          <folding>
-            <element signature="n#style#0;n#p#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/bronze_star.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/scores/_stars.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="80" selection-start="1306" selection-end="1306" vertical-scroll-proportion="-4.4166665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/scores/_comparison.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="590" selection-end="590" vertical-scroll-proportion="-4.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/compatibilities_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="10" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/licences_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.0">
+        <state line="55" column="17" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/licence.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="48" selection-start="2700" selection-end="2700" vertical-scroll-proportion="0.33116883">
+        <state line="100" column="40" selection-start="4103" selection-end="4103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licences/_licence_select.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="364" selection-end="364" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="19" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tools_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="17" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licences/_tab_licence_compatibility.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="19" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="47" selection-start="359" selection-end="359" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/compatibility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="35" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/compatibilities_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/matrix.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="55" selection-start="1407" selection-end="1407" vertical-scroll-proportion="-8.125">
+          <folding>
+            <element signature="e#330#445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tools/compatibility.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tools/compare.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="16" selection-start="256" selection-end="256" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="17" selection-start="30" selection-end="30" vertical-scroll-proportion="0.049668875">
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 <div class="ui-front">
   <select id="<%= select_id %>" class="licence-select-combo tbox">
     <option value="">Select...</option>
-    <% Licence.all.each do |licence| %>
+    <% Licence.all(order: 'title,version').each do |licence| %>
         <option value="<%= licence.identifier %>" <%= 'selected="selected"' if licence == selection %>><%= licence.full_title %></option>
     <% end %>
   </select>

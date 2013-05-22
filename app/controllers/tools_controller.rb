@@ -1,5 +1,5 @@
 class ToolsController < ApplicationController
-  def benchmark
+  def compatibility
   end
 
   def compare

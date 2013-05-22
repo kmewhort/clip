@@ -47,15 +47,18 @@ module LicenceHelper
 
   # links to other versions of this licence
   def licence_versions_nav(cur_licence)
-    dd_tags = cur_licence.all_versions.map do |licence|
-      content_tag 'dd', class: (licence == cur_licence ? "active" : "inactive") do
-        link_to(licence.version, licence)
+    versions = cur_licence.all_versions
+    unless versions.empty?
+      dd_tags = cur_licence.all_versions.map do |licence|
+        content_tag 'dd', class: (licence == cur_licence ? "active" : "inactive") do
+          link_to(licence.version, licence)
+        end
       end
-    end
 
-    dd_tags.join('')
-    content_tag 'dl', class: "sub-nav" do
-      content_tag('dt', "Versions:") + dd_tags.join('').html_safe
+      dd_tags.join('')
+      content_tag 'dl', class: "sub-nav" do
+        content_tag('dt', "Versions:") + dd_tags.join('').html_safe
+      end
     end
   end
 

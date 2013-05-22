@@ -20,7 +20,11 @@
     }
 
     #tools-links{
-      span {
+      a {
+        vertical-align: top;
+        margin-right: 5px;
+      }
+      span.icon {
         width: 120px;
         height: 140px;
         border: 1px solid #999;
@@ -29,8 +33,16 @@
         text-align: center;
         padding-top: 90px;
       }
+      span.icon:hover {
+        background-color: #1B93CC;
+      }
       span.compare-tool {
-        background: image-url('compare_icon_small.png') no-repeat scroll 0 0 transparent;
+        background: image-url('compare_icon_small.png') no-repeat scroll 0 5px transparent;
+        padding-top: 100px;
+      }
+      span.compatibility-tool {
+        background: image-url("compatibility_icon_small.png") no-repeat scroll 5px 9px transparent;
+        padding-top: 100px;
       }
     }
   }

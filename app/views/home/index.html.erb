@@ -9,11 +9,19 @@
 
 <div id="tools">
   <div id="tools-title"><h3>Licensing Apps:</h3></div>
-  <%= link_to "tools/compare" do %>
       <div id="tools-links">
-        <span class="compare-tool">Licence Compare</span>
+        <%= link_to "tools/compatibility" do %>
+            <span class="icon compatibility-tool">
+              <span class="icon-title">Compatibility</span>
+            </span>
+        <% end %>
+        <%= link_to "tools/compare" do %>
+            <span class="icon compare-tool">
+              <span class="icon-title">Text Compare</span>
+            </span>
+        <% end %>
       </div>
-  <% end %>
+  </div>
 </div>
 
 <div id="footer-outer" class="clear">

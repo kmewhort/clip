@@ -10,6 +10,11 @@
   }
   th.col-label {
     font-size: 95%;
+    .instructions {
+      font-style: italic;
+      font-weight: normal;
+      font-size: 95%;
+    }
   }
 
   td.compatibility-data {
@@ -29,8 +34,14 @@
       td.compatible{
         background-color: #B4DB6F;
       }
+      td.compatible:hover {
+        background-color: #cbf87f;
+      }
       td.incompatible{
         background-color: #C10026;
+      }
+      td.incompatible:hover{
+        background-color: #f8002e;
       }
     }
   }
@@ -48,4 +59,26 @@
     margin-top: 1px;
     vertical-align: top;
   }
+  .wait {
+    img {
+      background: none repeat scroll 0 0 transparent;
+    }
+  }
+}
+.tooltip {
+  .licence-title{
+    font-size: 10pt;
+    font-weight: normal;
+    strong{
+      font-weight: bold;
+    }
+  }
+  .reason{
+    font-size: 10pt;
+    font-weight: normal;
+  }
+}
+
+#compatibility-tool{
+  margin-bottom: 60px;
 }

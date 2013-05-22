@@ -2,7 +2,7 @@ Clip::Application.routes.draw do
   devise_for :admins
 
   # licences
-  resources :licences, :id => /[A-Za-z0-9\.\-]+?/, :format => /html|json|js/ do #allow periods in id
+  resources :licences, :id => /[A-Za-z0-9\.\-\+]+?/, :format => /html|json|js/ do #allow periods in id
     member do
       get 'compare_to'
     end
@@ -10,8 +10,11 @@ Clip::Application.routes.draw do
 
   resources :family_trees
 
-  resources :compatibilities, :id => /[A-Za-z0-9\.\-]+?/, :format => /html|json|js/ do
+  resources :compatibilities, :id => /[A-Za-z0-9\.\-\+]+?/, :format => /html|json|js/ do
     member do
+      get 'matrix'
+    end
+    collection do
       get 'matrix'
     end
   end
@@ -20,5 +23,5 @@ Clip::Application.routes.draw do
   root to: "home#index"
   match 'api' => "home#api"
   match 'tools/compare' => "tools#compare"
-  match 'tools/benchmark' => "tools#benchmark"
+  match 'tools/compatibility' => "tools#compatibility"
 end

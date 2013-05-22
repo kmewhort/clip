@@ -3,7 +3,7 @@ class CompatibilitiesController < ApplicationController
 
   def matrix
     # if no other licences are specified for compatibility determination, select a default set
-    if params[:licence_ids].nil? || params[:licence_ids].empty?
+    if !@compatibility.nil? && (params[:licence_ids].nil? || params[:licence_ids].empty?)
       # for CC licences, seed with other CC licences of the same version, plus CC0
       if @compatibility.licence.maintainer == 'Creative Commons'
         @licences = Licence.where(maintainer: 'Creative Commons', version: @compatibility.licence.version)
@@ -24,17 +24,19 @@ class CompatibilitiesController < ApplicationController
           @licences = Licence.where(domain_data: true)
         end
       end
-      @licences.sort! {|a,b| a.identifier <=> b.identifier }
+      @licences.sort! {|a,b| a.identifier <=> b.identifier }.uniq!
 
     # if a list of licences is specified, find each by compatibility id or licence identifier
-    else
+    elsif !params[:licence_ids].nil?
       @licences = params[:licence_ids].map do |id|
         if id.match /\A\d+\Z/
           Compatibility.find(id).licence
         else  #find by licence identifier
           Licence.find_by_identifier(id)
         end
-      end
+      end.uniq
+    else
+      @licences = []
     end
 
     respond_to do |format|
@@ -44,11 +46,13 @@ class CompatibilitiesController < ApplicationController
 
   private
   def find_compatibility
-    if params[:id].match /\A\d+\Z/
-      @compatibility = Compatibility.find(params[:id])
-    else  #find by licence identifier
-      licence = Licence.find_by_identifier(params[:id])
-      @compatibility = licence.compatibility
+    if params[:id]
+      if params[:id].match /\A\d+\Z/
+        @compatibility = Compatibility.find(params[:id])
+      else  #find by licence identifier
+        licence = Licence.find_by_identifier(params[:id])
+        @compatibility = licence.compatibility
+      end
     end
   end
 end

@@ -1,6 +1,5 @@
-<div id="compatibility-matrix-for-<%= @compatibility.id %>"
-     class="compatibility-matrix"
-     data-compatibility-id="<%= @compatibility.id %>">
+<%= content_tag :div, :id => "compatibility-matrix",
+                'data-compatibility-id' => (!@compatibility.nil? ? @compatibility.id : "") do %>
 <table class="compatibility-matrix">
   <tr>
     <th colspan="2">
@@ -8,23 +7,35 @@
       <p style="vertical-align: top; font-size: 95%; font-weight: normal; line-height: 1.2; margin-top: 8px; color: #C10026">
         Work in progress.  Use with caution!</p>
     </th>
-    <th class="col-label">You can release your adaptation under the following highlighted-green licences (and you may remix your work with any other work also licenced under these terms):</th>
+    <% unless licences.nil? || licences.empty? %>
+      <th class="col-label">
+        You can release your adaptation under the following highlighted-green licences (and you may remix your work with any
+        other work also licenced under these terms):<br />
+        <span class="instructions">Hover over a licence to view the reasons for any incompatibility</span>
+      </th>
+    <% end %>
   </tr>
 
-  <%= render partial: 'matrix_row',
-            locals: {licence: current_licence, all_licences: licences, first_row: true } %>
-  <% licences.to_a.reject{|l| l == current_licence}.each do |licence_i| %>
+  <% if !current_licence.nil? %>
+    <%= render partial: 'matrix_row',
+            locals: {licence: current_licence, all_licences: licences, first_row: true, highlight: true } %>
+  <% end %>
+  <% licences.to_a.reject{|l| l == current_licence}.each_with_index do |licence_i, i| %>
      <%= render partial: 'matrix_row',
-                locals: {licence: licence_i, all_licences: licences, first_row: false } %>
+                locals: {licence: licence_i, all_licences: licences, first_row: (current_licence.nil? && (i==0)), highlight: false } %>
   <% end %>
 
   <tr>
     <td colspan="2">
-      <span>Check compatibility with another licence:</span>
+      <% if !licences.empty? %>
+        <span>Check compatibility with another licence:</span>
+      <% else %>
+        <span>Check compatibility of:</span>
+      <% end %>
       <span><%= render partial: 'licences/licence_select', locals: { select_id: "add-licence",
                                                                      selection: nil } %></span>
       <span id="add-licence-button" class="small button">Add</span>
     </td>
   </tr>
 </table>
-</div>
+<% end %>
