@@ -20,8 +20,9 @@ Clip::Application.routes.draw do
   end
 
   # non-resourceful routes
-  root to: "home#index"
-  match 'api' => "home#api"
+  root to: "static_pages#index"
+  match 'api' => "static_pages#api"
+  match 'openness-ratings' => "static_pages#openness_ratings"
   match 'tools/compare' => "tools#compare"
   match 'tools/compatibility' => "tools#compatibility"
 end

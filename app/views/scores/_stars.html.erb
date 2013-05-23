@@ -1,48 +1,82 @@
 <table class="star-rating">
-  <% if licence.score.star_rating == 3 %>
+  <% if infopage %>
+    <tr>
+      <th></th>
+      <th><strong>Openness score</strong><br/>(out of 25)</th>
+      <th><strong>Description</strong></th>
+    </tr>
+  <% end %>
+  <% if infopage || licence.score.star_rating == 3 %>
     <tr class="gold-star">
       <td class="stars-image">
         <%= image_tag "gold_star.png" %>
         <h3>Gold star</h3>
       </td>
+      <% if infopage %>
+        <td class="stars-score">
+          <p>> 22.5</p>
+        </td>
+      <% end %>
       <td class="stars-description">
-        <p>This licence achieves a <strong>CLIPol Gold Star</strong> rating, the highest standard of openness. An author who releases a works under a Gold Star licence
+        <p><%= infopage ? "The" : "This" %> licence achieves a <strong>CLIPol Gold Star</strong> rating, the highest standard of openness. An author who releases a works under a Gold Star licence
           attempts to fully place the work in the world-wide public domain, thereby allowing anyone to freely adapt, remix and redistribute it
           for any purpose. There are few, if any, obligations. Compatibility issues rarely arise.</p>
+        <%= link_to "More info...", "/openness-ratings" unless infopage %>
       </td>
     </tr>
-  <% elsif licence.score.star_rating == 2 %>
+  <% end %>
+  <% if infopage || licence.score.star_rating == 2 %>
       <tr class="silver-star">
         <td class="stars-image">
           <%= image_tag "silver_star.png" %>
           <h3>Silver star</h3>
         </td>
+        <% if infopage %>
+            <td class="stars-score">
+              <p>> 20</p>
+            </td>
+        <% end %>
         <td class="stars-description">
-          <p>This licence achieves a <strong>CLIPol Silver Star</strong> rating, indicating a high standard of openness. The licence imposes only minor obligations or risks which are unlikely to hinder ordinary use cases
+          <p><%= infopage ? "The" : "This" %> licence achieves a <strong>CLIPol Silver Star</strong> rating, indicating a high standard of openness. The licence imposes only minor obligations or risks which are unlikely to hinder ordinary use cases
             of adapting, remixing or redistributing the work.</p>
+          <%= link_to "More info...", "/openness-ratings" unless infopage %>
         </td>
       </tr>
-  <% elsif licence.score.star_rating == 1 %>
+  <% end %>
+  <% if infopage || licence.score.star_rating == 1 %>
       <tr class="bronze-star">
         <td class="stars-image">
           <%= image_tag "bronze_star.png" %>
           <h3>Bronze star</h3>
         </td>
+        <% if infopage %>
+            <td class="stars-score">
+              <p>> 17.5</p>
+            </td>
+        <% end %>
         <td class="stars-description">
-          <p>This licence achieves a <strong>CLIPol Bronze Star</strong> rating, indicating that it meets the minimum standard necessary to be considered an "open" licence;
+          <p><%= infopage ? "The" : "This" %> licence achieves a <strong>CLIPol Bronze Star</strong> rating, indicating that it meets the minimum standard necessary to be considered an "open" licence;
             however, it may impose obligations or risks that prevent common desirable uses of the work. When adapting, remixing, or redistributing
             the work, care should be taken to review the licence terms to ensure that the risks are acceptable and to ensure compliance with all obligations.</p>
+          <%= link_to "More info...", "/openness-ratings" unless infopage %>
         </td>
       </tr>
-  <% else %>
+  <% end %>
+  <% if infopage || licence.score.star_rating == 0 %>
       <tr class="no-star">
         <td class="stars-image">
           <%= image_tag "no_star.png" %>
           <h3>Not open</h3>
         </td>
+        <% if infopage %>
+            <td class="stars-score">
+              <p>0-20</p>
+            </td>
+        <% end %>
         <td class="stars-description">
-          <p>This licence is not compliant with the CLIPol minimum standard of an "open" licence.  The licence imposes burdensome limitations, obligations or risks.
+          <p><%= infopage ? "The" : "This" %> licence is not compliant with the CLIPol minimum standard of an "open" licence.  The licence imposes burdensome limitations, obligations or risks.
             Before using the work, you should carefully review the licence terms to determine whether these burdens are acceptable for your particular use.</p>
+          <%= link_to "More info...", "/openness-ratings" unless infopage %>
         </td>
       </tr>
   <% end %>

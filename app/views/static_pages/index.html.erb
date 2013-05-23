@@ -1,0 +1,31 @@
+<div class="home">
+    <div id="search">
+      <div id="search-title"><h3>Search for a licence</h3></div>
+      <div class="ui-widget">
+        <%= render partial: 'licences/licence_select', locals: { select_id: "licence-search-combobox",
+                                                                 selection: nil } %>
+      </div>
+      <div class="browse-link">Or <%= link_to "browse", licences_path() %> by category...</div>
+    </div>
+
+    <div id="tools">
+      <div id="tools-title"><h3>Licensing Apps:</h3></div>
+          <div id="tools-links">
+            <%= link_to "tools/compatibility" do %>
+                <span class="icon compatibility-tool">
+                  <span class="icon-title">Compatibility</span>
+                </span>
+            <% end %>
+            <%= link_to "tools/compare" do %>
+                <span class="icon compare-tool">
+                  <span class="icon-title">Text Compare</span>
+                </span>
+            <% end %>
+          </div>
+      </div>
+    </div>
+
+    <div id="footer-outer" class="clear">
+      <%= render partial: "footer" %>
+    </div>
+</div>

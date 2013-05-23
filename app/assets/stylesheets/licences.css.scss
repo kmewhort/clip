@@ -221,22 +221,6 @@
         }
       }
     }
-
-    .star-rating {
-      h3 {
-        text-align: center;
-        margin: 0;
-        font-size: 1.4em;
-        line-height: 1.0;
-        padding: 2px 0 0;
-      }
-      .stars-description p{
-        font-size: 105%;
-      }
-      .silver-star img{
-        background: none repeat scroll 0 0 #FBFCFE;
-      }
-    }
   }
   #content-outer {
     width: 700px;
@@ -333,6 +317,30 @@
     .jsonhighlight{
       background: none repeat scroll 0 0 #F8FAFD;
     }
+  }
+}
+
+#clip .star-rating {
+  h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.4em;
+    line-height: 1.0;
+    padding: 2px 0 0;
+  }
+  td.stars-description{
+    text-align: right;
+    p{
+      font-size: 105%;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+    a{
+      font-size: 95%;
+    }
+  }
+  .silver-star img{
+    background: none repeat scroll 0 0 #FBFCFE;
   }
 }
 
