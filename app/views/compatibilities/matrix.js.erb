@@ -1,9 +1,7 @@
 // load matrix
-console.log('---');
-console.log($('#compatibility-matrix').length);
 $('#compatibility-matrix').replaceWith('<%=
   j render partial: 'matrix', locals: { current_licence: (!@compatibility.nil? ? @compatibility.licence : nil),
                                         licences: @licences } %>');
 
 // initialize
-Compatibility.initializeMatrices();
+CompatibilityMatrix.initializeMatrices();

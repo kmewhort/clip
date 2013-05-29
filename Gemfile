@@ -9,7 +9,7 @@ gem 'yaml_db'
 # diff
 gem 'htmldiff' # https://github.com/myobie/htmldiff
 gem 'nokogiri'
-gem "d3-rails"
+gem "d3-rails", git: "git@github.com:iblue/d3-rails.git"
 
 # styling
 gem 'simple_form'
