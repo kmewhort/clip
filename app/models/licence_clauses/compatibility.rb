@@ -3,17 +3,27 @@ class Compatibility < ActiveRecord::Base
   attr_accessible :licence_id, :copyleft_compatible_with_future_versions, :copyleft_compatible_with_other,
                   :sublicense_future_versions, :sublicense_other
 
+  # whether several works under different licences can be combined together under the target licence
+  def self.compatible?(original_licences, target_licence, reasons = {})
+    # check the pair-wise compatibility with the target licence and combine the reasons
+    result = true
+    original_licences.each do |original_licence|
+      if !original_licence.compatibility.compatible_with? target_licence, false, reasons
+        result = false
+      end
+    end
+    result
+  end
+
   # This licence is compatible with another if a derivative work can be licenced under the other licence
   # (but not necessarily licenced under this licence, if it's only one-way compatible);
   # If accept_soft_compatibility is true, the licence is also considered compatible if a combined work can
   # satisfy the licence terms through releasing the work under a licence containing the terms of BOTH licences
   def compatible_with?(other_licence, soft_compatibility_acceptable = false, reasons = {})
     # reasons for any soft or hard incompatibility
-    reasons.replace({
-        soft: [],
-        hard: [],
-        warnings: []
-    })
+    reasons[:soft] = [] if reasons[:soft].nil?
+    reasons[:hard] = [] if reasons[:hard].nil?
+    reasons[:warnings] = [] if reasons[:warnings].nil?
 
     #
     # Basic compatibility checks/barriers

@@ -1,0 +1,7 @@
+// load chart
+$('#multi-licence-chart').replaceWith('<%=
+  j render partial: 'chart', locals: { original_licences: @original_licences,
+                                       target_licences: @target_licences } %>');
+
+// initialize
+MultiLicenceChart.initializeChart();

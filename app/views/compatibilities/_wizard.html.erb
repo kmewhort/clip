@@ -20,23 +20,30 @@
         <h4>Type of remix:</h4>
         <div class="radio-group-header">My new work is a:</div>
         <div class="remix-types">
-          <input type="radio" name="remix_type" value="strong_adaptation" checked="checked"><strong>"Strong" adaptation</strong>. I remix or tightly integrate significant portions of the original works directly into my own work.<br />
-          <input type="radio" name="remix_type" value="weak_adaptation_of_files"><strong>"Weak" adaptation of individual files only</strong>. All of my changes and additions are contained in separate files from those of the original works.<br />
-          <input type="radio" name="remix_type" value="weak_adaptation_of_libraries"><strong>"Weak" adaptation of software libraries only</strong>. My own work merely links against the original works, using them as software libraries.  I've made no changes to the source code of the original works.<br />
+          <input type="radio" name="remix_type" value="strong_adaptation" checked="checked"><strong>"Strong" adaptation</strong>. I remix or tightly integrate significant portions of the original works directly into my own.<br />
+          <input type="radio" name="remix_type" value="weak_adaptation_of_files"><strong>"Weak" adaptation of individual files</strong>. All of my changes and additions are contained in separate files from those of the original works.<br />
+          <input type="radio" name="remix_type" value="weak_adaptation_of_libraries"><strong>"Weak" adaptation of software libraries</strong>. My own work merely links against the original works, using them as software libraries.  I've made no changes to the source code of the original works.<br />
           <input type="radio" name="remix_type" value="collection"><strong>Collection</strong>. I simply package the original works together, without changing any of the individual works themselves.<br />
         </div>
       </div>
-    </div>
-    <div class="six columns">
-      <div id="cloned-licence-display"></div>
+      <div class="six columns">
+        <div id="cloned-licence-display"></div>
+      </div>
     </div>
   </div>
   <div>
-    <h4>Results:</h4>
-    <p>You may release your remix under any of the following licences:</p>
-    <span>Check another:</span><span><%= render partial: 'licences/licence_select', locals: { select_id: "add-licence",
-                                                                                              selection: nil } %></span>
-    <span id="add-licence-button" class="small button">Check compatibility</span>
+    <div class="row">
+      <div class="six columns">
+        <h4>Results:</h4>
+        <p>You may release your own work under any of highlighted-green licences.  Hover over a licence to view the reasons for any incompatibility.<p>
+        <span>Check another licence:</span><span><%= render partial: 'licences/licence_select', locals: { select_id: "add-target-licence",
+                                                                                                          selection: nil } %></span>
+        <span id="add-target-licence-button" class="small button">Add</span>
+      </div>
+      <div class="six columns">
+        <div id="multi-licence-chart"></div>
+      </div>
+    </div>
   </div>
 </div>
 

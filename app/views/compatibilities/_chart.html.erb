@@ -1,0 +1,22 @@
+<div id="multi-licence-chart">
+  <table>
+    <tr>
+      <th>
+        <%= image_tag("beta_small.png", style: "float: left; margin-right: 6px; background-color: #FFF") %>
+        <p style="vertical-align: top; font-size: 95%; font-weight: normal; line-height: 1.2; margin-top: 8px; color: #C10026">
+          Work in progress.  Use with caution!</p>
+      </th>
+    </tr>
+    <tr>
+      <td class="compatibility-data">
+        <%= wrapped_cells(target_licences.map { |target_licence|
+          incompatibility_reasons = {}
+          content_tag :td, target_licence.identifier,
+                      class: "has-tip " + (Compatibility.compatible?(original_licences, target_licence, incompatibility_reasons) ? "compatible" : "incompatible"),
+                      title: incompatibility_reasons_tooltip(target_licence, incompatibility_reasons)
+        }, 4)
+        %>
+      </td>
+    </tr>
+  </table>
+</div>

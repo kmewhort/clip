@@ -5,6 +5,7 @@ module CompatibilityHelper
     for j in 0..(num_rows-1)
       html << "<tr>"
       num_cells = (j != (num_rows-1)) ? max_cols : (data.length % max_cols)
+      num_cells = max_cols if num_cells == 0
       for i in 0..(num_cells-1)
         html << "#{data[j*max_cols + i]}"
       end

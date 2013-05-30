@@ -27,42 +27,46 @@ $(document).ready(function(){
 
     // initialize original licence circle-pack licence graph (starting empty with remix type as "adaptation")
     $('#original-licence-display').each(function(){
-        var circle_pack = new LicenceCirclePack(this, [], "adaptation");
+        var graph = this;
+        var circle_pack = new LicenceCirclePack(this, [], "strong_adaptation");
 
+        // action to "add another licence" to the list of original licences
         $('#add-original-licence-button').click(function(){
-            if(circle_pack.add_licence($('#add-original-licence').val()))
+            if(circle_pack.add_licence($('#add-original-licence').val())){
                 circle_pack.update();
+
+                // also update the clone in the remix type panel
+                $('#cloned-licence-display').empty().append($(graph).clone());
+
+                // update the results
+                MultiLicenceChart.originalLicences.push($('#add-original-licence').val());
+                MultiLicenceChart.loadChart();
+            }
         });
+
+        // action to change the remix type shown on the graphs
+        $('.remix-types input').click(function(){
+            if(circle_pack.set_remix_type($(this).val()))
+              // update the circle pack charts
+              circle_pack.update();
+              $('#cloned-licence-display').empty().append($(graph).clone());
+
+              // update the results
+              MultiLicenceChart.remixType = $(this).val();
+              MultiLicenceChart.loadChart();
+        });
+        $('.remix-types input:checked').click();
     });
 
-    // default remix-type
+    // action to add another target licence in the multi-licence chart
+    $('#add-target-licence-button').click(function(){
+        MultiLicenceChart.targetLicences.push($('#add-target-licence').val());
+
+        // update the results
+        MultiLicenceChart.loadChart();
+    });
 });
 
-function CompatibilityMatrix(){}
-CompatibilityMatrix.initializeMatrices = function(){
-    // init tooltips
-    $(document).foundationTooltips();
-
-    // load licence selection comboboxes
-    $( ".licence-select-combo" ).combobox();
-
-    // set add-licence action
-    $(".compatibility-matrix #add-licence-button").click(function(){
-        var licence_ids = $.makeArray($('.compatibility-matrix .compatibility-row').map(function(){
-            return $(this).children("td:first").text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '');
-        }));
-        licence_ids.push(encodeURIComponent($('.compatibility-matrix #add-licence').val()));
-
-        var active_row = $('.compatibility-row.active > td.original-work');
-        if(active_row.length > 0){
-            $.getScript('/compatibilities/' + active_row.text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '') +
-                        '/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
-        }
-        else{
-            $.getScript('/compatibilities/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
-        }
-    });
-}
 
 function LicenceCirclePack(container, licences, remix_type){
     this.licences = licences;
@@ -80,7 +84,7 @@ function LicenceCirclePack(container, licences, remix_type){
         .size([this.diameter,this.diameter])
         .value(function(d) { return d.size; });
 
-    // load list of licences into the circle packing graph
+    // generate the initial the data for the circle packing graph
     this.licences = licences;
     this.root = this.d3data();
 
@@ -127,20 +131,22 @@ LicenceCirclePack.prototype.update = function(){
     // Exit any old nodes
     this.licence_nodes.exit().remove();
 
-    // update locations and sizes
+    // update locations, sizes and visibilities
     var overlap = this.overlap_distance();
     var padding = this.padding;
     this.licence_nodes.attr("transform", function(d) {
         return "translate(" + (d.x + padding/2) + "," + (d.y + padding/2) + ")"; })
-      .selectAll("circle").attr("r", function(d) { return d.r + overlap; });
+      .selectAll("circle").attr("r", function(d) { return d.r + (d.children ? 0 : overlap); })
+      .attr("visibility", function(d) { return (d.hide_node ? "hidden" : "visible"); });
 }
 
 // overlap circles differently depending on the way the user remixes them (collection vs adaptation)
 LicenceCirclePack.prototype.overlap_distance = function(){
     switch(this.licence_remix_type){
-        case "adaptation":
+        case "strong_adaptation":
             return 14;
-        case "weak_adaptation":
+        case "weak_adaptation_of_files":
+        case "weak_adaptation_of_libraries":
             return 0;
         case "collection":
             return -14;
@@ -155,18 +161,98 @@ LicenceCirclePack.prototype.set_remix_type = function(remix_type){
       return false;
 
     this.licence_remix_type = remix_type;
+    this.root.hide_node = (this.licence_remix_type != "collection");
+    if(this.root.children.length > 0) // if there's a "Your work" marker
+      this.root.children[0].hide_node = (this.licence_remix_type == "collection");
+
     return true;
 }
 
 // list of licences to d3 data (equal sized circles)
 LicenceCirclePack.prototype.d3data = function(){
+    var licence_list = $.map(this.licences, function(name){
+        return {
+            name: name,
+            size: 1000
+        };
+    });
+
+    // marker for own work
+    licence_list.unshift({
+        name: "Your work",
+        size: 1000
+    });
+
     return {
       name: "root",
-      children: $.map(this.licences, function(name){
-            return {
-                name: name,
-                size: 1000
-            };
-        })
+      hide_node: (this.licence_remix_type != "collection"),
+      children: licence_list
     };
 }
+
+
+function MultiLicenceChart(){}
+MultiLicenceChart.originalLicences = [];
+MultiLicenceChart.targetLicences = [];
+MultiLicenceChart.remixType = "strong_adaptation";
+
+MultiLicenceChart.loadChart = function(){
+  targetLicences = this.originalLicences.concat(this.targetLicences);
+  $.getScript('/compatibilities/multi_licence_chart.js'
+      + '?original_licence_ids[]=' + this.originalLicences.join("&original_licence_ids[]=")
+      + '&target_licence_ids[]=' + targetLicences.join("&target_licence_ids[]="));
+}
+
+MultiLicenceChart.initializeChart = function(){
+    // init tooltips
+    $(document).foundationTooltips();
+
+    // load licence selection comboboxes
+    /*
+    $( ".licence-select-combo" ).combobox();
+
+    // set add-licence action
+    $(".compatibility-matrix #add-licence-button").click(function(){
+        var licence_ids = $.makeArray($('.compatibility-matrix .compatibility-row').map(function(){
+            return $(this).children("td:first").text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '');
+        }));
+        licence_ids.push(encodeURIComponent($('.compatibility-matrix #add-licence').val()));
+
+        var active_row = $('.compatibility-row.active > td.original-work');
+        if(active_row.length > 0){
+            $.getScript('/compatibilities/' + active_row.text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '') +
+                '/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
+        }
+        else{
+            $.getScript('/compatibilities/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
+        }
+    });
+    */
+}
+
+function CompatibilityMatrix(){}
+CompatibilityMatrix.initializeMatrices = function(){
+    // init tooltips
+    $(document).foundationTooltips();
+
+    // load licence selection comboboxes
+    $( ".licence-select-combo" ).combobox();
+
+    // set add-licence action
+    $(".compatibility-matrix #add-licence-button").click(function(){
+        var licence_ids = $.makeArray($('.compatibility-matrix .compatibility-row').map(function(){
+            return $(this).children("td:first").text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '');
+        }));
+        licence_ids.push(encodeURIComponent($('.compatibility-matrix #add-licence').val()));
+
+        var active_row = $('.compatibility-row.active > td.original-work');
+        if(active_row.length > 0){
+            $.getScript('/compatibilities/' + active_row.text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '') +
+                '/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
+        }
+        else{
+            $.getScript('/compatibilities/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
+        }
+    });
+}
+

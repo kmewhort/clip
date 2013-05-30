@@ -1,4 +1,5 @@
-#clip .compatibility-matrix {
+#clip .compatibility-matrix,
+#compatibility-wizard {
   tr {
     border: medium none;
   }
@@ -10,11 +11,12 @@
   }
   th.col-label {
     font-size: 95%;
-    .instructions {
-      font-style: italic;
-      font-weight: normal;
-      font-size: 95%;
-    }
+  }
+
+  .instructions {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 95%;
   }
 
   td.compatibility-data {
@@ -55,9 +57,15 @@
       width: 320px !important;
   }
 
-  #add-licence-button {
+  #add-licence-button{
     margin-top: 1px;
     vertical-align: top;
+  }
+  #add-target-licence-button{
+    margin-top: 10px;
+  }
+  #tool-link{
+    margin-top: 10px;
   }
   .wait {
     img {
@@ -105,12 +113,6 @@
   #original-licence-display{
     text-align: center;
 
-    .node {
-      visibility: hidden;
-    }
-    .node.leaf{
-      visibility: visible;
-    }
     circle {
       fill: rgb(31, 119, 180);
       fill-opacity: .25;
@@ -130,6 +132,12 @@
 
     input {
       margin-top: 11px;
+    }
+  }
+
+  #multi-licence-chart{
+    table tr {
+      background-color: #FFF;
     }
   }
 }

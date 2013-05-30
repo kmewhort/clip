@@ -1,6 +1,7 @@
 class CompatibilitiesController < ApplicationController
   before_filter :find_compatibility
 
+  # matrix of two-way compatibilities
   def matrix
     # if no other licences are specified for compatibility determination, select a default set
     if !@compatibility.nil? && (params[:licence_ids].nil? || params[:licence_ids].empty?)
@@ -28,16 +29,20 @@ class CompatibilitiesController < ApplicationController
 
     # if a list of licences is specified, find each by compatibility id or licence identifier
     elsif !params[:licence_ids].nil?
-      @licences = params[:licence_ids].map do |id|
-        if id.match /\A\d+\Z/
-          Compatibility.find(id).licence
-        else  #find by licence identifier
-          Licence.find_by_identifier(id)
-        end
-      end.uniq
+      @licences = params[:licence_ids].map { |id| find_licence_by_compatibility_id(id) }.uniq
     else
       @licences = []
     end
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  # table of compatibility where works under multiple different licences are remixed
+  def multi_licence_chart
+    @original_licences = params[:original_licence_ids].map { |id| find_licence_by_compatibility_id(id) }.uniq
+    @target_licences = params[:target_licence_ids].map { |id| find_licence_by_compatibility_id(id) }.uniq
 
     respond_to do |format|
       format.js
@@ -53,6 +58,14 @@ class CompatibilitiesController < ApplicationController
         licence = Licence.find_by_identifier(params[:id])
         @compatibility = licence.compatibility
       end
+    end
+  end
+
+  def find_licence_by_compatibility_id(id)
+    if id.match /\A\d+\Z/
+      Compatibility.find(id).licence
+    else  #find by licence identifier
+      Licence.find_by_identifier(id)
     end
   end
 end

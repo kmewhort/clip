@@ -16,6 +16,7 @@ Clip::Application.routes.draw do
     end
     collection do
       get 'matrix'
+      get 'multi_licence_chart'
     end
   end
 
