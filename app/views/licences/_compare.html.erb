@@ -1,15 +1,4 @@
 <div id="licence-compare">
-  <% if licence_select_box %>
-      <p>Or, compare any two licences:</p>
-      <span id="licence-select-wrapper-a">
-          <%= render partial: 'licences/licence_select', locals: { select_id: 'licence-select-a',
-                                                                   selection: licence_a } %>
-        </span>
-        <span id="licence-select-wrapper-b">
-          <%= render partial: 'licences/licence_select', locals: { select_id: 'licence-select-b',
-                                                                   selection: licence_b } %>
-        </span>
-  <% end %>
   <div id="licence-diff" class="panel">
     <% if comparison_html.nil? %>
       <em>No licences selected for comparison.</em>

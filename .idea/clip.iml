@@ -36,7 +36,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.2, RVM: ruby-1.9.3-p385) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="compass (v0.12.2, RVM: ruby-1.9.3-p385) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="compass-rails (v1.0.3, RVM: ruby-1.9.3-p385) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="d3-rails (v0.0.5, RVM: ruby-1.9.3-p385) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="d3-rails (v0.0.8@4ff298, RVM: ruby-1.9.3-p385) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v2.2.3, RVM: ruby-1.9.3-p385) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff_match_patch_native (v1.0.2, RVM: ruby-1.9.3-p385) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diffy (v2.1.4, RVM: ruby-1.9.3-p385) [gem]" level="application" />

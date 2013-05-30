@@ -3,6 +3,22 @@
  */
 $(document).ready(function(){
    new LicenceCompare();
+
+   // load zurb Orbit slider (for tool)
+  $('.text-compare-slider').orbit({
+      timer: false,
+      directionalNav: true,
+      bullets: false
+  });
+
+    // licence selection type radios
+    $('.licence-selection-type input[value="family_tree"]').prop('checked','checked');
+    $('.licence-selection-type input[value="family_tree"]').change(function(){
+        $('.slider-nav .left').click();
+    });
+    $('.licence-selection-type input[value="any"]').change(function(){
+        $('.slider-nav .right').click();
+    });
 });
 
 function LicenceCompare(){

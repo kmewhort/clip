@@ -1,6 +1,5 @@
 <div id="family-tree">
   <% if family_select_box %>
-      <p>Select a licence family to compare the licence texts:</p>
       <select class="licence-family-select-combo tbox">
         <option value=""></option>
         <% FamilyTree.order("title ASC").each do |family| %>

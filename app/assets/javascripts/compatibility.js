@@ -19,7 +19,7 @@ $(document).ready(function(){
     });
 
     // load zurb Orbit slider (for tool)
-    $('.slider').orbit({
+    $('.compatibility-tool-slider').orbit({
         timer: false,
         directionalNav: true,
         bullets: true
