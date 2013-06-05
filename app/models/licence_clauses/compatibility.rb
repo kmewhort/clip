@@ -117,7 +117,7 @@ class Compatibility < ActiveRecord::Base
     # such that the prohibitions can be included in a combined licence)
     other_licence.right.attributes.each_pair do |key, value|
       next unless !key.match(/\A(prohibits)/).nil? && !value && licence.right.attributes[key]
-      reasons[:soft] << "#{licence.identifier} prohibits #{nicify(key)}, but #{other_licence.identifier} does not contain any such this stipulation"
+      reasons[:soft] << "#{licence.identifier} prohibits #{nicify(key)}, but #{other_licence.identifier} does not contain any such stipulation"
     end
 
     reasons[:hard].empty? && (reasons[:soft].empty? || soft_compatibility_acceptable)

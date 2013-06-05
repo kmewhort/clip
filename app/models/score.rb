@@ -4,23 +4,23 @@ class Score < ActiveRecord::Base
 
   SCORE_WEIGHTS = {
       categories: {
-        freedom: 1.0,
-        legal_risk: 1.0,
-        business_risk: 1.0
+          freedom: 1.0,
+          legal_risk: 1.0,
+          business_risk: 1.0
       },
       attributes: {
-        core_rights: 13.0, # everything else only applies insofar as the core rights grant freedoms
-        commercial_use: 1.0,
-        attribution: 1.0,
+          core_rights: 13.0, # everything else only applies insofar as the core rights grant freedoms
+          commercial_use: 1.0,
+          attribution: 1.0,
 
-        choice_of_forum: 0.75,
-        choice_of_law: 0.75,
-        warranty: 0.75,
-        disclaimer: 0.75,
-        indemnity: 2.0,
+          choice_of_forum: 0.75,
+          choice_of_law: 0.75,
+          warranty: 0.75,
+          disclaimer: 0.75,
+          indemnity: 2.0,
 
-        unilateral_changes: 2.0,
-        termination: 3.0
+          unilateral_changes: 2.0,
+          termination: 3.0
       }
   }
 
@@ -36,11 +36,11 @@ class Score < ActiveRecord::Base
   # >=22.5 = 3 stars (Gold), >=20 = 2 stars (Silver), >= 17.5 = 1 star (Bronze)
   def star_rating
     case
-      when openness >= 22.5
+      when openness > 22.5
         3
-      when openness >= 20
+      when openness > 20
         2
-      when openness >= 17.5
+      when openness > 17.5
         1
       else
         0
@@ -71,9 +71,9 @@ class Score < ActiveRecord::Base
 
   # overall measure of the "openness" of the licence (rather subjective, but suggestions for improvements are welcome!)
   def calculate_overall_openness
-     self.openness = self.licensee_legal_risk    * SCORE_WEIGHTS[:categories][:legal_risk] +
-                     self.licensee_business_risk * SCORE_WEIGHTS[:categories][:business_risk] +
-                     self.licensee_freedom       * SCORE_WEIGHTS[:categories][:freedom]
+    self.openness = self.licensee_legal_risk    * SCORE_WEIGHTS[:categories][:legal_risk] +
+        self.licensee_business_risk * SCORE_WEIGHTS[:categories][:business_risk] +
+        self.licensee_freedom       * SCORE_WEIGHTS[:categories][:freedom]
   end
 
   # calculate a score of the legal risk to the licensee
@@ -93,8 +93,8 @@ class Score < ActiveRecord::Base
     elsif licence.conflict_of_law.forum_of == 'unspecified'
       forum_score = 0.5
     elsif licence.conflict_of_law.forum_of == 'licensor' ||
-          licence.conflict_of_law.forum_of  == 'plaintiff' ||
-          licence.conflict_of_law.forum_of  == 'specific'
+        licence.conflict_of_law.forum_of  == 'plaintiff' ||
+        licence.conflict_of_law.forum_of  == 'specific'
       forum_score = 0
     else
       raise "Unrecognized value for conflict_of_law.forum_of"
@@ -116,8 +116,8 @@ class Score < ActiveRecord::Base
     elsif licence.conflict_of_law.law_of == 'unspecified'
       law_score = 0.5
     elsif licence.conflict_of_law.law_of == 'licensor' ||
-          licence.conflict_of_law.law_of == 'plaintiff' ||
-          licence.conflict_of_law.law_of == 'specific'
+        licence.conflict_of_law.law_of == 'plaintiff' ||
+        licence.conflict_of_law.law_of == 'specific'
       law_score = 0
     elsif licence.conflict_of_law.law_of == 'forum'
       law_score = forum_score
@@ -144,21 +144,21 @@ class Score < ActiveRecord::Base
     indemnity_score = licence.disclaimer.disclaimer_indemnity ? 0.0 : 1.0
 
     # total score for legal risk to the licence user
-   self.licensee_legal_risk =
-      forum_score      * SCORE_WEIGHTS[:attributes][:choice_of_forum] +
-      law_score        * SCORE_WEIGHTS[:attributes][:choice_of_law] +
-      warranty_score   * SCORE_WEIGHTS[:attributes][:warranty] +
-      disclaimer_score * SCORE_WEIGHTS[:attributes][:disclaimer] +
-      indemnity_score  * SCORE_WEIGHTS[:attributes][:indemnity]
+    self.licensee_legal_risk =
+        forum_score      * SCORE_WEIGHTS[:attributes][:choice_of_forum] +
+            law_score        * SCORE_WEIGHTS[:attributes][:choice_of_law] +
+            warranty_score   * SCORE_WEIGHTS[:attributes][:warranty] +
+            disclaimer_score * SCORE_WEIGHTS[:attributes][:disclaimer] +
+            indemnity_score  * SCORE_WEIGHTS[:attributes][:indemnity]
   end
 
   # calculate a score of the legal risk to the licensor
   def calculate_licensor_legal_risk
     # legal risk to the licencensor is the inverse of the risk to the licencee
     max_licensee_legal_risk =  SCORE_WEIGHTS[:attributes][:choice_of_forum] +
-                               SCORE_WEIGHTS[:attributes][:warranty] +
-                               SCORE_WEIGHTS[:attributes][:disclaimer] +
-                               SCORE_WEIGHTS[:attributes][:indemnity]
+        SCORE_WEIGHTS[:attributes][:warranty] +
+        SCORE_WEIGHTS[:attributes][:disclaimer] +
+        SCORE_WEIGHTS[:attributes][:indemnity]
 
     self.licensor_legal_risk = max_licensee_legal_risk - self.licensee_legal_risk
   end
@@ -192,7 +192,7 @@ class Score < ActiveRecord::Base
 
     self.licensee_business_risk =
         unilateral_change_score * SCORE_WEIGHTS[:attributes][:unilateral_changes] +
-        termination_risk_score  * SCORE_WEIGHTS[:attributes][:termination]
+            termination_risk_score  * SCORE_WEIGHTS[:attributes][:termination]
   end
 
   # calculate a score of the degree of freedom that a licence grants (high score = more freedom);
@@ -230,8 +230,8 @@ class Score < ActiveRecord::Base
     notice_and_attribution_score -= (1.0 / 3.0) if licence.obligation.obligation_notice
 
     self.licensee_freedom =
-      core_rights_score            * SCORE_WEIGHTS[:attributes][:core_rights] +
-      commercial_use_score         * SCORE_WEIGHTS[:attributes][:commercial_use] +
-      notice_and_attribution_score * SCORE_WEIGHTS[:attributes][:attribution]
+        core_rights_score            * SCORE_WEIGHTS[:attributes][:core_rights] +
+            commercial_use_score         * SCORE_WEIGHTS[:attributes][:commercial_use] +
+            notice_and_attribution_score * SCORE_WEIGHTS[:attributes][:attribution]
   end
 end

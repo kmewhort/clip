@@ -74,7 +74,8 @@ class LicencesController < ApplicationController
         format.html { redirect_to @licence, notice: success_notice }
         format.json { render json: @licence  }
       else
-        format.html { render action: "edit" }
+        @tab = 'licence_edit'
+        format.html { render action: "show" }
         format.json { render json: @licence.errors, status: :unprocessable_entity }
       end
     end

@@ -207,28 +207,6 @@ MultiLicenceChart.loadChart = function(){
 MultiLicenceChart.initializeChart = function(){
     // init tooltips
     $(document).foundationTooltips();
-
-    // load licence selection comboboxes
-    /*
-    $( ".licence-select-combo" ).combobox();
-
-    // set add-licence action
-    $(".compatibility-matrix #add-licence-button").click(function(){
-        var licence_ids = $.makeArray($('.compatibility-matrix .compatibility-row').map(function(){
-            return $(this).children("td:first").text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '');
-        }));
-        licence_ids.push(encodeURIComponent($('.compatibility-matrix #add-licence').val()));
-
-        var active_row = $('.compatibility-row.active > td.original-work');
-        if(active_row.length > 0){
-            $.getScript('/compatibilities/' + active_row.text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '') +
-                '/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
-        }
-        else{
-            $.getScript('/compatibilities/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
-        }
-    });
-    */
 }
 
 function CompatibilityMatrix(){}
@@ -242,7 +220,7 @@ CompatibilityMatrix.initializeMatrices = function(){
     // set add-licence action
     $(".compatibility-matrix #add-licence-button").click(function(){
         var licence_ids = $.makeArray($('.compatibility-matrix .compatibility-row').map(function(){
-            return $(this).children("td:first").text().replace(/(^[\s\:]+)|([\s\:]+$)/g, '');
+            return encodeURIComponent($(this).children("td:first").text().replace(/(^[\s\:]+)|([\s\:]+$)/g, ''));
         }));
         licence_ids.push(encodeURIComponent($('.compatibility-matrix #add-licence').val()));
 

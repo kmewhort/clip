@@ -118,18 +118,30 @@ class Licence < ActiveRecord::Base
   end
 
   def build_children
+    self.build_compliance if self.compliance.nil?
+    self.build_right if self.right.nil?
+    self.build_obligation if self.obligation.nil?
+    self.build_patent_clause if self.patent_clause.nil?
+    self.build_attribution_clause if self.attribution_clause.nil?
+    self.build_copyleft_clause if self.copyleft_clause.nil?
+    self.build_compatibility if self.compatibility.nil?
+    self.build_termination if self.termination.nil?
+    self.build_changes_to_term if self.changes_to_term.nil?
+    self.build_disclaimer if self.disclaimer.nil?
+    self.build_conflict_of_law if self.conflict_of_law.nil?
+
     # need to directly set parent of nested attributes for validation w/o save
-    self.build_compliance.licence = self if self.compliance.nil?
-    self.build_right.licence = self if self.right.nil?
-    self.build_obligation.licence = self if self.obligation.nil?
-    self.build_patent_clause.licence = self if self.patent_clause.nil?
-    self.build_attribution_clause.licence = self if self.attribution_clause.nil?
-    self.build_copyleft_clause.licence = self if self.copyleft_clause.nil?
-    self.build_compatibility.licence = self if self.compatibility.nil?
-    self.build_termination.licence = self if self.termination.nil?
-    self.build_changes_to_term.licence = self if self.changes_to_term.nil?
-    self.build_disclaimer.licence = self if self.disclaimer.nil?
-    self.build_conflict_of_law.licence = self if self.conflict_of_law.nil?
+    self.compliance.licence = self
+    self.right.licence = self
+    self.obligation.licence = self
+    self.patent_clause.licence = self
+    self.attribution_clause.licence = self
+    self.copyleft_clause.licence = self
+    self.compatibility.licence = self
+    self.termination.licence = self
+    self.changes_to_term.licence = self
+    self.disclaimer.licence = self
+    self.conflict_of_law.licence = self
   end
 
   # manually define json structure to provide a user-friendly ordering
