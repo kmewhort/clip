@@ -12,7 +12,7 @@
         <%= wrapped_cells(target_licences.map { |target_licence|
           incompatibility_reasons = {}
           content_tag :td, target_licence.identifier,
-                      class: "has-tip " + (Compatibility.compatible?(original_licences, target_licence, incompatibility_reasons) ? "compatible" : "incompatible"),
+                      class: "has-tip " + (Compatibility.compatible?(original_licences, target_licence, remix_type, incompatibility_reasons) ? "compatible" : "incompatible"),
                       title: incompatibility_reasons_tooltip(target_licence, incompatibility_reasons)
         }, 4)
         %>

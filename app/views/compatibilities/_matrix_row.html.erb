@@ -9,7 +9,7 @@
     <%= wrapped_cells(all_licences.map do |licence_j|
       incompatibility_reasons = {}
       content_tag :td, licence_j.identifier,
-                  class: "has-tip " + (licence.compatibility.compatible_with?(licence_j, false, incompatibility_reasons) ? "compatible" : "incompatible"),
+                  class: "has-tip " + (licence.compatibility.compatible_with?(licence_j, 'strong_adaptation', false, incompatibility_reasons) ? "compatible" : "incompatible"),
                   title: incompatibility_reasons_tooltip(licence_j, incompatibility_reasons)
     end)
     %>

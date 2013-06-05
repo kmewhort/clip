@@ -4,11 +4,11 @@ class Compatibility < ActiveRecord::Base
                   :sublicense_future_versions, :sublicense_other
 
   # whether several works under different licences can be combined together under the target licence
-  def self.compatible?(original_licences, target_licence, reasons = {})
+  def self.compatible?(original_licences, target_licence, remix_type, reasons = {})
     # check the pair-wise compatibility with the target licence and combine the reasons
     result = true
     original_licences.each do |original_licence|
-      if !original_licence.compatibility.compatible_with? target_licence, false, reasons
+      if !original_licence.compatibility.compatible_with? target_licence, remix_type, false, reasons
         result = false
       end
     end
@@ -19,7 +19,7 @@ class Compatibility < ActiveRecord::Base
   # (but not necessarily licenced under this licence, if it's only one-way compatible);
   # If accept_soft_compatibility is true, the licence is also considered compatible if a combined work can
   # satisfy the licence terms through releasing the work under a licence containing the terms of BOTH licences
-  def compatible_with?(other_licence, soft_compatibility_acceptable = false, reasons = {})
+  def compatible_with?(other_licence, remix_type = 'strong_adaptation', soft_compatibility_acceptable = false, reasons = {})
     # reasons for any soft or hard incompatibility
     reasons[:soft] = [] if reasons[:soft].nil?
     reasons[:hard] = [] if reasons[:hard].nil?
@@ -31,7 +31,7 @@ class Compatibility < ActiveRecord::Base
 
     # if no modification is allowed, cannot create a compatible derivative work at all (and, with
     # this full-stop, no further incompatibility checks necessary)
-    if !licence.right.right_to_modify
+    if !licence.right.right_to_modify && !remix_type == 'collection'
       reasons[:hard] << "#{licence.identifier} prohibits any type of adaptation"
       return false
     end
@@ -48,12 +48,32 @@ class Compatibility < ActiveRecord::Base
     return true if !copyleft_compatible_with_other.nil? && copyleft_compatible_with_other.split(/\s*,\s*/).include?(other_licence.id)
     return true if !sublicense_other.nil? && sublicense_other.split(/\s*,\s*/).include?(other_licence.id)
 
-    # unless explicitly compatible per above checks, the licence is NOT compatible where
-    # this licence has a copyleft clause
-    # TODO: check type of combination / type of copyleft
-    if licence.obligation.obligation_copyleft?
-      reasons[:hard] << "#{licence.identifier} contains a copyleft clause and adapations can only be released under the same #{licence.identifier} licence"
-      return false
+    #
+    # Copyleft checks
+    #
+
+    # for remixing into a collection, only check needed is that there's no
+    # contractual copyleft obligation against including the work in a collection
+    if remix_type == 'collection'
+      if licence.obligation.obligation_copyleft &&
+         (licence.copyleft_clause.copyleft_applies_to == "compilations")
+        reasons[:hard] << "#{licence.identifier} contains a copyleft clause which contractually applies even to collections. A collection can only be released under the same #{licence.identifier} licence"
+        return false
+      end
+      return true
+    end
+
+
+    # unless explicitly compatible above checks, the licence is NOT compatible where
+    # this licence has an applicable copyleft clause
+    if licence.obligation.obligation_copyleft
+      unless (remix_type == 'weak_adaptation_of_files' &&
+              licence.copyleft_clause.copyleft_applies_to == "modified_files") ||
+             (remix_type == 'weak_adaptation_of_libraries' &&
+              licence.copyleft_clause.copyleft_applied_to == "derivatives_linking_excepted")
+        reasons[:hard] << "#{licence.identifier} contains a copyleft clause and adapations can only be released under the same #{licence.identifier} licence"
+        return false
+      end
     end
 
     #

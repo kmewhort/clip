@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="62db5781-ca98-4cdf-82a9-276b0402f38c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tools/compare.html.erb" afterPath="$PROJECT_DIR$/app/views/tools/compare.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb" afterPath="$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compatibilities/_chart.html.erb" afterPath="$PROJECT_DIR$/app/views/compatibilities/_chart.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" afterPath="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compatibilities/multi_licence_chart.js.erb" afterPath="$PROJECT_DIR$/app/views/compatibilities/multi_licence_chart.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tools/compatibility.html.erb" afterPath="$PROJECT_DIR$/app/views/tools/compatibility.html.erb" />
     </list>
     <ignored path="clip.iws" />
@@ -28,75 +32,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="licence_compare.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/licence_compare.js">
+      <file leaf-file-name="copyleft_clause.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/licence_clauses/copyleft_clause.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="86" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/family_trees/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="3" column="60" selection-start="198" selection-end="226" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/family_trees/_show.html.erb">
+      <file leaf-file-name="compatibility.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="28" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.625">
+            <state line="60" column="33" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licence_compare.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/licence_compare.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="3" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compatibility.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="1430" selection-end="1521" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compare.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/tools/compare.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="24" selection-start="55" selection-end="55" vertical-scroll-proportion="0.051903114">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compatibility.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="compatibility.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tools/compatibility.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="88" vertical-scroll-proportion="-0.0">
+            <state line="41" column="26" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.53274333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tools.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss">
+      <file leaf-file-name="compatibility.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/compatibility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+            <state line="203" column="7" selection-start="6882" selection-end="6882" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,22 +92,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/compatibilities/multi_licence_chart.js.erb" />
-        <option value="$PROJECT_DIR$/app/helpers/compatibility_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/compatibilities/_chart.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss" />
         <option value="$PROJECT_DIR$/app/views/licences/_compare.html.erb" />
         <option value="$PROJECT_DIR$/app/views/compatibilities/_wizard.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/licence_compare.js" />
         <option value="$PROJECT_DIR$/app/views/family_trees/_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/licence_compare.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/tools/compatibility.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss" />
         <option value="$PROJECT_DIR$/app/views/tools/compare.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/scores/_stars.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/licence_compare.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/compatibilities_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/compatibilities/multi_licence_chart.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/compatibilities/_chart.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/compatibility.js" />
+        <option value="$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb" />
+        <option value="$PROJECT_DIR$/app/views/tools/compatibility.html.erb" />
       </list>
     </option>
   </component>
@@ -200,8 +166,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,20 +326,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -419,6 +369,86 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="licences" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="licence_clauses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -438,30 +468,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1119,28 +1133,36 @@
       <created>1369916941070</created>
       <updated>1369916941070</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Add icons to tool titles.">
+      <created>1369918239785</created>
+      <updated>1369918239785</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Minor wording updates.">
+      <created>1369919769734</created>
+      <updated>1369919769734</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="20" width="1364" height="747" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266564" sideWeight="0.46965098" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39291218" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3898305" sideWeight="0.48786038" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46995378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26348227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6724512" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29590288" sideWeight="0.21691974" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5053111" sideWeight="0.60708785" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.57511383" sideWeight="0.6101695" order="0" side_tool="true" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3882897" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3167028" sideWeight="0.5189681" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3898305" sideWeight="0.50682855" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28505394" sideWeight="0.4757208" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266564" sideWeight="0.46965098" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.6764253" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1181,7 +1203,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text compare widget facelift." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor wording updates." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1194,8 +1216,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Validation fixes." />
-    <MESSAGE value="Licence trees." />
     <MESSAGE value="Licence comparison &amp; licence info improvements. On upload, auto-parse all licence texts to plain text." />
     <MESSAGE value="External API; minor visual fixes." />
     <MESSAGE value="Licence comparison &amp; family tree &quot;app&quot; refactoring." />
@@ -1219,26 +1239,84 @@
     <MESSAGE value="Button for compatibility tool." />
     <MESSAGE value="Compatibility slider widget." />
     <MESSAGE value="Text compare widget facelift." />
+    <MESSAGE value="Add icons to tool titles." />
+    <MESSAGE value="Minor wording updates." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/compatibility_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/tools/compare.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+        <state line="1" column="24" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licences/_tab_licence_info.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/openness_ratings.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="540" selection-end="540" vertical-scroll-proportion="-11.25">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licences/_tab_licence_compatibility.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/scores/_stars.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="160" selection-start="3598" selection-end="3598" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/family_tree.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="11" selection-start="2921" selection-end="2921" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="3" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/users.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="301" selection-end="301" vertical-scroll-proportion="0.2542373">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/licence_compare.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="6" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/compatibilities_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="29" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/multi_licence_chart.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="14" selection-start="309" selection-end="309" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix_row.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="110" selection-start="537" selection-end="537" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/licence_clauses/obligation.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1247,99 +1325,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_chart.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="359" selection-end="359" vertical-scroll-proportion="-4.375">
-          <folding>
-            <element signature="n#style#0;n#p#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="7" column="20" selection-start="359" selection-end="359" vertical-scroll-proportion="0.25301206">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/_matrix.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/licence_clauses/copyleft_clause.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="14" selection-start="724" selection-end="724" vertical-scroll-proportion="-7.5">
-          <folding>
-            <element signature="e#330#445#0" expanded="true" />
-          </folding>
+        <state line="3" column="60" selection-start="198" selection-end="226" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/compatibility.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="682" selection-end="848" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/compatibilities/multi_licence_chart.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="18" selection-start="249" selection-end="249" vertical-scroll-proportion="-3.75">
+        <state line="203" column="7" selection-start="6882" selection-end="6882" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licences/_compare.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/licence_clauses/compatibility.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="236" selection-end="236" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/licence_compare.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="86" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/family_trees/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/family_trees/_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/compatibility.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="1430" selection-end="1521" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/licence_compare.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="3" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tools.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+        <state line="60" column="33" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tools/compatibility.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="88" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tools/compare.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="24" selection-start="55" selection-end="55" vertical-scroll-proportion="0.051903114">
+        <state line="41" column="26" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.53274333">
           <folding />
         </state>
       </provider>

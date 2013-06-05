@@ -200,7 +200,8 @@ MultiLicenceChart.loadChart = function(){
   targetLicences = this.originalLicences.concat(this.targetLicences);
   $.getScript('/compatibilities/multi_licence_chart.js'
       + '?original_licence_ids[]=' + this.originalLicences.join("&original_licence_ids[]=")
-      + '&target_licence_ids[]=' + targetLicences.join("&target_licence_ids[]="));
+      + '&target_licence_ids[]=' + targetLicences.join("&target_licence_ids[]=")
+      + '&remix_type=' + this.remixType);
 }
 
 MultiLicenceChart.initializeChart = function(){

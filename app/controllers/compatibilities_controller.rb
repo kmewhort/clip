@@ -43,6 +43,7 @@ class CompatibilitiesController < ApplicationController
   def multi_licence_chart
     @original_licences = params[:original_licence_ids].map { |id| find_licence_by_compatibility_id(id) }.uniq
     @target_licences = params[:target_licence_ids].map { |id| find_licence_by_compatibility_id(id) }.uniq
+    @remix_type = params[:remix_type]
 
     respond_to do |format|
       format.js
