@@ -58,10 +58,10 @@
       </dd>
       <% if can? :destroy, @licence %>
         <dd class="hide-for-small right">
-          <%= link_to('Destroy', licence,
+          <%= link_to('Del', @licence,
                   method: :delete, data: { confirm: 'Are you sure?' }) %>
-          <% end %>
         </dd>
+      <% end %>
     </dl>
     <ul class="tabs-content contained">
       <li class="active">

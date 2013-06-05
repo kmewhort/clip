@@ -34,7 +34,7 @@ class LicencesController < ApplicationController
     result = true
     success_notice = ''
     unless params[:preview]
-      if params[:submit_for_review]
+      if params[:submit_for_review] == "true"
         result = @licence.save_for_review
         success_notice = 'Thank you for your submission of a new licence! We will review it and post it on the website shortly.'
       else
@@ -60,7 +60,7 @@ class LicencesController < ApplicationController
     result = true
     success_notice = ''
     unless params[:preview]
-      if params[:submit_for_review]
+      if params[:submit_for_review] == "true"
         result = @licence.save_for_review
         success_notice = 'Thank you for your submission! We will review your suggested changes shortly.'
       else

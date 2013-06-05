@@ -5,7 +5,9 @@
       <%= f.check_box :sublicense_future_versions %>
       <%= f.label :sublicense_future_versions, "Future versions of the same license" %>
     </span>
-    <span class="input-wrapper"><%= f.label :sublicense_other, "Other specific licences (please enter a comma-separated list of ID's):" %><%= f.text_field :sublicense_other %></span>
+    <span class="input-wrapper">
+      <%= f.label :sublicense_other, "Other specific licences (please enter a comma-separated list of ID's):" %>
+      <%= f.text_field :sublicense_other %></span>
   </div>
 </div>
 <div class="copyleft-compatibility checkbox-group field">
@@ -15,6 +17,8 @@
       <%= f.check_box :copyleft_compatible_with_future_versions %>
       <%= f.label :copyleft_compatible_with_future_versions, "Future versions of the same license" %>
     </span>
-    <span class="input-wrapper"><%= f.label :copyleft_compatible_with_other, "Other specific licences (please enter a comma-separated list of ID's):" %><%= f.text_field :sublicense_other %></span>
+    <span class="input-wrapper">
+      <%= f.label :copyleft_compatible_with_other, "Other specific licences (please enter a comma-separated list of ID's):" %>
+      <%= f.text_field :copyleft_compatible_with_other %></span>
   </div>
 </div>
