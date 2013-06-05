@@ -45,8 +45,8 @@ class Compatibility < ActiveRecord::Base
                     licence.all_versions.index(other_licence) > licence.all_versions.index(licence))
 
     # specifically-defined compatibility
-    return true if !copyleft_compatible_with_other.nil? && copyleft_compatible_with_other.split(/\s*,\s*/).include?(other_licence.id)
-    return true if !sublicense_other.nil? && sublicense_other.split(/\s*,\s*/).include?(other_licence.id)
+    return true if !copyleft_compatible_with_other.nil? && copyleft_compatible_with_other.split(/\s*,\s*/).include?(other_licence.identifier)
+    return true if !sublicense_other.nil? && sublicense_other.split(/\s*,\s*/).include?(other_licence.identifier)
 
     #
     # Copyleft checks
