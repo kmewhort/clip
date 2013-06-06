@@ -18,10 +18,12 @@
   </ul>
 <% end %>
 
-<p>This copyleft obligation applies to:</p>
+<p>This is a <strong><%= (licence.copyleft_clause.copyleft_applies_to == 'derivatives' ||
+                  licence.copyleft_clause.copyleft_applies_to == 'compilation') ? 'strong' : 'weak' %> copyleft</strong>
+   clause.  The copyleft obligation applies to:</p>
 <ul>
     <% if licence.copyleft_clause.copyleft_applies_to == 'derivatives' ||
-          licence.copyleft_clause.copyleft_applies_to == 'derivatives_links_excepted'  %>
+          licence.copyleft_clause.copyleft_applies_to == 'derivatives_linking_excepted'  %>
       <li>Any <strong>adaptation or derivative work</strong> you create which is based on the original</li>
     <% elsif licence.copyleft_clause.copyleft_applies_to == 'modified_files' %>
       <li>Any <strong>individual files</strong> from the original that you modify (and any of your files that include portions of the original work)</li>
@@ -30,7 +32,7 @@
 
 <p>but does <strong>NOT</strong> apply to:</p>
 <ul>
-    <% if licence.copyleft_clause.copyleft_applies_to == 'derivatives_links_excepted' %>
+    <% if licence.copyleft_clause.copyleft_applies_to == 'derivatives_linking_excepted' %>
       <li>A work you create that only programatically <strong>links</strong> to an original software work</li>
     <% elsif licence.copyleft_clause.copyleft_applies_to == 'modified_files' %>
       <li>Any individual <strong>files that you author</strong> entirely yourself</li>
