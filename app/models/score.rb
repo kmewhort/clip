@@ -202,7 +202,7 @@ class Score < ActiveRecord::Base
     # (except in jurisdictions where SGDRs apply). This rights needs to be granted, or the license
     # effectively grants little
     if !licence.right.covers_copyright
-      return 0
+      return (self.licensee_freedom = 0)
     end
 
     # the core rights that licenses typically grant and the right to use, modify & distribute
