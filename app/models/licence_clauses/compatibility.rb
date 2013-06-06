@@ -31,7 +31,7 @@ class Compatibility < ActiveRecord::Base
 
     # if no modification is allowed, cannot create a compatible derivative work at all (and, with
     # this full-stop, no further incompatibility checks necessary)
-    if !licence.right.right_to_modify && !remix_type == 'collection'
+    if !licence.right.right_to_modify && (remix_type != 'collection')
       reasons[:hard] << "#{licence.identifier} prohibits any type of adaptation"
       return false
     end
