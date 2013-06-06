@@ -6,9 +6,10 @@ class Ability
     can :read, :all
     can :compare_to, Licence
 
-    # guests can preview json and submit updates in a non-saving "submit_for_review" mode
+    # guests can preview json and submit updates (in a non-saving "submit_for_review" mode,
+    # per the controller logic)
     can [:new, :edit], Licence
-    can [:create, :update], Licence if params[:preview] || params[:submit_for_review]
+    can [:create, :update], Licence
 
     # admins can do everything
     if !user.nil?

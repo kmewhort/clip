@@ -26,6 +26,10 @@
   </div>
 
   <div id="main-content" class='<%= controller.controller_name %>'>
+    <% if admin_signed_in? %>
+      <div class="sign-out-link"><%= link_to('Logout', destroy_admin_session_path, :method=>'delete') %></div>
+    <% end %>
+
     <% if !notice.nil? %>
         <p id="notice"><%= notice %></p>
     <% end %>

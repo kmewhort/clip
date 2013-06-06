@@ -1,11 +1,11 @@
 require 'licence_text_processor'
 class Licence < ActiveRecord::Base
   attr_accessible :domain_content, :domain_data, :domain_software, :identifier, :version,
-    :maintainer, :maintainer_type, :title, :url,
-    :compliance_attributes, :right_attributes, :obligation_attributes, :patent_clause_attributes,
-    :attribution_clause_attributes, :copyleft_clause_attributes, :compatibility_attributes,
-    :termination_attributes, :changes_to_term_attributes, :disclaimer_attributes, :conflict_of_law_attributes,
-    :logo, :text
+                  :maintainer, :maintainer_type, :title, :url,
+                  :compliance_attributes, :right_attributes, :obligation_attributes, :patent_clause_attributes,
+                  :attribution_clause_attributes, :copyleft_clause_attributes, :compatibility_attributes,
+                  :termination_attributes, :changes_to_term_attributes, :disclaimer_attributes, :conflict_of_law_attributes,
+                  :logo, :text
   MAINTAINER_TYPES = %w(gov ngo private)
 
   has_one :compliance, dependent: :destroy
@@ -33,7 +33,7 @@ class Licence < ActiveRecord::Base
   has_attached_file :text, styles: { unparsed: { format: nil },
                                      html: { format: 'html' },
                                      text: { format: 'txt' } },
-                           processors: [:licence_text_processor]
+                    processors: [:licence_text_processor]
 
   accepts_nested_attributes_for :compliance, :allow_destroy => true
   accepts_nested_attributes_for :right, :allow_destroy => true
@@ -83,9 +83,9 @@ class Licence < ActiveRecord::Base
 
       # save to file
       filename = Time.now.to_i.to_s + (!identifier.nil? ? ("_" + identifier) : "") + ".yml"
-      File.open(Rails.root.join('public', 'review_pending', filename), 'w') do |f|
-        YAML.dump(data, f)
-      end
+      yaml = YAML.dump(data)
+      File.open(Rails.root.join('public', 'review_pending', filename), 'w') { |f| f << yaml }
+      AdminMailer.update_notification(self, yaml).deliver
     end
     is_valid
   end
@@ -129,6 +129,7 @@ class Licence < ActiveRecord::Base
     self.build_changes_to_term if self.changes_to_term.nil?
     self.build_disclaimer if self.disclaimer.nil?
     self.build_conflict_of_law if self.conflict_of_law.nil?
+    self.build_score if self.score.nil?
 
     # need to directly set parent of nested attributes for validation w/o save
     self.compliance.licence = self
@@ -142,6 +143,7 @@ class Licence < ActiveRecord::Base
     self.changes_to_term.licence = self
     self.disclaimer.licence = self
     self.conflict_of_law.licence = self
+    self.score.licence = self
   end
 
   # manually define json structure to provide a user-friendly ordering
