@@ -169,16 +169,21 @@
 .ui-combobox {
   position: relative;
   display: inline-block;
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
 }
 .ui-combobox-toggle {
+  /*
   position: absolute;
   top: 0;
   bottom: 0;
   margin-left: -1px;
   padding: 0;
-  /* adjust styles for IE 6/7 */
   *height: 1.7em;
-  *top: 0.1em;
+  *top: 0.1em; */
+}
+.ui-combobox .ui-button-icon-only{
+  vertical-align: top;
 }
 .ui-combobox-input {
   margin: 0;
@@ -191,8 +196,19 @@
 }
 
 .ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text{
-  padding: 0.86em 0.4em;
   vertical-align: top;
+  height: 31px;
+  border: medium none;
+}
+a.ui-combobox-toggle{
+  float: right;
+  padding-right: 0;
+  width: 27px;
+  margin-right: 0;
+  height: 31px;
+  border: medium none;
+  border-left: 1px solid #D3D3D3;
+  background: none repeat scroll 0 0 transparent;
 }
 
 .ui-autocomplete {
@@ -200,6 +216,15 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 20px;
+}
+
+.ui-combobox .ui-autocomplete-input{
+  border-radius: 4px;
+  height: 31px;
+  border: medium none;
+  padding: 0;
+  padding-left: 10px;
+  font-color: #AAA;
 }
 /* IE 6 doesn't support max-height
  */

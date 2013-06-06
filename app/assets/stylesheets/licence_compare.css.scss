@@ -23,8 +23,11 @@
     display: none;
   }
 
-  .ui-front, .ui-combobox, .ui-combobox-input, ul.ui-menu {
-    width: 100% !important;
+  .licence-select-wrapper .ui-front,
+  .licence-select-wrapper .ui-combobox,
+  .licence-select-wrapper .ui-combobox-input,
+  .licence-select-wrapper ul.ui-menu {
+      width: 100% !important;
   }
 }
 

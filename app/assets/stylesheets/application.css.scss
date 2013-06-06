@@ -25,6 +25,7 @@
   }
   #nav, #featured {
     @include column(12);
+    padding: 0 14px;
   }
   #nav {
     margin: 0 0 24px;
