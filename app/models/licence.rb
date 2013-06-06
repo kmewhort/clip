@@ -85,7 +85,7 @@ class Licence < ActiveRecord::Base
       filename = Time.now.to_i.to_s + (!identifier.nil? ? ("_" + identifier) : "") + ".yml"
       yaml = YAML.dump(data)
       File.open(Rails.root.join('public', 'review_pending', filename), 'w') { |f| f << yaml }
-      AdminMailer.update_notification(self, yaml).deliver
+      #AdminMailer.update_notification(self, yaml).deliver
     end
     is_valid
   end
