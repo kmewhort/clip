@@ -1,11 +1,4 @@
 GIT
-  remote: git@github.com:iblue/d3-rails.git
-  revision: 4ff2986e8b8ddd17b5e8b6aa66f9b50076570c04
-  specs:
-    d3-rails (0.0.8)
-      railties (>= 3.1)
-
-GIT
   remote: git@github.com:kmewhort/clip-similarity.git
   revision: a8884b03cdac0838618de4697147953c9311a956
   specs:
@@ -75,6 +68,8 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    d3-rails (0.0.5)
+      railties (>= 3.1)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -191,7 +186,7 @@ DEPENDENCIES
   clip-similarity!
   coffee-rails (~> 3.2.1)
   compass-rails
-  d3-rails!
+  d3-rails
   devise
   htmldiff
   jquery-rails
