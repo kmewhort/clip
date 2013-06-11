@@ -1,49 +1,31 @@
 == CLIPol (the CIPPIC Licensing Information Project for Open Licences)
-CLIPol is a web platform designed to serve useful information about open data licences,
-open content licences, and open source software. It consists of:
-*a database of machine-readable information on the rights, restrictions and obligations in different licences;
-*an API for retrieving this information;
-*a web-accessible site for viewing this information in a user-friendly way (avoiding legalese); and
-*a set of web apps built on top of this information (currently consisting of a compatibility-checking tool and a
-text-comparison tool).
+CLIPol is a web platform designed to serve useful information about open data licences, open content licences, and open source software. It consists of:
+* a database of machine-readable information on the rights, restrictions and obligations in different licences;
+* an API for retrieving this information;
+* a web-accessible site for viewing this information in a user-friendly way (avoiding legalese); and
+* a set of web apps built on top of this information (currently consisting of a compatibility-checking tool and a text-comparison tool).
 
-The project is maintained by the <a href="http://www.cippic.ca">Samuelson-Glushko Canadian Internet Policy
-and Public Interest Clinic</a>, a public interest technology law clinic at the Faculty of Law, Common
-Law Section, University of Ottawa.
+The project is maintained by the {Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic}[http://www.cippic.ca], a public interest technology law clinic at the Faculty of Law, Common Law Section, University of Ottawa.
 
 == Getting Started
-The easiest way to use CLIPol is to visit our website at http://www.clipol.org!  We also have
-an API for retrieving our data in JSON format, which you can find further information about
-at http://www.clipol.org/api.
+The easiest way to use CLIPol is to visit our website at http://www.clipol.org!  We also have an API for retrieving our data in JSON format, which you can find further information about at http://www.clipol.org/api.
 
 == Contributing to the Database
-The easiest way to add new licences or fix any erroneous data is to submit changes through the
-data editors on our websites.  On the rightmost tab of the webpage for any licence, you'll see
-an "Edit" tab to make changes.  To add a new licence, navigate to http://www.clipol.org/api.
+The easiest way to add new licences or fix any erroneous data is to submit changes through the forms on our website.  On the rightmost tab of the webpage for any licence, you'll see an "Edit" tab to make changes.  To add a new licence, open http://www.clipol.org/api.
 
 == Contributing to the Software
-If you wish to contribute to development, whether to submit a fix or add a tool, simply pull
-this git repository and have at the Rails code! The repository contains a recent copy of the database
-stored using the *yaml_db* gem.  You can thus instantiate a populated database with:
+If you wish to contribute to development, whether to submit a fix or add a tool, simply pull this git repository and have at the Rails code! The repository contains a recent copy of the database stored using the *yaml_db* gem.  You can thus instantiate a populated database with:
   rake db:create
   rake db:data:load
 
 == Licence
-All files in this repository (http://github.com/kmewhort/clip) are licensed under a *BSD License*.  See
-*licence.txt* for further details.
+All files in this repository (http://github.com/kmewhort/clip) are licensed under a <b>BSD License</b>.  See the *licence.txt* for further details.
 
-In addition, the data (everything accessible in JSON format through the web API, as well as the YAML
-database file) is licenced under *CC0 1.0 Universal* (http://creativecommons.org/publicdomain/zero/1.0/‎).
+In addition, the data (everything accessible in JSON format through the web API, as well as the YAML database file) is licenced under {CC0 1.0 Universal}[http://creativecommons.org/publicdomain/zero/1.0/‎].
 
 == Credits
-*This project would not have been possible without the generous financial support of
-GeoConnections[http://geoconnections.nrcan.gc.ca/], a national collaborative initiative led by
-National Resources Canada. GeoConnections supports the integration and use of Canadian Geospatial
-Data Infrastructure (CGDI), an on-line resource that improves the sharing, access and use of open
-geospatial information.
-*A big thank-you to James McKinney for his founding work[https://github.com/jpmckinney/clip-analysis]
-on the licence text comparison tool.
+* This project would not have been possible without the generous financial support of GeoConnections[http://geoconnections.nrcan.gc.ca/], a national collaborative initiative led by National Resources Canada. GeoConnections supports the integration and use of Canadian Geospatial Data Infrastructure (CGDI), an on-line resource that improves the sharing, access and use of open geospatial information.
+* A big thank-you to James McKinney for his founding work[https://github.com/jpmckinney/clip-analysis] on the licence text comparison tool.
 
 == Contact
-*Please freel free to contact the project lead, Kent Mewhort (kent@openissues.ca), with any comments or
-questions. For bug reports, prerably raise them directly through Github.
+* Please freel free to contact the project lead, Kent Mewhort (kent@openissues.ca), with any comments or questions. For bug reports, prerably raise them directly through Github.
