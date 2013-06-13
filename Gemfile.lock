@@ -50,6 +50,12 @@ GEM
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
     cancan (1.6.9)
+    capistrano (2.14.2)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     chunky_png (1.2.8)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -84,6 +90,7 @@ GEM
     fssm (0.2.10)
     gsl (1.15.3)
       narray (>= 0.5.9)
+    highline (1.6.16)
     hike (1.2.2)
     htmldiff (0.0.1)
     i18n (0.6.4)
@@ -106,6 +113,13 @@ GEM
       sassy-math (>= 1.5)
     multi_json (1.7.2)
     narray (0.6.0.8)
+    net-scp (1.1.0)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.6)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
     paperclip (3.4.1)
@@ -183,6 +197,7 @@ PLATFORMS
 
 DEPENDENCIES
   cancan
+  capistrano
   clip-similarity!
   coffee-rails (~> 3.2.1)
   compass-rails
