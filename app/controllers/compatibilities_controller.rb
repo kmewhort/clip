@@ -17,16 +17,21 @@ class CompatibilitiesController < ApplicationController
       elsif @compatibility.licence.domain_software
         @licences = [@compatibility.licence] + Licence.where(
           ['BSD-2-Clause','BSD-3-Clause''GPL-2.0+','GPL-3.0+','LGPL-2.1+','AGPL-3.0+'].map{|i| "identifier = '#{i}'"}.join(" OR "))
-      else
-        # show the matrix for all licences of the same type
-        if @compatibility.licence.domain_content
-          @licences = Licence.where(domain_content: true)
-        elsif @compatibility.licence.domain_data
-          @licences = Licence.where(domain_data: true)
-        end
+      # for data licences, seed with a few commonly used licences and also
+      # show others in the same family
+      elsif @compatibility.licence.domain_data
+        @licences = [@compatibility.licence]
+        @licences += @compatibility.licence.family_tree_nodes.first.family_tree.licences if !@compatibility.licence.family_tree_nodes.nil? &&
+                                                                                            !@compatibility.licence.family_tree_nodes.empty?
+        @licences += Licence.where(['CC0','CC-BY-3.0','ODC-PDDL-1.0','ODC-By-1.0','ODC-ODbL-1.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
+      # for content licences, seed with a few commonly used and others in the same family
+      elsif @compatibility.licence.domain_content
+        @licences = [@compatibility.licence]
+        @licences += @compatibility.licence.family_tree_nodes.first.family_tree.licences if !@compatibility.licence.family_tree_nodes.nil? &&
+                                                                                            !@compatibility.licence.family_tree_nodes.empty?
+        @licences += Licence.where(['CC0','CC-BY-3.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
       end
       @licences.sort! {|a,b| a.identifier <=> b.identifier }.uniq!
-
     # if a list of licences is specified, find each by compatibility id or licence identifier
     elsif !params[:licence_ids].nil?
       @licences = params[:licence_ids].map { |id| find_licence_by_compatibility_id(id) }.uniq
