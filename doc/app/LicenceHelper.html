@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module LicenceHelper - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/licence_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-domains_comma_seperated">#domains_comma_seperated</a>
+    
+    <li><a href="#method-i-licence_info_categories">#licence_info_categories</a>
+    
+    <li><a href="#method-i-licence_tabs">#licence_tabs</a>
+    
+    <li><a href="#method-i-licence_versions_nav">#licence_versions_nav</a>
+    
+    <li><a href="#method-i-rights_covered">#rights_covered</a>
+    
+    <li><a href="#method-i-search_tabs">#search_tabs</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Paperclip.html">Paperclip</a>
+  
+    <li><a href="./Paperclip/LicenceTextProcessor.html">Paperclip::LicenceTextProcessor</a>
+  
+    <li><a href="./Ability.html">Ability</a>
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./AdminMailer.html">AdminMailer</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./AttributionClause.html">AttributionClause</a>
+  
+    <li><a href="./ChangesToTerm.html">ChangesToTerm</a>
+  
+    <li><a href="./CompatibilitiesController.html">CompatibilitiesController</a>
+  
+    <li><a href="./Compatibility.html">Compatibility</a>
+  
+    <li><a href="./CompatibilityHelper.html">CompatibilityHelper</a>
+  
+    <li><a href="./Compliance.html">Compliance</a>
+  
+    <li><a href="./ConflictOfLaw.html">ConflictOfLaw</a>
+  
+    <li><a href="./CopyleftClause.html">CopyleftClause</a>
+  
+    <li><a href="./Disclaimer.html">Disclaimer</a>
+  
+    <li><a href="./FamilyTree.html">FamilyTree</a>
+  
+    <li><a href="./FamilyTreeNode.html">FamilyTreeNode</a>
+  
+    <li><a href="./FamilyTreesController.html">FamilyTreesController</a>
+  
+    <li><a href="./Licence.html">Licence</a>
+  
+    <li><a href="./LicenceHelper.html">LicenceHelper</a>
+  
+    <li><a href="./LicencesController.html">LicencesController</a>
+  
+    <li><a href="./Obligation.html">Obligation</a>
+  
+    <li><a href="./PatentClause.html">PatentClause</a>
+  
+    <li><a href="./Right.html">Right</a>
+  
+    <li><a href="./Score.html">Score</a>
+  
+    <li><a href="./ScoreHelper.html">ScoreHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Termination.html">Termination</a>
+  
+    <li><a href="./ToolsController.html">ToolsController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module LicenceHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-domains_comma_seperated" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">domains_comma_seperated</span><span
+            class="method-args">(licence)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="domains_comma_seperated-source">
+            <pre><span class="ruby-comment"># File app/helpers/licence_helper.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">domains_comma_seperated</span>(<span class="ruby-identifier">licence</span>)
+  <span class="ruby-identifier">domains</span> = <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">domain_name</span>, <span class="ruby-identifier">is_in_domain</span><span class="ruby-operator">|</span>        (<span class="ruby-identifier">domain_name</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^domain/</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">is_in_domain</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">domain_name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">&quot;domain_&quot;</span>,<span class="ruby-string">&quot;&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span> }
+  <span class="ruby-identifier">domains</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">empty?</span> }.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;&lt;strong&gt;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&lt;/strong&gt;&quot;</span> }.<span class="ruby-identifier">to_sentence</span>.<span class="ruby-identifier">html_safe</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- domains_comma_seperated-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- domains_comma_seperated-method -->
+
+    
+      <div id="method-i-licence_info_categories" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licence_info_categories</span><span
+            class="method-args">(licence)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>categories for which licence information is available</p>
+          
+
+          
+          <div class="method-source-code" id="licence_info_categories-source">
+            <pre><span class="ruby-comment"># File app/helpers/licence_helper.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licence_info_categories</span>(<span class="ruby-identifier">licence</span>)
+  <span class="ruby-comment"># return applicable categories of licence information</span>
+  <span class="ruby-identifier">result</span> = {}
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:rights</span>] = <span class="ruby-string">'Rights and Permissions'</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:obligations</span>] = <span class="ruby-string">'Obligations'</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:attribution_clauses</span>] = <span class="ruby-string">'Attribution'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">obligation_attribution</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:copyleft_clauses</span>] = <span class="ruby-string">'Copyleft / Share-alike'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">obligation_copyleft</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:disclaimers</span>] = <span class="ruby-string">'Disclaimers'</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:terminations</span>] = <span class="ruby-string">'Termination'</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:changes_to_terms</span>] = <span class="ruby-string">'Licence Versioning'</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">:conflict_of_laws</span>] = <span class="ruby-string">'Choice of Law / Choice of Forum'</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licence_info_categories-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licence_info_categories-method -->
+
+    
+      <div id="method-i-licence_tabs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licence_tabs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="licence_tabs-source">
+            <pre><span class="ruby-comment"># File app/helpers/licence_helper.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licence_tabs</span>
+  <span class="ruby-identifier">tabs</span> = {}
+  <span class="ruby-identifier">tabs</span>[<span class="ruby-string">'licence_info'</span>] = <span class="ruby-string">&quot;Licence Info&quot;</span>
+  <span class="ruby-identifier">tabs</span>[<span class="ruby-string">'licence_text'</span>] = <span class="ruby-string">&quot;Licence Text&quot;</span>
+  <span class="ruby-identifier">tabs</span>[<span class="ruby-string">'licence_compatibility'</span>] = <span class="ruby-string">&quot;Compatibility&quot;</span>
+  <span class="ruby-identifier">tabs</span>[<span class="ruby-string">'licence_benchmarks'</span>] = <span class="ruby-string">&quot;Benchmarks&quot;</span>
+  <span class="ruby-identifier">tabs</span>[<span class="ruby-string">'licence_comparison'</span>] = <span class="ruby-string">&quot;Family History&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@family_trees</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@family_trees</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">tabs</span>[<span class="ruby-string">'licence_metadata'</span>] = <span class="ruby-string">&quot;Metadata&quot;</span>
+  <span class="ruby-identifier">tabs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licence_tabs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licence_tabs-method -->
+
+    
+      <div id="method-i-licence_versions_nav" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licence_versions_nav</span><span
+            class="method-args">(cur_licence)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>links to other versions of this licence</p>
+          
+
+          
+          <div class="method-source-code" id="licence_versions_nav-source">
+            <pre><span class="ruby-comment"># File app/helpers/licence_helper.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licence_versions_nav</span>(<span class="ruby-identifier">cur_licence</span>)
+  <span class="ruby-identifier">versions</span> = <span class="ruby-identifier">cur_licence</span>.<span class="ruby-identifier">all_versions</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">versions</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">dd_tags</span> = <span class="ruby-identifier">cur_licence</span>.<span class="ruby-identifier">all_versions</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">licence</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">content_tag</span> <span class="ruby-string">'dd'</span>, <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> (<span class="ruby-identifier">licence</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">cur_licence</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;active&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;inactive&quot;</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">licence</span>.<span class="ruby-identifier">version</span>, <span class="ruby-identifier">licence</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">dd_tags</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">''</span>)
+    <span class="ruby-identifier">content_tag</span> <span class="ruby-string">'dl'</span>, <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;sub-nav&quot;</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">content_tag</span>(<span class="ruby-string">'dt'</span>, <span class="ruby-string">&quot;Versions:&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">dd_tags</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">''</span>).<span class="ruby-identifier">html_safe</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licence_versions_nav-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licence_versions_nav-method -->
+
+    
+      <div id="method-i-rights_covered" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rights_covered</span><span
+            class="method-args">(rights, covered = true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>populate array of rights covered / not covered under the licence</p>
+          
+
+          
+          <div class="method-source-code" id="rights_covered-source">
+            <pre><span class="ruby-comment"># File app/helpers/licence_helper.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rights_covered</span>(<span class="ruby-identifier">rights</span>, <span class="ruby-identifier">covered</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Copyright&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rights</span>.<span class="ruby-identifier">covers_copyright</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">covered</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Trade-marks&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rights</span>.<span class="ruby-identifier">covers_trademarks</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">covered</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span>  (<span class="ruby-identifier">covered</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;Patents&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;Patents (unless rights are implied by the licence)&quot;</span>)        <span class="ruby-keyword">if</span> <span class="ruby-identifier">rights</span>.<span class="ruby-identifier">covers_patents_explicitly</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">covered</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Neighbouring rights (rights in a sound recording or performance)&quot;</span>        <span class="ruby-keyword">if</span> <span class="ruby-identifier">rights</span>.<span class="ruby-identifier">covers_neighbouring_rights</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">covered</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Database rights (where applicable under European law)&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rights</span>.<span class="ruby-identifier">covers_sgdrs</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Moral rights&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rights</span>.<span class="ruby-identifier">covers_moral_rights</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Prohibitions against circumvention of technical protection measures&quot;</span>        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">rights</span>.<span class="ruby-identifier">covers_circumventions</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">covered</span> <span class="ruby-comment"># circumvention is only a prohibition, so only show if not covered</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rights_covered-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rights_covered-method -->
+
+    
+      <div id="method-i-search_tabs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search_tabs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="search_tabs-source">
+            <pre><span class="ruby-comment"># File app/helpers/licence_helper.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search_tabs</span>
+  { <span class="ruby-string">&quot;/licences&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;All licences&quot;</span>,
+    <span class="ruby-string">&quot;/licences?domain_data=true&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Data&quot;</span>,
+    <span class="ruby-string">&quot;/licences?domain_software=true&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Software&quot;</span>,
+    <span class="ruby-string">&quot;/licences?domain_content=true&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Content&quot;</span>,
+    <span class="ruby-string">&quot;/licences?maintainer_type=ngo,private&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;International&quot;</span>,
+    <span class="ruby-string">&quot;/licences?maintainer_type=gov&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Government&quot;</span>
+  }.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span>, <span class="ruby-identifier">link_name</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">content_tag</span> <span class="ruby-value">:li</span>, <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">fullpath</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;current&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">content_tag</span> <span class="ruby-value">:a</span>, <span class="ruby-identifier">link_name</span>, <span class="ruby-identifier">href</span><span class="ruby-operator">:</span> <span class="ruby-identifier">url</span>
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">html_safe</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- search_tabs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- search_tabs-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

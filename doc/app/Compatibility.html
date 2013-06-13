@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Compatibility - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/licence_clauses/compatibility.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-compatible-3F">::compatible?</a>
+    
+    <li><a href="#method-i-as_json">#as_json</a>
+    
+    <li><a href="#method-i-compatible_with-3F">#compatible_with?</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Paperclip.html">Paperclip</a>
+  
+    <li><a href="./Paperclip/LicenceTextProcessor.html">Paperclip::LicenceTextProcessor</a>
+  
+    <li><a href="./Ability.html">Ability</a>
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./AdminMailer.html">AdminMailer</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./AttributionClause.html">AttributionClause</a>
+  
+    <li><a href="./ChangesToTerm.html">ChangesToTerm</a>
+  
+    <li><a href="./CompatibilitiesController.html">CompatibilitiesController</a>
+  
+    <li><a href="./Compatibility.html">Compatibility</a>
+  
+    <li><a href="./CompatibilityHelper.html">CompatibilityHelper</a>
+  
+    <li><a href="./Compliance.html">Compliance</a>
+  
+    <li><a href="./ConflictOfLaw.html">ConflictOfLaw</a>
+  
+    <li><a href="./CopyleftClause.html">CopyleftClause</a>
+  
+    <li><a href="./Disclaimer.html">Disclaimer</a>
+  
+    <li><a href="./FamilyTree.html">FamilyTree</a>
+  
+    <li><a href="./FamilyTreeNode.html">FamilyTreeNode</a>
+  
+    <li><a href="./FamilyTreesController.html">FamilyTreesController</a>
+  
+    <li><a href="./Licence.html">Licence</a>
+  
+    <li><a href="./LicenceHelper.html">LicenceHelper</a>
+  
+    <li><a href="./LicencesController.html">LicencesController</a>
+  
+    <li><a href="./Obligation.html">Obligation</a>
+  
+    <li><a href="./PatentClause.html">PatentClause</a>
+  
+    <li><a href="./Right.html">Right</a>
+  
+    <li><a href="./Score.html">Score</a>
+  
+    <li><a href="./ScoreHelper.html">ScoreHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Termination.html">Termination</a>
+  
+    <li><a href="./ToolsController.html">ToolsController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Compatibility</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-compatible-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compatible?</span><span
+            class="method-args">(original_licences, target_licence, remix_type, reasons = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>whether several works under different licences can be combined together
+under the target licence</p>
+          
+
+          
+          <div class="method-source-code" id="compatible-3F-source">
+            <pre><span class="ruby-comment"># File app/models/licence_clauses/compatibility.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compatible?</span>(<span class="ruby-identifier">original_licences</span>, <span class="ruby-identifier">target_licence</span>, <span class="ruby-identifier">remix_type</span>, <span class="ruby-identifier">reasons</span> = {})
+  <span class="ruby-comment"># check the pair-wise compatibility with the target licence and combine the reasons</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">original_licences</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">original_licence</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">original_licence</span>.<span class="ruby-identifier">compatibility</span>.<span class="ruby-identifier">compatible_with?</span> <span class="ruby-identifier">target_licence</span>, <span class="ruby-identifier">remix_type</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">reasons</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- compatible-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- compatible-3F-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-as_json" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">as_json</span><span
+            class="method-args">(options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="as_json-source">
+            <pre><span class="ruby-comment"># File app/models/licence_clauses/compatibility.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-keyword">super</span>( <span class="ruby-identifier">except</span><span class="ruby-operator">:</span> [ <span class="ruby-value">:id</span>, <span class="ruby-value">:licence_id</span>, <span class="ruby-value">:created_at</span>, <span class="ruby-value">:updated_at</span> ] )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- as_json-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- as_json-method -->
+
+    
+      <div id="method-i-compatible_with-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compatible_with?</span><span
+            class="method-args">(other_licence, remix_type = 'strong_adaptation', soft_compatibility_acceptable = false, reasons = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This licence is compatible with another if a derivative work can be
+licenced under the other licence (but not necessarily licenced under this
+licence, if it’s only one-way compatible); If accept_soft_compatibility is
+true, the licence is also considered compatible if a combined work can
+satisfy the licence terms through releasing the work under a licence
+containing the terms of BOTH licences</p>
+          
+
+          
+          <div class="method-source-code" id="compatible_with-3F-source">
+            <pre><span class="ruby-comment"># File app/models/licence_clauses/compatibility.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">compatible_with?</span>(<span class="ruby-identifier">other_licence</span>, <span class="ruby-identifier">remix_type</span> = <span class="ruby-string">'strong_adaptation'</span>, <span class="ruby-identifier">soft_compatibility_acceptable</span> = <span class="ruby-keyword">false</span>, <span class="ruby-identifier">reasons</span> = {})
+  <span class="ruby-comment"># reasons for any soft or hard incompatibility</span>
+  <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:soft</span>] = [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:soft</span>].<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:hard</span>] = [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:hard</span>].<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:warnings</span>] = [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:warnings</span>].<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Basic compatibility checks/barriers</span>
+  <span class="ruby-comment">#</span>
+
+  <span class="ruby-comment"># if no modification is allowed, cannot create a compatible derivative work at all (and, with</span>
+  <span class="ruby-comment"># this full-stop, no further incompatibility checks necessary)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">licence</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">right_to_modify</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">remix_type</span> <span class="ruby-operator">!=</span> <span class="ruby-string">'collection'</span>)
+    <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:hard</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} prohibits any type of adaptation&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># compatible with the exact same licence,</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">licence</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other_licence</span>
+
+  <span class="ruby-comment"># future versions of the same licence</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">copyleft_compatible_with_future_versions</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">sublicense_future_versions</span>) <span class="ruby-operator">&amp;&amp;</span>
+                 (<span class="ruby-identifier">licence</span>.<span class="ruby-identifier">all_versions</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">other_licence</span>) <span class="ruby-operator">&amp;&amp;</span>
+                  <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">all_versions</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">other_licence</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">all_versions</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">licence</span>))
+
+  <span class="ruby-comment"># specifically-defined compatibility</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">copyleft_compatible_with_other</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">copyleft_compatible_with_other</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\s*,\s*/</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">other_licence</span>.<span class="ruby-identifier">identifier</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sublicense_other</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">sublicense_other</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\s*,\s*/</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">other_licence</span>.<span class="ruby-identifier">identifier</span>)
+
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Copyleft checks</span>
+  <span class="ruby-comment">#</span>
+
+  <span class="ruby-comment"># for remixing into a collection, only check needed is that there's no</span>
+  <span class="ruby-comment"># contractual copyleft obligation against including the work in a collection</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">remix_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">'collection'</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">obligation_copyleft</span> <span class="ruby-operator">&amp;&amp;</span>
+       (<span class="ruby-identifier">licence</span>.<span class="ruby-identifier">copyleft_clause</span>.<span class="ruby-identifier">copyleft_applies_to</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;compilations&quot;</span>)
+      <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:hard</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} contains a copyleft clause which contractually applies even to collections. A collection can only be released under the same #{licence.identifier} licence&quot;</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+
+  <span class="ruby-comment"># unless explicitly compatible above checks, the licence is NOT compatible where</span>
+  <span class="ruby-comment"># this licence has an applicable copyleft clause</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">obligation_copyleft</span>
+    <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">remix_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">'weak_adaptation_of_files'</span> <span class="ruby-operator">&amp;&amp;</span>
+            <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">copyleft_clause</span>.<span class="ruby-identifier">copyleft_applies_to</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;modified_files&quot;</span>) <span class="ruby-operator">||</span>
+           (<span class="ruby-identifier">remix_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">'weak_adaptation_of_libraries'</span> <span class="ruby-operator">&amp;&amp;</span>
+            <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">copyleft_clause</span>.<span class="ruby-identifier">copyleft_applied_to</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;derivatives_linking_excepted&quot;</span>)
+      <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:hard</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} contains a copyleft clause and adapations can only be released under the same #{licence.identifier} licence&quot;</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Term-by-term comparisons</span>
+  <span class="ruby-comment">#</span>
+
+  <span class="ruby-comment"># consider permissive licences compatible where the other licence includes all of the core obligations</span>
+  <span class="ruby-comment"># of this one (the combined work is still technically under the terms of BOTH licences,</span>
+  <span class="ruby-comment"># but a user's compliance with the more onerous licence implies compliance with the other)</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">licence</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-operator">!</span><span class="ruby-identifier">key</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/\Aobligation/</span>).<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">other_licence</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:soft</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} contains #{nicify(key)} obligations, but #{other_licence.identifier} does not&quot;</span>
+    <span class="ruby-comment"># TODO: add a warning for soft compatibility</span>
+    <span class="ruby-comment"># TODO: more specific checks for type of attribution, type of copyleft</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># the other licence cannot grant any additional rights or permissions</span>
+  <span class="ruby-identifier">other_licence</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-operator">!</span><span class="ruby-identifier">key</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/\A(right|covers)/</span>).<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">licence</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">key</span>]
+
+    <span class="ruby-comment"># explicit permission for circumventions or SGDRs is jurisdiction specific and a</span>
+    <span class="ruby-comment"># licence not including these does not necessarily mean the licence does not allow it;</span>
+    <span class="ruby-comment"># thus, generate a warning only</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;covers_circumventions&quot;</span>
+      <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:warnings</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} does not explicitly permit circumvention of technical protection measures (TPMs), but #{other_licence.identifier} \
+        grants permission to do so. This may render the licences incompatible in jurisdictions with anti-circumvention laws&quot;</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;covers_sgdrs&quot;</span>
+      <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:warnings</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} does not explicitly grant Sui Generis Database Rights (SGDRs), but #{other_licence.identifier} \
+        does. This may render the licences incompatible in jurisdictions with legislated SGDRs (such as in Europe)&quot;</span>
+    <span class="ruby-comment"># a patent licence may be implicit even if not set out explicitly in the licence;</span>
+    <span class="ruby-comment"># thus, generate a warning only</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;covers_patents_explicitly&quot;</span>
+      <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:warnings</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} does not explicitly cover patent rights, but #{other_licence.identifier} \
+        does. However, depending on the context, this may not pose a problem if patent rights are implicitly granted in the #{licence.identifier} licence&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:soft</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} does not cover #{nicify(key)}, but #{other_licence.identifier} #{!key.match(/\Aright/).nil? ? 'grants this right' : 'does'}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># the other licence cannot remove any prohibitions (unless soft compatibility is acceptable,</span>
+  <span class="ruby-comment"># such that the prohibitions can be included in a combined licence)</span>
+  <span class="ruby-identifier">other_licence</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-operator">!</span><span class="ruby-identifier">key</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/\A(prohibits)/</span>).<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">licence</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:soft</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{licence.identifier} prohibits #{nicify(key)}, but #{other_licence.identifier} does not contain any such stipulation&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:hard</span>].<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">reasons</span>[<span class="ruby-value">:soft</span>].<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">soft_compatibility_acceptable</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- compatible_with-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- compatible_with-3F-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

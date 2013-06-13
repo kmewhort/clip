@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Score - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/score.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-licensee_business_risk_rank">#licensee_business_risk_rank</a>
+    
+    <li><a href="#method-i-licensee_freedom_rank">#licensee_freedom_rank</a>
+    
+    <li><a href="#method-i-licensee_legal_risk_rank">#licensee_legal_risk_rank</a>
+    
+    <li><a href="#method-i-licensor_business_risk_rank">#licensor_business_risk_rank</a>
+    
+    <li><a href="#method-i-openness_rank">#openness_rank</a>
+    
+    <li><a href="#method-i-score_licence">#score_licence</a>
+    
+    <li><a href="#method-i-star_rating">#star_rating</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Paperclip.html">Paperclip</a>
+  
+    <li><a href="./Paperclip/LicenceTextProcessor.html">Paperclip::LicenceTextProcessor</a>
+  
+    <li><a href="./Ability.html">Ability</a>
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./AdminMailer.html">AdminMailer</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./AttributionClause.html">AttributionClause</a>
+  
+    <li><a href="./ChangesToTerm.html">ChangesToTerm</a>
+  
+    <li><a href="./CompatibilitiesController.html">CompatibilitiesController</a>
+  
+    <li><a href="./Compatibility.html">Compatibility</a>
+  
+    <li><a href="./CompatibilityHelper.html">CompatibilityHelper</a>
+  
+    <li><a href="./Compliance.html">Compliance</a>
+  
+    <li><a href="./ConflictOfLaw.html">ConflictOfLaw</a>
+  
+    <li><a href="./CopyleftClause.html">CopyleftClause</a>
+  
+    <li><a href="./Disclaimer.html">Disclaimer</a>
+  
+    <li><a href="./FamilyTree.html">FamilyTree</a>
+  
+    <li><a href="./FamilyTreeNode.html">FamilyTreeNode</a>
+  
+    <li><a href="./FamilyTreesController.html">FamilyTreesController</a>
+  
+    <li><a href="./Licence.html">Licence</a>
+  
+    <li><a href="./LicenceHelper.html">LicenceHelper</a>
+  
+    <li><a href="./LicencesController.html">LicencesController</a>
+  
+    <li><a href="./Obligation.html">Obligation</a>
+  
+    <li><a href="./PatentClause.html">PatentClause</a>
+  
+    <li><a href="./Right.html">Right</a>
+  
+    <li><a href="./Score.html">Score</a>
+  
+    <li><a href="./ScoreHelper.html">ScoreHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Termination.html">Termination</a>
+  
+    <li><a href="./ToolsController.html">ToolsController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Score</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="SCORE_WEIGHTS">SCORE_WEIGHTS
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-licensee_business_risk_rank" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licensee_business_risk_rank</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="licensee_business_risk_rank-source">
+            <pre><span class="ruby-comment"># File app/models/score.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licensee_business_risk_rank</span>
+  <span class="ruby-constant">Score</span>.<span class="ruby-identifier">count</span>(<span class="ruby-identifier">conditions</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;licensee_business_risk &gt; #{self.licensee_business_risk}&quot;</span> ) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licensee_business_risk_rank-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licensee_business_risk_rank-method -->
+
+    
+      <div id="method-i-licensee_freedom_rank" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licensee_freedom_rank</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="licensee_freedom_rank-source">
+            <pre><span class="ruby-comment"># File app/models/score.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licensee_freedom_rank</span>
+  <span class="ruby-constant">Score</span>.<span class="ruby-identifier">count</span>(<span class="ruby-identifier">conditions</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;licensee_freedom &gt; #{self.licensee_freedom}&quot;</span> ) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licensee_freedom_rank-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licensee_freedom_rank-method -->
+
+    
+      <div id="method-i-licensee_legal_risk_rank" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licensee_legal_risk_rank</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="licensee_legal_risk_rank-source">
+            <pre><span class="ruby-comment"># File app/models/score.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licensee_legal_risk_rank</span>
+  <span class="ruby-constant">Score</span>.<span class="ruby-identifier">count</span>(<span class="ruby-identifier">conditions</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;licensee_legal_risk &gt; #{self.licensee_legal_risk}&quot;</span> ) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licensee_legal_risk_rank-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licensee_legal_risk_rank-method -->
+
+    
+      <div id="method-i-licensor_business_risk_rank" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licensor_business_risk_rank</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="licensor_business_risk_rank-source">
+            <pre><span class="ruby-comment"># File app/models/score.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licensor_business_risk_rank</span>
+  <span class="ruby-constant">Score</span>.<span class="ruby-identifier">count</span>(<span class="ruby-identifier">conditions</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;licensor_business_risk &gt; #{self.licensor_business_risk}&quot;</span> ) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licensor_business_risk_rank-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licensor_business_risk_rank-method -->
+
+    
+      <div id="method-i-openness_rank" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">openness_rank</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="openness_rank-source">
+            <pre><span class="ruby-comment"># File app/models/score.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">openness_rank</span>
+  <span class="ruby-constant">Score</span>.<span class="ruby-identifier">count</span>(<span class="ruby-identifier">conditions</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;openness &gt; #{self.openness}&quot;</span> ) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- openness_rank-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- openness_rank-method -->
+
+    
+      <div id="method-i-score_licence" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">score_licence</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>calculate the scores</p>
+          
+
+          
+          <div class="method-source-code" id="score_licence-source">
+            <pre><span class="ruby-comment"># File app/models/score.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">score_licence</span>
+  <span class="ruby-identifier">calculate_licensee_legal_risk</span>
+  <span class="ruby-identifier">calculate_licensee_business_risk</span>
+  <span class="ruby-identifier">calculate_licensee_freedom</span>
+  <span class="ruby-identifier">calculate_licensor_legal_risk</span>
+  <span class="ruby-identifier">calculate_overall_openness</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- score_licence-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- score_licence-method -->
+
+    
+      <div id="method-i-star_rating" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">star_rating</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>&gt;=22.5 = 3 stars (Gold), &gt;=20 = 2 stars (Silver), &gt;= 17.5 = 1 star
+(Bronze)</p>
+          
+
+          
+          <div class="method-source-code" id="star_rating-source">
+            <pre><span class="ruby-comment"># File app/models/score.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">star_rating</span>
+  <span class="ruby-keyword">case</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">openness</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">22.5</span>
+      <span class="ruby-value">3</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">openness</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">20</span>
+      <span class="ruby-value">2</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">openness</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">17.5</span>
+      <span class="ruby-value">1</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- star_rating-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- star_rating-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

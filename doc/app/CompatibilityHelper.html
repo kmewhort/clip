@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module CompatibilityHelper - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/compatibility_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-incompatibility_reasons_tooltip">#incompatibility_reasons_tooltip</a>
+    
+    <li><a href="#method-i-wrapped_cells">#wrapped_cells</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Paperclip.html">Paperclip</a>
+  
+    <li><a href="./Paperclip/LicenceTextProcessor.html">Paperclip::LicenceTextProcessor</a>
+  
+    <li><a href="./Ability.html">Ability</a>
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./AdminMailer.html">AdminMailer</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./AttributionClause.html">AttributionClause</a>
+  
+    <li><a href="./ChangesToTerm.html">ChangesToTerm</a>
+  
+    <li><a href="./CompatibilitiesController.html">CompatibilitiesController</a>
+  
+    <li><a href="./Compatibility.html">Compatibility</a>
+  
+    <li><a href="./CompatibilityHelper.html">CompatibilityHelper</a>
+  
+    <li><a href="./Compliance.html">Compliance</a>
+  
+    <li><a href="./ConflictOfLaw.html">ConflictOfLaw</a>
+  
+    <li><a href="./CopyleftClause.html">CopyleftClause</a>
+  
+    <li><a href="./Disclaimer.html">Disclaimer</a>
+  
+    <li><a href="./FamilyTree.html">FamilyTree</a>
+  
+    <li><a href="./FamilyTreeNode.html">FamilyTreeNode</a>
+  
+    <li><a href="./FamilyTreesController.html">FamilyTreesController</a>
+  
+    <li><a href="./Licence.html">Licence</a>
+  
+    <li><a href="./LicenceHelper.html">LicenceHelper</a>
+  
+    <li><a href="./LicencesController.html">LicencesController</a>
+  
+    <li><a href="./Obligation.html">Obligation</a>
+  
+    <li><a href="./PatentClause.html">PatentClause</a>
+  
+    <li><a href="./Right.html">Right</a>
+  
+    <li><a href="./Score.html">Score</a>
+  
+    <li><a href="./ScoreHelper.html">ScoreHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Termination.html">Termination</a>
+  
+    <li><a href="./ToolsController.html">ToolsController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module CompatibilityHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-incompatibility_reasons_tooltip" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">incompatibility_reasons_tooltip</span><span
+            class="method-args">(other_licence, reasons)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="incompatibility_reasons_tooltip-source">
+            <pre><span class="ruby-comment"># File app/helpers/compatibility_helper.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">incompatibility_reasons_tooltip</span>(<span class="ruby-identifier">other_licence</span>, <span class="ruby-identifier">reasons</span>)
+  <span class="ruby-identifier">all_reasons</span> = <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:hard</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">reasons</span>[<span class="ruby-value">:soft</span>]
+
+  <span class="ruby-identifier">html</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_reasons</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;&lt;span class='licence-title'&gt;&lt;strong&gt;#{h other_licence.full_title}&lt;/strong&gt; is &lt;strong&gt;compatible.&lt;/strong&gt;&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;&lt;span class='licence-title'&gt;&lt;strong&gt;#{h other_licence.full_title}&lt;/strong&gt; is &lt;strong&gt;incompatible&lt;/strong&gt; for the following reasons:&quot;</span>
+    <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&lt;ul&gt;&quot;</span>
+    <span class="ruby-identifier">all_reasons</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">reason</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;&lt;li class='reason'&gt;#{reason + ((reason == all_reasons.last) ? &quot;.&quot; : &quot;;&quot;)}&lt;/li&gt;&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&lt;/ul&gt;&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">html</span>.<span class="ruby-identifier">html_safe</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- incompatibility_reasons_tooltip-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- incompatibility_reasons_tooltip-method -->
+
+    
+      <div id="method-i-wrapped_cells" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wrapped_cells</span><span
+            class="method-args">(data, max_cols = 6)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="wrapped_cells-source">
+            <pre><span class="ruby-comment"># File app/helpers/compatibility_helper.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wrapped_cells</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">max_cols</span> = <span class="ruby-value">6</span>)
+  <span class="ruby-identifier">html</span> = <span class="ruby-string">&quot;&lt;table&gt;&quot;</span>
+  <span class="ruby-identifier">num_rows</span> = (<span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">max_cols</span>).<span class="ruby-identifier">ceil</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">num_rows</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+    <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&lt;tr&gt;&quot;</span>
+    <span class="ruby-identifier">num_cells</span> = (<span class="ruby-identifier">j</span> <span class="ruby-operator">!=</span> (<span class="ruby-identifier">num_rows</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)) <span class="ruby-operator">?</span> <span class="ruby-identifier">max_cols</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">max_cols</span>)
+    <span class="ruby-identifier">num_cells</span> = <span class="ruby-identifier">max_cols</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">num_cells</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">num_cells</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+      <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{data[j*max_cols + i]}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&lt;/tr&gt;&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&lt;/table&gt;&quot;</span>
+  <span class="ruby-identifier">html</span>.<span class="ruby-identifier">html_safe</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- wrapped_cells-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- wrapped_cells-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

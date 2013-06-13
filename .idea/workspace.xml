@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62db5781-ca98-4cdf-82a9-276b0402f38c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Capfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/deploy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/clip.iml" afterPath="$PROJECT_DIR$/.idea/clip.iml" />
+    <list default="true" id="62db5781-ca98-4cdf-82a9-276b0402f38c" name="Default" comment="Configure for capistrano deployment.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/brick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/brick_link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/bug.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/bullet_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/bullet_toggle_minus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/bullet_toggle_plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/find.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/loadingAnimation.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/macFFBgHack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/package.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/page_green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/page_white_text.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/page_white_width.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/plugin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/ruby.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/tag_blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/tag_green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/transparent.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/wrench.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/wrench_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/images/zoom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Ability.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/AdminMailer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/ApplicationController.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/AttributionClause.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/ChangesToTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/CompatibilitiesController.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Compatibility.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/CompatibilityHelper.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Compliance.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/ConflictOfLaw.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/CopyleftClause.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Disclaimer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/FamilyTree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/FamilyTreeNode.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/FamilyTreesController.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Licence.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/LicenceHelper.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/LicencesController.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Obligation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Paperclip.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Paperclip/LicenceTextProcessor.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/PatentClause.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Right.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Score.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/ScoreHelper.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/StaticPagesController.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/StaticPagesHelper.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/Termination.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/ToolsController.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/created.rid" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/doc/README_FOR_APP.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/js/darkfish.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/js/navigation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/js/search.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/js/search_index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/js/searcher.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/rdoc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/app/table_of_contents.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="clip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -251,42 +311,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -998,7 +1022,11 @@
       <created>1371136133218</created>
       <updated>1371136133218</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Configure for capistrano deployment.">
+      <created>1371136214843</created>
+      <updated>1371136214843</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1006,11 +1034,11 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266564" sideWeight="0.46965098" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39291218" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39291218" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6724512" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29590288" sideWeight="0.21691974" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4157815" sideWeight="0.60708785" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4157815" sideWeight="0.60708785" order="0" side_tool="true" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4668721" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3167028" sideWeight="0.5189681" order="7" side_tool="true" content_ui="tabs" />
@@ -1060,7 +1088,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduce default sets of licences in compatibility charts (takes too long to load otherwise)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure for capistrano deployment." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1073,7 +1101,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Move gems related to family tree generation to dev-only." />
     <MESSAGE value="Gemfile update" />
     <MESSAGE value="Add d3 for asset compilation." />
     <MESSAGE value="Remove runtime dependency on clip similarity." />
@@ -1098,6 +1125,7 @@
     <MESSAGE value="Add a readme file and a licence." />
     <MESSAGE value="Documentation updates." />
     <MESSAGE value="Reduce default sets of licences in compatibility charts (takes too long to load otherwise)." />
+    <MESSAGE value="Configure for capistrano deployment." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

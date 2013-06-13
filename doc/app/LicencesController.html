@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class LicencesController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/licences_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-compare_to">#compare_to</a>
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-destroy">#destroy</a>
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Paperclip.html">Paperclip</a>
+  
+    <li><a href="./Paperclip/LicenceTextProcessor.html">Paperclip::LicenceTextProcessor</a>
+  
+    <li><a href="./Ability.html">Ability</a>
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./AdminMailer.html">AdminMailer</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./AttributionClause.html">AttributionClause</a>
+  
+    <li><a href="./ChangesToTerm.html">ChangesToTerm</a>
+  
+    <li><a href="./CompatibilitiesController.html">CompatibilitiesController</a>
+  
+    <li><a href="./Compatibility.html">Compatibility</a>
+  
+    <li><a href="./CompatibilityHelper.html">CompatibilityHelper</a>
+  
+    <li><a href="./Compliance.html">Compliance</a>
+  
+    <li><a href="./ConflictOfLaw.html">ConflictOfLaw</a>
+  
+    <li><a href="./CopyleftClause.html">CopyleftClause</a>
+  
+    <li><a href="./Disclaimer.html">Disclaimer</a>
+  
+    <li><a href="./FamilyTree.html">FamilyTree</a>
+  
+    <li><a href="./FamilyTreeNode.html">FamilyTreeNode</a>
+  
+    <li><a href="./FamilyTreesController.html">FamilyTreesController</a>
+  
+    <li><a href="./Licence.html">Licence</a>
+  
+    <li><a href="./LicenceHelper.html">LicenceHelper</a>
+  
+    <li><a href="./LicencesController.html">LicencesController</a>
+  
+    <li><a href="./Obligation.html">Obligation</a>
+  
+    <li><a href="./PatentClause.html">PatentClause</a>
+  
+    <li><a href="./Right.html">Right</a>
+  
+    <li><a href="./Score.html">Score</a>
+  
+    <li><a href="./ScoreHelper.html">ScoreHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Termination.html">Termination</a>
+  
+    <li><a href="./ToolsController.html">ToolsController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class LicencesController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-compare_to" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compare_to</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="compare_to-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">compare_to</span>
+  <span class="ruby-ivar">@licence_a</span> = <span class="ruby-constant">Licence</span>.<span class="ruby-identifier">find_by_identifier</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@licence_b</span> = <span class="ruby-constant">Licence</span>.<span class="ruby-identifier">find_by_identifier</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:licence_id</span>])
+  <span class="ruby-ivar">@selectable</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:selectable</span>]
+
+  <span class="ruby-comment"># render/cache an HTML diff of the two licences</span>
+  <span class="ruby-ivar">@comparison_html</span> = <span class="ruby-ivar">@licence_a</span>.<span class="ruby-identifier">html_diff_with</span>(<span class="ruby-ivar">@licence_b</span>)
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">js</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- compare_to-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- compare_to-method -->
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">success_notice</span> = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:preview</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cannot?</span> <span class="ruby-value">:update_without_review</span>, <span class="ruby-ivar">@licence</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">save_for_review</span>
+      <span class="ruby-identifier">success_notice</span> = <span class="ruby-string">'Thank you for your submission of a new licence! We will review it and post it on the website shortly.'</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">save</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:preview</span>]
+      <span class="ruby-identifier">success_notice</span> = <span class="ruby-string">'Licence was successfully created.'</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@licence</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-identifier">success_notice</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@licence</span>  }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;new&quot;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">destroy</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">licences_url</span> }
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">head</span> <span class="ruby-value">:no_content</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- destroy-method -->
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># index.html.erb</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">pretty_generate</span>(<span class="ruby-ivar">@licences</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">brief</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)) }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-identifier">notice</span> }
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@licence</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@tab</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:tab</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;licence_info&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:tab</span>]
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">pretty_generate</span>(<span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">except</span><span class="ruby-operator">:</span> [<span class="ruby-value">:created_at</span>, <span class="ruby-value">:updated_at</span>, <span class="ruby-value">:id</span>, <span class="ruby-value">:licence_id</span>])) }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/licences_controller.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">assign_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:licence</span>])
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">success_notice</span> = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:preview</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cannot?</span> <span class="ruby-value">:update_without_review</span>, <span class="ruby-ivar">@licence</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">save_for_review</span>
+      <span class="ruby-identifier">success_notice</span> = <span class="ruby-string">'Thank you for your submission! We will review your suggested changes shortly.'</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">save</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:preview</span>]
+      <span class="ruby-identifier">success_notice</span> = <span class="ruby-string">'Licence was successfully updated.'</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@licence</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-identifier">success_notice</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@licence</span>  }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@tab</span> = <span class="ruby-string">'licence_edit'</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;show&quot;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@licence</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

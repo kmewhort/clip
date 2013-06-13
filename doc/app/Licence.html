@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Licence - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/licence.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-find_by_identifier">::find_by_identifier</a>
+    
+    <li><a href="#method-i-all_versions">#all_versions</a>
+    
+    <li><a href="#method-i-as_json">#as_json</a>
+    
+    <li><a href="#method-i-build_children">#build_children</a>
+    
+    <li><a href="#method-i-full_title">#full_title</a>
+    
+    <li><a href="#method-i-html_diff_with">#html_diff_with</a>
+    
+    <li><a href="#method-i-save_for_review">#save_for_review</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Paperclip.html">Paperclip</a>
+  
+    <li><a href="./Paperclip/LicenceTextProcessor.html">Paperclip::LicenceTextProcessor</a>
+  
+    <li><a href="./Ability.html">Ability</a>
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./AdminMailer.html">AdminMailer</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./AttributionClause.html">AttributionClause</a>
+  
+    <li><a href="./ChangesToTerm.html">ChangesToTerm</a>
+  
+    <li><a href="./CompatibilitiesController.html">CompatibilitiesController</a>
+  
+    <li><a href="./Compatibility.html">Compatibility</a>
+  
+    <li><a href="./CompatibilityHelper.html">CompatibilityHelper</a>
+  
+    <li><a href="./Compliance.html">Compliance</a>
+  
+    <li><a href="./ConflictOfLaw.html">ConflictOfLaw</a>
+  
+    <li><a href="./CopyleftClause.html">CopyleftClause</a>
+  
+    <li><a href="./Disclaimer.html">Disclaimer</a>
+  
+    <li><a href="./FamilyTree.html">FamilyTree</a>
+  
+    <li><a href="./FamilyTreeNode.html">FamilyTreeNode</a>
+  
+    <li><a href="./FamilyTreesController.html">FamilyTreesController</a>
+  
+    <li><a href="./Licence.html">Licence</a>
+  
+    <li><a href="./LicenceHelper.html">LicenceHelper</a>
+  
+    <li><a href="./LicencesController.html">LicencesController</a>
+  
+    <li><a href="./Obligation.html">Obligation</a>
+  
+    <li><a href="./PatentClause.html">PatentClause</a>
+  
+    <li><a href="./Right.html">Right</a>
+  
+    <li><a href="./Score.html">Score</a>
+  
+    <li><a href="./ScoreHelper.html">ScoreHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Termination.html">Termination</a>
+  
+    <li><a href="./ToolsController.html">ToolsController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Licence</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="MAINTAINER_TYPES">MAINTAINER_TYPES
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-find_by_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_by_identifier</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>find by either the licence identifier or db id (whichever is specified)</p>
+          
+
+          
+          <div class="method-source-code" id="find_by_identifier-source">
+            <pre><span class="ruby-comment"># File app/models/licence.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_by_identifier</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">match</span> <span class="ruby-regexp">/\A\d+\Z/</span>
+    <span class="ruby-constant">Licence</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Licence</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">conditions</span><span class="ruby-operator">:</span> {<span class="ruby-identifier">identifier</span><span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>})
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_by_identifier-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_by_identifier-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-all_versions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all_versions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>get all versions of the this licence</p>
+          
+
+          
+          <div class="method-source-code" id="all_versions-source">
+            <pre><span class="ruby-comment"># File app/models/licence.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_versions</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Licence</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span>).<span class="ruby-identifier">delete_if</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">version</span>.<span class="ruby-identifier">empty?</span> }
+  <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-comment"># special case handling for LGPL, which changed names from 2.0 to 2.1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">title</span> <span class="ruby-operator">==</span> <span class="ruby-string">'GNU Library General Public License'</span>
+    <span class="ruby-identifier">result</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Licence</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'GNU Lesser General Public License'</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">title</span> <span class="ruby-operator">==</span> <span class="ruby-string">'GNU Lesser General Public License'</span>
+    <span class="ruby-identifier">result</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Licence</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'GNU Library General Public License'</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># sort by version</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">sort!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">version</span> }
+  <span class="ruby-comment"># special case for BSD, which has decreasing number of clauses labels with future versions</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">title</span> <span class="ruby-operator">==</span> <span class="ruby-string">'BSD'</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">reverse!</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- all_versions-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- all_versions-method -->
+
+    
+      <div id="method-i-as_json" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">as_json</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>manually define json structure to provide a user-friendly ordering</p>
+          
+
+          
+          <div class="method-source-code" id="as_json-source">
+            <pre><span class="ruby-comment"># File app/models/licence.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">result</span> = {
+      <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">identifier</span>,
+      <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span>,
+      <span class="ruby-identifier">version</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">version</span>
+  }
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:brief</span>]
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:url</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">url</span>
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:maintainer</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maintainer</span>
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:maintainer_type</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maintainer_type</span>
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:domain_data</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">domain_data</span>
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:domain_software</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">domain_software</span>
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:domain_content</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">domain_content</span>
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:compliance</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compliance</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:rights</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:obligations</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:attribution</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">attribution_clause</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:copyleft</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">copyleft_clause</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:patents</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">patent_clause</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:compatibility</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compatibility</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:termination</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">termination</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:changes_to_terms</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">changes_to_term</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:disclaimers</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disclaimer</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-value">:conflict_of_laws</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">conflict_of_law</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- as_json-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- as_json-method -->
+
+    
+      <div id="method-i-build_children" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">build_children</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="build_children-source">
+            <pre><span class="ruby-comment"># File app/models/licence.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">build_children</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_compliance</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compliance</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_right</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_obligation</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_patent_clause</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">patent_clause</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_attribution_clause</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">attribution_clause</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_copyleft_clause</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">copyleft_clause</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_compatibility</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compatibility</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_termination</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">termination</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_changes_to_term</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">changes_to_term</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_disclaimer</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disclaimer</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_conflict_of_law</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">conflict_of_law</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build_score</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">score</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-comment"># need to directly set parent of nested attributes for validation w/o save</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compliance</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">obligation</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">patent_clause</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">attribution_clause</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">copyleft_clause</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compatibility</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">termination</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">changes_to_term</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disclaimer</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">conflict_of_law</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">score</span>.<span class="ruby-identifier">licence</span> = <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- build_children-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- build_children-method -->
+
+    
+      <div id="method-i-full_title" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">full_title</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>full title w/ licence version identifier</p>
+          
+
+          
+          <div class="method-source-code" id="full_title-source">
+            <pre><span class="ruby-comment"># File app/models/licence.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">full_title</span>
+  <span class="ruby-identifier">full_title</span> = <span class="ruby-identifier">title</span> <span class="ruby-operator">+</span> <span class="ruby-string">' '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span>
+  <span class="ruby-identifier">full_title</span>.<span class="ruby-identifier">sub</span> <span class="ruby-regexp">/\+\Z/</span>, <span class="ruby-string">' or later'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- full_title-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- full_title-method -->
+
+    
+      <div id="method-i-html_diff_with" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">html_diff_with</span><span
+            class="method-args">(other_licence)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="html_diff_with-source">
+            <pre><span class="ruby-comment"># File app/models/licence.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">html_diff_with</span>(<span class="ruby-identifier">other_licence</span>)
+  <span class="ruby-comment"># try to load the html diff from cache</span>
+  <span class="ruby-identifier">cache_filename</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'public'</span>,<span class="ruby-string">'system'</span>,<span class="ruby-string">'licences'</span>,<span class="ruby-string">'diffs'</span>,<span class="ruby-node">&quot;#{self.id}-#{other_licence.id}.html&quot;</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span> <span class="ruby-identifier">cache_filename</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">cache_filename</span>
+
+  <span class="ruby-comment"># run diff and cache result /system/licences/diffs</span>
+  <span class="ruby-identifier">diff_result</span> = <span class="ruby-constant">HTMLDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">DiffBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">path</span>(<span class="ruby-value">:html</span>)),
+                                          <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">other_licence</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">path</span>(<span class="ruby-value">:html</span>))).<span class="ruby-identifier">build</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">cache_filename</span>, <span class="ruby-identifier">diff_result</span>
+  <span class="ruby-identifier">diff_result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- html_diff_with-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- html_diff_with-method -->
+
+    
+      <div id="method-i-save_for_review" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_for_review</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>save the licence state to YAML but not the db (so changes can be reviewed
+before an actual save)</p>
+          
+
+          
+          <div class="method-source-code" id="save_for_review-source">
+            <pre><span class="ruby-comment"># File app/models/licence.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_for_review</span>
+  <span class="ruby-identifier">is_valid</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valid?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_valid</span>
+    <span class="ruby-comment"># include nested relations in output</span>
+    <span class="ruby-identifier">data</span> = { <span class="ruby-identifier">attributes</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@attributes</span> }
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">data</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">key</span>) }
+
+    <span class="ruby-comment"># save to file</span>
+    <span class="ruby-identifier">filename</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> (<span class="ruby-string">&quot;_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">identifier</span>) <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.yml&quot;</span>
+    <span class="ruby-identifier">yaml</span> = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">data</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'public'</span>, <span class="ruby-string">'review_pending'</span>, <span class="ruby-identifier">filename</span>), <span class="ruby-string">'w'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">yaml</span> }
+    <span class="ruby-comment">#AdminMailer.update_notification(self, yaml).deliver</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">is_valid</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_for_review-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_for_review-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
