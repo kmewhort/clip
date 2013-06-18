@@ -66,9 +66,29 @@ class Licence < ActiveRecord::Base
     cache_filename = Rails.root.join('public','system','licences','diffs',"#{self.id}-#{other_licence.id}.html")
     return File.read cache_filename if File.exist? cache_filename
 
-    # run diff and cache result /system/licences/diffs
-    diff_result = HTMLDiff::DiffBuilder.new(File.read(self.text.path(:html)),
-                                            File.read(other_licence.text.path(:html))).build
+    # read in  the html
+    text_a = File.read(self.text.path(:html))
+    text_b = File.read(other_licence.text.path(:html))
+
+    # run diff and tthen clean (the htmldiff library can produce malformed html)
+    # clean the html before comparing it
+    tidy_options = {
+        bare: 1,
+        clean: 1,
+        drop_empty_paras: 1,
+        drop_proprietary_attributes: 1,
+        hide_comments: 1,
+        logical_emphasis: 1,
+        quote_marks: 1,
+        show_body_only: 1,
+        force_output: 1,
+        output_xhtml: 1,
+        tidy_mark: 0
+    }
+    diff_result = HTMLDiff::DiffBuilder.new(text_a,text_b).build
+    diff_result = TidyFFI::Tidy.with_options(tidy_options).new(diff_result).clean
+
+    # cache result to /system/licences/diffs
     File.write cache_filename, diff_result
     diff_result
   end

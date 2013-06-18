@@ -9,6 +9,7 @@ gem 'yaml_db'
 # diff
 gem 'htmldiff', git: 'git@github.com:kmewhort/htmldiff.git'
 gem 'nokogiri'
+gem 'tidy_ffi'
 gem "d3-rails"
 
 # styling
