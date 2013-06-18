@@ -1,4 +1,5 @@
 require 'licence_text_processor'
+require 'nokogiri'
 class Licence < ActiveRecord::Base
   attr_accessible :domain_content, :domain_data, :domain_software, :identifier, :version,
                   :maintainer, :maintainer_type, :title, :url,
@@ -66,27 +67,10 @@ class Licence < ActiveRecord::Base
     cache_filename = Rails.root.join('public','system','licences','diffs',"#{self.id}-#{other_licence.id}.html")
     return File.read cache_filename if File.exist? cache_filename
 
-    # read in  the html
-    text_a = File.read(self.text.path(:html))
-    text_b = File.read(other_licence.text.path(:html))
-
-    # run diff and tthen clean (the htmldiff library can produce malformed html)
-    # clean the html before comparing it
-    tidy_options = {
-        bare: 1,
-        clean: 1,
-        drop_empty_paras: 1,
-        drop_proprietary_attributes: 1,
-        hide_comments: 1,
-        logical_emphasis: 1,
-        quote_marks: 1,
-        show_body_only: 1,
-        force_output: 1,
-        output_xhtml: 1,
-        tidy_mark: 0
-    }
+    # read in the html, simplify it, and diff it
+    text_a = simplify_html File.read(self.text.path(:html))
+    text_b = simplify_html File.read(other_licence.text.path(:html))
     diff_result = HTMLDiff::DiffBuilder.new(text_a,text_b).build
-    diff_result = TidyFFI::Tidy.with_options(tidy_options).new(diff_result).clean
 
     # cache result to /system/licences/diffs
     File.write cache_filename, diff_result
@@ -193,5 +177,25 @@ class Licence < ActiveRecord::Base
       result[:conflict_of_laws] = self.conflict_of_law.as_json(options)
     end
     result
+  end
+
+  private
+
+  # strips html down to basic tags (to make comparisons better)
+  def simplify_html(html)
+    doc = Nokogiri::HTML.parse(html)
+
+    # strip to allowed tags
+    allowed_tags = %w(h1 h2 h3 h4 h5 h6 body p br ul ol li)
+    (doc.css("*") - doc.css(allowed_tags.join(","))).each do |node|
+      unless node == doc.root
+        node.children.each {|c| c.parent = node.parent}
+        node.remove
+      end
+    end
+
+    # strip class and style attributes
+    doc.xpath('//@class | //@style').remove
+    doc.serialize
   end
 end

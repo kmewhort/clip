@@ -10,17 +10,16 @@ GIT
       unicode_utils
 
 GIT
-  remote: git@github.com:kmewhort/htmldiff.git
-  revision: e528eddb5ee8a607df21074ab08c2c8f170ef4da
-  specs:
-    htmldiff (0.0.1)
-
-GIT
   remote: git@github.com:opennorth/tf-idf-similarity.git
   revision: 3cc13145f39626f237374b350ec75c6f00ba1a5f
   specs:
     tf-idf-similarity (0.0.9)
       unicode_utils
+
+PATH
+  remote: ../htmldiff
+  specs:
+    htmldiff (0.0.1)
 
 GEM
   remote: http://rubygems.org/
