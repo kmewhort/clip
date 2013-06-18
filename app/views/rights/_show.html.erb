@@ -14,37 +14,42 @@
     </ul>
 </p>
 
-<p>However, you must <strong>NOT</strong> do any of the following:</p>
-    <ul>
-      <% if !licence.right.right_to_use_and_reproduce %>
-        <li><strong>Use or reproduce</strong> the work, even for your own purposes</li>
-      <% end %>
+<% unless licence.right.right_to_use_and_reproduce && licence.right.right_to_modify &&
+           licence.right.right_to_distribute && !licence.right.prohibits_commercial_use &&
+           !licence.right.prohibits_tpms && !licence.right.prohibits_tpms_unless_parallel &&
+           !licence.right.prohibits_patent_actions %>
+    <p>However, you must <strong>NOT</strong> do any of the following:</p>
+        <ul>
+          <% if !licence.right.right_to_use_and_reproduce %>
+            <li><strong>Use or reproduce</strong> the work, even for your own purposes</li>
+          <% end %>
 
-      <% if !licence.right.right_to_modify %>
-        <li><strong>Modify</strong> or adapt the work in any way</li>
-      <% end %>
+          <% if !licence.right.right_to_modify %>
+            <li><strong>Modify</strong> or adapt the work in any way</li>
+          <% end %>
 
-      <% if !licence.right.right_to_distribute %>
-        <li><strong>Distribute</strong> the work or share it with anyone else</li>
-      <% end %>
+          <% if !licence.right.right_to_distribute %>
+            <li><strong>Distribute</strong> the work or share it with anyone else</li>
+          <% end %>
 
-      <% if licence.right.prohibits_commercial_use %>
-        <li>Use the work for any <strong>commercial purposes</strong></li>
-      <% end %>
+          <% if licence.right.prohibits_commercial_use %>
+            <li>Use the work for any <strong>commercial purposes</strong></li>
+          <% end %>
 
-      <% if licence.right.prohibits_tpms %>
-        <li><strong>Lock</strong> the work with any technical protection measures (TPMs) or digital rights management (DRM)</li>
-      <% end %>
+          <% if licence.right.prohibits_tpms %>
+            <li><strong>Lock</strong> the work with any technical protection measures (TPMs) or digital rights management (DRM)</li>
+          <% end %>
 
-      <% if licence.right.prohibits_tpms_unless_parallel %>
-        <li><strong>Lock</strong> the work with any technical protection measures (TPMs) / digital rights management (DRM), unless you also provide an unlocked version</li>
-      <% end %>
+          <% if licence.right.prohibits_tpms_unless_parallel %>
+            <li><strong>Lock</strong> the work with any technical protection measures (TPMs) / digital rights management (DRM), unless you also provide an unlocked version</li>
+          <% end %>
 
-      <% if licence.right.prohibits_patent_actions %>
-          <li>Pursue <strong>patent actions</strong> against the contributors of the work</li>
-      <% end %>
-    </ul>
-</p>
+          <% if licence.right.prohibits_patent_actions %>
+              <li>Pursue <strong>patent actions</strong> against the contributors of the work</li>
+          <% end %>
+        </ul>
+    </p>
+<% end %>
 
 <% @rights_covered = rights_covered(licence.right, true)
    @rights_not_covered = rights_covered(licence.right, false) %>
