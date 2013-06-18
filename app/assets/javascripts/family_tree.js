@@ -81,9 +81,28 @@ SimilarityTree.prototype.update = function(source) {
     nodeEnter.append("svg:circle")
         .attr("r", 7);
     nodeEnter.append("svg:text")
-        .attr("x", function(d) { return d.children ? -10 : 10; })
         .attr("dy", ".35em")
-        .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+        .attr("y", function(d) {
+          if((d.depth == 0) || !d.children)
+            return 0;
+          return (d.depth % 2) ? -14 : 14
+         })
+        .attr("x", function(d) {
+            if(d.depth == 0)
+                return -10;
+            else if(!d.children)
+                return 10;
+            else
+                return 0;
+        })
+        .attr("text-anchor", function(d) {
+            if(d.depth == 0)
+                return "end";
+            else if(!d.children)
+                return "start";
+            else
+                return "middle";
+        })
         .text(function(d) { return d.licence.identifier; })
         .style("fill-opacity", 1);
     var nodeExit = node.exit().remove();
@@ -121,6 +140,7 @@ SimilarityTree.prototype.calculate_offsets = function(nodes){
         if(nodes[i].y < y_range[0])
             y_range[0] = nodes[i].y;
     }
+    x_range[0] -= 14; // account for text placement above node
 
     this.x_offset = -x_range[0] + 10;
     //this.y_offset = (this.width - (y_range[1] - y_range[0])) / 2 - 10 - 100;

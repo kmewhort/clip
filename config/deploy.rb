@@ -21,7 +21,7 @@ set :shared_children, %w{public/system log tmp/pids public/review_pending}
 before "deploy:finalize_update", "deploy:merge_system_directory"
 namespace :deploy do
   task :merge_system_directory do
-    run "rsync -pr #{release_path}/public/system/licences #{shared_path}/system/licences"
+    run "rsync -pr #{release_path}/public/system/licences #{shared_path}/system/"
   end
 end
 

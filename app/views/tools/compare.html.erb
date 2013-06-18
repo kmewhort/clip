@@ -11,7 +11,7 @@
   <div class="slider text-compare-slider">
     <div>
       <h4>Select a licence family to compare the licence texts:</h4>
-      <%= render partial: 'family_trees/show', locals: { family_tree: nil, family_select_box: true } %>
+      <%= render partial: 'family_trees/show', locals: { family_tree: @family_tree, family_select_box: true } %>
     </div>
     <div>
       <h4>Compare any two licences:</h4>
