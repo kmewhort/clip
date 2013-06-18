@@ -17,6 +17,9 @@ set :deploy_to, "/var/www/clipol"
 # keep the licence review_pending files shared between deployments
 set :shared_children, %w{public/system log tmp/pids public/review_pending}
 
+# use bundler
+require "bundler/capistrano"
+
 # merge any new data files from the repository into the shared system directory
 before "deploy:finalize_update", "deploy:merge_system_directory"
 namespace :deploy do
