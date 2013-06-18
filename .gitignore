@@ -16,3 +16,6 @@
 
 # Ignore review submission
 /public/review_pending
+
+# Ignore IDE config files
+/.idea

@@ -11,7 +11,7 @@ class ToolsController < ApplicationController
       @comparison = @licence_a.html_diff_with(@licence_b)
     end
 
-    if params[:family_tree_id]
+    if params[:family_tree]
       @family_tree = FamilyTree.find(params[:family_tree])
     end
 
