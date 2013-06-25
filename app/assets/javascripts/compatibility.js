@@ -46,6 +46,7 @@ $(document).ready(function(){
 
         // action to clear all licences (reset the tool)
         $('#clear-button').click(function(){
+            $("input[value='strong_adaptation']").click();
             circle_pack.reset();
             circle_pack.update();
 
@@ -124,6 +125,7 @@ LicenceCirclePack.prototype.add_licence = function(licence){
 }
 
 LicenceCirclePack.prototype.reset = function(licence){
+    this.licence_nodes.remove();
     this.root = this.d3data();
 }
 
