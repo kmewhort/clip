@@ -70,7 +70,7 @@ class Compatibility < ActiveRecord::Base
       unless (remix_type == 'weak_adaptation_of_files' &&
               licence.copyleft_clause.copyleft_applies_to == "modified_files") ||
              (remix_type == 'weak_adaptation_of_libraries' &&
-              licence.copyleft_clause.copyleft_applied_to == "derivatives_linking_excepted")
+              licence.copyleft_clause.copyleft_applies_to == "derivatives_linking_excepted")
         reasons[:hard] << "#{licence.identifier} contains a copyleft clause and adapations can only be released under the same #{licence.identifier} licence"
         return false
       end
