@@ -34,7 +34,7 @@ class CompatibilitiesController < ApplicationController
       @licences.sort! {|a,b| a.identifier <=> b.identifier }.uniq!
     # if a list of licences is specified, find each by compatibility id or licence identifier
     elsif !params[:licence_ids].nil?
-      @licences = params[:licence_ids].map { |id| find_licence_by_compatibility_id(id) }.uniq
+      @licences = params[:licence_ids].map { |id| find_licence_by_compatibility_id(id) }.compact.uniq
     else
       @licences = []
     end
@@ -68,10 +68,14 @@ class CompatibilitiesController < ApplicationController
   end
 
   def find_licence_by_compatibility_id(id)
-    if id.match /\A\d+\Z/
-      Compatibility.find(id).licence
-    else  #find by licence identifier
-      Licence.find_by_identifier(id)
+    if id.nil? || id.empty?
+      nil
+    else
+      if id.match /\A\d+\Z/
+        Compatibility.find(id).licence
+      else  #find by licence identifier
+        Licence.find_by_identifier(id)
+      end
     end
   end
 end

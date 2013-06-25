@@ -257,5 +257,18 @@ CompatibilityMatrix.initializeMatrices = function(){
             $.getScript('/compatibilities/matrix.js?licence_ids[]=' + licence_ids.join("&licence_ids[]="));
         }
     });
+
+    // clear licences button
+    $(".compatibility-matrix #clear-licences-button").click(function(){
+        var active_row = $('.compatibility-row.active > td.original-work');
+        if(active_row.length > 0){
+            active_licence_id = active_row.text().replace(/(^[\s\:]+)|([\s\:]+$)/g,'');
+            $.getScript('/compatibilities/' + active_licence_id +
+                '/matrix.js?licence_ids[]=' + active_licence_id);
+        }
+        else{
+            $.getScript('/compatibilities/matrix.js');
+        }
+    });
 }
 
