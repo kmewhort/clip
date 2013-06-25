@@ -65,12 +65,15 @@ class Licence < ActiveRecord::Base
   def html_diff_with(other_licence)
     # try to load the html diff from cache
     cache_filename = Rails.root.join('public','system','licences','diffs',"#{self.id}-#{other_licence.id}.html")
-    return File.read cache_filename if File.exist? cache_filename
+    #return File.read cache_filename if File.exist? cache_filename
 
     # read in the html, simplify it, and diff it
-    text_a = simplify_html File.read(self.text.path(:html))
-    text_b = simplify_html File.read(other_licence.text.path(:html))
-    diff_result = HTMLDiff::DiffBuilder.new(text_a,text_b).build
+    #text_a = simplify_html File.read(self.text.path(:html))
+    #text_b = simplify_html File.read(other_licence.text.path(:html))
+    #diff_result = HTMLDiff::DiffBuilder.new(text_a,text_b).build
+    text_a = File.read(self.text.path(:html))
+    text_b = File.read(other_licence.text.path(:html))
+    diff_result = FastHtmlDiff::DiffBuilder.new(text_a,text_b).build
 
     # cache result to /system/licences/diffs
     File.write cache_filename, diff_result
