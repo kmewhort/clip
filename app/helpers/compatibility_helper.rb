@@ -17,10 +17,15 @@ module CompatibilityHelper
 
   def incompatibility_reasons_tooltip(other_licence, reasons)
     all_reasons = reasons[:hard] + reasons[:soft]
+    warnings = reasons[:warnings]
 
     html = ""
     if all_reasons.empty?
-      html << "<span class='licence-title'><strong>#{h other_licence.full_title}</strong> is <strong>compatible.</strong>"
+      if warnings.empty?
+        html << "<span class='licence-title'><strong>#{h other_licence.full_title}</strong> is <strong>compatible.</strong>"
+      else
+        html << "<span class='licence-title'><strong>#{h other_licence.full_title}</strong> is <em>likely</em> <strong>compatible.</strong>"
+      end
     else
       html << "<span class='licence-title'><strong>#{h other_licence.full_title}</strong> is <strong>incompatible</strong> for the following reasons:"
       html << "<ul>"
@@ -29,6 +34,16 @@ module CompatibilityHelper
       end
       html << "</ul>"
     end
+
+    unless warnings.empty?
+      html << "<span class='warnings'>Warnings:</span>"
+      html << "<ul>"
+      warnings.each do |reason|
+        html << "<li class='warning'>#{reason + ((reason == warnings.last) ? "." : ";")}</li>"
+      end
+      html << "</ul>"
+    end
+
     html.html_safe
   end
 end
