@@ -89,9 +89,12 @@
     width: 100% !important;
   }
 
-  .add-licence-button{
+  .add-licence-button, .clear-button {
     margin-top: 12px;
     vertical-align: top;
+  }
+  .clear-button {
+    background-color: #7BA6CB;
   }
 
   #original-licence-display{

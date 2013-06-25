@@ -36,7 +36,7 @@ module CompatibilityHelper
     end
 
     unless warnings.empty?
-      html << "<span class='warnings'>Warnings:</span>"
+      html << "<div class='warnings'>Warnings:</div>"
       html << "<ul>"
       warnings.each do |reason|
         html << "<li class='warning'>#{reason + ((reason == warnings.last) ? "." : ";")}</li>"

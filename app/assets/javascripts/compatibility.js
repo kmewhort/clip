@@ -44,6 +44,20 @@ $(document).ready(function(){
             }
         });
 
+        // action to clear all licences (reset the tool)
+        $('#clear-button').click(function(){
+            circle_pack.reset();
+            circle_pack.update();
+
+            // also update the clone in the remix type panel
+            $('#cloned-licence-display').empty().append($(graph).clone());
+
+            // clear the results
+            MultiLicenceChart.originalLicences = [];
+            MultiLicenceChart.targetLicences = [];
+            MultiLicenceChart.loadChart();
+        });
+
         // action to change the remix type shown on the graphs
         $('.remix-types input').click(function(){
             if(circle_pack.set_remix_type($(this).val()))
@@ -107,6 +121,10 @@ LicenceCirclePack.prototype.add_licence = function(licence){
         size: 1000
     });
     return true;
+}
+
+LicenceCirclePack.prototype.reset = function(licence){
+    this.root = this.d3data();
 }
 
 LicenceCirclePack.prototype.update = function(){
@@ -197,6 +215,10 @@ MultiLicenceChart.targetLicences = [];
 MultiLicenceChart.remixType = "strong_adaptation";
 
 MultiLicenceChart.loadChart = function(){
+  if(this.originalLicences.length == 0){
+      $('#multi-licence-chart').empty();
+      return;
+  }
   targetLicences = this.originalLicences.concat(this.targetLicences);
   $.getScript('/compatibilities/multi_licence_chart.js'
       + '?original_licence_ids[]=' + this.originalLicences.join("&original_licence_ids[]=")
