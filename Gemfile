@@ -7,8 +7,7 @@ gem "paperclip", "~> 3.0"
 gem 'yaml_db'
 
 # diff
-gem 'htmldiff', git: 'git@github.com:kmewhort/htmldiff.git'
-gem 'fast_html_diff', path: '../../fast_html_diff'
+gem 'fast_html_diff'
 gem 'nokogiri'
 gem 'tidy_ffi'
 gem "d3-rails"
