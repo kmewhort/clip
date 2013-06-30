@@ -1,5 +1,4 @@
 require 'licence_text_processor'
-require 'nokogiri'
 class Licence < ActiveRecord::Base
   attr_accessible :domain_content, :domain_data, :domain_software, :identifier, :version,
                   :maintainer, :maintainer_type, :title, :url,
@@ -63,18 +62,11 @@ class Licence < ActiveRecord::Base
 
 
   def html_diff_with(other_licence)
-    # try to load the html diff from cache
-    cache_filename = Rails.root.join('public','system','licences','diffs',"#{self.id}-#{other_licence.id}.html")
-    return File.read cache_filename if File.exist? cache_filename
-
-    # read in the html, simplify it, and diff it
-    text_a = simplify_html File.read(self.text.path(:html))
-    text_b = simplify_html File.read(other_licence.text.path(:html))
-    diff_result = HTMLDiff::DiffBuilder.new(text_a,text_b).build
-
-    # cache result to /system/licences/diffs
-    File.write cache_filename, diff_result
-    diff_result
+    # read in the html and diff it
+    text_a = File.read(self.text.path(:html))
+    text_b = File.read(other_licence.text.path(:html))
+    diff_result = FastHtmlDiff::DiffBuilder.new(text_a,text_b,
+                                                simplify_html: true, try_hard: true).build
   end
 
   # save the licence state to YAML but not the db (so changes can be reviewed before an actual save)
@@ -177,25 +169,5 @@ class Licence < ActiveRecord::Base
       result[:conflict_of_laws] = self.conflict_of_law.as_json(options)
     end
     result
-  end
-
-  private
-
-  # strips html down to basic tags (to make comparisons better)
-  def simplify_html(html)
-    doc = Nokogiri::HTML.parse(html)
-
-    # strip to allowed tags
-    allowed_tags = %w(h1 h2 h3 h4 h5 h6 body p br ul ol li)
-    (doc.css("*") - doc.css(allowed_tags.join(","))).each do |node|
-      unless node == doc.root
-        node.children.each {|c| c.parent = node.parent}
-        node.remove
-      end
-    end
-
-    # strip class and style attributes
-    doc.xpath('//@class | //@style').remove
-    doc.serialize
   end
 end

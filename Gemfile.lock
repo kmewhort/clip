@@ -10,12 +10,6 @@ GIT
       unicode_utils
 
 GIT
-  remote: git@github.com:kmewhort/htmldiff.git
-  revision: e528eddb5ee8a607df21074ab08c2c8f170ef4da
-  specs:
-    htmldiff (0.0.1)
-
-GIT
   remote: git@github.com:opennorth/tf-idf-similarity.git
   revision: 3cc13145f39626f237374b350ec75c6f00ba1a5f
   specs:
@@ -93,6 +87,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fast_html_diff (0.8)
+      nokogiri
     ffi (1.2.1)
     fssm (0.2.10)
     gsl (1.15.3)
@@ -211,7 +207,7 @@ DEPENDENCIES
   compass-rails
   d3-rails
   devise
-  htmldiff!
+  fast_html_diff
   jquery-rails
   jquery-ui-rails
   nokogiri
