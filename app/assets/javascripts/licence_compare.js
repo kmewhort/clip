@@ -34,7 +34,7 @@ function LicenceCompare(){
 LicenceCompare.prototype.compareLicences = function(licence_a_id, licence_b_id){
     if(licence_a && licence_b){
         // wait spinner
-        $('#licence-diff').empty().append("Loading (this may take several minutes)...").append($("<div>").addClass('wait'));
+        $('#licence-diff').empty().append("Loading...").append($("<div>").addClass('wait'));
 
         // refresh the container
         var compare_url = '/licences/' + licence_a + '/compare_to.js?licence_id=' + licence_b;
