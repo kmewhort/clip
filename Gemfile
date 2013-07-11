@@ -41,9 +41,7 @@ end
 
 # Gems only needed for development / initial data generation
 group :development, :test do
-  #gem 'diffy' https://github.com/samg/diffy
-  gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
-  gem 'clip-similarity', git: 'git@github.com:kmewhort/clip-similarity.git'
+  gem 'similarity_tree', '~> 1.0'
   gem 'ruby-progressbar'
 end
 

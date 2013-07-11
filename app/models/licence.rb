@@ -92,6 +92,11 @@ class Licence < ActiveRecord::Base
     full_title.sub /\+\Z/, ' or later'
   end
 
+  # original text of the licence (as html)
+  def fulltext_filename
+    self.text.path(:html)
+  end
+
   # get all versions of the this licence
   def all_versions
     result = Licence.where(title: self.title).delete_if{|l| l.version.empty? }
