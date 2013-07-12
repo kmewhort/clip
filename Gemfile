@@ -7,7 +7,7 @@ gem "paperclip", "~> 3.0"
 gem 'yaml_db'
 
 # diff
-gem 'fast_html_diff'
+gem 'fast_html_diff', '~> 0.8.1'
 gem 'nokogiri'
 gem 'tidy_ffi'
 gem "d3-rails"
@@ -41,8 +41,7 @@ end
 
 # Gems only needed for development / initial data generation
 group :development, :test do
-  gem 'similarity_tree', '~> 1.0'
-  gem 'ruby-progressbar'
+  gem 'similarity_tree', '~> 1.0.2'
 end
 
 gem 'jquery-rails'

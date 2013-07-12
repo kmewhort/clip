@@ -27,7 +27,7 @@ class Licence < ActiveRecord::Base
     self.score.save
   end
 
-  has_many :family_tree_nodes
+  has_and_belongs_to_many :family_trees
 
   has_attached_file :logo, styles: { medium: "220x220" }
   has_attached_file :text, styles: { unparsed: { format: nil },

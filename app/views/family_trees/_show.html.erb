@@ -13,7 +13,7 @@
         <p>Click any two licences in the <strong><%= family_tree.title %></strong> family to compare the legal text:</p>
       <% end %>
       <%= content_tag :div, '', class: 'licence-similarity-tree',
-                      data: { family_tree_root: family_tree.root_node } %>
+                      data: { family_tree_root: JSON.parse(family_tree.to_json) } %>
       <p class="tree-info">A closer distance between nodes indicates greater similarity.</p>
   <% end %>
 </div>
