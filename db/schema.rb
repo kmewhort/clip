@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422131641) do
+ActiveRecord::Schema.define(:version => 20130712083715) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -91,17 +91,19 @@ ActiveRecord::Schema.define(:version => 20130422131641) do
     t.datetime "updated_at",               :null => false
   end
 
-  create_table "family_tree_nodes", :force => true do |t|
-    t.integer "licence_id"
-    t.integer "family_tree_id"
-    t.integer "parent_id"
-    t.float   "diff_score"
-  end
-
   create_table "family_trees", :force => true do |t|
     t.string "title"
+    t.string "diff_method"
     t.float  "diff_threshold"
+    t.text   "tree_data"
   end
+
+  create_table "family_trees_licences", :id => false, :force => true do |t|
+    t.integer "family_tree_id", :null => false
+    t.integer "licence_id",     :null => false
+  end
+
+  add_index "family_trees_licences", ["family_tree_id", "licence_id"], :name => "index_family_trees_licences_on_family_tree_id_and_licence_id", :unique => true
 
   create_table "licences", :force => true do |t|
     t.string   "identifier"

@@ -7,7 +7,7 @@ gem "paperclip", "~> 3.0"
 gem 'yaml_db'
 
 # diff
-gem 'fast_html_diff'
+gem 'fast_html_diff', '~> 0.8.1'
 gem 'nokogiri'
 gem 'tidy_ffi'
 gem "d3-rails"
@@ -41,10 +41,7 @@ end
 
 # Gems only needed for development / initial data generation
 group :development, :test do
-  #gem 'diffy' https://github.com/samg/diffy
-  gem 'tf-idf-similarity',git: 'git@github.com:opennorth/tf-idf-similarity.git'
-  gem 'clip-similarity', git: 'git@github.com:kmewhort/clip-similarity.git'
-  gem 'ruby-progressbar'
+  gem 'similarity_tree', '~> 1.0.2'
 end
 
 gem 'jquery-rails'

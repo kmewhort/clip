@@ -24,6 +24,7 @@ function FamilyTree(){
 // tree of similary licences, where distance apart approximates the difference between any two licences
 function SimilarityTree(element, root, width, height){
     this.root = root;
+    this.root.diff_score = 1.0;
     this.tree = d3.layout.tree()
         .size([height, width]);
 
@@ -103,7 +104,7 @@ SimilarityTree.prototype.update = function(source) {
             else
                 return "middle";
         })
-        .text(function(d) { return d.licence.identifier; })
+        .text(function(d) { return d.content.id; })
         .style("fill-opacity", 1);
     var nodeExit = node.exit().remove();
 
@@ -166,7 +167,7 @@ SimilarityTree.prototype.calculate_length_between = function(nodes){
 
 // compare the text of two selected licences
 SimilarityTree.prototype.compare_selections = function(){
-    licence_a = this.selection_a.licence.id;
-    licence_b = this.selection_b.licence.id;
+    licence_a = this.selection_a.content.id;
+    licence_b = this.selection_b.content.id;
     (new LicenceCompare()).compareLicences(licence_a, licence_b);
 }

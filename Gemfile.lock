@@ -1,20 +1,11 @@
-GIT
-  remote: git@github.com:kmewhort/clip-similarity.git
-  revision: a8884b03cdac0838618de4697147953c9311a956
+PATH
+  remote: ../../similarity_tree
   specs:
-    clip-similarity (0.9.0)
-      diff_match_patch_native
-      diffy
+    similarity_tree (1.0.2)
+      fast_html_diff (~> 0.8.1)
       gsl
+      ruby-progressbar
       tf-idf-similarity
-      unicode_utils
-
-GIT
-  remote: git@github.com:opennorth/tf-idf-similarity.git
-  revision: 3cc13145f39626f237374b350ec75c6f00ba1a5f
-  specs:
-    tf-idf-similarity (0.0.9)
-      unicode_utils
 
 GEM
   remote: http://rubygems.org/
@@ -81,13 +72,10 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
-    diff_match_patch_native (1.0.2)
-      rice (>= 1.4.2)
-    diffy (2.1.4)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fast_html_diff (0.8)
+    fast_html_diff (0.8.1)
       nokogiri
     ffi (1.2.1)
     fssm (0.2.10)
@@ -157,7 +145,6 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    rice (1.4.3)
     rolify (3.2.0)
     ruby-progressbar (1.0.2)
     sass (3.2.8)
@@ -175,6 +162,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    tf-idf-similarity (0.1.0)
     thor (0.18.1)
     tidy_ffi (0.1.5)
       ffi (~> 1.2.0)
@@ -186,7 +174,6 @@ GEM
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    unicode_utils (1.4.0)
     warden (1.2.1)
       rack (>= 1.0)
     yaml_db (0.2.3)
@@ -202,12 +189,11 @@ PLATFORMS
 DEPENDENCIES
   cancan
   capistrano
-  clip-similarity!
   coffee-rails (~> 3.2.1)
   compass-rails
   d3-rails
   devise
-  fast_html_diff
+  fast_html_diff (~> 0.8.1)
   jquery-rails
   jquery-ui-rails
   nokogiri
@@ -215,10 +201,9 @@ DEPENDENCIES
   pg
   rails (= 3.2.9)
   rolify
-  ruby-progressbar
   sass-rails (~> 3.2.3)
+  similarity_tree (~> 1.0)!
   simple_form
-  tf-idf-similarity!
   tidy_ffi
   uglifier (>= 1.0.3)
   yaml_db

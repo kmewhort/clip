@@ -27,7 +27,7 @@ class Licence < ActiveRecord::Base
     self.score.save
   end
 
-  has_many :family_tree_nodes
+  has_and_belongs_to_many :family_trees
 
   has_attached_file :logo, styles: { medium: "220x220" }
   has_attached_file :text, styles: { unparsed: { format: nil },
@@ -90,6 +90,11 @@ class Licence < ActiveRecord::Base
   def full_title
     full_title = title + ' ' + version
     full_title.sub /\+\Z/, ' or later'
+  end
+
+  # original text of the licence (as html)
+  def fulltext_filename
+    self.text.path(:html)
   end
 
   # get all versions of the this licence
