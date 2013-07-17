@@ -37,7 +37,8 @@ LicenceCompare.prototype.compareLicences = function(licence_a_id, licence_b_id){
         $('#licence-diff').empty().append("Loading...").append($("<div>").addClass('wait'));
 
         // refresh the container
-        var compare_url = '/licences/' + licence_a + '/compare_to.js?licence_id=' + licence_b;
+        var compare_url = '/licences/' + licence_a +
+            '/compare_to.js?licence_id=' + encodeURIComponent(licence_b);
         if($('#licence-select-wrapper-a').length > 0)
           compare_url += '&selectable=1';
         $.getScript(compare_url);

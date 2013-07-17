@@ -117,7 +117,7 @@ class LicencesController < ApplicationController
 
   def find_licence
     @licence = Licence.find_by_identifier(params[:id])
-    @family_trees = @licence.family_tree_nodes.map {|ftn| ftn.family_tree }
+    @family_trees = @licence.family_trees
   end
 
   def build_licence

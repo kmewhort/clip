@@ -21,14 +21,12 @@ class CompatibilitiesController < ApplicationController
       # show others in the same family
       elsif @compatibility.licence.domain_data
         @licences = [@compatibility.licence]
-        @licences += @compatibility.licence.family_tree_nodes.first.family_tree.licences if !@compatibility.licence.family_tree_nodes.nil? &&
-                                                                                            !@compatibility.licence.family_tree_nodes.empty?
+        @licences += @compatibility.licence.family_trees.first.licences unless @compatibility.licence.family_trees.empty?
         @licences += Licence.where(['CC0','CC-BY-3.0','ODC-PDDL-1.0','ODC-By-1.0','ODC-ODbL-1.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
       # for content licences, seed with a few commonly used and others in the same family
       elsif @compatibility.licence.domain_content
         @licences = [@compatibility.licence]
-        @licences += @compatibility.licence.family_tree_nodes.first.family_tree.licences if !@compatibility.licence.family_tree_nodes.nil? &&
-                                                                                            !@compatibility.licence.family_tree_nodes.empty?
+        @licences += @compatibility.licence.family_trees.first.licences unless @compatibility.licence.family_trees.empty?
         @licences += Licence.where(['CC0','CC-BY-3.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
       end
       @licences.sort! {|a,b| a.identifier <=> b.identifier }.uniq!
