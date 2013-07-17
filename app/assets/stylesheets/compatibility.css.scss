@@ -33,9 +33,23 @@
       td {
         margin: 1px;
         word-break: break-all;
+        width: 108px;
       }
       td.compatible{
         background-color: #B4DB6F;
+        .warning-wrapper{
+          float: right;
+          width: 0;
+          height: 0;
+
+          img.warning {
+            position: absolute;
+            border: medium none;
+            padding: 0;
+            margin: -9px 2px 0;
+            background: none repeat scroll 0 0 transparent;
+          }
+        }
       }
       td.compatible:hover {
         background-color: #cbf87f;

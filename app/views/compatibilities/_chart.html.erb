@@ -9,13 +9,22 @@
     </tr>
     <tr>
       <td class="compatibility-data">
-        <%= wrapped_cells(target_licences.map { |target_licence|
-          incompatibility_reasons = {}
-          content_tag :td, target_licence.identifier,
-                      class: "has-tip " + (Compatibility.compatible?(original_licences, target_licence, remix_type, incompatibility_reasons) ? "compatible" : "incompatible"),
-                      title: incompatibility_reasons_tooltip(target_licence, incompatibility_reasons)
-        }, 4)
-        %>
+        <%= wrapped_cells(target_licences.map do |target_licence|
+              incompatibility_reasons = {}
+              is_compatible = Compatibility.compatible?(original_licences, target_licence, remix_type, incompatibility_reasons)
+              content_tag(:td,
+                      class: "has-tip " + (is_compatible ? "compatible" : "incompatible"),
+                      title: incompatibility_reasons_tooltip(target_licence, incompatibility_reasons)) do %>
+                <% if is_compatible && !incompatibility_reasons[:warnings].empty? %>
+                <span class="warning-wrapper">
+                  <%= image_tag('warning.png', class: "warning") %>
+                </span>
+                <% end %>
+                <%= target_licence.identifier %>
+         <%
+               end
+             end, 4)
+         %>
       </td>
     </tr>
   </table>

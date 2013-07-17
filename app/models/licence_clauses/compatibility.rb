@@ -96,7 +96,7 @@ class Compatibility < ActiveRecord::Base
 
       # explicit permission for circumventions or SGDRs is jurisdiction specific and a
       # licence not including these does not necessarily mean the licence does not allow it;
-      # thus, generate a warning only
+      # as well, neighbouring rights and patents may be implicit. Generate a warning only.
       if key == "covers_circumventions"
         reasons[:warnings] << "#{licence.identifier} does not explicitly permit circumvention of technical protection measures (TPMs), but #{other_licence.identifier} \
           grants permission to do so. This may render the licences incompatible in jurisdictions with anti-circumvention laws"
@@ -108,6 +108,9 @@ class Compatibility < ActiveRecord::Base
       elsif key == "covers_patents_explicitly"
         reasons[:warnings] << "#{licence.identifier} does not explicitly cover patent rights, but #{other_licence.identifier} \
           does. However, depending on the context, this may not pose a problem if patent rights are implicitly granted in the #{licence.identifier} licence"
+      elsif key == "covers_neighbouring_rights"
+        reasons[:warnings] << "#{licence.identifier} does not explicitly cover neighbouring rights, but #{other_licence.identifier} \
+          does. However, depending on the context, this may not pose a problem if neighbouring rights are not applicable or are implicitly granted in the #{licence.identifier} licence"
       else
         reasons[:soft] << "#{licence.identifier} does not cover #{nicify(key)}, but #{other_licence.identifier} #{!key.match(/\Aright/).nil? ? 'grants this right' : 'does'}"
       end
@@ -130,6 +133,8 @@ class Compatibility < ActiveRecord::Base
   private
   # nicify json attributes for incompatibility reason messages
   def nicify(attribute)
+    # abbreviations which need expanding / special cases
+    attribute = attribute.sub(/tpms/, "technical protection measures")
     attribute.sub(/\A(covers)|(prohibits)|(right)|(obligation)_/,'').gsub(/_/,' ')
   end
 

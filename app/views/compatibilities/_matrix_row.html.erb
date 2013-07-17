@@ -7,11 +7,20 @@
   </td>
   <td class="compatibility-data">
     <%= wrapped_cells(all_licences.map do |licence_j|
-      incompatibility_reasons = {}
-      content_tag :td, licence_j.identifier,
-                  class: "has-tip " + (licence.compatibility.compatible_with?(licence_j, 'strong_adaptation', false, incompatibility_reasons) ? "compatible" : "incompatible"),
-                  title: incompatibility_reasons_tooltip(licence_j, incompatibility_reasons)
-    end)
+          incompatibility_reasons = {}
+          is_compatible = licence.compatibility.compatible_with?(licence_j, 'strong_adaptation', false, incompatibility_reasons)
+          content_tag(:td,
+                      class: "has-tip " + (is_compatible ? "compatible" : "incompatible"),
+                      title: incompatibility_reasons_tooltip(licence_j, incompatibility_reasons)) do %>
+             <% if is_compatible && !incompatibility_reasons[:warnings].empty? %>
+                <span class="warning-wrapper">
+                  <%= image_tag('warning.png', class: "warning") %>
+                </span>
+             <% end %>
+             <%= licence_j.identifier %>
+    <%
+          end
+        end)
     %>
   </td>
 </tr>
