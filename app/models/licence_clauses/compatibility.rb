@@ -111,6 +111,9 @@ class Compatibility < ActiveRecord::Base
       elsif key == "covers_neighbouring_rights"
         reasons[:warnings] << "#{licence.identifier} does not explicitly cover neighbouring rights, but #{other_licence.identifier} \
           does. However, depending on the context, this may not pose a problem if neighbouring rights are not applicable or are implicitly granted in the #{licence.identifier} licence"
+      elsif key == "covers_moral_rights"
+        reasons[:warnings] << "#{licence.identifier} does not explicitly waive moral rights, but #{other_licence.identifier} \
+          does. However, depending on the context, this may not pose if your jurisdiction does not have moral rights or your use does not implicate them."
       else
         reasons[:soft] << "#{licence.identifier} does not cover #{nicify(key)}, but #{other_licence.identifier} #{!key.match(/\Aright/).nil? ? 'grants this right' : 'does'}"
       end

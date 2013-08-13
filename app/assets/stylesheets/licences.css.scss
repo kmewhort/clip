@@ -321,6 +321,33 @@
       background: none repeat scroll 0 0 #F8FAFD;
     }
   }
+
+  #risks-wrap{
+    .tabs-precursor{
+      float: left;
+      margin-right: 8px;
+    }
+    .risk.tabs{
+      display: inline-block;
+      margin-top: 3px;
+
+      dd {
+        a, a:link, a:visited {
+          height: 22px;
+          line-height: 20px;
+          color: #666666;
+        }
+      }
+      dd.active {
+        a, a:link, a:visited {
+          color: #FFF;
+        }
+      }
+      dd:hover a {
+        background-color: #2BA6CB;
+      }
+    }
+  }
 }
 
 #clip .star-rating {

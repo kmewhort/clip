@@ -1,0 +1,12 @@
+<div id="risks-wrap">
+  <span class="tabs-precursor">Analyze risks to the: </span>
+  <dl class="risk tabs pill">
+    <dd class="active"><a href="#user-risks">License User</a></dd>
+    <dd><a href="#licensor-risks">Licensor</a></dd>
+  </dl>
+
+  <ul class="tabs-content">
+    <li class="active" id="user-risksTab"><%= render partial: 'risks_to_licensees' %></li>
+    <li id="licensor-risksTab"><%= render partial: 'risks_to_licensors' %></li>
+  </ul>
+</div>
