@@ -330,6 +330,8 @@
     .risk.tabs{
       display: inline-block;
       margin-top: 3px;
+      height: inherit;
+      margin-bottom: 0;
 
       dd {
         a, a:link, a:visited {

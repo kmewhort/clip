@@ -1,100 +1,161 @@
-<h2>Rights Clearance Risks</h2>
+<h3>Rights Clearance Risks</h3>
 
-TODO: patents?
+<p>The licensor cannot grant you any right to use a work when the licensor does not actually own the copyright to the work. However,
+  sometimes a licensor may do so by mistake; for example, an open source software application might incidentally include
+  third-party graphical icons which do not come under the same license. In this case, by using or redistributing this open
+  source software application, you also end up infringing copyright. The copyright owner could take legal action against you.
+  In this case, because copyright is "strict liability", you will likely be found liable even if you were unaware of the
+  infringement.</p>
 
-<p>The licensor cannot grant you any right to use a work for which she or he does not actually own the copyright. For
-  example, an open source software application may incidentally include copyrighted graphical icons which are not
-  licensed. In this case, by using or redistributing the open source software application, you also infringe copyright;
-  the copyright owner could hold you responsible.  Because copyright is "strict liability", it is not relevant whether
-  you were even aware of the infringement.</p>
-
-<% if licence.disclaimer.warranty_noninfringement %>
-    <p>However, this license does provide a warranty of noninfringement, providing you some protection against this risk. The
+<% if @licence.disclaimer.warranty_noninfringement %>
+    <p>However, this license <strong>includes a warranty of noninfringement</strong>, providing you some protection against this risk. The
     licensor guarantees that all rights are either owned or properly cleared.</p>
 <% else %>
-    <p>Although a few open licenses provide a warranty that all copyright in the work has been properly cleared (a warranty of
-      noninfringement), this license does not. This means that you are responsible for double-checking that the licensor
-      actually owns the works which the license purports to grant. Ultimately, this is a difficult task for larger works and
-      you will likely need to accept some risk that you may accidentally infringe copyright where an included work is not
-      properly licensed.</p>
+    <p>Although a few open licenses provide a warranty that all copyright in the work has been properly cleared (a "warranty of
+      noninfringement"), <strong>this license does not</strong>. This means that you are responsible for verifying that the licensor
+      actually owns copyright in the works which the license purports to grant you. This is a difficult task for larger works --
+      in many cases you may simply need to accept some risk that you could accidentally infringe copyright when a work is
+      not properly licensed.</p>
 <% end %>
 
-<h2>Liability for Defects and Inaccuracies</h2>
+<h3>Liability for Defects and Inaccuracies</h3>
 
-<p>If a licensor is "negligent" in providing works which are defective or contain inaccurate information, the law generally
-  holds the licensor responsible for any harm done. However, given that openly-licensed works are given away for free and
-  often to a vast number of users, almost all open licenses attempt to disclaim this default responsibility.</p>
+<p>If a licensor is "negligent" in releasing works which are defective or contain inaccurate information, the law generally
+  holds the licensor responsible for any harm done as a result of this negligence. However, given that <em>openly</em>
+  licensed works are given away for free and often to a vast number of people, nearly all open licenses attempt to disclaim
+  this default responsibility.</p>
 
-<% if license.disclaimer.disclaimer_warranty %>
-    <p>Fortunately for license users, this license does NOT contain a disclaimer of responsibility.  The default legal rules apply
-      and you may hold the licensor responsible for negligence in providing accurate and safe materials.</p>
+<% if !@licence.disclaimer.disclaimer_warranty %>
+    <p>Fortunately for license users, this license <strong>does NOT contain a disclaimer of responsibility</strong>.  The
+      default legal rules apply and you may hold the licensor legally responsible for negligence if the a licensed work causes injury
+      due to an inaccuracy or defect.</p>
 <% else %>
-    <p>This licence is no exception. It contains a general disclaimer of liability which, in most cases, will release the
-      licensor of legal responsibility for defects, inaccuracies, or errors.  By using the licensed material, you're agreeing
+    <p>This licence is no exception. It <strong>contains a general disclaimer of liability</strong>, which, in most cases, will release
+      the licensor of legal responsibility for any defects, inaccuracies, or errors.  By using the licensed material, you are agreeing
       to do so entirely at your own risk.</p>
 <% end %>
-<% if license.disclaimer.disclaimer_indemnity %>
-    <p>This license also goes further than most open licenses and requires you to indemnify the licensor against lawsuits from other
-      parties. For example, if you redistribute the work as part of your own project or product and one of your customers is harmed by
-      a defect, that user might choose to take legal action against the licensor.  In this case, you will be responsible for defending
-      the licensor and paying any damages awarded against the licensor.</p>
+<% if @licence.disclaimer.disclaimer_indemnity %>
+    <p>This license also <strong>goes further</strong> than most open licenses and <strong>requires you to indemnify the licensor</strong>
+      against lawsuits from other parties. For example, if you redistribute the work as part of your own project or product
+      and negligence on the licensor's part harms one of your customers, that customer might choose to take legal action against the licensor.
+      In this case, it is you who is responsible for defending the licensor and paying any damages awarded against the licensor.</p>
 <% end %>
 
-<h2>Jurisdictional Legal Risks</h2>
+<h3>Licence Termination Risks</h3>
+
+<p>If you violate the terms of a licence, the ordinary legal remedy available to a licensor is to hold you responsible for any harm
+  that this breach causes. However, because it can be difficult to identify any actual harm caused by
+  the violation of an open licences' terms (there is often no financial loss), many open licenses add an additional remedy
+  that the license automatically terminates, as soon as you violate any term. This revokes your rights to use the
+  licensed work.</p>
+
+<% if @licence.termination.termination_automatic %>
+    <p><strong>This license takes this approach</strong>. Therefore, there is a risk that you could lose all rights to use the work
+      even through an inadvertent or minor breach (such as even a mistake in attribution). If your project or business depends on the
+      licensed material, this could be a problematic risk.  Take extra precautions to ensure that you comply with the letter of the license.</p>
+    <% if @licence.termination.termination_reinstatement %>
+        <p>Fortunately, this license does also <strong>contain an automatic re-instatement clause</strong>. If you receive notice that you are in breach
+          of the licence terms, simply ensure that you rectify the breach in a timely manner and follow the steps set out in the license
+          to avoid losing your rights altogether.</p>
+    <% end %>
+<% else %>
+    <p>Fortunately for license users, this license does not take this approach.  The default legal rules apply and the license
+      will not be revoked through an inadvertent or minor breach; however, you should still take steps to avoid any breach
+      and ensure that you remedy license violations as soon as they come to your attention. You could be responsible for
+      any financial harm through your breach or be in violation of copyright.</p>
+<% end %>
+<% if @licence.termination.termination_discretionary %>
+    <p>Additonally, this license goes even further than most and gives the licensor the <strong>discretion to terminate your rights
+      at any time</strong>, for nearly any any reason. If you use works under this license, it is advisable to be very careful not
+      to displease the licensor -- or you risk losing your right to use the works at all.</p>
+<% end %>
+
+<h3>Jurisdictional Legal Risks</h3>
 
 <p>If a lawsuit arises between you and the licensor, it is more expensive to conduct the legal action in another country.
-  A "choice of forum" clause in the license indicates the jurisdiction in which any related lawsuit should be held.</p>
+  A "choice of forum" clause in a license indicates the jurisdiction in which any related lawsuit should be held. Depending
+  on the location specified, this can increase or decrease the potential cost of a lawsuit.</p>
 
-<% if licence.conflict_of_law.forum_of == 'defendant' %>
-    <p>In this case, the licence indicates a choice of forum in favour of the defendant's jurisdiction. This helps deter lawsuits;
-    if you commence a legal action against the licensor, it will be more expensive for you; if a licensor commences a
+<% if @licence.conflict_of_law.forum_of == 'defendant' %>
+    <p>In this case, the licence indicates a choice of forum in favour of the <strong>defendant's jurisdiction</strong>. This helps
+    deter lawsuits; if you commence a legal action against the licensor, it will be more expensive for you; if a licensor commences a
     legal action against you, it will be more expensive for the licensor.</p>
-<% elsif licence.conflict_of_law.forum_of == 'unspecified' %>
-    <p>In the case, the license simply does not specify a forum. This means that the courts will decide the appropriate and
+<% elsif @licence.conflict_of_law.forum_of == 'unspecified' %>
+    <p>In the case, the license simply <strong>does not specify a forum</strong>. This means that the courts will decide the appropriate and
       most convenient forum for any lawsuits.</p>
-<% elsif licence.conflict_of_law.forum_of == 'licensor' %>
-    <p>In this case, the license specifies a choice of forum in favour of the plantiff's jurisdiction. This increases the
-    legal risk for you, as it will be more expensive to defend any lawsuits against you.</p>
-<% elsif licence.conflict_of_law.forum_of  == 'specific' %>
-    <p>In the case, the license identifies a specific jurisdiction for all lawsuits, whether they are commenced by you or the
-    licensor.  For most licenses, this specific jurisdication is that of the licensor. Thus, if you reside in a different
-    location, any lawsuits may be more expensive for you to commence or defend.</p>
+<% elsif @licence.conflict_of_law.forum_of == 'plaintiff' %>
+    <p>In this case, the license specifies a choice of forum in favour of the jurisdiciton of the <strong>plaintiff</strong>
+      who commences a lawsuit against you. This increases the legal risk for you, as it will be more expensive to defend any
+      lawsuits against you if you reside in a different jurisdiction.</p>
+<% elsif @licence.conflict_of_law.forum_of == 'licensor' %>
+    <p>In this case, the license specifies a choice of forum in favour of the <strong>licensor's jurisdiction</strong>. Thus, if you reside
+      in a different location from the licensor, this increases the legal risk for you, as it will be more expensive
+      to defend any lawsuits against you.</p>
+<% elsif @licence.conflict_of_law.forum_of  == 'specific' %>
+    <p>In the case, the license identifies a <strong>specific jurisdiction</strong> for all lawsuits, whether they are
+    commenced by you or the licensor.  For most licenses, this specific jurisdiction is that of the licensor. Thus, if you
+    reside in a different location, any lawsuits may be more expensive for you to commence or defend.</p>
 <% end %>
 
+<p>As well, even if a lawsuit is heard by a court in your own jurisdiction, the court may apply a different law when a license
+  contains a "choice of law" clause. It is usually more expensive to litigate under foreign laws with which you and your lawyers
+  may not be familiar.  You may need to hire foreign legal experts.</p>
 
+<% if @licence.conflict_of_law.law_of == 'defendant' %>
+    <p>This licence contains a choice of law clause in favour of the <strong>defendant's jurisdiction</strong>. This helps deter lawsuits, as
+    it is the person commencing the lawsuit which may have to litigate on the basis of foreign laws.</p>
+<% elsif @licence.conflict_of_law.law_of == 'unspecified' %>
+    <p>This license <strong>does not contain a choice of law clause</strong>, which means that the court will decide which law should
+    apply based on where the activities in dispute occurred.</p>
+<% elsif @licence.conflict_of_law.law_of  == 'forum' %>
+    <p>This license specifies that the <strong>laws in place where the lawsuit is held</strong> shall govern the lawsuit. If this is
+    different from the laws where you reside, it could increase the cost of any lawsuit.</p>
+<% elsif @licence.conflict_of_law.law_of == 'plaintiff' %>
+    <p>This license contains a choice of law clause in favour of the <strong>plaintiff</strong> launching any lawsuit against you.
+      This increases the legal risk for you, as it will be more expensive to defend any lawsuits against you where you fall
+      under the laws of a different jurisdiction.</p>
+<% elsif @licence.conflict_of_law.law_of == 'licensor' %>
+    <p>This license contains a choice of law clause in favour of the <strong>licensor</strong>. If you reside
+      in a different jurisdiction from the licensor, this increases the legal risk for you, as it will be more expensive
+      to defend any lawsuits against you.</p>
+<% elsif @licence.conflict_of_law.law_of  == 'specific' %>
+    <p>This license identifies the <strong>laws of a specific jurisdiction</strong> for all lawsuits, whether they are commenced
+      by you or the licensor.  For most licenses, this specific jurisdiction named is that of the licensor. Thus, if you reside
+      in a different location, any lawsuits may be more expensive for you to commence or defend.</p>
+<% end %>
 
+<h3>Copyleft Risks</h3>
 
+<p>Although "copyleft" or "share-alike" licenses help keep works free and help build collaborative communities, they
+  also pose risks to businesses who base their business models on non-free works. For example, a commercial closed-source software
+  vendor might end up including a copyleft software library in its own application. This can occur where a company loses track of licenses
+  amongst the hundreds of software libraries that may be included in an application, or where a piece of "in-house" code using copyleft
+  libraries later makes its way into a commercial product.  In these cases, the copyleft clause demands that the whole of the closed-source
+  software application be made open source. The developer has to choose between releasing the application as open source
+  (which may adversely impact the current business model) or being found liable of copyright infringement.
+  </p>
 
+<% if !@licence.obligation.obligation_copyleft %>
+  <p>This license, however, <strong>does not include any copyleft clause</strong>.</p>
+<% else %>
+  <p>The copyleft clause in this license <strong>applies to all <%= case @licence.copyleft_clause.copyleft_applies_to
+                                                                       when "modified_files" then "modified files"
+                                                                       when "derivatives" then "derivative works"
+                                                                       when "derivatives_linking_excepted" then "derivatives works, with the exception of linking to software libraries"
+                                                                       when "compilations" then "derivative works and even compilations" end %></strong>.
+    Make sure to conduct careful due diligence assessments, only integrating copyleft works in your own where
+    you plan to release everything as open source, or where you are certain that the copyleft clause does not apply.</p>
+  <% if @licence.copyleft_clause.copyleft_engages_on == "affero" %>
+    <p>You should also note that the copyleft clause for this license engages when you provide access to your work over
+    a computer network.  Thus, it may apply even to some "in-house" software that you do not distribute.</p>
+  <% elsif @licence.copyleft_clause.copyleft_engages_on == "use" %>
+    <p>You should also note that the copyleft clause for this license engages whenever you use the work.
+     Thus, it applies even to "in-house" software that you do not distribute.</p>
+  <% end %>
+<% end %>
 
-
-This license...
-
-The license also ...
-
-License Termination
-
-If you breach the terms of a licence, the ordinary legal remedy for the licensor is to hold you responsible for any harm which arises out of the mistake. However, because it can be difficult to identify any such actual harm caused by breaching an open license, many open licenses add an additional remedy that the license automatically terminates as soon as you breach any clause.
-
-However, this licence does not do so.  The default legal rules apply and the license will not be revoked through an indvertant or minor breach; however, you should certainly still take steps to avoid any breach and ensure that you remedy any such breach as soon as it comes to your attention.
-
-This license takes this approach.  This creates a risk that you could lose all rights to use the work through an inadvertant or minor breach, such as perhaps a mistake in attribution. If your project or business depends on using the material, such a situation would be highly problematic.  Fortunately, the license also contains a automatic re-instantement clause.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- TODO
+<h3>Patent Infringement Risks</h3>
+<h3>License Change Risks</h3>
+-->
 

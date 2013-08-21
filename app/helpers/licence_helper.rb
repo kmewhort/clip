@@ -18,8 +18,8 @@ module LicenceHelper
     tabs['licence_info'] = "Licence Info"
     tabs['licence_text'] = "Legal Text"
     tabs['licence_compatibility'] = "Compatibility"
-    #tabs['licence_risks'] = "Risks"
     tabs['licence_benchmarks'] = "Benchmarks"
+    tabs['licence_risks'] = "Risks"
     tabs['licence_comparison'] = "History" if !@family_trees.nil? && !@family_trees.empty?
     tabs['licence_metadata'] = "Metadata"
     tabs
