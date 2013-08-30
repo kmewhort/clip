@@ -61,6 +61,10 @@ Clip::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  # Google analytics
+  config.google_analytics_id = 'UA-15696185-4'
+  config.google_analytics_address = 'clipol.org'
+
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5

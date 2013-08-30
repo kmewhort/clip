@@ -39,6 +39,9 @@ Clip::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  # No google analytics
+  config.google_analytics_id = nil
+
   # Paperclip
   Paperclip::Attachment.default_options[:command_path] = "/usr/bin/"
 end

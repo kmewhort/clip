@@ -34,4 +34,7 @@ Clip::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # No google analytics
+  config.google_analytics_id = nil
 end

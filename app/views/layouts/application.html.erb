@@ -15,6 +15,13 @@
 
 	<%= stylesheet_link_tag    "application" %>
 	<%= javascript_include_tag "application" %>
+
+    <% unless Rails.configuration.google_analytics_id.nil? %>
+    <script type="text/javascript">
+      <%= render partial: 'layouts/google_analytics.js' %>
+    </script>
+    <% end %>
+
     <%= yield :head %>
     <%= csrf_meta_tags %>
 </head>
