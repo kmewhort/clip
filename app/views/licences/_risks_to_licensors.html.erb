@@ -1,1 +1,164 @@
-b
+<h3>Liability for Defects and Inaccuracies</h3>
+
+<p>If a licensor is "negligent" in releasing works that are defective or contain inaccurate information, the law generally
+  holds the licensor responsible for any harm done as a result of this negligence. However, given that <em>openly</em>
+  licensed works are given away for free and often to a vast number of people, nearly all open licences attempt to disclaim
+  this default responsibility.</p>
+
+<% if !@licence.disclaimer.disclaimer_warranty %>
+    <p>However, this licence <strong>does NOT contain a disclaimer of responsibility</strong>.  The
+      default legal rules apply and licencees may hold you legally responsible for negligence if the a licensed work causes injury
+      due to an inaccuracy or defect. This puts you at more risk than with most open licences.</p>
+<% else %>
+    <p>This licence is no exception. It <strong>contains a general disclaimer of liability</strong>, which, in most cases, shifts
+      the burden of risk onto the licensee and helps release you of legal responsibility for many defects, inaccuracies, and errors.</p>
+<% end %>
+<% if @licence.disclaimer.disclaimer_indemnity %>
+    <p>This licence also goes one step further than most open licences and <strong>requires licensees to indemnify you</strong>
+      against lawsuits from other parties. For example, if a licensee redistributes the work as part of her own project or product,
+      and negligence on your part harms one of her customers, that customer might choose to take legal action against you.
+      In this case, it is the licensee who is responsible for defending you and paying any damages awarded against the you (contingent
+      on the licensee's ability to pay).</p>
+    <p>Although this indemnity further decreases your legal risk, many licensees consider this an unfair burden and it may deter
+      licensees from making use of your works.</p>
+<% end %>
+
+<h3>Drafting Error Risks</h3>
+
+<p>When a user first retrieves and starts using your work, the licence terms set out at that time usually continue to apply.  Even if
+  you change the terms, by default the original terms still to apply to existing users.  The new terms only come into effect
+  for new users who retrieve the works, or old users who agree to the the new terms when downloading updates.</p>
+
+<% if !@licence.changes_to_term.licence_changes_effective_immediately %>
+    <p>This is the case with this licence. Although there is some risk that a drafting error in the original licence will continue to
+    apply to existing licensees, this is generally a small and acceptable risk in a well-reviewed licence.</p>
+<% else %>
+    <p>However, this licence states that changes to the licence are to apply <em>automatically</em>. This decreases the risk that
+      a drafting error in the original licence may continue to apply to existing licensees. However, it also introduces a large
+      degree of uncertainty to users, who do not know what types of clauses you may introduce in the future. Depending on your risk
+      tolerances, this decrease in the "openness" of your works may be a poor trade-off, given that the risk from a potential drafting
+      error is generally very low in a well-reviewed licence.</p>
+<% end %>
+
+<h3>Licence Violation Risks</h3>
+
+<p>If a licensee violates the terms of the licence, the ordinary legal remedy available is to hold the licensee responsible
+  for any harm that this breach causes. However, because it can be difficult to identify any actual harm caused by
+  the violation of an open licence's terms (there is often no financial loss), many open licences add an additional remedy
+  that the licence automatically terminates, as soon as the licensee violates any term.</p>
+
+<% if @licence.termination.termination_automatic %>
+    <p><strong>This licence takes this approach</strong>. Even if a breach would cause no financial loss, the licence still deters
+      licensees from violating the licence terms because they would face termination of the licence.
+    <% if @licence.termination.termination_reinstatement %>
+         The licence also <strong>contains an automatic re-instatement clause</strong>. If licensees lose their rights
+          through a violation of the terms, they can still restore their rights if they rectify the breach in a timely manner
+          and follow the steps set out in the licence.</p>
+    <% else %>
+        </p><p>The licence does NOT contain an automatic re-instatement clause. This means that if licensees lose their rights
+          through inadvertent breaches, there is no way for them to restore their rights other than through individual requests
+          to you. This lack of a re-instantement clause to allow timely rectification of violations provides less
+          certainty to users and might increase administrative burdens for you.</p>
+    <% end %>
+<% else %>
+    <p>However, this licence does not take this approach.  The default legal rules apply and the licence
+      will not be revoked through an inadvertent or minor breach. Depending on whether the licence is also considered a contract,
+      it might be difficult for you to terminate the license, even for violators. This may or may not pose a risk for you,
+      depending on how important it is for you to enforce minor violations.</p>
+<% end %>
+<% if @licence.termination.termination_discretionary %>
+    <p>Additionally, this licence goes even further than most and gives the you <strong>discretion to terminate a licencee's rights
+      at any time</strong>, for nearly any reason. Although this lowers your risks and grants you broad discretion to
+      put a stop to any use which displeases you, it also places a much high burden of risk on licence users, and, in most cases,
+      makes your works non-open.</p>
+<% end %>
+
+<h3>Jurisdictional Legal Risks</h3>
+
+<p>If a lawsuit arises between you and the licensee, it is more expensive to conduct the legal action in another country.
+  A "choice of forum" clause in a licence indicates the jurisdiction in which any related lawsuit should be held. Depending
+  on the location specified, this can increase or decrease the potential cost of a lawsuit.</p>
+
+<% if @licence.conflict_of_law.forum_of == 'defendant' %>
+    <p>In this case, the licence indicates a choice of forum in favour of the <strong>defendant's jurisdiction</strong>. This helps
+      deter lawsuits; if you commence a legal action against a licensee, it will be more expensive for you; if a licensee commences a
+      legal action against you, it will be more expensive for the licensee.</p>
+<% elsif @licence.conflict_of_law.forum_of == 'unspecified' %>
+    <p>In this case, the licence simply <strong>does not specify a forum</strong>. This means that the courts will decide the appropriate and
+      most convenient forum for any lawsuits.</p>
+<% elsif @licence.conflict_of_law.forum_of == 'plaintiff' %>
+    <p>In this case, the licence specifies a choice of forum in favour of the jurisdiction of the <strong>plaintiff</strong>
+      who commences a lawsuit against you. This increases the legal risk for you, as it will be more expensive to defend any
+      lawsuits against you if you reside in a different jurisdiction.</p>
+<% elsif @licence.conflict_of_law.forum_of == 'licensor' %>
+    <p>In this case, the licence specifies a choice of forum in favour of <strong>the licensor</strong>, minimizing
+      the risk that you might have to defend a lawsuit elsewhere (and maximizing this risk for the licensees).</p>
+<% elsif @licence.conflict_of_law.forum_of  == 'specific' %>
+    <p>In the case, the licence identifies a <strong>specific jurisdiction</strong> for all lawsuits. If this specific
+      jurisdiction is your jurisdiction, this minimizes the risk that you might have to defend a lawsuit elsewhere (and
+      maximizes this risk for the licensees).</p>
+<% end %>
+
+<p>As well, even if a lawsuit is heard by a court in your own jurisdiction, the court may apply a different law when a licence
+  contains a "choice of law" clause. It is usually more expensive to litigate under foreign laws with which you and your lawyers
+  may not be familiar.  You may need to hire foreign legal experts.</p>
+
+<% if @licence.conflict_of_law.law_of == 'defendant' %>
+    <p>This licence contains a choice of law clause in favour of the <strong>defendant's jurisdiction</strong>. This helps deter lawsuits, as
+      it is the person instituting the lawsuit which may have to litigate on the basis of foreign laws.</p>
+<% elsif @licence.conflict_of_law.law_of == 'unspecified' %>
+    <p>This licence <strong>does not contain a choice of law clause</strong>, which means that the court will decide which law should
+      apply based on where the activities in dispute occurred.</p>
+<% elsif @licence.conflict_of_law.law_of  == 'forum' %>
+    <p>This licence specifies that the <strong>laws in place where the lawsuit is held</strong> shall govern the lawsuit. If this is
+      different from the laws where you reside, it could increase the cost of any lawsuit.</p>
+<% elsif @licence.conflict_of_law.law_of == 'plaintiff' %>
+    <p>This licence contains a choice of law clause in favour of the <strong>plaintiff</strong> launching any lawsuit against you.
+      This increases the legal risk for you, as it will be more expensive to defend any lawsuits against you where you fall
+      under the laws of a different jurisdiction.</p>
+<% elsif @licence.conflict_of_law.law_of == 'licensor' %>
+    <p>This licence contains a choice of law clause in favour of <strong>the licensor</strong>, minimizing
+      the risk that you might have to defend or pursue a lawsuit under foreign laws (and maximizing this risk for the licensees).</p>
+<% elsif @licence.conflict_of_law.law_of  == 'specific' %>
+    <p>This licence identifies the <strong>laws of a specific jurisdiction</strong> for all lawsuits, whether they are commenced
+      by you or the licensor.  If this specific jurisdiction is your jurisdiction, this minimizes
+      the risk that you might have to defend or pursue a lawsuit under foreign laws (and maximizes this risk for the licensees)..</p>
+<% end %>
+
+
+<h3>Patent Licensing Risks</h3>
+<p>If your licensed work, or a work to which you contribute your licensed work, implicates your patents, then you may need to license the
+  patents as well as copyright.  Different licences set out different scopes on how your patents are licensed.<p></p>
+<% if @licence.right.covers_patents_explicitly %>
+    <% if @licence.patent_clause.patent_licence_extends_to == "licensors_contributions" %>
+          <p>This licence states that your patent licence only applies to those patents implicated by your own individual contributions to a licensed work;
+            even if the work as a whole implicates other patents of yours, the licensee still has no right to use these other patents. This lowers the risk
+            that you might unintentionally license other patents which you hold.  Licensees are also not granted any rights with respect to
+            patents implicated by downstream modifications.</p>
+    <% elsif @licence.patent_clause.patent_licence_extends_to == "entire_work" %>
+          <p>This licence states that your patent licence applies to patents implicated not only by your own individual contributions to the work,
+            but also those implicated by the work as a whole (at the time you introduce your contributions).  This creates a small risk that you might unintentionally
+            license other patents which you hold, where other parts of the work implicate these patents.  You should carefully review the other parts of the work
+            and consider whether these implicate patents that you might not wish to license.  Licensees are still not granted any rights with respect to
+            patents implicated by downstream modifications.</p>
+    <% end %>
+<% else %>
+    <p>Unfortunately, this licence does not explicitly identify patent rights. This creates some uncertainty and risk for you (as well as the
+    licensee), because there may still be an <em>implicit</em> patent licence if the work clearly implicates one or more of
+    your patents. A court would need to determine the existence and the exact of scope of such an implicit licence.</p>
+<% end %>
+
+<% if @licence.right.prohibits_patent_actions %>
+    <p>This licence also provides some deterrence against patent lawsuits in the form of a <strong>patent retaliation
+      clause</strong>. If anyone instituted <%= @licence.patent_clause.patent_retaliation_upon_originating_claim ? "an originating claim" : "" %>
+      <%= @licence.patent_clause.patent_retaliation_upon_counterclaim ? " or a counterclaim" : "" %> against you, their licence to use
+      <% if @licence.patent_clause.patent_retaliation_applies_to == "specific_work" %>
+          this work would be revoked. Of course, this would only impact potential litigators who make use of this work.
+      <% elsif @licence.patent_clause.patent_retaliation_applies_to == "all_works_under_same_licence" %>
+          any work under this same licence would be revoked. Of course, this would only impact potential litigators who also make use of works
+          under this licence.
+      <% end %></p>
+<% else %>
+    <p>The licence contains no patent retaliation clause to try to deter patent lawsuits against you (a patent retaliation
+      clause would revoke the licence for anyone who institutes patent litigation).</p>
+<% end %>
