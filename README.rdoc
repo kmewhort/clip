@@ -28,4 +28,4 @@ In addition, the data (everything accessible in JSON format through the web API,
 * A big thank-you to James McKinney for his founding work[https://github.com/jpmckinney/clip-analysis] on the licence text comparison tool.
 
 == Contact
-* Please freel free to contact the project lead, Kent Mewhort (kent@openissues.ca), with any comments or questions. For bug reports, prerably raise them directly through Github.
+* Please freel free to contact the project lead, Kent Mewhort (kent@openissues.ca), with any comments or questions. For bug reports, preferably raise them directly through Github.

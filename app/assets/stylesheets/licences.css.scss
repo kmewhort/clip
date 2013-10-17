@@ -349,6 +349,30 @@
         background-color: #2BA6CB;
       }
     }
+    h3 {
+      display: inline-block;
+    }
+    .caution {
+      display: inline-block;
+      background: url("risk_warning.png") repeat-x scroll left top transparent;
+      height: 20px;
+      width: 24px;
+      margin-top: 6px;
+      vertical-align: top;
+    }
+
+    #content-outer {
+      width: 690px;
+    }
+    #right {
+      width: 262px;
+      .caution {
+        background: url("risk_warning_sm.png") repeat-x scroll left top transparent;
+        margin-top: 3px;
+        height: 14px;
+        width: 17px;
+      }
+    }
   }
 }
 

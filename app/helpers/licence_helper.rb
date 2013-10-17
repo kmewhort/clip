@@ -78,4 +78,37 @@ module LicenceHelper
       if !rights.covers_circumventions && !covered # circumvention is only a prohibition, so only show if not covered
     result
   end
+
+  # whether to display a warning for a particular risk category
+  def warning_for(category, user_type)
+    if user_type == :licensee
+      case(category)
+        when 'Liability for Defects and Inaccuracies'
+          @licence.disclaimer.disclaimer_indemnity
+        when 'Licence Change Risks'
+          @licence.changes_to_term.licence_changes_effective_immediately
+        when 'Licence Termination Risks'
+          @licence.termination.termination_discretionary ||
+            (@licence.termination.termination_automatic && !@licence.termination.termination_reinstatement)
+        when 'Jurisdictional Legal Risks'
+          (@licence.conflict_of_law.forum_of  == 'specific') || (@licence.conflict_of_law.forum_of  == 'licensor') ||
+          (@licence.conflict_of_law.law_of  == 'specific') || (@licence.conflict_of_law.law_of  == 'licensor')
+        when 'Patent Infringement Risks'
+          !@licence.right.covers_patents_explicitly
+        else
+          raise 'Unknown license risk category'
+      end
+    elsif user_type == :licensor
+      case(category)
+        when 'Liability for Defects and Inaccuracies'
+          !@licence.disclaimer.disclaimer_warranty
+        when 'Licence Violation Risks'
+          !@licence.termination.termination_automatic
+        when 'Patent Licensing Risks'
+          !@licence.right.covers_patents_explicitly
+        else
+          raise 'Unknown license risk category'
+      end
+    end
+  end
 end
