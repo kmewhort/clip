@@ -11,7 +11,7 @@ class CompatibilitiesController < ApplicationController
         if @compatibility.licence.identifier != 'CC0-1.0'
           @licences += [Licence.find_by_identifier('CC0-1.0')]
         else
-          @licences += Licence.where(maintainer: 'Creative Commons', version: "3.0")
+          @licences += Licence.where(maintainer: 'Creative Commons', version: "4.0")
         end
       # for software licences, seed with a few commonly used licences
       elsif @compatibility.licence.domain_software
@@ -22,12 +22,12 @@ class CompatibilitiesController < ApplicationController
       elsif @compatibility.licence.domain_data
         @licences = [@compatibility.licence]
         @licences += @compatibility.licence.family_trees.first.licences unless @compatibility.licence.family_trees.empty?
-        @licences += Licence.where(['CC0','CC-BY-3.0','ODC-PDDL-1.0','ODC-By-1.0','ODC-ODbL-1.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
+        @licences += Licence.where(['CC0','CC-BY-4.0','ODC-PDDL-1.0','ODC-By-1.0','ODC-ODbL-1.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
       # for content licences, seed with a few commonly used and others in the same family
       elsif @compatibility.licence.domain_content
         @licences = [@compatibility.licence]
         @licences += @compatibility.licence.family_trees.first.licences unless @compatibility.licence.family_trees.empty?
-        @licences += Licence.where(['CC0','CC-BY-3.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
+        @licences += Licence.where(['CC0','CC-BY-4.0'].map{|i| "identifier = '#{i}'"}.join(" OR "))
       end
       @licences.sort! {|a,b| a.identifier <=> b.identifier }.uniq!
     # if a list of licences is specified, find each by compatibility id or licence identifier

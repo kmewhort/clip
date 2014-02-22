@@ -17,9 +17,9 @@ module ScoreHelper
   # common licences to use as benchmarks
   def benchmark_references(score)
     benchmarks = []
-    benchmarks += Licence.where(identifier: ['CC-BY-3.0', 'CC0-1.0']) if score.licence.domain_content
+    benchmarks += Licence.where(identifier: ['CC-BY-4.0', 'CC0-1.0']) if score.licence.domain_content
     benchmarks += Licence.where(identifier: ['BSD-2-Clause', 'GPL-3.0']) if score.licence.domain_software
-    benchmarks += Licence.where(identifier: ['CC-BY-3.0', 'CC0-1.0', 'ODC-PDDL-1.0']) if score.licence.domain_data
+    benchmarks += Licence.where(identifier: ['CC-BY-4.0', 'CC0-1.0', 'ODC-PDDL-1.0']) if score.licence.domain_data
     benchmarks.uniq
   end
 
