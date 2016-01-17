@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.22'
 
 # database=storage
 gem 'pg'
@@ -17,7 +17,7 @@ gem 'simple_form'
 gem 'jquery-ui-rails'
 
 gem 'sass-rails',   '~> 3.2.3'
-gem 'compass-rails'
+gem 'compass-rails', '~> 1.0.3'
 gem 'zurb-foundation', '~> 3.0'
 
 # authorization and authentication
@@ -42,6 +42,7 @@ end
 # Gems only needed for development / initial data generation
 group :development, :test do
   gem 'similarity_tree', '~> 1.0.2'
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'
