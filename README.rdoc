@@ -33,6 +33,7 @@ If deploying to Heroku:
   heroku create
   heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
   heroku config:set DEVISE_SECRET_KEY=`bundle exec rake secret`
+  heroku addons:create heroku-postgresql:hobby-dev
   git push heroku master
 
 == Licence
