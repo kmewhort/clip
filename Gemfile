@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
+ruby '2.2.4'
+
 gem 'rails', '3.2.22'
 
 # database=storage
-gem 'pg'
 gem "paperclip", "~> 3.0"
 gem 'yaml_db'
 
@@ -43,6 +44,11 @@ end
 group :development, :test do
   gem 'similarity_tree', '~> 1.0.2'
   gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem 'jquery-rails'
