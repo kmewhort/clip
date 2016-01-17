@@ -35,6 +35,9 @@ If deploying to Heroku:
   heroku config:set DEVISE_SECRET_KEY=`bundle exec rake secret`
   heroku addons:create heroku-postgresql:hobby-dev
   git push heroku master
+  heroku ps:scale web=1
+  heroku run rake db:schema:load
+  heroku run rake db:data:load
 
 == Licence
 All files in this repository (http://github.com/kmewhort/clip) are licensed under a <b>BSD License</b>.  See the *licence.txt* for further details.
