@@ -14,9 +14,24 @@ The easiest way to use CLIPol is to visit our website at http://www.clipol.org! 
 The easiest way to add new licences or fix any erroneous data is to submit changes through the forms on our website.  On the rightmost tab of the webpage for any licence, you'll see an "Edit" tab to make changes.  To add a new licence, open http://www.clipol.org/api.
 
 == Contributing to the Software
-If you wish to contribute to development, whether to submit a fix or add a tool, simply pull this git repository and have at the Rails code! The repository contains a recent copy of the database stored using the *yaml_db* gem.  You can thus instantiate a populated database with:
-  rake db:create
-  rake db:data:load
+If you wish to contribute to development, whether to submit a fix or add a tool, simply pull this git repository and have at the Rails code!
+
+If you are running OS X, you will need the [GNU Scientific Library (GSL)](http://www.gnu.org/software/gsl/), which you can install with Homebrew:
+  brew install gsl
+
+Then, install the app's dependencies:
+  bundle
+
+The repository contains a recent copy of the database stored using the *yaml_db* gem.  You can thus instantiate a populated database with:
+  bundle exec rake db:create
+  bundle exec rake db:schema:load
+  bundle exec rake db:data:load
+
+== Deployment
+  heroku create
+  heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+  heroku config:set DEVISE_SECRET_KEY=`bundle exec rake secret`
+  git push heroku master
 
 == Licence
 All files in this repository (http://github.com/kmewhort/clip) are licensed under a <b>BSD License</b>.  See the *licence.txt* for further details.
